@@ -13,3 +13,5 @@ Description: "Value set of client's relationship to the person that referred the
 * HIVConcepts#HIV.B.DE10 "Drug-injecting partner"
 * HIVConcepts#HIV.B.DE11 "Sexual partner"
 * HIVConcepts#HIV.B.DE12 "Social contact"
+* HIVConcepts#HIV.B.ET.DE4 "Siblings"
+* HIVConcepts#HIV.B.ET.DE5 "Parent"
