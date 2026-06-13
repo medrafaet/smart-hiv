@@ -2,8 +2,9 @@ Alias: $SCT = http://snomed.info/sct
 Alias: $LNC = http://loinc.org
 Alias: $ICD11 = http://id.who.int/icd/release/11/mms
 Alias: $ICD10 = http://hl7.org/fhir/sid/icd-10
-Alias: $CVX = http://hl7.org/fhir/sid/cvx 
+Alias: $CVX = http://hl7.org/fhir/sid/cvx
 Alias: $GENDER = http://hl7.org/fhir/administrative-gender
+Alias: $identifier-type = http://terminology.hl7.org/CodeSystem/v2-0203
 
 Alias: $action-type = http://terminology.hl7.org/CodeSystem/action-type
 Alias: $library-type = http://terminology.hl7.org/CodeSystem/library-type
