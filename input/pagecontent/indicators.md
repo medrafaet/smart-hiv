@@ -1,4 +1,4 @@
-This page includes indicators and performance metrics aggregated from core data elements identified and is extracted from the WHO Digital Adaptation Kit (DAK) SMART Guidelines for HIV .
+This page includes indicators and performance metrics aggregated from core data elements identified in the Ethiopia HIV Digital Adaptation Kit (DAK), adapted from the WHO SMART Guidelines for HIV source content.
 
 For full operational descriptions of the indicators included and their references, see Web Annex C of the HIV DAK.  
 For machine-readable representations, see the <a href="indicators-measures.html">Indicators and Measures</a>.

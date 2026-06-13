@@ -1,12 +1,16 @@
-This implementation guide is meant to facilitate operationalization of the World Health Organization (WHO) Digital Adaptation Kit (DAK) for HIV. This page includes links to the published DAK for HIV, as well as a small subset of other references.
+This implementation guide is meant to facilitate operationalization of the Ethiopian Ministry of Health HIV Digital Adaptation Kit (DAK), adapted from the World Health Organization (WHO) Digital Adaptation Kit for HIV. This page includes links to the source DAK material and a small subset of other references.
 
 For additional resources, see the <a href="dependencies.html">Dependencies</a> page, which includes the standards referenced in this implementation guide and the references section in the published DAK for HIV.
 
+### Ethiopia HIV Digital Adaptation Kit (DAK)
+
+> The Ethiopia HIV Digital Adaptation Kit was published on \[publication date\]:
+>
+> \[Link to the Ministry-approved DAK and accompanying web annexes when available\]
+
 ### WHO Digital Adaptation Kit (DAK) for HIV
 
-> The Digital Adaptation Kit was published on \[publication date\]:
->
-> \[Link to the DAK and accompanying web annexes when available\]
+> The WHO Digital Adaptation Kit was used as source material for this Ethiopian Ministry of Health customization.
 
 ### WHO guideline development
     

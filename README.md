@@ -1,15 +1,13 @@
-<!--badges-->
-[![Deploy IG](https://github.com/WorldHealthOrganization/smart-hiv/actions/workflows/deploy.yml/badge.svg)](https://github.com/WorldHealthOrganization/smart-hiv/actions/workflows/deploy.yml)  
-<!--/badges-->   
+# Ethiopian Ministry of Health SMART Guidelines - HIV Implementation Guide
 
-# WHO SMART GUIDELINES - HIV Implementation Guide
+This repository contains the Ethiopian Ministry of Health customization of the HIV SMART Guidelines Implementation Guide. It is based on the WHO SMART Guidelines HIV artifacts and adapted for Ethiopia's HIV service delivery, reporting, and interoperability needs.
 
-Click to visit the Implementation Guide [here](https://worldhealthorganization.github.io/smart-hiv/)
+Click to visit the generated Implementation Guide after publication.
 
 
 ## Changes and feedback
 
-Feedback and issues about this empty framework can be submitted via the [issues](issues) page, and will be incorporated into subsequent releases.
+Feedback and issues about this Ethiopia MoH customization can be submitted via the project issue tracker and will be incorporated into subsequent releases.
 
 ### Building Locally
 ### Install nodejs

@@ -1,6 +1,6 @@
-This page includes a depiction of end-users and related stakeholders as introduced in the WHO Digital Adaptation Kit for HIV(link forthcoming).
+This page includes a depiction of end-users and related stakeholders as introduced in the Ethiopia HIV Digital Adaptation Kit.
 
-The specific roles and demographic profile of the personas will vary depending on the setting, the generic personas are based on the WHO core competencies and credentials of different health worker personas.
+The specific roles and demographic profile of the personas will vary depending on the Ethiopian service setting. The generic personas are based on Ministry-recognized HIV service roles and may be further refined during implementation.
 
 
 ### Targeted generic personas
