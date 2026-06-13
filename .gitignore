@@ -51,3 +51,6 @@ tramp
 *bkp*
 
 .sdkmanrc
+
+reports
+*.pyc

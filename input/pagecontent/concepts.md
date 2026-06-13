@@ -1,4 +1,4 @@
-Key concepts and abbreviations are described here. Additional terms are defined in the Glossary and List of Abbreviations in the WHO Digital Adaptation Kit: SMART Guidelines for Immunizations (link forthcoming), as well as in the [WHO Digital Documentation of COVID-19 Certificates FHIR Implementation Guide](https://worldhealthorganization.github.io/ddcc/concepts.html).
+Key concepts and abbreviations are described here. Additional terms are defined in the Ethiopia HIV Digital Adaptation Kit and the WHO HIV Digital Adaptation Kit.
 
 ### Concepts 
 
@@ -16,7 +16,7 @@ Key concepts and abbreviations are described here. Additional terms are defined 
   </tr>
   <tr>
     <td>Certificate</td>
-    <td>A document attesting a fact. In the context of the vaccination certificate, it attests to the fact that a vaccine has been administered to an individual.</td>
+    <td>A document attesting a health-related fact, such as an encounter, test result, diagnosis, prescription, referral, or service event.</td>
   </tr>
   <tr>
     <td><a href="http://hl7.org/fhir/uv/cpg/">Clinical practice guidelines (CPG)</a></td>
@@ -36,11 +36,11 @@ Key concepts and abbreviations are described here. Additional terms are defined 
   </tr>
   <tr>
     <td>Defaulter</td>
-    <td>A person who has missed the scheduled dose of a vaccine.</td>
+    <td>A client who has missed a scheduled HIV service, follow-up, medication refill, or clinical appointment according to programme rules.</td>
   </tr>
   <tr>
-    <td>Electronic Immunization Registry (EIR)</td>
-    <td>See Immunization Information System (IIS).</td>
+    <td>Electronic health record (EHR)</td>
+    <td>A digital registry or longitudinal record used to support HIV service delivery, monitoring, and reporting.</td>
   </tr>
   <tr>
     <td><a href="https://www.hl7.org/fhir/overview.html">Fast Healthcare Interoperability Resources (FHIR)</a></td>
@@ -51,12 +51,12 @@ Key concepts and abbreviations are described here. Additional terms are defined 
     <td>Capabilities the system must have in order to meet the end-users’ needs and achieve tasks within the business process.</td>
   </tr>
   <tr>
-    <td>Immunization Information System (IIS)</td>
-    <td>Also called an Electronic Immunization Registry (EIR). Serves as a digital tracking and decision-support tool. IIS facilitate monitoring and tracking of individual immunization schedules and contain individuals’ immunization histories; supporting health workers to determine whether an individual is up to date on their immunization schedule and whether that individual has been vaccinated in a timely manner.</td>
+    <td>Health information system (HIS)</td>
+    <td>A digital tracking and decision-support system that supports monitoring of HIV services, client follow-up, clinical history, laboratory results, medication, referrals, and programme reporting.</td>
   </tr>
   <tr>
     <td><a href="https://build.fhir.org/implementationguide.html">Implementation Guide (IG)</a></td>
-    <td>A set of rules about how FHIR resources are used (or should be used) to solve a particular problem, with associated documentation to support and clarify the usage. This IG is based on WHO guidance, as it is represented in the Digital Adaptation Kit: SMART Guidelines for Immunizations, to support the adoption of open standards for interoperability.</td>
+    <td>A set of rules about how FHIR resources are used to solve a particular problem, with associated documentation to support and clarify the usage. This IG is based on Ethiopian Ministry of Health HIV programme guidance, adapted from WHO SMART Guidelines content, to support the adoption of open standards for interoperability.</td>
   </tr>
   <tr>
     <td>Indicator</td>
@@ -136,16 +136,16 @@ Key concepts and abbreviations are described here. Additional terms are defined 
     <td>Electronic health</td>
   </tr>
   <tr>
-    <td>EIR</td>
-    <td>Electronic immunization registry</td>
+    <td>EHR</td>
+    <td>Electronic health record</td>
   </tr>
   <tr>
     <td>EMR</td>
     <td>Electronic medical record</td>
   </tr>
   <tr>
-    <td>EPI</td>
-    <td>Expanded Programme on Immunization</td>
+    <td>HIV</td>
+    <td>Human immunodeficiency virus</td>
   </tr>
   <tr>
     <td>FHIR</td>
@@ -192,8 +192,8 @@ Key concepts and abbreviations are described here. Additional terms are defined 
     <td>Integrating the Healthcare Enterprise</td>
   </tr>
   <tr>
-    <td>IIS</td>
-    <td>Immunization Information System</td>
+    <td>HIS</td>
+    <td>Health information system</td>
   </tr>
   <tr>
     <td>ISCO</td>

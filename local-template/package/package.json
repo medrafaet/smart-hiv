@@ -1,10 +1,10 @@
 {
-    "name": "who.fhir.smart-ig-empty-local",
+    "name": "et.moh.fhir.smart-hiv-local",
     "version": "0.0.1",
     "type": "fhir.template",
     "license": "CC0-1.0",
-    "description": "Local template extension for WHO SMART FHIR IG",
-    "author": "http://who.int",
+    "description": "Local template extension for the Ethiopian MoH HIV SMART FHIR IG",
+    "author": "https://www.moh.gov.et",
       "base":  "who.template.root",
     "dependencies": {
       "who.template.root": "current"

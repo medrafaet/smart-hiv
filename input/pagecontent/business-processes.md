@@ -1,6 +1,5 @@
-This page describes the business processes included in the WHO Digital
-Adaptation Kit (DAK) HIV (link forthcoming). 
-For full details, see the published DAK content.
+This page describes the HIV business processes included in the Ethiopian Ministry of Health customization of the Digital Adaptation Kit (DAK).
+For full details, see the Ministry-approved DAK content.
 
 A business process, or process, is a set of related activities or tasks 
 performed together to achieve the objectives of the health programme area, 
@@ -10,7 +9,7 @@ that are performed within the business process. The workflow provides a “story
 for the business process being diagrammed and is used to enhance communication 
 and collaboration among users, stakeholders and engineers.
 
-The DAK for HIV focuses on key business processes <mark>insert content here</mark>.
+The Ethiopia HIV DAK focuses on the key business processes required for HIV registration, testing services, prevention, care and treatment, PMTCT, diagnostics, follow-up, referral, and surveillance workflows.
 
 ### Overview of Key Business Processes 
 The following table describes the workflows of the included processes. 

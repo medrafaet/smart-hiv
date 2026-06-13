@@ -12,12 +12,12 @@ The pages included in this section are described below.
 The documentation below details how to use this IG to execute the decision logic and the resources required to do so including PlanDefinitions, ActivityDefinitions, ValueSets, and Libraries.
 
 #### PlanDefinitions
-<mark>insert content here</mark> has been represented as a FHIR PlanDefinition conformant to the FHIR Clinical Practice Guidelines Implementation guide [CPG-ComputablePlanDefinition](http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableplandefinition). For example, there is a PlanDefinition for Hepatitis A, Measles, etc. The intention behind this design is for each implementation to utilize only the antigens that are required for their national/local context, as many countries have national vaccine routines, which may leverage the WHO guidance. The aim of this content was to be adaptable for those contexts. 
+HIV decision-support content has been represented as FHIR PlanDefinitions conformant to the FHIR Clinical Practice Guidelines Implementation Guide [CPG-ComputablePlanDefinition](http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableplandefinition). The intention behind this design is for Ethiopian implementations to use the PlanDefinitions required for their approved HIV service workflows while retaining standards-based traceability to source guidance.
 
 These PlanDefinitions can be found in the [Artifact Index](artifacts.html)
 
 #### ActivityDefinitions
-To represent the activities that need to be carried out, this implementation guide follows the workflow patterns established by the base FHIR specification. Each antigen represented as a PlanDefinition will be processed to produce ActivityDefnitions conform to the FHIR Clinical Practice Guidelines Implementation guide [CPG-ActivityProfiles](http://hl7.org/fhir/uv/cpg/profiles.html#activity-profiles).
+To represent the activities that need to be carried out, this implementation guide follows the workflow patterns established by the base FHIR specification. Each HIV workflow represented as a PlanDefinition can be processed to produce ActivityDefinitions conforming to the FHIR Clinical Practice Guidelines Implementation Guide [CPG-ActivityProfiles](http://hl7.org/fhir/uv/cpg/profiles.html#activity-profiles).
 
 
 #### FHIR Library
@@ -26,4 +26,4 @@ The FHIR Library contains a base64 encoded CQL library which represents the deci
 #### ValueSets
 Many of the ValueSets used in this IG are  from [CPG on FHIR](https://hl7.org/fhir/uv/cpg/) and the [IPS](https://hl7.org/fhir/uv/ips/). There are a number of generated ValueSets based on the user scenarios detailed in this IG.
 
-There is one exception to that format which is the vaccine libraries, which map the codes between a variety of different systems including SNOMED GPS and WHO ATC in order to allow implementers to search for any vaccine which might be applicable to their user. More details on this approach is provided below. 
+Terminology bindings in this guide may include international code systems and Ethiopia-specific concepts so that implementers can support both interoperability and Ministry-approved local reporting requirements.
