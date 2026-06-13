@@ -9,6 +9,7 @@ standard library to extract worksheet rows.
 from __future__ import annotations
 
 import csv
+import argparse
 import re
 from collections import Counter, defaultdict
 from dataclasses import dataclass
@@ -123,7 +124,10 @@ def compare_text(value: str) -> str:
 
 
 def relative(path: Path) -> str:
-    return str(path.relative_to(REPO_ROOT))
+    try:
+        return str(path.relative_to(REPO_ROOT))
+    except ValueError:
+        return str(path)
 
 
 def read_shared_strings(zip_file: ZipFile) -> List[str]:
@@ -476,6 +480,17 @@ def render_report(
     semantic_change_count = sum(1 for _, _, _, fields in changed if any(field in KEY_SEMANTIC_FIELDS for field in fields))
     validation_change_count = sum(1 for _, _, _, fields in changed if any(field in VALIDATION_FIELDS for field in fields))
     linkage_change_count = sum(1 for _, _, _, fields in changed if any(field in LINKAGE_FIELDS for field in fields))
+    duplicate_sheets = sorted(
+        {element.sheet for elements in ethiopia.duplicate_data_element_ids.values() for element in elements}
+    )
+    if duplicate_sheets:
+        duplicate_note = (
+            "Sheet counts are data element rows. The Ethiopia workbook has duplicate Data Element IDs in "
+            + ", ".join(f"`{sheet}`" for sheet in duplicate_sheets)
+            + ", so the row count is higher than the unique Data Element ID count."
+        )
+    else:
+        duplicate_note = "Sheet counts are data element rows. The Ethiopia workbook has no duplicate Data Element IDs."
 
     lines = [
         "# Ethiopia HIV DAK Data Dictionary Delta Report",
@@ -554,7 +569,7 @@ def render_report(
             sheet_rows,
         ),
         "",
-        "Sheet counts are data element rows. The Ethiopia workbook has duplicate Data Element IDs in `HIV.E-F PMTCT`, so the row count is higher than the unique Data Element ID count.",
+        duplicate_note,
         "",
         "## Most Changed Fields",
         "",
@@ -580,8 +595,8 @@ def render_report(
         "",
         "## Key Questions For Ministry Review",
         "",
-        "1. Are all 34 Ethiopia-only Data Element IDs intended additions to the national DAK?",
-        "2. Are all 205 WHO Data Element IDs absent from the Ethiopia workbook intentionally removed from national scope?",
+        f"1. Are all {len(added)} Ethiopia-only Data Element IDs intended additions to the national DAK?",
+        f"2. Are all {len(removed)} WHO Data Element IDs absent from the Ethiopia workbook intentionally removed from national scope?",
         "3. For shared IDs with label, data type, multiple-choice, or input-option changes, does the Data Element ID still represent the same concept?",
         "4. Should Ethiopia-specific `HIV.Surveil.*` elements become new IG elements, and where should they appear in the business process and FHIR mappings?",
         "5. Should removed WHO rows be deleted from the customized IG, hidden from narrative pages, or retained as optional/reference WHO content?",
@@ -597,7 +612,39 @@ def render_report(
     return "\n".join(lines)
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Generate a reviewable delta report for the Ethiopia HIV DAK data dictionary."
+    )
+    parser.add_argument(
+        "--ethiopia-workbook",
+        type=Path,
+        default=ETHIOPIA_WORKBOOK,
+        help=f"Ethiopia workbook to compare. Default: {relative(ETHIOPIA_WORKBOOK)}",
+    )
+    parser.add_argument(
+        "--who-workbook",
+        type=Path,
+        default=WHO_WORKBOOK,
+        help=f"WHO baseline workbook. Default: {relative(WHO_WORKBOOK)}",
+    )
+    parser.add_argument(
+        "--report-dir",
+        type=Path,
+        default=REPORT_DIR,
+        help=f"Output report directory. Default: {relative(REPORT_DIR)}",
+    )
+    return parser.parse_args()
+
+
 def main() -> None:
+    global ETHIOPIA_WORKBOOK, WHO_WORKBOOK, REPORT_DIR
+
+    args = parse_args()
+    ETHIOPIA_WORKBOOK = args.ethiopia_workbook
+    WHO_WORKBOOK = args.who_workbook
+    REPORT_DIR = args.report_dir
+
     if not ETHIOPIA_WORKBOOK.exists():
         raise FileNotFoundError(ETHIOPIA_WORKBOOK)
     if not WHO_WORKBOOK.exists():

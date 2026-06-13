@@ -1,6 +1,6 @@
 ValueSet: HIV.A.DE18
-Title: "Gender ValueSet"
-Description: "Value set of gender of the client"
+Title: "Sex ValueSet"
+Description: "Value set of Ethiopia HIV.A.DE18 sex options retained for registration"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"
@@ -11,6 +11,3 @@ Description: "Value set of gender of the client"
 
 * HIVConcepts#HIV.A.DE19 "Female"
 * HIVConcepts#HIV.A.DE20 "Male"
-* HIVConcepts#HIV.A.DE21 "Transgender male"
-* HIVConcepts#HIV.A.DE22 "Transgender female"
-* HIVConcepts#HIV.A.DE23 "Other"
