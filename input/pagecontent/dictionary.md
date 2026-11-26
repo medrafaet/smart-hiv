@@ -48,9 +48,9 @@ concept dictionary codes.
   </tr>
   <tr>
     <td>HIV.A2 Gather client details</td>
-    <td>HIV.A.DE2</td>
-    <td>Family name</td>
-    <td>Client's family name or last name</td>
+    <td>HIV.A.ET.DE1</td>
+    <td>Father name</td>
+    <td>Clients's father name</td>
     <td>N/A</td>
     <td>String</td>
     <td>N/A</td>
@@ -58,6 +58,40 @@ concept dictionary codes.
     <td>N/A</td>
     <td>Only letters and special characters (period, dash) allowed</td>
     <td>R</td>
+    <td>None</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.A2 Gather client details</td>
+    <td>HIV.A.ET.DE2</td>
+    <td>Grand Father's Name</td>
+    <td>Client's grand father name</td>
+    <td>N/A</td>
+    <td>String</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>Only letters and special characters (period, dash) allowed</td>
+    <td>R</td>
+    <td>None</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.A2 Gather client details</td>
+    <td>HIV.A.DE2</td>
+    <td>Family Name</td>
+    <td>Client's family name or last name</td>
+    <td>N/A</td>
+    <td>String</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>Only letters and special characters (period, dash) allowed</td>
+    <td>O</td>
     <td>None</td>
     <td></td>
     <td></td>
@@ -77,7 +111,7 @@ concept dictionary codes.
     <td>R</td>
     <td>None</td>
     <td>HIV.B7.DT, HIV.B9.DT, HIV.D17.DT, HIV.E4.DT, HIV.S.1, HIV.S.2, HIV.S.3, HIV.S.4</td>
-    <td>HEP.1B, HEP.2B, STI.1B, STI.4B, STI.7B, STI.8B</td>
+    <td>HEP.1A, HEP.1B, HEP.2A, HEP.2B, STI.1A, STI.1B, STI.4A, STI.4B, STI.7A, STI.7B, STI.8A, STI.8B</td>
     <td>The encounter date may be system generated, but there is a requirement to be able to back enter data.</td>
   </tr>
   <tr>
@@ -101,7 +135,7 @@ concept dictionary codes.
     <td>HIV.A2 Gather client details</td>
     <td>HIV.A.DE5</td>
     <td>Referred by</td>
-    <td>How the client was referred</td>
+    <td>who referd the client</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -152,8 +186,8 @@ concept dictionary codes.
     <td>HIV.A6.1 Review sociodemographic data with client
 HIV.A5 Create new client record</td>
     <td>HIV.A.DE8</td>
-    <td>Unique identifier</td>
-    <td>Unique identifier generated for new clients or a universal ID, if used in the country</td>
+    <td>MRN</td>
+    <td>Unique identifier generated for new clients</td>
     <td>N/A</td>
     <td>ID</td>
     <td>N/A</td>
@@ -171,25 +205,7 @@ HIV.A5 Create new client record</td>
 HIV.A5 Create new client record</td>
     <td>HIV.A.DE9</td>
     <td>National ID</td>
-    <td>National unique identifier assigned to the client, if used in the country</td>
-    <td>N/A</td>
-    <td>ID</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>Minimum and maximum number of characters based on local policy</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.A6.1 Review sociodemographic data with client
-HIV.A5 Create new client record</td>
-    <td>HIV.A.DE10</td>
-    <td>National health ID</td>
-    <td>National health unique identifier assigned to the client, if used in the country</td>
+    <td>National unique identifier assigned to the client</td>
     <td>N/A</td>
     <td>ID</td>
     <td>N/A</td>
@@ -206,8 +222,8 @@ HIV.A5 Create new client record</td>
     <td>HIV.A6.1 Review sociodemographic data with client
 HIV.A5 Create new client record</td>
     <td>HIV.A.DE11</td>
-    <td>National programme ID</td>
-    <td>National programme unique identifier assigned to the client, if used in the country</td>
+    <td>Unique ART number</td>
+    <td>National programme unique identifier assigned to the client</td>
     <td>N/A</td>
     <td>ID</td>
     <td>N/A</td>
@@ -225,7 +241,7 @@ HIV.A5 Create new client record</td>
 HIV.A5 Create new client record</td>
     <td>HIV.A.DE12</td>
     <td>National health insurance ID</td>
-    <td>National health insurance unique identifier assigned to the client, if used in the country</td>
+    <td>National health insurance unique identifier assigned to the client</td>
     <td>N/A</td>
     <td>ID</td>
     <td>N/A</td>
@@ -233,24 +249,6 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>Minimum and maximum number of characters based on local policy</td>
     <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.A6.1 Review sociodemographic data with client
-HIV.A5 Create new client record</td>
-    <td>HIV.A.DE13</td>
-    <td>Country of birth</td>
-    <td>Country where the client was born</td>
-    <td>Select one</td>
-    <td>Coding</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>List of countries</td>
-    <td>R</td>
     <td>None</td>
     <td></td>
     <td></td>
@@ -320,19 +318,19 @@ HIV.A5 Create new client record</td>
     <td>Quantity</td>
     <td>N/A</td>
     <td>Duration</td>
-    <td>("Visit date" - "Date of birth")/365</td>
+    <td>("Visit Date" - "Date of birth")/365</td>
     <td>None</td>
     <td>C</td>
     <td>Calculated from "Date of birth"</td>
     <td>HIV.B2.DT, HIV.C23.DT, HIV.D12.DT, HIV.D15.DT, HIV.D17.DT, HIV.D21.1.DT, HIV.D21.2.DT, HIV.S.1, HIV.S.3</td>
-    <td>ART.1, ART.10, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, CCA.1, CCA.2, CCA.3, CCA.4, DFT.1, DFT.2, DFT.3, DFT.4, DFT.5, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.5, HTS.6, HTS.7, HTS.8, HTS.9, INC.1, PRV.10, PRV.11, PRV.12, PRV.13, PRV.14, PRV.15, PRV.16, PRV.17, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.8, PRV.9, SDC.1, STI.1A, STI.1B, STI.1C1, STI.1C2, STI.2A, STI.2B, STI.2C1, STI.2C2, STI.3A, STI.3B, STI.3C1, STI.3C2, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.1, TBH.2, TBH.3, TBH.4, VER.1, VER.5, VER.7</td>
+    <td>ART.1, ART.2, ART.3, ART.4, ART.8, ART.9, CCA.1, CCA.3, CCA.4, DFT.1, DFT.2, DFT.3, DFT.4, DFT.5, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.5, HTS.6, PRV.10, PRV.11, PRV.12, PRV.13, PRV.14, PRV.15, PRV.16, PRV.17, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.8, PRV.9, SDC.1, STI.1A, STI.1B, STI.1C1, STI.1C2, STI.2A, STI.2B, STI.2C1, STI.2C2, STI.3A, STI.3B, STI.3C1, STI.3C2, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.1, TBH.2, TBH.3, TBH.4, VER.1, VER.5, VER.7, PRV.2, PRV.3</td>
     <td></td>
   </tr>
   <tr>
     <td>HIV.A6.1 Review sociodemographic data with client
 HIV.A5 Create new client record</td>
     <td>HIV.A.DE18</td>
-    <td>Gender*</td>
+    <td>sex</td>
     <td>Gender of the client*</td>
     <td>Select one</td>
     <td>Coding</td>
@@ -343,7 +341,7 @@ HIV.A5 Create new client record</td>
     <td>R</td>
     <td>None</td>
     <td>HIV.D12.DT, HIV.S.1</td>
-    <td>ART.1, ART.10, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, DFT.1, DFT.2, DFT.3, DFT.4, DFT.5, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.6, HTS.7, HTS.8, HTS.9, INC.1, PRV.10, PRV.11, PRV.12, PRV.13, PRV.14, PRV.17, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.8, PRV.9, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.1, TBH.2, TBH.3, TBH.4</td>
+    <td>ART.1, ART.2, ART.3, ART.4, ART.8, ART.9, DFT.1, DFT.2, DFT.3, DFT.4, DFT.5, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.6, PRV.10, PRV.11, PRV.12, PRV.13, PRV.14, PRV.17, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.8, PRV.9, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.1, TBH.2, TBH.3, TBH.4, PRV.2, PRV.3</td>
     <td>*The answer list for the Gender data element in this is HIV DAK is for the purposes of disaggregation in reporting. This may differ from other definitions of gender and may need to be constructed from other data elements in an electronic medical record system</td>
   </tr>
   <tr>
@@ -361,7 +359,7 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.D12.DT, HIV.S.1</td>
-    <td>ART.1, ART.10, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, DFT.1, DFT.2, DFT.3, DFT.4, DFT.5, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.6, HTS.7, HTS.8, HTS.9, INC.1, PRV.10, PRV.11, PRV.12, PRV.13, PRV.14, PRV.17, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.8, PRV.9, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.1, TBH.2, TBH.3, TBH.4</td>
+    <td>ART.1, ART.2, ART.3, ART.4, ART.8, ART.9, DFT.1, DFT.2, DFT.3, DFT.4, DFT.5, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.6, PRV.10, PRV.11, PRV.12, PRV.13, PRV.14, PRV.17, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.8, PRV.9, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.1, TBH.2, TBH.3, TBH.4, PRV.2, PRV.3</td>
     <td></td>
   </tr>
   <tr>
@@ -379,95 +377,59 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.D12.DT, HIV.S.1</td>
-    <td>ART.1, ART.10, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, DFT.1, DFT.2, DFT.3, DFT.4, DFT.5, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.6, HTS.7, HTS.8, HTS.9, INC.1, PRV.10, PRV.11, PRV.12, PRV.13, PRV.14, PRV.17, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.8, PRV.9, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.1, TBH.2, TBH.3, TBH.4</td>
+    <td>ART.1, ART.2, ART.3, ART.4, ART.8, ART.9, DFT.1, DFT.2, DFT.3, DFT.4, DFT.5, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.6, PRV.10, PRV.11, PRV.12, PRV.13, PRV.14, PRV.17, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.8, PRV.9, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.1, TBH.2, TBH.3, TBH.4, PRV.2, PRV.3</td>
     <td></td>
   </tr>
   <tr>
     <td>HIV.A6.1 Review sociodemographic data with client
 HIV.A5 Create new client record</td>
-    <td>HIV.A.DE21</td>
-    <td>Transgender male</td>
-    <td>Client identifies as transgender male</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Transgender male</td>
+    <td>HIV.A.DE54</td>
+    <td>Country of residence</td>
+    <td>Country in which the client usually resides. This is distinct from country of birth or nationality.</td>
+    <td>Select one</td>
+    <td>Coding</td>
+    <td>ISO 3166-1 country code list (alpha-2); Ethiopia = ET</td>
     <td>N/A</td>
     <td>N/A</td>
+    <td>Selected code must be valid in the approved country value set</td>
+    <td>R</td>
     <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.D12.DT, HIV.S.1</td>
-    <td>ART.1, ART.10, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, DFT.1, DFT.2, DFT.3, DFT.4, DFT.5, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.6, HTS.7, HTS.8, HTS.9, INC.1, PRV.10, PRV.11, PRV.12, PRV.13, PRV.14, PRV.17, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.8, PRV.9, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.1, TBH.2, TBH.3, TBH.4</td>
-    <td></td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>WHO DAK adaptation for Ethiopia: use ISO 3166-1 for country coding. Example: ET = Ethiopia. Confirm that the source concept means country of residence before mapping as Equivalent.</td>
   </tr>
   <tr>
     <td>HIV.A6.1 Review sociodemographic data with client
 HIV.A5 Create new client record</td>
-    <td>HIV.A.DE22</td>
-    <td>Transgender female</td>
-    <td>Client identifies as transgender female</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Transgender female</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.D12.DT, HIV.S.1</td>
-    <td>ART.1, ART.10, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, DFT.1, DFT.2, DFT.3, DFT.4, DFT.5, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.6, HTS.7, HTS.8, HTS.9, INC.1, PRV.10, PRV.11, PRV.12, PRV.13, PRV.14, PRV.17, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.8, PRV.9, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.1, TBH.2, TBH.3, TBH.4</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.A6.1 Review sociodemographic data with client
-HIV.A5 Create new client record</td>
-    <td>HIV.A.DE23</td>
-    <td>Other</td>
-    <td>Additional category</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Other</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.D12.DT, HIV.S.1</td>
-    <td>ART.1, ART.10, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, DFT.1, DFT.2, DFT.3, DFT.4, DFT.5, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.6, HTS.7, HTS.8, HTS.9, INC.1, PRV.10, PRV.11, PRV.12, PRV.13, PRV.14, PRV.17, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.8, PRV.9, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.1, TBH.2, TBH.3, TBH.4</td>
-    <td>For "Other" specify in certain settings. May not specify in settings where to do so would put the client at risk.</td>
-  </tr>
-  <tr>
-    <td>HIV.A6.1 Review sociodemographic data with client
-HIV.A5 Create new client record</td>
-    <td>HIV.A.DE24</td>
-    <td>Other (specify)</td>
-    <td>Additional category (please specify)</td>
-    <td>N/A</td>
-    <td>String</td>
-    <td>N/A</td>
+    <td>HIV.A.ET.DE18</td>
+    <td>Region</td>
+    <td>Client's residency region</td>
+    <td>Select one</td>
+    <td>Coding</td>
+    <td>Ethiopia official MFR list.</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Gender"='Other'</td>
+    <td>Required if input in HIV.A.DE54 "Country of residence" = "ET"</td>
     <td></td>
     <td></td>
-    <td>For "Other" specify in certain settings. May not specify in settings where to do so would put the client at risk.</td>
+    <td></td>
   </tr>
   <tr>
     <td>HIV.A6.1 Review sociodemographic data with client
 HIV.A5 Create new client record</td>
-    <td>HIV.A.DE25</td>
-    <td>Sex</td>
-    <td>Sex of the client assigned at birth</td>
+    <td>HIV.A.ET.DE3</td>
+    <td>Zone/ Subcity</td>
+    <td>Client's residency Zone/ Subcity</td>
     <td>Select one</td>
     <td>Coding</td>
-    <td>N/A</td>
+    <td>Ethiopia official MFR list.</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
-    <td>R</td>
-    <td>None</td>
+    <td>C</td>
+    <td>Required if input in HIV.A.DE54 "Country of residence" = "ET"</td>
     <td></td>
     <td></td>
     <td></td>
@@ -475,17 +437,17 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.A6.1 Review sociodemographic data with client
 HIV.A5 Create new client record</td>
-    <td>HIV.A.DE26</td>
-    <td>Female</td>
-    <td>Client identifies as female</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Female</td>
+    <td>HIV.A.ET.DE4</td>
+    <td>Woreda</td>
+    <td>Client's residency Woreda</td>
+    <td>Select one</td>
+    <td>Coding</td>
+    <td>Ethiopia official MFR list.</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
-    <td>R</td>
-    <td>None</td>
+    <td>C</td>
+    <td>Required if input in HIV.A.DE54 "Country of residence" = "ET"</td>
     <td></td>
     <td></td>
     <td></td>
@@ -493,17 +455,17 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.A6.1 Review sociodemographic data with client
 HIV.A5 Create new client record</td>
-    <td>HIV.A.DE27</td>
-    <td>Male</td>
-    <td>Client identifies as male</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Male</td>
+    <td>HIV.A.ET.DE5</td>
+    <td>Kebele</td>
+    <td>Client's residency Kebele</td>
+    <td>N/A</td>
+    <td>String</td>
+    <td></td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
-    <td>R</td>
-    <td>None</td>
+    <td>O</td>
+    <td>Applicable only if "Country of residence" = "ET". Disabled/hidden if "Country of residence" ≠ "ET".</td>
     <td></td>
     <td></td>
     <td></td>
@@ -511,35 +473,53 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.A6.1 Review sociodemographic data with client
 HIV.A5 Create new client record</td>
-    <td>HIV.A.DE28</td>
-    <td>Other</td>
-    <td>Client identifies in non-binary way or as a sexual and gender minority (or minorities)</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Other</td>
+    <td>HIV.A.ET.DE6</td>
+    <td>Ketena/Gott</td>
+    <td>Client's residency Ketena/Gott</td>
+    <td>N/A</td>
+    <td>String</td>
+    <td></td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
-    <td>R</td>
+    <td>O</td>
+    <td>Applicable only if "Country of residence" = "ET". Disabled/hidden if "Country of residence" ≠ "ET".</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.A6.1 Review sociodemographic data with client
+HIV.A5 Create new client record</td>
+    <td>HIV.A.ET.DE7</td>
+    <td>House Number</td>
+    <td>Client's residency House number</td>
+    <td>N/A</td>
+    <td>String</td>
+    <td></td>
+    <td>N/A</td>
+    <td>N/A</td>
     <td>None</td>
+    <td>O</td>
+    <td>Applicable only if "Country of residence" = "ET". Disabled/hidden if "Country of residence" ≠ "ET".</td>
     <td></td>
     <td></td>
-    <td>For "Other" specify in certain settings. May not specify in settings where to do so would put the client at risk.</td>
+    <td></td>
   </tr>
   <tr>
     <td>HIV.A6.1 Review sociodemographic data with client
 HIV.A5 Create new client record</td>
     <td>HIV.A.DE29</td>
     <td>Address</td>
-    <td>Client's home address or address which the client is consenting to disclose</td>
+    <td>Client's residency address for non Ethiopians</td>
     <td>N/A</td>
     <td>String</td>
+    <td></td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>N/A</td>
-    <td>Can be based on the structure and format of addresses in the country</td>
-    <td>R</td>
     <td>None</td>
+    <td>C</td>
+    <td>Required if input in HIV.A.DE54 "Country of residence" ≠ "ET</td>
     <td></td>
     <td></td>
     <td></td>
@@ -549,82 +529,10 @@ HIV.A5 Create new client record</td>
 HIV.A5 Create new client record</td>
     <td>HIV.A.DE30</td>
     <td>Marital Status</td>
-    <td>Client's current marital status </td>
+    <td>Client's current marital status</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.A6.1 Review sociodemographic data with client
-HIV.A5 Create new client record</td>
-    <td>HIV.A.DE31</td>
-    <td>Unmarried</td>
-    <td>Client does not have an active marriage contract</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Unmarried</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.A6.1 Review sociodemographic data with client
-HIV.A5 Create new client record</td>
-    <td>HIV.A.DE32</td>
-    <td>Never married</td>
-    <td>Client has never entered into a marriage contract</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Never married</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.A6.1 Review sociodemographic data with client
-HIV.A5 Create new client record</td>
-    <td>HIV.A.DE33</td>
-    <td>Married</td>
-    <td>A current marriage contract is active</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Married</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.A6.1 Review sociodemographic data with client
-HIV.A5 Create new client record</td>
-    <td>HIV.A.DE34</td>
-    <td>Polygamous</td>
-    <td>Client is in a polygamous union</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Polygamous</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -638,11 +546,11 @@ HIV.A5 Create new client record</td>
     <td>HIV.A6.1 Review sociodemographic data with client
 HIV.A5 Create new client record</td>
     <td>HIV.A.DE35</td>
-    <td>Divorced </td>
+    <td>Divorced</td>
     <td>Client is divorced, whereby marriage contract has been declared dissolved and inactive</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Divorced </td>
+    <td>Divorced</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -673,12 +581,12 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.A6.1 Review sociodemographic data with client
 HIV.A5 Create new client record</td>
-    <td>HIV.A.DE37</td>
-    <td>Unknown</td>
-    <td>Client does not wish to disclose marital status</td>
+    <td>HIV.A.DE31</td>
+    <td>Single</td>
+    <td>Client is single</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Unknown</td>
+    <td>Single</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -691,12 +599,12 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.A6.1 Review sociodemographic data with client
 HIV.A5 Create new client record</td>
-    <td>HIV.A.DE38</td>
-    <td>Domestic partner</td>
-    <td>Client reports that they are in a domestic partnership</td>
+    <td>HIV.A.DE33</td>
+    <td>Married</td>
+    <td>Client is married</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Domestic partner</td>
+    <td>Married</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -709,35 +617,17 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.A6.1 Review sociodemographic data with client
 HIV.A5 Create new client record</td>
-    <td>HIV.A.DE39</td>
-    <td>Annulled</td>
-    <td>Client's marriage contract has been declared null and to have not existed</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Annulled</td>
+    <td>HIV.A.ET.DE8</td>
+    <td>Educational Status</td>
+    <td>The client's educational status</td>
+    <td>Select one</td>
+    <td>Coding</td>
+    <td></td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.A6.1 Review sociodemographic data with client
-HIV.A5 Create new client record</td>
-    <td>HIV.A.DE40</td>
-    <td>Legally separated</td>
-    <td>Client is legally separated from their spouse</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Legally separated</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
     <td></td>
     <td></td>
     <td></td>
@@ -745,17 +635,161 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.A6.1 Review sociodemographic data with client
 HIV.A5 Create new client record</td>
-    <td>HIV.A.DE41</td>
-    <td>Interlocutory</td>
-    <td>Client is subject to an interlocutory decree</td>
+    <td>HIV.A.ET.DE9</td>
+    <td>No formal education</td>
+    <td>The client hasn't received any formal education</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Interlocutory</td>
+    <td>No formal education</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
-    <td>O</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.A6.1 Review sociodemographic data with client
+HIV.A5 Create new client record</td>
+    <td>HIV.A.ET.DE10</td>
+    <td>Can read and write</td>
+    <td>The client hasn’t received any formal education but can read and write</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Can read and write</td>
+    <td>N/A</td>
+    <td>N/A</td>
     <td>None</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.A6.1 Review sociodemographic data with client
+HIV.A5 Create new client record</td>
+    <td>HIV.A.ET.DE11</td>
+    <td>Primary school</td>
+    <td>The client has completed primary education</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Primary school</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.A6.1 Review sociodemographic data with client
+HIV.A5 Create new client record</td>
+    <td>HIV.A.ET.DE12</td>
+    <td>Secondary school</td>
+    <td>The client has completed secondary education</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Secondary school</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.A6.1 Review sociodemographic data with client
+HIV.A5 Create new client record</td>
+    <td>HIV.A.ET.DE13</td>
+    <td>Higher education</td>
+    <td>The client has an undergraduate degree or higher</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Higher education</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.A6.1 Review sociodemographic data with client
+HIV.A5 Create new client record</td>
+    <td>HIV.A.ET.DE14</td>
+    <td>Occupation</td>
+    <td>The client's occupation</td>
+    <td>Input Option</td>
+    <td>Coding</td>
+    <td></td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.A6.1 Review sociodemographic data with client
+HIV.A5 Create new client record</td>
+    <td>HIV.A.ET.DE15</td>
+    <td>Employed</td>
+    <td>The client is formally employed at a formal organization(company)</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Employed</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.A6.1 Review sociodemographic data with client
+HIV.A5 Create new client record</td>
+    <td>HIV.A.ET.DE16</td>
+    <td>Unemployed</td>
+    <td>The client is currently unemployed</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Unemployed</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.A6.1 Review sociodemographic data with client
+HIV.A5 Create new client record</td>
+    <td>HIV.A.ET.DE24</td>
+    <td>Other ( specify)</td>
+    <td>The above descrioptions do not capture the client's occupation- specify in text here</td>
+    <td>Input Option</td>
+    <td>String</td>
+    <td></td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td></td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -765,7 +799,7 @@ HIV.A5 Create new client record</td>
 HIV.A5 Create new client record</td>
     <td>HIV.A.DE42</td>
     <td>Telephone number</td>
-    <td>Client's telephone number (a landline or a mobile phone number)</td>
+    <td>Can be a landline or a mobile phone number</td>
     <td>N/A</td>
     <td>Quantity</td>
     <td>N/A</td>
@@ -782,10 +816,10 @@ HIV.A5 Create new client record</td>
     <td>HIV.A6.1 Review sociodemographic data with client
 HIV.A5 Create new client record</td>
     <td>HIV.A.DE43</td>
-    <td>[Administrative Area]</td>
+    <td>Catchment area</td>
     <td>This should be a context-specific list of administrative areas, such as villages, districts, etc. The purpose of this data element is to allow for grouping and flagging of client data to a particular facility's catchment area. This can be input into the system by the end user OR it can be automated in the database based on the end user's attributes.</td>
-    <td>Select one</td>
-    <td>Coding</td>
+    <td>N/A</td>
+    <td>String</td>
     <td>Context-specific list of administrative areas, e.g. facility list, district list, etc.</td>
     <td>N/A</td>
     <td>N/A</td>
@@ -819,7 +853,7 @@ HIV.A5 Create new client record</td>
 HIV.A5 Create new client record</td>
     <td>HIV.A.DE45</td>
     <td>Reminder messages</td>
-    <td>Whether client wants to receive text or other messages as follow-up for HIV services</td>
+    <td>Whether client wants to receive text or other messages as follow-up for family planning</td>
     <td>N/A</td>
     <td>Boolean</td>
     <td>True/False</td>

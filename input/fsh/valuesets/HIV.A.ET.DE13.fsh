@@ -1,6 +1,6 @@
 ValueSet: HIV.A.ET.DE13
 Title: "Occupation ValueSet"
-Description: "Value set of Ethiopia HIV.A.ET.DE13 occupation options retained for registration."
+Description: "Occupation codes from the previous Ethiopia HIV registration data dictionary. Current registration uses the Ethiopian base occupation-vs value set."
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"

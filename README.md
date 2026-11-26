@@ -25,11 +25,11 @@ but must not weaken its constraints or replace its required bindings.
 Keep WHO concept meanings and clinical logic intact; source row IDs must not
 silently redefine existing coded concepts.
 
-This commit pins the source only. It does not regenerate or certify the current
-questionnaires, logical models, terminology, CQL, or dictionary narrative against
-this workbook. In particular, the latest workbook gives required grandfather
-name its own ID, `HIV.A.ET.DE2`, and retains `HIV.A.DE2` for optional family name.
-The registration artifacts still need to be aligned with that distinction.
+Use the workbook to review the questionnaires, logical models, terminology,
+CQL, and dictionary narrative. The registration questionnaire and logical model
+distinguish required grandfather name (`HIV.A.ET.DE2`) from optional family name
+(`HIV.A.DE2`). The logical model maps grandfather name to the workbook ID
+because the existing `HIVConcepts` code `HIV.A.ET.DE2` identifies Zone/Subcity.
 
 ### DevOps and validation handoff
 

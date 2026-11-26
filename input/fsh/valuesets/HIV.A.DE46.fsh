@@ -1,6 +1,6 @@
 ValueSet: HIV.A.DE46
 Title: "Communication preference(s) ValueSet"
-Description: "Value set of how the client would like to receive family planning communications"
+Description: "Communication channels the client prefers for HIV services."
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"

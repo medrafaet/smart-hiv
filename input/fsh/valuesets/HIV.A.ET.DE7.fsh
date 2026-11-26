@@ -1,6 +1,6 @@
 ValueSet: HIV.A.ET.DE7
 Title: "Educational Status ValueSet"
-Description: "Value set of Ethiopia HIV.A.ET.DE7 educational status options retained for registration."
+Description: "Education codes from the previous Ethiopia HIV registration data dictionary. Current registration uses the Ethiopian base education-status-vs value set."
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"
