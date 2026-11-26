@@ -1,12 +1,13 @@
 Instance: HIV.F6CheckWhetherInfantChildHadHivExposure
 InstanceOf: sdc-questionnaire-extr-smap
 Title: "Check whether infant/child had HIV exposure"
-Description: "Questionnaire for check whether infant/child had HIV exposure"
+Description: "Records the infant's documented HIV exposure and whether breastfeeding continues."
 Usage: #definition
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablequestionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
 * subjectType = #Patient
 * language = #en
+* version = "2026-10"
 * status = #draft
 * experimental = true
 
@@ -18,12 +19,15 @@ Usage: #definition
   * required = true
   * repeats = false
   * readOnly = false
-  * answerValueSet = "#HIV.E.DE108"
+  * answerValueSet = Canonical(HIV.E.DE108)
 * item[+]
   * id = "HIV.E.DE112"
   * linkId = "HIV.E.DE112"
   * type = #boolean
-  * text = "HIV-exposed infant or child"
+  * text = "HIV-exposed infant is still breastfeeding"
   * required = false
   * repeats = false
   * readOnly = false
+  * enableWhen.question = "HIV.E.DE108"
+  * enableWhen.operator = #=
+  * enableWhen.answerCoding = HIVConcepts#HIV.E.DE110

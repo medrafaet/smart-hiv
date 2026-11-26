@@ -29698,10 +29698,10 @@ HIV.A5 Create new client record</td>
     <th>Annotations</th>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE1</td>
-    <td>Pregnant woman's first name</td>
-    <td>Pregnant woman's first or given name</td>
+    <td>Mother&#x27;s name</td>
+    <td>Name of the client</td>
     <td>N/A</td>
     <td>String</td>
     <td>N/A</td>
@@ -29712,13 +29712,47 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Reuse the verified given name of the maternal client when available.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
+    <td>HIV.E.ET.DE1</td>
+    <td>Father&#x27;s name</td>
+    <td>Name of the client&#x27;s father</td>
+    <td>N/A</td>
+    <td>String</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>Only letters and special characters (period, dash) allowed</td>
+    <td>C</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Distinct from family name. Use the Ethiopian Base father-name extension when exchanging the maternal Patient record.</td>
+  </tr>
+  <tr>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
+    <td>HIV.E.ET.DE44</td>
+    <td>Grandfather&#x27;s name</td>
+    <td>Grandfather&#x27;s name</td>
+    <td>N/A</td>
+    <td>String</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>Only letters and special characters (period, dash) allowed</td>
+    <td>C</td>
+    <td>None</td>
+    <td></td>
+    <td></td>
+    <td>Distinct from family name. Use the Ethiopian Base grandfather-name extension when exchanging the maternal Patient record.</td>
+  </tr>
+  <tr>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE2</td>
-    <td>Pregnant woman's surname</td>
-    <td>Pregnant woman's family name or last name</td>
+    <td>Family name</td>
+    <td>Client&#x27;s family name or last name</td>
     <td>N/A</td>
     <td>String</td>
     <td>N/A</td>
@@ -29732,10 +29766,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE3</td>
-    <td>Pregnant woman's unique ID</td>
-    <td>Unique identifier generated for new clients or a universal ID, if used in the country</td>
+    <td>Unique ART ID number</td>
+    <td>Region number/facility type code/specific facility code/ patient/client assigned number to the client if enrolled in HIV Care.</td>
     <td>N/A</td>
     <td>ID</td>
     <td>N/A</td>
@@ -29746,13 +29780,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Use the verified HIV programme identifier when the client is enrolled in HIV care. The logical model maps to the workbook row because the WHO code describes a generic identifier.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE4</td>
-    <td>Antenatal care number</td>
-    <td>Identification number assigned to woman at first visit to the ANC based on national system</td>
+    <td>Antenatal care serial number</td>
+    <td>Identification number assigned to woman at first visit to the ANC</td>
     <td>N/A</td>
     <td>ID</td>
     <td>N/A</td>
@@ -29763,10 +29797,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Use the verified ANC serial number when assigned. The ART number and ANC serial number identify different records.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE5</td>
     <td>Gestational age</td>
     <td>Gestational age in weeks and/or days depending on the source of gestational age</td>
@@ -29775,15 +29809,15 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>Integer Quantity</td>
     <td>Duration</td>
-    <td>4 weeks ≤ "Gestational age" ≤ 40 weeks</td>
+    <td>4 weeks ≤ &quot;Gestational age&quot; ≤ 40 weeks</td>
     <td>R</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Capture completed weeks. Values outside 4 to 40 weeks raise a verification warning.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE6</td>
     <td>Source of gestational age</td>
     <td>Gestational age can be calculated multiple ways. This data element describes where the gestational age above has been calculated from.</td>
@@ -29800,10 +29834,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE7</td>
-    <td>Last menstrual period (LMP)</td>
-    <td>Gestational age (GA) calculated from LMP</td>
+    <td>Last normal menstrual period (LNMP)</td>
+    <td>Gestational age (GA) calculated from a reliable LMP</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Last menstrual period (LMP)</td>
@@ -29817,10 +29851,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE8</td>
     <td>Ultrasound</td>
-    <td>Woman's gestational age today calculated field using ultrasound GA and ultrasound date</td>
+    <td>Woman&#x27;s gestational age today calculated field using ultrasound GA that was done before 24 weeks and ultrasound date</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Ultrasound</td>
@@ -29834,10 +29868,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE9</td>
     <td>Symphysis fundal height (SFH) or abdominal palpation</td>
-    <td>If LMP is unknown and either ultrasound wasn't done or it wasn't done early enough, then show the option for health worker to enter GA in weeks based on Symphysis Fundal Height (SFH) or abdominal palpation.</td>
+    <td>If LMP is unknown and either ultrasound wasn&#x27;t done or it wasn&#x27;t done early enough, then show the option for health worker to enter GA in weeks based on Symphysis Fundal Height (SFH) or abdominal palpation.</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Symphysis fundal height (SFH) or abdominal palpation</td>
@@ -29851,7 +29885,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE10</td>
     <td>Expected date of delivery (EDD)</td>
     <td>Expected date of delivery based on gestational age</td>
@@ -29868,7 +29902,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE11</td>
     <td>Number of pregnancies (gravida)</td>
     <td>Total number of times the woman has been pregnant (including this pregnancy). Also referred to as gravida.</td>
@@ -29877,66 +29911,49 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>Integer Quantity</td>
     <td>N/A</td>
-    <td>1 ≤ "Number of pregnancies (gravida)" ≤ 15</td>
+    <td>1 ≤ &quot;Number of pregnancies (gravida)&quot; ≤ 15</td>
     <td>R</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Include the pregnancy being documented in the total. Previous pregnancies are calculated as this total minus one. The workbook range is checked.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
-    <td>HIV.E.DE12</td>
-    <td>Number of previous pregnancies</td>
-    <td>This calculates the total number of all previous pregnancies (i.e. not including this current pregnancy). This is done for easier obstetric history calculations.</td>
-    <td>N/A</td>
-    <td>Quantity</td>
-    <td>N/A</td>
-    <td>Integer Quantity</td>
-    <td>"Number of pregnancies (gravida)" - 1</td>
-    <td>None</td>
-    <td>R</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE13</td>
     <td>Number of miscarriages and/or abortions</td>
-    <td>Total number of pregnancies lost or ended due to miscarriages and/or abortions before 22 weeks / 5 months</td>
+    <td>Total number of pregnancies lost or ended due to miscarriages and/or abortions before 28 weeks / 7months</td>
     <td>N/A</td>
     <td>Quantity</td>
     <td>N/A</td>
     <td>Integer Quantity</td>
     <td>N/A</td>
-    <td>0 ≤ "Number of miscarriages and/or abortions" ≤ "Number of previous pregnancies"</td>
+    <td>0 ≤ &quot;Number of miscarriages and/or abortions&quot; ≤ &quot;Number of previous pregnancies&quot;</td>
     <td>R</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>The October workbook uses 28 weeks. The logical model maps to the workbook row because the WHO code uses 22 weeks.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE14</td>
     <td>Number of live births</td>
-    <td>Total number of live births after 22 weeks</td>
+    <td>Total number of live births after 28 weeks</td>
     <td>N/A</td>
     <td>Quantity</td>
     <td>N/A</td>
     <td>Integer Quantity</td>
     <td>N/A</td>
-    <td>0 ≤ "Number of live births" ≤ ("Number of previous pregnancies" - "Number of miscarriages and/or abortions")</td>
+    <td>0 ≤ &quot;Number of live births&quot; ≤ (&quot;Number of previous pregnancies&quot; – &quot;Number of miscarriages and/or abortions&quot;)</td>
     <td>R</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Count live births in previous pregnancies using the workbook threshold. The logical model maps to the workbook row because the WHO code uses 22 weeks. Multiple births can produce more than one infant per pregnancy, so the form flags the workbook cross-check as a warning.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE15</td>
     <td>Number of caesarian sections</td>
     <td>Total number of caesarean sections</td>
@@ -29945,32 +29962,32 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>Integer Quantity</td>
     <td>N/A</td>
-    <td>0 ≤ "Number of caesarian sections" ≤ "'Parity"</td>
+    <td>0 ≤ &quot;Number of caesarian sections&quot; ≤ &quot;&#x27;Parity&quot;</td>
     <td>R</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record caesarean sections before the pregnancy being documented. The form warns when the count exceeds the recorded birth count.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE16</td>
     <td>Number of stillbirths</td>
-    <td>Total number of stillbirths after 22 weeks</td>
+    <td>Total number of births after 28 weeks in which the neonate has no signs of life at birth</td>
     <td>N/A</td>
     <td>Quantity</td>
     <td>N/A</td>
     <td>Integer Quantity</td>
     <td>N/A</td>
-    <td>0 ≤ "Number of stillbirths" ≤ ("Number of previous pregnancies" - "Number of miscarriages and/or abortions" - "Number of live births")</td>
+    <td>0 ≤ &quot;Number of stillbirths&quot; ≤ (&quot;Number of previous pregnancies&quot; - &quot;Number of miscarriages and/or abortions&quot; - &quot;Number of live births&quot;)</td>
     <td>R</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Count stillbirths in previous pregnancies using the workbook threshold. The logical model maps to the workbook row because the WHO code uses 22 weeks.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE17</td>
     <td>Past pregnancy complications</td>
     <td>Whether the woman has had any complications or problems in any previous pregnancy</td>
@@ -29984,10 +30001,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>See ANC DAK</td>
+    <td>Record all applicable complications. Select No past pregnancy complications or Does not know on its own.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE18</td>
     <td>No past pregnancy complications</td>
     <td>No known past pregnancy problems</td>
@@ -30001,13 +30018,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>See ANC DAK</td>
+    <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE19</td>
     <td>Does not know of any past pregnancy complications</td>
-    <td>Don't know if there were any problems during past pregnancies</td>
+    <td>Don&#x27;t know if there were any problems during past pregnancies</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Does not know of any past pregnancy complications</td>
@@ -30018,10 +30035,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>See ANC DAK</td>
+    <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE20</td>
     <td>Pre-eclampsia</td>
     <td>A condition specific to pregnancy, arising after the 20th week of gestation, characterized by hypertension and proteinuria. Oedema may also be present, but is no longer considered a cardinal sign because it is present to some extent in most pregnancies. If not controlled, pre-eclampsia will lead to eclampsia which is characterized by fits, followed by coma, and has a high mortality rate.</td>
@@ -30035,13 +30052,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>See ANC DAK</td>
+    <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE21</td>
     <td>Eclampsia</td>
-    <td>A condition peculiar to pregnancy or a newly delivered woman, characterized by fits followed coma. The woman usually has hypertension and proteinuria. The fits may occur in the antepartum, intrapartum or early postpartum periods. </td>
+    <td>The occurance of seziure or coma in a woman with preeclampsia after GA of 20 weeks.It can occur before .during or after delivery.</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Eclampsia</td>
@@ -30052,10 +30069,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>See ANC DAK</td>
+    <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE22</td>
     <td>Alcohol use</td>
     <td>Alcohol intake</td>
@@ -30069,13 +30086,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>See ANC DAK</td>
+    <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE23</td>
     <td>Baby died within 24 hours of birth</td>
-    <td>The woman's baby died within 24 hours of childbirth </td>
+    <td>The woman&#x27;s baby died within 24 hours of childbirth</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Baby died within 24 hours of birth</td>
@@ -30086,13 +30103,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>See ANC DAK</td>
+    <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE24</td>
     <td>Prolonged labour</td>
-    <td>The woman's experienced prolonged labour</td>
+    <td>The woman&#x27;s experienced labor for more than 24 hours.</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Prolonged labour</td>
@@ -30106,7 +30123,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE25</td>
     <td>Convulsions</td>
     <td>Woman had convulsions during her past pregnancy</td>
@@ -30120,12 +30137,12 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>See ANC DAK</td>
+    <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE26</td>
-    <td>Forceps</td>
+    <td>Forceps delivery</td>
     <td>Woman required forceps delivery</td>
     <td>Input Option</td>
     <td>Codes</td>
@@ -30137,12 +30154,12 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>See ANC DAK</td>
+    <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE27</td>
-    <td>Gestational diabetes mellitus</td>
+    <td>Diabetes during pregnancy</td>
     <td>Hyperglycaemia first detected at any time during pregnancy</td>
     <td>Input Option</td>
     <td>Codes</td>
@@ -30154,12 +30171,12 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>See ANC DAK</td>
+    <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE28</td>
-    <td>Heavy bleeding (during or after delivery)</td>
+    <td>Antepartum hemorrheage</td>
     <td>Woman was bleeding heavily during or after giving birth during previous pregnancy/pregnancies</td>
     <td>Input Option</td>
     <td>Codes</td>
@@ -30171,13 +30188,30 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>See ANC DAK</td>
+    <td>The label says antepartum haemorrhage, but the definition and input option describe bleeding during or after delivery. The existing broad WHO code remains available for exchange. Record documented antepartum bleeding under Other for preview until the intended code is confirmed.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
+    <td>HIV.E.ET.DE2</td>
+    <td>Postpartum haemorrhage</td>
+    <td>Heavy bleeding after delivery</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Postpartum haemorrhage</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>O</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>A distinct option for documented bleeding after delivery.</td>
+  </tr>
+  <tr>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE29</td>
     <td>Macrosomia</td>
-    <td>Fetus large for gestational age</td>
+    <td>Estimated fetal weight greater than or equal to 4000g</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Macrosomia</td>
@@ -30188,10 +30222,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>See ANC DAK</td>
+    <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE30</td>
     <td>Perineal tear (3rd or 4th degree)</td>
     <td>Woman experienced 3rd or 4th degree perineal tear</td>
@@ -30205,10 +30239,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>See ANC DAK</td>
+    <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE31</td>
     <td>Substance use</td>
     <td>Illicit drug use (e.g. cannabis, amphetamines, prescription stimulants, opioids, opiates, ecstasy, cocaine)</td>
@@ -30222,10 +30256,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>See ANC DAK</td>
+    <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE32</td>
     <td>Tobacco use</td>
     <td>Use of tobacco products, in any form</td>
@@ -30239,10 +30273,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>See ANC DAK</td>
+    <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE33</td>
     <td>Vacuum delivery</td>
     <td>Woman required vacuum delivery</td>
@@ -30256,10 +30290,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>See ANC DAK</td>
+    <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE34</td>
     <td>Other past pregnancy problems</td>
     <td>Woman experienced other past pregnancy problems not described above</td>
@@ -30273,10 +30307,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>See ANC DAK</td>
+    <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE35</td>
     <td>Other past pregnancy problems (specify)</td>
     <td>Woman experienced other past pregnancy problems not described above (specify)</td>
@@ -30287,13 +30321,13 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Past pregnancy complications"='Other past pregnancy problems'</td>
+    <td>Required if &quot;Past pregnancy complications&quot;=&#x27;Other past pregnancy problems&#x27;</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when Other past pregnancy problems is selected.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE36</td>
     <td>Parity</td>
     <td>Total number of live and stillbirths (calculated)</td>
@@ -30301,16 +30335,16 @@ HIV.A5 Create new client record</td>
     <td>Quantity</td>
     <td>N/A</td>
     <td>Integer Quantity</td>
-    <td>"Number of live births" + "Number of stillbirths"</td>
+    <td>&quot;Number of live births&quot; + &quot;Number of stillbirths&quot;</td>
     <td>None</td>
     <td>R</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Calculated from both documented birth counts. A missing count leaves the result blank.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE37</td>
     <td>Pregnancy in HIV-infected woman</td>
     <td>Any HIV diagnosis in a pregnant woman as determined by the national HIV testing algorithm, or a pregnancy in a woman previously diagnosed with HIV</td>
@@ -30318,16 +30352,16 @@ HIV.A5 Create new client record</td>
     <td>Boolean</td>
     <td>True/False</td>
     <td>N/A</td>
-    <td>If "Currently pregnant"=True and "HIV status"='HIV-positive' then "Pregnancy in HIV-infected woman"=True</td>
+    <td>If &quot;Currently pregnant&quot;=True and &quot;HIV status&quot;=&#x27;HIV-positive&#x27; then &quot;Pregnancy in HIV-infected women&quot;=True</td>
     <td>None</td>
     <td></td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Calculated only when both current pregnancy status and a definitive maternal HIV status are known. An unknown status leaves the flag blank.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE38</td>
     <td>Date new pregnancy of HIV-positive woman identified</td>
     <td>Earliest date when a new pregnancy of an HIV-positive woman is recorded</td>
@@ -30344,7 +30378,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE39</td>
     <td>ANC contact during pregnancy</td>
     <td>Whether the mother had at least one ANC contact (visit)</td>
@@ -30358,13 +30392,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record whether an ANC visit took place during the pregnancy being documented.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE40</td>
-    <td>Date of first ANC visit</td>
-    <td>Date of the pregnant woman's first ANC visit</td>
+    <td>Date of first ANC contact</td>
+    <td>Date of the pregnant woman&#x27;s first ANC visit</td>
     <td>N/A</td>
     <td>Date</td>
     <td>N/A</td>
@@ -30375,10 +30409,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Shown when an ANC contact is recorded. The date cannot be in the future.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE41</td>
     <td>Timing of ART initiation</td>
     <td>When the pregnant woman or mother initiated ART, for women living with HIV.</td>
@@ -30386,18 +30420,18 @@ HIV.A5 Create new client record</td>
     <td>Coding</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>Calculated from "ART start date" relative to current pregnancy</td>
-    <td>"Maternal HIV status"='HIV-positive'</td>
+    <td>Calculated from &quot;ART start date&quot; relative to current pregnancy</td>
+    <td>&quot;Maternal HIV status&quot;=&#x27;HIV-positive&#x27;</td>
     <td>C</td>
-    <td>Required if "ART start date" is NOT NULL</td>
+    <td>Required if &quot;ART start date&quot; is NOT NULL</td>
     <td></td>
     <td>VER.1, VER.4, VER.5</td>
-    <td></td>
+    <td>Capture the documented timing when maternal HIV status is positive and a maternal ART start date is recorded. The preview uses the recorded category because the workbook leaves timing precedence and postpartum boundaries unspecified.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE42</td>
-    <td>Already on ART at first antenatal care visit</td>
+    <td>known on ART during pregnancy</td>
     <td>The pregnant woman was already on antiretroviral therapy (ART) at first antenatal care visit</td>
     <td>Input Option</td>
     <td>Codes</td>
@@ -30412,7 +30446,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE43</td>
     <td>Newly on ART during pregnancy</td>
     <td>The pregnant woman started ART during her pregnancy</td>
@@ -30429,7 +30463,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE44</td>
     <td>Newly on ART during labour and delivery</td>
     <td>The woman started ART during labour and delivery</td>
@@ -30446,7 +30480,24 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
+    <td>HIV.E.ET.DE3</td>
+    <td>Newly on ART during postpartum period</td>
+    <td>The woman started ART during postpartum period</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Newly on ART during postpartum period</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>C</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>The workbook includes a separate postpartum initiation category.</td>
+  </tr>
+  <tr>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE45</td>
     <td>Maternal use of recommended ART regimen</td>
     <td>Whether the mother is taking a recommended ART regimen</td>
@@ -30454,16 +30505,16 @@ HIV.A5 Create new client record</td>
     <td>Boolean</td>
     <td>True/False</td>
     <td>N/A</td>
-    <td>Calculated from "Current ART regimen" and list of recommended ART regimen in pregnant women</td>
+    <td>Calculated from &quot;Current ART regimen&quot; and list of recommended ART regimen in pregnant women</td>
     <td>None</td>
     <td>C</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>The form displays an assessment supplied by the application after checking the approved national regimen list.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE46</td>
     <td>Delivery date</td>
     <td>Date on which the woman delivered</td>
@@ -30472,15 +30523,15 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>"Delivery date" ≤ Date in which data is entered</td>
+    <td>&quot;Delivery date&quot; ≤ Date in which data is entered</td>
     <td>R</td>
     <td>None</td>
     <td></td>
     <td>VER.1, VER.3, VER.4, VER.5</td>
-    <td></td>
+    <td>Required when the pregnancy outcome is live birth or stillbirth. Capture the date of miscarriage or abortion in the separate date field.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE47</td>
     <td>Pregnancy outcome</td>
     <td>Outcome of current pregnancy</td>
@@ -30491,13 +30542,13 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Delivery date" is NOT NULL</td>
+    <td>Required if &quot;Delivery date&quot; is NOT NULL</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Leave blank during an ongoing pregnancy. Select the documented outcome before entering a delivery date or a pregnancy loss date. The workbook offers a single outcome per response.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE48</td>
     <td>Live birth</td>
     <td>Outcome of pregnancy was a live birth</td>
@@ -30514,7 +30565,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE49</td>
     <td>Early fetal loss/miscarriage</td>
     <td>Outcome of pregnancy was early fetal loss/miscarriage</td>
@@ -30531,7 +30582,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE50</td>
     <td>Induced abortion</td>
     <td>Outcome of pregnancy was induced abortion</td>
@@ -30548,7 +30599,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE51</td>
     <td>Stillbirth</td>
     <td>Outcome of pregnancy was stillbirth</td>
@@ -30565,7 +30616,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE52</td>
     <td>Delivery mode</td>
     <td>Mode of delivery for current pregnancy</td>
@@ -30579,10 +30630,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Shown when a delivery is recorded.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE53</td>
     <td>Spontaneous vaginal delivery</td>
     <td>Mode of delivery for current pregnancy spontaneous vaginal delivery (SVD)</td>
@@ -30599,7 +30650,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE54</td>
     <td>Assisted vaginal delivery</td>
     <td>Mode of delivery for current pregnancy was assisted vaginal delivery</td>
@@ -30616,9 +30667,9 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE55</td>
-    <td>Caesarian section (C/S, operative delivery)</td>
+    <td>C-section</td>
     <td>Mode of delivery for current pregnancy was caesarian section (C/S; operative delivery)</td>
     <td>Input Option</td>
     <td>Codes</td>
@@ -30633,7 +30684,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE56</td>
     <td>Indications for caesarian section (C/S)</td>
     <td>Indications for caesarian section</td>
@@ -30647,10 +30698,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Shown when caesarean section is recorded.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE57</td>
     <td>Obstetric complications</td>
     <td>Serious or life-threatening obstetric complications during pregnancy, delivery or postpartum experienced by mother or her newborn</td>
@@ -30667,24 +30718,24 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE58</td>
     <td>Live birth</td>
     <td>The woman had a live birth</td>
     <td>N/A</td>
     <td>Boolean</td>
-    <td>True/False</td>
+    <td>Live birth</td>
     <td>N/A</td>
-    <td>True if "Pregnancy outcome"='Live birth'</td>
+    <td>True if &quot;Pregnancy outcome&quot;=&#x27;Live birth&#x27;</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Calculated from the documented pregnancy outcome. The flag stays blank while the outcome is unknown.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE59</td>
     <td>Live birth to an HIV-positive woman</td>
     <td>A woman living with HIV had a live birth</td>
@@ -30692,16 +30743,16 @@ HIV.A5 Create new client record</td>
     <td>Boolean</td>
     <td>True/False</td>
     <td>N/A</td>
-    <td>True if "Maternal HIV status"='HIV-positive' AND "Live birth"=True</td>
+    <td>True if &quot;HIV status of mother&quot;=&#x27;HIV-positive&#x27; AND &quot;Live birth&quot;=True</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Calculated from the pregnancy outcome and confirmed maternal HIV status. A live birth with unknown maternal status leaves the flag blank.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE60</td>
     <td>Gestational age at birth</td>
     <td>Best estimate of gestational age in completed weeks when infant was born (an indication of prematurity, preterm and extreme preterm)</td>
@@ -30715,27 +30766,27 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record completed weeks at birth. This value is distinct from gestational age recorded during antenatal care.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE61</td>
     <td>Small for gestational age (SGA)</td>
-    <td>Whether the infant was small for gestational age (SGA) at birth (<10th percentile)</td>
+    <td>Whether the infant was small for gestational age (SGA) at birth (&lt;10th percentile)</td>
     <td>N/A</td>
     <td>Boolean</td>
     <td>True/False</td>
     <td>N/A</td>
-    <td>True if "Gestational age at birth"<10th percentile</td>
+    <td>True if &quot;Gestational age at birth&quot;&lt;10th percentile</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Gestational age at birth" is NOT NULL</td>
+    <td>Required if &quot;Gestational age at birth&quot; is NOT NULL</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the documented SGA assessment when known. Gestational age alone cannot determine the birth-weight percentile. Leave the status blank if no SGA assessment was recorded.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE62</td>
     <td>Preterm birth status</td>
     <td>The woman gave birth when the gestational age is less than 37 weeks</td>
@@ -30749,10 +30800,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the appropriate category when gestational age at birth is known. The form checks the three workbook categories against the entered weeks.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE63</td>
     <td>Not preterm</td>
     <td>The birth was not preterm</td>
@@ -30769,13 +30820,13 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE64</td>
-    <td>Preterm (<37 weeks gestation)</td>
-    <td>Gestational age at birth was <37 weeks</td>
+    <td>Preterm (&lt;37 weeks gestation)</td>
+    <td>Gestational age at birth was &lt;37 weeks</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Preterm (<37 weeks gestation)</td>
+    <td>Preterm (&lt;37 weeks gestation)</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -30783,16 +30834,16 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>For mutually exclusive capture, use this choice for births from 32 weeks up to 37 weeks. Use Very preterm for births before 32 weeks.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE65</td>
-    <td>Very preterm (<32 weeks gestation)</td>
-    <td>Gestational age at birth was <32 weeks</td>
+    <td>Very preterm (&lt;32 weeks gestation)</td>
+    <td>Gestational age at birth was &lt;32 weeks</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Very preterm (<32 weeks gestation)</td>
+    <td>Very preterm (&lt;32 weeks gestation)</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -30803,10 +30854,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE66</td>
     <td>Maternal ART start date</td>
-    <td>The date on which the infant was started or restarted on ART</td>
+    <td>The date the mother initiated ART</td>
     <td>N/A</td>
     <td>Date</td>
     <td>N/A</td>
@@ -30817,10 +30868,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Date the mother initiated ART. This field appears in maternal history beside Timing of ART initiation.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE67</td>
     <td>Place of delivery</td>
     <td>The type of place where the woman delivered</td>
@@ -30834,10 +30885,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td>VER.1, VER.3, VER.4</td>
-    <td></td>
+    <td>Required when the pregnancy outcome is live birth or stillbirth.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE68</td>
     <td>Health facility</td>
     <td>The woman delivered at a health facility</td>
@@ -30854,7 +30905,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE69</td>
     <td>Home</td>
     <td>The woman delivered at home</td>
@@ -30871,7 +30922,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE70</td>
     <td>Other</td>
     <td>The woman delivered at another location that is not at home or at a health facility</td>
@@ -30888,7 +30939,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE71</td>
     <td>Other (specify)</td>
     <td>The woman delivered at another location that is not at home or at a health facility (specify)</td>
@@ -30899,13 +30950,13 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Place of delivery"='Other'</td>
+    <td>Required if &quot;Place of delivery&quot;=&#x27;Other&#x27;</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when Other is selected.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE72</td>
     <td>Delivery facility</td>
     <td>Facility where the infant or child was born</td>
@@ -30919,10 +30970,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when Health facility is selected. The workbook captures the facility name. Registry linkage requires a verified delivery Location.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE73</td>
     <td>Date of miscarriage or abortion</td>
     <td>Date of the miscarriage/abortion</td>
@@ -30931,12 +30982,12 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>Date of miscarriage/abortion" ≤ Date in which data is entered</td>
+    <td>&#x27;Date of miscarriage/abortion&quot; ≤ Date in which data is entered</td>
     <td>C</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Shown for early fetal loss or induced abortion. Record the date when it is documented.</td>
   </tr>
   <tr>
     <td>HIV.H Following up and contacting clients</td>
@@ -30948,20 +30999,20 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>Date of death" ≤ Date in which data is entered</td>
+    <td>&#x27;Date of death&quot; ≤ Date in which data is entered</td>
     <td>C</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Recorded in the Follow-up questionnaire. The date must be today or earlier.</td>
   </tr>
   <tr>
     <td>HIV.H Following up and contacting clients</td>
     <td>HIV.E.DE75</td>
     <td>Cause of death of mother</td>
-    <td>The woman's cause of death</td>
-    <td>Select one</td>
-    <td>Coding</td>
+    <td>The woman&#x27;s cause of death</td>
+    <td>N/A</td>
+    <td>String</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>N/A</td>
@@ -30970,13 +31021,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the documented cause as text in Follow-up. The exchange model retains the historical coded field.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE76</td>
-    <td>Infant's first name</td>
-    <td>Infant's first or given name</td>
+    <td>Infant&#x27;s first name</td>
+    <td>Infant&#x27;s first or given name</td>
     <td>N/A</td>
     <td>String</td>
     <td>N/A</td>
@@ -30987,13 +31038,30 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when recording linked infant history. Reuse the verified infant name when available.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
-    <td>HIV.E.DE77</td>
-    <td>Infant's surname</td>
-    <td>Infant's family name or last name</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
+    <td>HIV.E.ET.DE77</td>
+    <td>Infant&#x27;s father name</td>
+    <td>Name of the infant&#x27;s father</td>
+    <td>N/A</td>
+    <td>String</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Use the Ethiopian Base father-name extension when exchanging the infant Patient record.</td>
+  </tr>
+  <tr>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
+    <td>HIV.E. ET.DE78</td>
+    <td>Infant&#x27;s Grandfather&#x27;s name</td>
+    <td>Name of the infant&#x27;s grandfahter</td>
     <td>N/A</td>
     <td>String</td>
     <td>N/A</td>
@@ -31004,13 +31072,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>The source ID contains a space. The form captures the name and maps it back to this workbook row. Use the Ethiopian Base grandfather-name extension for Patient exchange.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE78</td>
-    <td>Infant's unique ID</td>
-    <td>Unique identifier generated for new clients or a universal ID, if used in the country</td>
+    <td>Infant&#x27;s MRN</td>
+    <td>Unique identifier generated for new clients</td>
     <td>N/A</td>
     <td>ID</td>
     <td>N/A</td>
@@ -31021,13 +31089,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Use the infant’s verified facility MRN. The logical model maps to the workbook row because the WHO code describes a generic identifier.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE79</td>
-    <td>Mother's first name</td>
-    <td>Biological mother's first or given name</td>
+    <td>Mother&#x27;s first name</td>
+    <td>Biological mother&#x27;s first or given name</td>
     <td>N/A</td>
     <td>String</td>
     <td>N/A</td>
@@ -31038,13 +31106,47 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Carried forward from the confirmed maternal record for this linked infant.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
+    <td>HIV.E.ET.DE82</td>
+    <td>Mother&#x27;s father&#x27;s name</td>
+    <td>Biological mother&#x27;s father&#x27;s name</td>
+    <td>N/A</td>
+    <td>String</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Carried forward from the confirmed maternal record for this linked infant.</td>
+  </tr>
+  <tr>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
+    <td>HIV.E.ET.DE85</td>
+    <td>Mother&#x27;s Grand father&#x27;s name</td>
+    <td>Biological mother&#x27;s Grand father&#x27;s name</td>
+    <td>N/A</td>
+    <td>String</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>Only letters and special characters (period, dash) allowed.</td>
+    <td>C</td>
+    <td>None</td>
+    <td></td>
+    <td></td>
+    <td>Carried forward from the confirmed maternal record for this linked infant.</td>
+  </tr>
+  <tr>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE80</td>
-    <td>Mother's surname</td>
-    <td>Biological mother's family name or last name</td>
+    <td>Mother&#x27;s surname</td>
+    <td>Biological mother&#x27;s family name or last name</td>
     <td>N/A</td>
     <td>String</td>
     <td>N/A</td>
@@ -31055,13 +31157,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Carried forward from the confirmed maternal record for this linked infant when recorded.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE81</td>
-    <td>Mother's unique ID</td>
-    <td>Unique identifier generated for new clients or a universal ID, if used in the country</td>
+    <td>Mother&#x27;s unique ART number</td>
+    <td>Unique identifier generated for new clients or a universal ID</td>
     <td>N/A</td>
     <td>ID</td>
     <td>N/A</td>
@@ -31072,13 +31174,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Use the biological mother’s documented HIV programme ART number. The logical model maps to this workbook row.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE82</td>
-    <td>Caregiver's first name</td>
-    <td>Caregiver's first or given name</td>
+    <td>Caregiver&#x27;s first name</td>
+    <td>Caregiver&#x27;s first name</td>
     <td>N/A</td>
     <td>String</td>
     <td>N/A</td>
@@ -31092,26 +31194,43 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
+    <td>HIV.E.ET.DE83</td>
+    <td>Caregiver&#x27;s Grand father name</td>
+    <td>Caregiver&#x27;s Grand father&#x27;s name</td>
+    <td>N/A</td>
+    <td>String</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>Only letters and special characters (period, dash) allowed.</td>
+    <td>C</td>
+    <td>None</td>
+    <td></td>
+    <td></td>
+    <td>Record the caregiver’s grandfather’s name when known.</td>
+  </tr>
+  <tr>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE83</td>
-    <td>Caregiver's surname</td>
-    <td>Caregiver's family name or last name</td>
+    <td>Caregiver&#x27;s Father&#x27;s name</td>
+    <td>Caregiver&#x27;s father&#x27;s name</td>
     <td>N/A</td>
     <td>String</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>Only letters and special characters (period, dash) allowed.</td>
-    <td>C</td>
-    <td>None</td>
     <td></td>
     <td></td>
     <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>The workbook uses this ID for the father’s name. The existing WHO code means caregiver surname, so the form captures the father’s name in a separate field mapped to this row.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE84</td>
-    <td>Caregiver's unique identifier</td>
+    <td>National ID</td>
     <td>Unique identifier generated for new clients or a universal ID, if used in the country</td>
     <td>N/A</td>
     <td>ID</td>
@@ -31123,13 +31242,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Use the verified caregiver’s national ID when recorded. It is distinct from the mother’s ART number and infant’s MRN.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE85</td>
     <td>ANC contact date</td>
-    <td>The date and time of the client's ANC contact (in the ANC DAK this is called 'Contact date')</td>
+    <td>The date and time of the client&#x27;s ANC contact (in the ANC DAK this is called &#x27;Contact date&#x27;)</td>
     <td>N/A</td>
     <td>DateTime</td>
     <td>N/A</td>
@@ -31140,10 +31259,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.B9.DT, HIV.S.4</td>
     <td>HEP.1C, HEP.3C, HTS.1, STI.1C1, STI.1C2, STI.2C1, STI.2C2, STI.3C1, STI.3C2, VER.4, VER.7</td>
-    <td>The encounter date may be system generated, but there is a requirement to be able to back enter data.</td>
+    <td>Required when an ANC contact is recorded. The form checks that the timestamp is at or before the current time.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE86</td>
     <td>Referral</td>
     <td>If infant was referred for care</td>
@@ -31157,61 +31276,61 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record whether the linked infant was referred for care.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE87</td>
     <td>Infant date of birth</td>
-    <td>The infant's date of birth (DOB) if known</td>
+    <td>The infant&#x27;s date of birth (DOB) if known</td>
     <td>N/A</td>
     <td>Date</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>"Date of birth" OR "Date of birth unknown" OR "Estimated age" should be entered.</td>
+    <td>&quot;Date of birth&quot; OR &quot;Date of birth unknown&quot; OR &quot;Estimated age&quot; should be entered.</td>
     <td>C</td>
     <td>None</td>
     <td></td>
     <td>VER.2, VER.3, VER.6</td>
-    <td>May determine from birth certificate, national ID, U5 vaccination/growth card. If system generated such as from a national identifier, record may not be editable. Age-specific client care (e.g. dosing); client identifier; report disaggregation. Date of birth also used in non-vertical transmission indicators.</td>
+    <td>Record the known date of birth or mark it unknown and enter an age estimate.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE88</td>
     <td>Date of birth of infant unknown</td>
-    <td>Is the client's DOB unknown?</td>
+    <td>Is the infant DOB unknown?</td>
     <td>N/A</td>
     <td>Boolean</td>
     <td>True/False</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>"Date of birth" OR "Date of birth unknown" OR "Estimated age" should be entered.</td>
+    <td>&quot;Date of birth&quot; OR &quot;Date of birth unknown&quot; OR &quot;Estimated age&quot; should be entered.</td>
     <td>C</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>If marked unknown, the birth date stays blank and the estimated age is required.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE89</td>
     <td>Estimated age of infant</td>
-    <td>If DOB is unknown, enter the client's estimated age. Display client's age in number of years</td>
+    <td>If DOB is unknown, enter the infant&#x27;s estimated age. Display infant&#x27;s age in number of years</td>
     <td>N/A</td>
     <td>Quantity</td>
     <td>N/A</td>
     <td>Duration</td>
     <td>N/A</td>
-    <td>If "Date of birth unknown" = True, "Estimated age" is required</td>
+    <td>If &quot;Date of birth unknown&quot; = True, &quot;Estimated age&quot; is required</td>
     <td>C</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the estimated age in years. A decimal value can represent an age below one year.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE90</td>
     <td>Age of infant</td>
     <td>Infant age calculated using date of birth</td>
@@ -31219,18 +31338,18 @@ HIV.A5 Create new client record</td>
     <td>Quantity</td>
     <td>N/A</td>
     <td>Duration</td>
-    <td>("ANC contact date" - "Date of birth")/365</td>
+    <td>(&quot;ANC Contact Date&quot; – &quot;Date of birth&quot;)/365</td>
     <td>None</td>
     <td>C</td>
     <td>None</td>
     <td></td>
     <td>VER.2</td>
-    <td></td>
+    <td>Uses the workbook formula when the application supplies a verified age for the exact birth and contact dates. If ANC contact predates birth, the age stays blank. Confirm which infant encounter date should be used for those cases.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE91</td>
-    <td>Gender of infant</td>
+    <td>sex of infant</td>
     <td>Gender of the infant</td>
     <td>Select one</td>
     <td>Coding</td>
@@ -31242,13 +31361,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>Gender-specific client care and interventions (e.g. pregnancy, family planning methods); client identifier; report disaggregation</td>
+    <td>The preview presents the two workbook choices. The exchange value set retains the existing Other code.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE92</td>
     <td>Female</td>
-    <td>Client identifies as female</td>
+    <td>Infant identifies as female</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Female</td>
@@ -31262,10 +31381,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE93</td>
     <td>Male</td>
-    <td>Client identifies as male</td>
+    <td>Infant identifies as male</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Male</td>
@@ -31277,94 +31396,77 @@ HIV.A5 Create new client record</td>
     <td></td>
     <td></td>
     <td></td>
-  </tr>
-  <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
-    <td>HIV.E.DE94</td>
-    <td>Other</td>
-    <td>Client identifies in a non-binary way</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Other</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td>For "Other" specify in certain settings. May not specify in settings where to do so would be to put the client at risk.</td>
   </tr>
   <tr>
     <td>HIV.F2 Take vital signs</td>
     <td>HIV.E.DE95</td>
     <td>Infant height</td>
-    <td>The infant's height in centimetres</td>
+    <td>The infant&#x27;s height in centimetres</td>
     <td>N/A</td>
     <td>Quantity</td>
     <td>N/A</td>
     <td>Decimal Quantity</td>
     <td>N/A</td>
-    <td>20 cm ≥ "Infant height" ≥ 100 cm</td>
+    <td>20 cm ≥ &quot;Infant height&quot; ≥ 100 cm</td>
     <td></td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record a positive decimal quantity in centimetres. The workbook bounds are reversed and need confirmation.</td>
   </tr>
   <tr>
     <td>HIV.F2 Take vital signs</td>
     <td>HIV.E.DE96</td>
     <td>Infant weight</td>
-    <td>The infant's current weight in kilograms</td>
+    <td>The infant&#x27;s current weight in kilograms</td>
     <td>N/A</td>
     <td>Quantity</td>
     <td>N/A</td>
     <td>Decimal Quantity</td>
     <td>N/A</td>
-    <td>0 kg > "Infant weight" ≥ 20 kg</td>
+    <td>0 kg &gt; &quot;Infant weight&quot; ≥ 20 kg</td>
     <td></td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record a positive decimal quantity in kilograms. The workbook bounds are inconsistent and need confirmation.</td>
   </tr>
   <tr>
-    <td>HIV.F3 Capture or update infant's/child's history</td>
+    <td>HIV.F3 Capture or update infant&#x27;s/child&#x27;s history</td>
     <td>HIV.E.DE97</td>
     <td>Birth weight</td>
-    <td>Birth weight in kg of the baby</td>
+    <td>Birth weight in gm of the baby</td>
     <td>N/A</td>
     <td>Quantity</td>
     <td>N/A</td>
     <td>Decimal Quantity</td>
     <td>N/A</td>
-    <td>0 kg > "Birth weight" ≥ 10kg</td>
+    <td>0 kg &gt; &quot;Birth weight&quot; ≥ 10kg</td>
     <td>C</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record birth weight in grams. The worksheet validation cell mixes units and has inconsistent comparison operators.</td>
   </tr>
   <tr>
-    <td>HIV.F3 Capture or update infant's/child's history</td>
+    <td>HIV.F3 Capture or update infant&#x27;s/child&#x27;s history</td>
     <td>HIV.E.DE98</td>
     <td>Low birth weight</td>
-    <td>Note if infant </¬¨‚â•2500 g at birth</td>
+    <td>Note if infant &lt;/³2500 g at birth</td>
     <td>N/A</td>
     <td>Boolean</td>
     <td>True/False</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>Calculated from "Birth weight"</td>
+    <td>Calculated from &quot;Birth weight&quot;</td>
     <td>O</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Calculated only from a verified positive birth weight in grams. The cutoff is less than 2,500 g as defined by WHO.</td>
   </tr>
   <tr>
-    <td>HIV.F3 Capture or update infant's/child's history</td>
+    <td>HIV.F3 Capture or update infant&#x27;s/child&#x27;s history</td>
     <td>HIV.E.DE99</td>
     <td>Length of infant</td>
     <td>Length of infant at birth in cm</td>
@@ -31378,10 +31480,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record a positive quantity in whole centimetres.</td>
   </tr>
   <tr>
-    <td>HIV.F3 Capture or update infant's/child's history</td>
+    <td>HIV.F3 Capture or update infant&#x27;s/child&#x27;s history</td>
     <td>HIV.E.DE100</td>
     <td>Head circumference</td>
     <td>Head circumference of infant at birth in cm</td>
@@ -31395,7 +31497,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record a positive quantity in whole centimetres.</td>
   </tr>
   <tr>
     <td>HIV.E4 Test mother for HIV using testing algorithm</td>
@@ -31406,13 +31508,13 @@ HIV.A5 Create new client record</td>
     <td>Boolean</td>
     <td>True/False</td>
     <td>N/A</td>
-    <td>"Maternal HIV test result" is NOT NULL</td>
+    <td>&quot;Maternal HIV test result&quot; is NOT NULL</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Set to Yes when a reported maternal HIV test result is recorded. The flag stays blank when the result is pending or unavailable.</td>
   </tr>
   <tr>
     <td>HIV.E4 Test mother for HIV using testing algorithm</td>
@@ -31429,13 +31531,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>The order is recorded independently of the test date and outcome.</td>
   </tr>
   <tr>
     <td>HIV.E4 Test mother for HIV using testing algorithm</td>
     <td>HIV.E.DE103</td>
     <td>Mother HIV test date</td>
-    <td>Date when a mother's HIV test was conducted</td>
+    <td>Date when a mother&#x27;s HIV test was conducted</td>
     <td>N/A</td>
     <td>DateTime</td>
     <td>N/A</td>
@@ -31446,7 +31548,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when a maternal test result is recorded. A performed test may have a documented date before its result is available.</td>
   </tr>
   <tr>
     <td>HIV.E4 Test mother for HIV using testing algorithm</td>
@@ -31463,7 +31565,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the result reported after applying the national testing algorithm. Other fields capture the maternal status and the history at first ANC.</td>
   </tr>
   <tr>
     <td>HIV.E4 Test mother for HIV using testing algorithm</td>
@@ -31531,7 +31633,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the documented exposure classification, including Unknown when the information needed for classification is unavailable.</td>
   </tr>
   <tr>
     <td>HIV.F6 Check whether infant/child had HIV exposure</td>
@@ -31557,7 +31659,7 @@ HIV.A5 Create new client record</td>
     <td>Infant had known exposure to HIV</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>HIV-exposed</td>
+    <td>Exposed</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -31571,7 +31673,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.F6 Check whether infant/child had HIV exposure</td>
     <td>HIV.E.DE111</td>
     <td>Unknown HIV exposure</td>
-    <td>Don't know whether infant or child was exposed to HIV, such as if mother's HIV status is unknown</td>
+    <td>Don&#x27;t know whether infant or child was exposed to HIV, such as if mother&#x27;s HIV status is unknown</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Unknown HIV exposure</td>
@@ -31587,22 +31689,22 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.F6 Check whether infant/child had HIV exposure</td>
     <td>HIV.E.DE112</td>
-    <td>HIV-exposed infant or child</td>
-    <td>Whether the infant or child was determined to have had HIV exposure</td>
+    <td>HIV exposed infant still exposed</td>
+    <td>HIV exposed infant still breast feeding</td>
     <td>N/A</td>
     <td>Boolean</td>
     <td>True/False</td>
     <td>N/A</td>
-    <td>True if "Infant or child exposure to HIV"='HIV-exposed'</td>
+    <td>True if &quot;Infant or child exposure to HIV&quot;=&#x27;HIV-exposed&#x27;</td>
     <td>None</td>
     <td>C</td>
-    <td>Can be calculated from "Infant or child exposure to HIV"</td>
+    <td>Can be calculated from &quot;Infant or child exposure to HIV&quot;</td>
     <td></td>
     <td>VER.2, VER.3, VER.5, VER.6</td>
-    <td></td>
+    <td>The definition asks whether an HIV-exposed infant is still breastfeeding. The workbook formula would set Yes for any past exposure. The form captures the documented breastfeeding status separately for an infant with known HIV exposure.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE113</td>
     <td>Key population member*</td>
     <td>Mother is a member of a key population which has an increased risk of HIV</td>
@@ -31611,18 +31713,18 @@ HIV.A5 Create new client record</td>
     <td>True/False</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>If "Key population member type" is NOT NULL</td>
+    <td>If &quot;Key population member type&quot; is NOT NULL</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.B9.DT, HIV.C7.DT, HIV.S.1, HIV.S.4</td>
-    <td></td>
-    <td>* Only collect where feasible, and data security and confidentiality can be ensured</td>
+    <td>PRV.8, PRV.9</td>
+    <td>Record documented maternal membership. A recorded category requires Yes; an unanswered category does not supply membership information.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE114</td>
     <td>Key population member type*</td>
-    <td>The type of key population that the infant's mother is included in</td>
+    <td>The type of key population that the infant&#x27;s mother is included in</td>
     <td>Select all that apply</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -31632,14 +31734,14 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.S.1</td>
-    <td>ART.1, ART.10, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.5, HTS.6, HTS.7, HTS.8, INC.1, PRV.11, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.8, PRV.9, SDC.1, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.3, TBH.4</td>
-    <td>* Only collect where feasible, and data security and confidentiality can be ensured</td>
+    <td>ART.1, ART.2, ART.3, ART.4, ART.8, ART.9, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.5, HTS.6, PRV.11, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, SDC.1, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.3, TBH.4, PRV.2, PRV.3</td>
+    <td>Select all applicable documented categories. The exchange vocabulary retains the legacy trans and gender-diverse category.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE115</td>
     <td>Sex worker</td>
-    <td>Infant's mother is a sex worker</td>
+    <td>Infant&#x27;s mother is a sex worker</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Sex worker</td>
@@ -31649,14 +31751,14 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.S.1</td>
-    <td>ART.1, ART.10, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.5, HTS.6, HTS.7, HTS.8, INC.1, PRV.11, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.8, PRV.9, SDC.1, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.3, TBH.4</td>
+    <td>ART.1, ART.2, ART.3, ART.4, ART.8, ART.9, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.5, HTS.6, PRV.11, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, SDC.1, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.3, TBH.4, PRV.2, PRV.3</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE116</td>
-    <td>People who inject drugs</td>
-    <td>Infant's mother is a person who injects drugs</td>
+    <td>People who injects drugs</td>
+    <td>Infant&#x27;s mother is a person who injects drugs</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>People who inject drugs</td>
@@ -31666,45 +31768,28 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.S.1</td>
-    <td>ART.1, ART.10, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.5, HTS.6, HTS.7, HTS.8, INC.1, PRV.11, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.8, PRV.9, SDC.1, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.3, TBH.4</td>
+    <td>ART.1, ART.2, ART.3, ART.4, ART.8, ART.9, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.5, HTS.6, PRV.11, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, SDC.1, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.3, TBH.4, PRV.2, PRV.3</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
-    <td>HIV.E.DE117</td>
-    <td>Transgender people</td>
-    <td>Infant's mother is transgender</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Transgender people</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.S.1</td>
-    <td>ART.1, ART.10, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.5, HTS.6, HTS.7, HTS.8, INC.1, PRV.11, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.8, PRV.9, SDC.1, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.3, TBH.4</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE118</td>
     <td>People living in prisons and other closed setting</td>
-    <td>Infant's mother is in a prison or closed setting</td>
+    <td>Infant&#x27;s mother is in a prison or closed setting</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>People living in prisons and other closed setting</td>
+    <td>Prisoner</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.S.1</td>
-    <td>ART.1, ART.10, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.5, HTS.6, HTS.7, HTS.8, INC.1, PRV.11, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.8, PRV.9, SDC.1, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.3, TBH.4</td>
+    <td>ART.1, ART.2, ART.3, ART.4, ART.8, ART.9, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.5, HTS.6, PRV.11, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, SDC.1, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.3, TBH.4, PRV.2, PRV.3</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.F3 Capture or update infant's/child's history</td>
+    <td>HIV.F3 Capture or update infant&#x27;s/child&#x27;s history</td>
     <td>HIV.E.DE119</td>
     <td>Postpartum family planning counselling conducted</td>
     <td>Provide family planning and contraception counselling</td>
@@ -31724,21 +31809,21 @@ HIV.A5 Create new client record</td>
     <td>HIV.F8 Test infant/child for HIV using testing algorithm</td>
     <td>HIV.E.DE120</td>
     <td>Age of infant on HIV test date</td>
-    <td>Infant's age when an HIV test is performed in months and years (calculated from date of birth)</td>
+    <td>Infant&#x27;s age when an HIV test is performed in months and years (calculated from date of birth)</td>
     <td>N/A</td>
     <td>Quantity</td>
-    <td>("HIV test date" - "Infant date of birth") / 365.25</td>
+    <td>(&quot;HIV test date&quot; – &quot;Infant date of birth&quot;) / 365.25</td>
     <td>Duration</td>
-    <td>"HIV test date" - "Infant date of birth"</td>
+    <td>HIV test date – Infant&#x27;s date of birth</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>The application supplies the age for the verified date of birth and exact HIV test date using the workbook formula. The form leaves age blank when the dates are incomplete, mismatched, or out of order.</td>
   </tr>
   <tr>
-    <td>HIV.F3 Capture or update infant's/child's history</td>
+    <td>HIV.F3 Capture or update infant&#x27;s/child&#x27;s history</td>
     <td>HIV.E.DE121</td>
     <td>ARV adherence counselling</td>
     <td>Counselling was carried out during visit</td>
@@ -31755,9 +31840,9 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.F3 Capture or update infant's/child's history</td>
+    <td>HIV.F3 Capture or update infant&#x27;s/child&#x27;s history</td>
     <td>HIV.E.DE122</td>
-    <td>Infant feeding counselling provided</td>
+    <td>Infant-feeding counselling provided</td>
     <td>Support on infant and child feeding to mother or caregiver provided</td>
     <td>N/A</td>
     <td>Boolean</td>
@@ -31772,9 +31857,9 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.F3 Capture or update infant's/child's history</td>
+    <td>HIV.F3 Capture or update infant&#x27;s/child&#x27;s history</td>
     <td>HIV.E.DE123</td>
-    <td>Date infant feeding counselling provided</td>
+    <td>Date infant-feeding counselling provided</td>
     <td>Date support on infant and child feeding to mother or caregiver provided</td>
     <td>N/A</td>
     <td>Date</td>
@@ -31786,10 +31871,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Shown when infant-feeding counselling was documented as provided.</td>
   </tr>
   <tr>
-    <td>HIV.F3 Capture or update infant's/child's history</td>
+    <td>HIV.F3 Capture or update infant&#x27;s/child&#x27;s history</td>
     <td>HIV.E.DE124</td>
     <td>Malaria prevention counselling conducted</td>
     <td>Counselling provided on how to prevent malaria</td>
@@ -31806,7 +31891,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.F3 Capture or update infant's/child's history</td>
+    <td>HIV.F3 Capture or update infant&#x27;s/child&#x27;s history</td>
     <td>HIV.E.DE125</td>
     <td>Insecticide treated bednet (ITN) provided or referred</td>
     <td>An insecticide treated bednet (ITN) was provided or the client was referred</td>
@@ -31823,7 +31908,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.F3 Capture or update infant's/child's history</td>
+    <td>HIV.F3 Capture or update infant&#x27;s/child&#x27;s history</td>
     <td>HIV.E.DE126</td>
     <td>Maternal syphilis treatment</td>
     <td>Whether or not mother was treated for syphilis</td>
@@ -31840,10 +31925,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.F3 Capture or update infant's/child's history</td>
+    <td>HIV.F3 Capture or update infant&#x27;s/child&#x27;s history</td>
     <td>HIV.E.DE127</td>
-    <td>Infant feeding practice</td>
-    <td>Infant feeding practice</td>
+    <td>Infant-feeding practice</td>
+    <td>Infant-feeding practice up to 6 months, and after initiation of complementary feeding as appropriate</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -31857,7 +31942,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.F3 Capture or update infant's/child's history</td>
+    <td>HIV.F3 Capture or update infant&#x27;s/child&#x27;s history</td>
     <td>HIV.E.DE128</td>
     <td>Exclusively breastfeeding</td>
     <td>Specifies whether the infant is exclusively being breastfed by the mother</td>
@@ -31874,7 +31959,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.F3 Capture or update infant's/child's history</td>
+    <td>HIV.F3 Capture or update infant&#x27;s/child&#x27;s history</td>
     <td>HIV.E.DE129</td>
     <td>Replacement feeding</td>
     <td>Infant is not receiving any breast milk with a diet that provides all the nutrients needed until they can be fully fed on family foods</td>
@@ -31891,7 +31976,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.F3 Capture or update infant's/child's history</td>
+    <td>HIV.F3 Capture or update infant&#x27;s/child&#x27;s history</td>
     <td>HIV.E.DE130</td>
     <td>Mixed feeding</td>
     <td>Infant younger than 6 months of age is given other liquids and/or foods together with breast milk. This could be water, other types of milk or any type of solid food.</td>
@@ -31908,10 +31993,27 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.F3 Capture or update infant's/child's history</td>
+    <td>HIV.F3 Capture or update infant&#x27;s/child&#x27;s history</td>
+    <td>HIV.E.ET.DE130</td>
+    <td>Complementary feeding</td>
+    <td>Children receives breast milk and other solids or fluids after 6 months from 6 months of age to 24 months or later</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Complementary feeding</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>O</td>
+    <td>None</td>
+    <td></td>
+    <td></td>
+    <td>A separate documented feeding practice from Mixed feeding.</td>
+  </tr>
+  <tr>
+    <td>HIV.F3 Capture or update infant&#x27;s/child&#x27;s history</td>
     <td>HIV.E.DE131</td>
-    <td>Infant feeding practice recorded date</td>
-    <td>Date on which infant feeding practice was recorded</td>
+    <td>Infant-feeding practice recorded date</td>
+    <td>Date on which infant-feeding practice was recorded</td>
     <td>N/A</td>
     <td>Date</td>
     <td>N/A</td>
@@ -31922,10 +32024,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Shown when a feeding practice is recorded.</td>
   </tr>
   <tr>
-    <td>HIV.F3 Capture or update infant's/child's history</td>
+    <td>HIV.F3 Capture or update infant&#x27;s/child&#x27;s history</td>
     <td>HIV.E.DE132</td>
     <td>Stopped breastfeeding</td>
     <td>The mother has fully stopped breastfeeding the infant or child</td>
@@ -31942,7 +32044,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.F3 Capture or update infant's/child's history</td>
+    <td>HIV.F3 Capture or update infant&#x27;s/child&#x27;s history</td>
     <td>HIV.E.DE133</td>
     <td>Date stopped breastfeeding</td>
     <td>The date on which the mother stopped breastfeeding the infant</td>
@@ -31956,13 +32058,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Shown when stopped breastfeeding is documented. The date is today or earlier.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE134</td>
     <td>Taking iron and folic acid (IFA) tablets</td>
-    <td>Is client taking her iron and folic acid (IFA) tablets? Select whether the woman is continuing to take IFA supplements</td>
+    <td>Is mother taking her iron and folic acid (IFA) tablets? Select whether the woman is continuing to take IFA supplements</td>
     <td>N/A</td>
     <td>Boolean</td>
     <td>True/False</td>
@@ -31976,7 +32078,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE135</td>
     <td>Amount of iron prescribed</td>
     <td>Amount of iron supplements prescribed in milligrams for intake</td>
@@ -31990,10 +32092,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the documented amount as a positive decimal quantity in milligrams.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE136</td>
     <td>Type of iron supplement dosage provided</td>
     <td>Whether the amount of iron prescribed is for daily or weekly intake</td>
@@ -32010,13 +32112,13 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE137</td>
-    <td>Daily </td>
+    <td>Daily</td>
     <td>Iron supplements prescribed for daily intake</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Daily </td>
+    <td>Daily</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -32027,10 +32129,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE138</td>
-    <td>Weekly</td>
     <td>Iron supplements prescribed for daily intake</td>
+    <td>Iron supplements prescribed for weekly take</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Weekly</td>
@@ -32041,10 +32143,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>The Weekly choice has the weekly meaning in the workbook.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE139</td>
     <td>Amount of daily dose of folic acid prescribed</td>
     <td>Amount of folic acid supplements prescribed in milligrams for daily intake</td>
@@ -32058,10 +32160,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the documented daily amount as a positive decimal quantity in milligrams.</td>
   </tr>
   <tr>
-    <td>HIV.F3 Capture or update infant's/child's history</td>
+    <td>HIV.F3 Capture or update infant&#x27;s/child&#x27;s history</td>
     <td>HIV.E.DE140</td>
     <td>Date infant ARV prophylaxis dispensed (or started)</td>
     <td>Date HIV-exposed infant received ARV prophylaxis (for the first time)</td>
@@ -32075,13 +32177,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record when infant ARV prophylaxis was first dispensed or started. The date is today or earlier.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE141</td>
     <td>Maternal HIV status</td>
-    <td>The HIV status of the infant's mother</td>
+    <td>The HIV status of the infant&#x27;s mother</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -32092,13 +32194,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the documented maternal HIV status. The form keeps it separate from a single reported test result.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE142</td>
     <td>HIV-positive</td>
-    <td>Infant's mother is HIV-positive</td>
+    <td>Infant&#x27;s mother is HIV-positive</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>HIV-positive</td>
@@ -32112,10 +32214,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE143</td>
     <td>HIV-negative</td>
-    <td>Infant's mother is HIV-negative</td>
+    <td>Infant&#x27;s mother is HIV-negative</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>HIV-negative</td>
@@ -32129,10 +32231,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE144</td>
     <td>Unknown</td>
-    <td>Don't know HIV status - client does not know partner's HIV status</td>
+    <td>Don&#x27;t know HIV status - client does not know partner&#x27;s HIV status</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Unknown</td>
@@ -32143,30 +32245,30 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Unknown concerns the mother’s HIV status. The source definition refers to a partner in error.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE145</td>
     <td>Maternal HIV status at first ANC visit</td>
-    <td>The HIV status of the infant's mother at first ANC visit</td>
+    <td>The HIV status of the infant&#x27;s mother at first ANC visit</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>Potentially calculated using "HIV status" and first "ANC contact date"</td>
+    <td>Potentially calculated using &quot;HIV status&quot; and first &quot;ANC contact date&quot;</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the status documented at the first ANC visit. A later status is insufficient evidence for the first visit.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE146</td>
     <td>HIV-positive</td>
-    <td>Infant's mother is HIV-positive</td>
+    <td>Infant&#x27;s mother is HIV-positive</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>HIV-positive</td>
@@ -32180,11 +32282,11 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE147</td>
     <td>HIV-negative</td>
-    <td>Infant's mother is HIV-negative</td>
-    <td>Input Option</td>
+    <td>Infant&#x27;s mother is HIV-negative</td>
+    <td></td>
     <td>Codes</td>
     <td>HIV-negative</td>
     <td>N/A</td>
@@ -32197,10 +32299,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE148</td>
     <td>Unknown</td>
-    <td>Don't know HIV status - client does not know partner's HIV status</td>
+    <td>Don&#x27;t know HIV status</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Unknown</td>
@@ -32228,7 +32330,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the reported maternal syphilis result in the Care and Treatment diagnostics activity.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -32296,7 +32398,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record documented maternal hypertension.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -32313,10 +32415,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record documented maternal pre-eclampsia.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE155</td>
     <td>Signs of substantial risk of HIV infection</td>
     <td>Signs the client is at a substantial risk of HIV infection</td>
@@ -32330,13 +32432,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.C7.DT, HIV.S.1</td>
     <td></td>
-    <td></td>
+    <td>Select every documented finding when any listed risk finding was recorded. The source has no None option, so the form uses a separate screening question.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE156</td>
     <td>No condom use during sex with more than one partner in the past 6 months</td>
-    <td>Recent vaginal or anal sexual intercourse without a condom with more than one partner</td>
+    <td>sexual intercourse without a condom with more than one partner</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>No condom use during sex with more than one partner in the past 6 months</td>
@@ -32350,7 +32452,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE157</td>
     <td>STI in the past 6 months</td>
     <td>A recent history (in the last 6 months) of a sexually transmitted infection (STI) by laboratory testing or self-report of syndromic STI treatment</td>
@@ -32367,13 +32469,13 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE158</td>
     <td>A sexual partner in the past 6 months had one or more HIV risk factors</td>
     <td>A recent sex partner of the client had HIV risk factors</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>A sexual partner in the past 6 months had one or more HIV risk factors</td>
+    <td>A sexual partner in the past 6 months with one or more HIV risk factors</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -32384,10 +32486,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE159</td>
-    <td>PrEP requested by client</td>
-    <td>Client is requesting PrEP, reflecting a decision-making process has already taken place and suggesting of substantial risk of HIV</td>
+    <td>PrEP provided to the client</td>
+    <td>PrEP provided for clients, reflecting a decision-making process has already taken place and suggesting of substantial risk of HIV based on national guidline</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>PrEP requested by client</td>
@@ -32398,13 +32500,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.C7.DT, HIV.S.1</td>
     <td></td>
-    <td></td>
+    <td>The WHO code means PrEP requested. This workbook row means PrEP provided. The form records provision separately and maps it to the workbook row.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE160</td>
     <td>Serodiscordant partner</td>
-    <td>Mother's HIV status is different from a current partner's HIV status</td>
+    <td>Mother&#x27;s HIV status is different from a current partner&#x27;s HIV status</td>
     <td>N/A</td>
     <td>Boolean</td>
     <td>True/False</td>
@@ -32415,10 +32517,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.S.4</td>
     <td></td>
-    <td>This is not set to be derived, as client's partners may change</td>
+    <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE161</td>
     <td>Date woman received counselling for CPT</td>
     <td>Date woman received counselling for co-trimoxazole preventive therapy (CPT)</td>
@@ -32432,10 +32534,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the documented counselling date as today or earlier.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE162</td>
     <td>Date woman received counselling for TPT</td>
     <td>Date woman received counselling for TB preventive therapy</td>
@@ -32449,12 +32551,12 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the documented counselling date as today or earlier.</td>
   </tr>
   <tr>
     <td>HIV.F12 Prescribe</td>
     <td>HIV.E.DE163</td>
-    <td>Infant's co-trimoxazole prophylaxis start date</td>
+    <td>Infant&#x27;s co-trimoxazole prophylaxis start date</td>
     <td>Start date of co-trimoxazole prophylaxis</td>
     <td>N/A</td>
     <td>Date</td>
@@ -32471,19 +32573,19 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.F12 Prescribe</td>
     <td>HIV.E.DE164</td>
-    <td>Infant's age when co-trimoxazole prophylaxis was started</td>
+    <td>Infant&#x27;s age when co-trimoxazole prophylaxis was started</td>
     <td>The number of weeks or months infant was when started on co-trimoxazole (CTX) prophylaxis preventive therapy</td>
     <td>N/A</td>
     <td>Quantity</td>
     <td>N/A</td>
     <td>Duration</td>
-    <td>"Infant's co-trimoxazole prophylaxis start date" - "Infant date of birth"</td>
-    <td>"Infant's co-trimoxazole prophylaxis start date" - "Infant date of birth" ≤ 24 months</td>
+    <td>&quot;CTX start date&quot; – &quot;Infant&#x27;s date of birth&quot;</td>
+    <td>&quot;CTX start date&quot; – infant&#x27;s date of birth ≤ 24 months</td>
     <td>O</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>The application supplies the verified age for the precise co-trimoxazole start date. The preview shows the age in months within the workbook’s 24-month scope.</td>
   </tr>
   <tr>
     <td>HIV.F12 Prescribe</td>
@@ -32500,7 +32602,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the clinician’s documented assessment.</td>
   </tr>
   <tr>
     <td>HIV.F12 Prescribe</td>
@@ -32534,10 +32636,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when infant ARV prophylaxis is documented.</td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE168</td>
     <td>HIV test type</td>
     <td>Type of HIV test</td>
@@ -32551,10 +32653,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.B7.DT, HIV.E4.DT</td>
     <td>VER.2</td>
-    <td></td>
+    <td>The test-type choices are available in the maternal and infant PMTCT testing forms.</td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE169</td>
     <td>Rapid diagnostic test for HIV</td>
     <td>Antibody test for HIV performed with a rapid diagnostic (RDT)</td>
@@ -32571,13 +32673,13 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE170</td>
     <td>Enzyme immunoassay for HIV</td>
     <td>Antibody test for HIV performed with an enzyme immunoassay (EIA)</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Enzyme immunoassay for HIV</td>
+    <td>Enzyme immunoassay</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -32588,13 +32690,13 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE171</td>
-    <td>Nucleic acid test for HIV</td>
+    <td>DNA/PCR test</td>
     <td>Virological test, which includes testing for early infant diagnosis</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Nucleic acid test for HIV</td>
+    <td>Nucleic acid testing</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -32602,10 +32704,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.B7.DT, HIV.E4.DT</td>
     <td>VER.2</td>
-    <td></td>
+    <td>Uses the existing nucleic acid test code. No interpretation is inferred from the test method.</td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE172</td>
     <td>Dual HIV/syphilis rapid diagnostic test</td>
     <td>Antibody test for HIV and syphilis performed with a rapid diagnostic</td>
@@ -32619,10 +32721,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.B7.DT, HIV.E4.DT</td>
     <td>VER.2</td>
-    <td></td>
+    <td>Use this option only when the maternal client was documented as pregnant at the time of testing.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE173</td>
     <td>Maternal and child health service visit</td>
     <td>Maternal and child health service visit attended by an HIV-exposed infant</td>
@@ -32636,12 +32738,131 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td>VER.5</td>
+    <td>Select the documented MCH visit category. Each workbook milestone has a distinct code.</td>
+  </tr>
+  <tr>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
+    <td>HIV.E.ET.DE12</td>
+    <td>At birth</td>
+    <td>HIV-exposed infant evaluated at the time of birth</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>At birth visit</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
+    <td>HIV.E.ET.DE13</td>
+    <td>At 6 weeks</td>
+    <td>HIV-exposed infant attending MCH services at 6 weeksvisit</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>At 6 weeks visit</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
+    <td>HIV.E.ET.DE14</td>
+    <td>10 weeks</td>
+    <td>HIV-exposed infant attending MCH services for a 10 weeksvisit</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>10 weeks visit</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
+    <td>HIV.E.ET.DE15</td>
+    <td>14 weeks</td>
+    <td>HIV-exposed infant attending MCH services for a 14-weeks visit</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>14 weeks visit</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
+    <td>HIV.E.ET.DE16</td>
+    <td>5 months</td>
+    <td>HIV-exposed infant attending MCH services for a 5 months visit</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>5 months visit</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
+    <td>HIV.E.ET.DE17</td>
+    <td>6 months</td>
+    <td>HIV-exposed infant attending MCH services for a 6 months visit</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>6 months visit</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
+    <td>HIV.E.ET.DE18</td>
+    <td>9 months</td>
+    <td>HIV-exposed infant attending MCH services for a 9 months visit</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>9 months visit</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE174</td>
-    <td>12-month visit</td>
+    <td>12 months</td>
     <td>HIV-exposed infant attending MCH services for a 12-month visit</td>
     <td>Input Option</td>
     <td>Codes</td>
@@ -32656,7 +32877,41 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
+    <td>HIV.E.ET.DE30</td>
+    <td>15 months</td>
+    <td>HIV-exposed infant attending MCH services for a 15 months visit</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>15 months visit</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
+    <td>HIV.E.ET.DE31</td>
+    <td>18 months</td>
+    <td>HIV-exposed infant attending MCH services for an 18 months visit</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>18 months visit</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE175</td>
     <td>24-month visit</td>
     <td>HIV-exposed infants attending MCH services for a 24-month visit</td>
@@ -32673,7 +32928,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE176</td>
     <td>First visit after the end of breastfeeding</td>
     <td>HIV-exposed infant attending MCH services for a first visit after the end of breastfeeding</td>
@@ -32690,7 +32945,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE177</td>
     <td>Weeks postpartum</td>
     <td>Number of weeks postpartum on this visit date</td>
@@ -32698,47 +32953,64 @@ HIV.A5 Create new client record</td>
     <td>Quantity</td>
     <td>N/A</td>
     <td>Integer Quantity</td>
-    <td>Weeks between "Visit date" and "Delivery date"</td>
+    <td>Weeks between &quot;Visit date&quot; and &quot;Delivery date&quot;</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>The application supplies completed weeks calculated for the verified visit and delivery dates.</td>
   </tr>
   <tr>
-    <td>HIV.F3 Capture or update infant's/child's history</td>
-    <td>HIV.E.DE178</td>
-    <td>Birth cohort</td>
-    <td>Month and year of infant's birth, which the infant is registered into. The cohort is a group of infants born in the same month, whose status is followed over time.</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
+    <td>HIV.E.ET.DE177</td>
+    <td>Integreted PMTCT register (Mother baby cohort register)</td>
+    <td>PMTCT register (Mother - baby register)</td>
     <td>N/A</td>
     <td>Date</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>Date ≤ Current Date</td>
-    <td>R</td>
-    <td>None</td>
     <td></td>
     <td></td>
-    <td>Data type may vary by country and context but often will include month and year</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Record the date from the integrated mother and baby PMTCT register.</td>
   </tr>
   <tr>
-    <td>HIV.F3 Capture or update infant's/child's history</td>
-    <td>HIV.E.DE179</td>
-    <td>Registered in birth cohort</td>
-    <td>Whether the infant has been registered in a birth cohort</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
+    <td>HIV.E.ET.DE178</td>
+    <td>Maternal cohort</td>
+    <td>Maaternal cohort identified by Booking date of the mother to measure the retaintion and viral supression of the mother</td>
     <td>N/A</td>
-    <td>Boolean</td>
-    <td>True/False</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>R</td>
-    <td>None</td>
+    <td>Date</td>
     <td></td>
-    <td>VER.6</td>
     <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Record the maternal cohort date from the documented booking record.</td>
+  </tr>
+  <tr>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
+    <td>HIV.E.ET.DE179</td>
+    <td>HEI cohort</td>
+    <td>HEI cohort identified by Booking date of the mother to measure the the final outcome of HEI</td>
+    <td>N/A</td>
+    <td>Date</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Record the HIV-exposed infant cohort date from the documented maternal booking record. The historical WHO birth cohort fields remain distinct.</td>
   </tr>
   <tr>
     <td>HIV.F8 Test infant/child for HIV using testing algorithm</td>
@@ -32750,12 +33022,12 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>Yes</td>
     <td>C</td>
     <td>None</td>
     <td>HIV.E12.DT</td>
     <td></td>
-    <td></td>
+    <td>Record the sample number when an EID result is recorded. The test number identifies the corresponding result. Pending results can be left blank.</td>
   </tr>
   <tr>
     <td>HIV.F8 Test infant/child for HIV using testing algorithm</td>
@@ -32767,7 +33039,7 @@ HIV.A5 Create new client record</td>
     <td>EID sample 1</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>Yes</td>
     <td>C</td>
     <td>None</td>
     <td>HIV.E12.DT</td>
@@ -32784,7 +33056,7 @@ HIV.A5 Create new client record</td>
     <td>EID sample 2</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>Yes</td>
     <td>C</td>
     <td>None</td>
     <td>HIV.E12.DT</td>
@@ -32801,7 +33073,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>Yes</td>
     <td>C</td>
     <td>None</td>
     <td>HIV.E12.DT</td>
@@ -32818,7 +33090,7 @@ HIV.A5 Create new client record</td>
     <td>EID test number 1</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>Yes</td>
     <td>C</td>
     <td>None</td>
     <td>HIV.E12.DT</td>
@@ -32835,7 +33107,7 @@ HIV.A5 Create new client record</td>
     <td>EID test number 2</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>Yes</td>
     <td>C</td>
     <td>None</td>
     <td>HIV.E12.DT</td>
@@ -32852,12 +33124,12 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>Yes</td>
     <td>C</td>
     <td>None</td>
     <td>HIV.E12.DT</td>
     <td></td>
-    <td></td>
+    <td>Shown when the first EID test is selected.</td>
   </tr>
   <tr>
     <td>HIV.F8 Test infant/child for HIV using testing algorithm</td>
@@ -32866,10 +33138,10 @@ HIV.A5 Create new client record</td>
     <td>Positive HIV test result from the nucleic acid test</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Positive</td>
+    <td>Reactive</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>Yes</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.E12.DT</td>
@@ -32883,10 +33155,10 @@ HIV.A5 Create new client record</td>
     <td>Negative HIV test result from the nucleic acid test</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Negative</td>
+    <td>Non-reactive</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>Yes</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.E12.DT</td>
@@ -32900,15 +33172,32 @@ HIV.A5 Create new client record</td>
     <td>Indeterminate HIV test result from the nucleic acid test</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Indeterminate</td>
+    <td>Non-reactive</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>Yes</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.E12.DT</td>
     <td></td>
     <td></td>
+  </tr>
+  <tr>
+    <td>HIV.F8 Test infant/child for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE89</td>
+    <td>Rejected</td>
+    <td>Rejected HIV test result due to sampling problem</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>A rejected sample is a separate recorded outcome.</td>
   </tr>
   <tr>
     <td>HIV.F8 Test infant/child for HIV using testing algorithm</td>
@@ -32920,12 +33209,12 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>Yes</td>
     <td>C</td>
     <td>None</td>
     <td>HIV.E12.DT</td>
     <td></td>
-    <td></td>
+    <td>Shown when the second EID test is selected.</td>
   </tr>
   <tr>
     <td>HIV.F8 Test infant/child for HIV using testing algorithm</td>
@@ -32934,10 +33223,10 @@ HIV.A5 Create new client record</td>
     <td>Positive HIV test result from the nucleic acid test</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Positive</td>
+    <td>Reactive</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>Yes</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.E12.DT</td>
@@ -32951,10 +33240,10 @@ HIV.A5 Create new client record</td>
     <td>Negative HIV test result from the nucleic acid test</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Negative</td>
+    <td>Non-reactive</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>Yes</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.E12.DT</td>
@@ -32968,10 +33257,10 @@ HIV.A5 Create new client record</td>
     <td>Indeterminate HIV test result from the nucleic acid test</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Indeterminate</td>
+    <td>Non-reactive</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>Yes</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.E12.DT</td>
@@ -32979,9 +33268,94 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
-    <td>HIV.E.DE194</td>
-    <td>Assay number in testing strategy</td>
+    <td>HIV.F8 Test infant/child for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE193</td>
+    <td>Rejected</td>
+    <td>Rejected HIV test result due to sampling problem</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>A rejected sample is a separate recorded outcome.</td>
+  </tr>
+  <tr>
+    <td>HIV.F8 Test infant/child for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE194</td>
+    <td>Antibody Test Result</td>
+    <td>The test result of the the Antibody test - Confirmatory Test</td>
+    <td>Select one</td>
+    <td>Coding</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Record the reported confirmatory antibody result. The form keeps it separate from the infant HIV status.</td>
+  </tr>
+  <tr>
+    <td>HIV.F8 Test infant/child for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE195</td>
+    <td>Negative</td>
+    <td>Test result of the antibody is Negative</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Negative</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.F8 Test infant/child for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE196</td>
+    <td>Positive</td>
+    <td>Test result of the antibody is posetive</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Posetive</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>Inconclusive</td>
+    <td>Test result of the antibody is inconclusive</td>
+    <td>Input Option</td>
+    <td>Coding</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>The source row has no identifier. The form uses the existing HIV-inconclusive test-result code HIV.E.DE107.</td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE197</td>
+    <td>Assay number in testing strategy for the Child using Antibody test</td>
     <td>The number of the assay (test kit) in the HIV testing strategy</td>
     <td>Select one</td>
     <td>Coding</td>
@@ -32993,10 +33367,367 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.B7.DT, HIV.E4.DT</td>
     <td></td>
-    <td>Assay 1 (A1), Assay 2 (A2) and Assay 3 (A3) should be three different HIV assays (products) that share minimal common false reactivity.</td>
+    <td>Choose the recorded assay number for an antibody test.</td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE198</td>
+    <td>Assay 1</td>
+    <td>The first test in the HIV testing strategy</td>
+    <td>N/A</td>
+    <td>Codes</td>
+    <td>Assay 1</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>C</td>
+    <td>None</td>
+    <td>HIV.B7.DT, HIV.E4.DT</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE199</td>
+    <td>Assay 2</td>
+    <td>The second test in the HIV testing strategy</td>
+    <td>N/A</td>
+    <td>Codes</td>
+    <td>Assay 2</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>O</td>
+    <td>None</td>
+    <td>HIV.B7.DT, HIV.E4.DT</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE200</td>
+    <td>Assay 3</td>
+    <td>The third test in the HIV testing strategy</td>
+    <td>N/A</td>
+    <td>Codes</td>
+    <td>Assay 3</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>O</td>
+    <td>None</td>
+    <td>HIV.B7.DT, HIV.E4.DT</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE201</td>
+    <td>Assay 1 repeated</td>
+    <td>The first test in the HIV testing strategy</td>
+    <td>N/A</td>
+    <td>Codes</td>
+    <td>Assay 1</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>C</td>
+    <td>None</td>
+    <td>HIV.B7.DT, HIV.E4.DT</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE202</td>
+    <td>Test result of HIV assay 1</td>
+    <td>The result of the first HIV assay in the testing strategy</td>
+    <td>Select one</td>
+    <td>Coding</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>C</td>
+    <td>None</td>
+    <td>HIV.B7.DT, HIV.E4.DT</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE203</td>
+    <td>Reactive</td>
+    <td>The result of the HIV assay in the testing strategy was reactive</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Reactive</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>O</td>
+    <td>None</td>
+    <td>HIV.B7.DT, HIV.E4.DT</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE204</td>
+    <td>Non-reactive</td>
+    <td>The result of the HIV assay in the testing strategy was non-reactive</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Non-reactive</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>O</td>
+    <td>None</td>
+    <td>HIV.B7.DT, HIV.E4.DT</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>HIV.E.ET.DE205</td>
+    <td>Inconclusive</td>
+    <td>Cant say reactive or non reactive, If there is no line in the control window-even if there is a line in the patient/ test window</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Inconclusive</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>The definition describes a missing control line. The coded display is Invalid.</td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE206</td>
+    <td>Test result of HIV assay 2</td>
+    <td>The result of the second HIV assay in the testing strategy</td>
+    <td>Select one</td>
+    <td>Coding</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>C</td>
+    <td>None</td>
+    <td>HIV.B7.DT, HIV.E4.DT</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE207</td>
+    <td>Reactive</td>
+    <td>The result of the HIV assay in the testing strategy was reactive</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Reactive</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>O</td>
+    <td>None</td>
+    <td>HIV.B7.DT, HIV.E4.DT</td>
+    <td></td>
+    <td>The workbook also uses this ID for Non-reactive. The form uses the existing HIV assay 2 Reactive code HIV.E.DE205.</td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE207</td>
+    <td>Non-reactive</td>
+    <td>The result of the HIV assay in the testing strategy was reactive</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Reactive</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>O</td>
+    <td>None</td>
+    <td>HIV.B7.DT, HIV.E4.DT</td>
+    <td></td>
+    <td>The workbook also uses this ID for Reactive. The form uses the existing HIV assay 2 Non-reactive code HIV.E.DE206.</td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE209</td>
+    <td>Inconclusive</td>
+    <td>Cant say reactive or non reactive, If there is no line in the control window-even if there is a line in the patient/ test window</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Inconclusive</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>The definition describes a missing control line. The coded display is Invalid.</td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE210</td>
+    <td>Test result of HIV assay 3</td>
+    <td>The result of the third HIV assay in the testing strategy</td>
+    <td>Select one</td>
+    <td>Coding</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>C</td>
+    <td>None</td>
+    <td>HIV.B7.DT, HIV.E4.DT</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE211</td>
+    <td>Reactive</td>
+    <td>The result of the HIV assay in the testing strategy was reactive</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Reactive</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>O</td>
+    <td>None</td>
+    <td>HIV.B7.DT, HIV.E4.DT</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE212</td>
+    <td>Non-reactive</td>
+    <td>The result of the HIV assay in the testing strategy was non-reactive</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Non-reactive</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>O</td>
+    <td>None</td>
+    <td>HIV.B7.DT, HIV.E4.DT</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE213</td>
+    <td>Inconclusive</td>
+    <td>Cant say reactive or non reactive, If there is no line in the control window-even if there is a line in the patient/ test window</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Inconclusive</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>The definition describes a missing control line. The coded display is Invalid.</td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE214</td>
+    <td>Test result of HIV assay 1 repeated</td>
+    <td>The result of the repeated first HIV assay in the testing strategy</td>
+    <td>Select one</td>
+    <td>Coding</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>C</td>
+    <td>None</td>
+    <td>HIV.B7.DT, HIV.E4.DT</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE215</td>
+    <td>Reactive</td>
+    <td>The result of the HIV assay in the testing strategy was reactive</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Reactive</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>O</td>
+    <td>None</td>
+    <td>HIV.B7.DT, HIV.E4.DT</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE216</td>
+    <td>Non-reactive</td>
+    <td>The result of the HIV assay in the testing strategy was non-reactive</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Non-reactive</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>O</td>
+    <td>None</td>
+    <td>HIV.B7.DT, HIV.E4.DT</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>HIV.E.ET.DE217</td>
+    <td>Inconclusive</td>
+    <td>Cant say reactive or non reactive, If there is no line in the control window-even if there is a line in the patient/ test window</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Inconclusive</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>The definition describes a missing control line. The coded display is Invalid.</td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.E.DE194</td>
+    <td>Assay number in testing strategy for maternal self test</td>
+    <td>The number of the assay (test kit) in the HIV testing strategy</td>
+    <td>Select one</td>
+    <td>Coding</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>C</td>
+    <td>None</td>
+    <td>HIV.B7.DT, HIV.E4.DT</td>
+    <td></td>
+    <td>Record the assay number independently of the reported maternal diagnostic result.</td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE195</td>
     <td>Assay 0</td>
     <td>A community outreach test-for-triage or self-test which is not included in the HIV testing strategy</td>
@@ -33013,7 +33744,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE196</td>
     <td>Assay 1</td>
     <td>The first test in the HIV testing strategy</td>
@@ -33030,7 +33761,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE197</td>
     <td>Assay 2</td>
     <td>The second test in the HIV testing strategy</td>
@@ -33047,7 +33778,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE198</td>
     <td>Assay 3</td>
     <td>The third test in the HIV testing strategy</td>
@@ -33064,13 +33795,13 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE199</td>
     <td>Assay 1 repeated</td>
     <td>The first test in the HIV testing strategy</td>
     <td>N/A</td>
     <td>Codes</td>
-    <td>Assay 1 repeated</td>
+    <td>Assay 1</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -33078,10 +33809,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.B7.DT, HIV.E4.DT</td>
     <td></td>
-    <td></td>
+    <td>The form uses the existing repeated-assay 1 code HIV.E.DE199.</td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE200</td>
     <td>Test result of HIV assay 1</td>
     <td>The result of the first HIV assay in the testing strategy</td>
@@ -33098,7 +33829,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE201</td>
     <td>Reactive</td>
     <td>The result of the HIV assay in the testing strategy was reactive</td>
@@ -33115,7 +33846,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE202</td>
     <td>Non-reactive</td>
     <td>The result of the HIV assay in the testing strategy was non-reactive</td>
@@ -33132,24 +33863,24 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td></td>
     <td>HIV.E.DE203</td>
-    <td>Invalid</td>
-    <td>The result of the HIV assay in the testing strategy was invalid</td>
+    <td>Inconclusive</td>
+    <td>Cant say reactive or non reactive, If there is no line in the control window-even if there is a line in the patient/ test window</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Invalid</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.B7.DT, HIV.E4.DT</td>
+    <td>Inconclusive</td>
     <td></td>
-    <td>Terminology may depend upon the type of assay being used in the algorithm</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>The definition describes a missing control line. The form retains the existing Invalid code.</td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE204</td>
     <td>Test result of HIV assay 2</td>
     <td>The result of the second HIV assay in the testing strategy</td>
@@ -33166,7 +33897,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE205</td>
     <td>Reactive</td>
     <td>The result of the HIV assay in the testing strategy was reactive</td>
@@ -33183,7 +33914,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE206</td>
     <td>Non-reactive</td>
     <td>The result of the HIV assay in the testing strategy was non-reactive</td>
@@ -33200,24 +33931,24 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td></td>
     <td>HIV.E.DE207</td>
-    <td>Invalid</td>
-    <td>The result of the HIV assay in the testing strategy was invalid</td>
+    <td>Inconclusive</td>
+    <td>Cant say reactive or non reactive, If there is no line in the control window-even if there is a line in the patient/ test window</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Invalid</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.B7.DT, HIV.E4.DT</td>
+    <td>Inconclusive</td>
     <td></td>
-    <td>Terminology may depend upon the type of assay being used in the algorithm</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>The definition describes a missing control line. The form retains the existing Invalid code.</td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE208</td>
     <td>Test result of HIV assay 3</td>
     <td>The result of the third HIV assay in the testing strategy</td>
@@ -33234,7 +33965,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE209</td>
     <td>Reactive</td>
     <td>The result of the HIV assay in the testing strategy was reactive</td>
@@ -33251,7 +33982,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE210</td>
     <td>Non-reactive</td>
     <td>The result of the HIV assay in the testing strategy was non-reactive</td>
@@ -33268,24 +33999,24 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td></td>
     <td>HIV.E.DE211</td>
-    <td>Invalid</td>
-    <td>The result of the HIV assay in the testing strategy was invalid</td>
+    <td>Inconclusive</td>
+    <td>Cant say reactive or non reactive, If there is no line in the control window-even if there is a line in the patient/ test window</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Invalid</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.B7.DT, HIV.E4.DT</td>
+    <td>Inconclusive</td>
     <td></td>
-    <td>Terminology may depend upon the type of assay being used in the algorithm</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>The definition describes a missing control line. The form retains the existing Invalid code.</td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE212</td>
     <td>Test result of HIV assay 1 repeated</td>
     <td>The result of the repeated first HIV assay in the testing strategy</td>
@@ -33302,7 +34033,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE213</td>
     <td>Reactive</td>
     <td>The result of the HIV assay in the testing strategy was reactive</td>
@@ -33319,7 +34050,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE214</td>
     <td>Non-reactive</td>
     <td>The result of the HIV assay in the testing strategy was non-reactive</td>
@@ -33336,24 +34067,24 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td></td>
     <td>HIV.E.DE215</td>
-    <td>Invalid</td>
-    <td>The result of the HIV assay in the testing strategy was invalid</td>
+    <td>Inconclusive</td>
+    <td>Cant say reactive or non reactive, If there is no line in the control window-even if there is a line in the patient/ test window</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Invalid</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.B7.DT, HIV.E4.DT</td>
+    <td>Inconclusive</td>
     <td></td>
-    <td>Terminology may depend upon the type of assay being used in the algorithm</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>The definition describes a missing control line. The form retains the existing Invalid code.</td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE216</td>
     <td>Test result of syphilis assay 1</td>
     <td>The result of the first syphilis assay in the testing strategy</td>
@@ -33370,7 +34101,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE217</td>
     <td>Reactive</td>
     <td>The result of the first syphilis assay in the testing strategy was reactive</td>
@@ -33387,7 +34118,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.E.DE218</td>
     <td>Non-reactive</td>
     <td>The result of the first syphilis assay in the testing strategy was non-reactive</td>
@@ -33404,27 +34135,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
-    <td>HIV.E.DE219</td>
-    <td>Invalid</td>
-    <td>The result of the HIV assay in the testing strategy was invalid</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Invalid</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.E4.DT</td>
-    <td></td>
-    <td>Terminology may depend upon the type of assay being used in the algorithm</td>
-  </tr>
-  <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
-    <td>HIV.E.DE220</td>
-    <td>Test result of syphilis assay 1 repeated</td>
-    <td>The result of the first syphilis assay repeated in the testing strategy</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE222</td>
+    <td>Test result of Hepatitis B assay 1</td>
+    <td>The result of the first Hepatitis B assay in the testing strategy</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -33435,13 +34149,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.E4.DT</td>
     <td></td>
-    <td></td>
+    <td>Records the reported maternal hepatitis B assay result.</td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
-    <td>HIV.E.DE221</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE223</td>
     <td>Reactive</td>
-    <td>The result of the first syphilis assay repeated in the testing strategy was reactive</td>
+    <td>The result of the first Hepatitis Bassay in the testing strategy was reactive</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Reactive</td>
@@ -33455,10 +34169,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
-    <td>HIV.E.DE222</td>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.E.ET.DE224</td>
     <td>Non-reactive</td>
-    <td>The result of the first syphilis assay repeated in the testing strategy was non-reactive</td>
+    <td>The result of the first Hepatitis B assay in the testing strategy was non-reactive</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Non-reactive</td>
@@ -33470,23 +34184,6 @@ HIV.A5 Create new client record</td>
     <td>HIV.E4.DT</td>
     <td></td>
     <td></td>
-  </tr>
-  <tr>
-    <td>HIV.E4 Test mother for HIV using testing algorithm</td>
-    <td>HIV.E.DE223</td>
-    <td>Invalid</td>
-    <td>The result of the first syphilis assay repeated in the testing strategy was invalid</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Invalid</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.E4.DT</td>
-    <td></td>
-    <td>Terminology may depend upon the type of assay being used in the algorithm</td>
   </tr>
   <tr>
     <td>HIV.F8 Test infant/child for HIV using testing algorithm</td>
@@ -33498,12 +34195,12 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>Yes</td>
     <td>C</td>
     <td>None</td>
     <td></td>
-    <td>HTS.2, HTS.3, HTS.5, HTS.7, HTS.8, PRV.3, PRV.7, VER.2, VER.7</td>
-    <td></td>
+    <td>HTS.2, HTS.5, HTS.7, HTS.8, PRV.3, PRV.7, VER.2, VER.7, PRV.3</td>
+    <td>Required when an EID or antibody result is recorded. The date is today or earlier.</td>
   </tr>
   <tr>
     <td>HIV.F8 Test infant/child for HIV using testing algorithm</td>
@@ -33515,12 +34212,12 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>Yes</td>
     <td>R</td>
     <td>None</td>
     <td></td>
     <td>VER.6</td>
-    <td></td>
+    <td>Record the HIV status established by the testing workflow. Keep the status separate from each raw assay result.</td>
   </tr>
   <tr>
     <td>HIV.F8 Test infant/child for HIV using testing algorithm</td>
@@ -33532,7 +34229,7 @@ HIV.A5 Create new client record</td>
     <td>HIV-positive</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>Yes</td>
     <td>O</td>
     <td>None</td>
     <td></td>
@@ -33549,7 +34246,7 @@ HIV.A5 Create new client record</td>
     <td>HIV-negative</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>Yes</td>
     <td>O</td>
     <td>None</td>
     <td></td>
@@ -33563,10 +34260,10 @@ HIV.A5 Create new client record</td>
     <td>Infant has unknown HIV status</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Unknown</td>
+    <td>Inconclusive</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>Yes</td>
     <td>O</td>
     <td>None</td>
     <td></td>
@@ -33588,10 +34285,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td>VER.3</td>
-    <td></td>
+    <td>Record when infant ART was documented as started or restarted.</td>
   </tr>
   <tr>
-    <td>HIV.F20 Record infant's/child's final HIV diagnosis</td>
+    <td>HIV.F20 Record infant&#x27;s/child&#x27;s final HIV diagnosis</td>
     <td>HIV.E.DE230</td>
     <td>Final diagnosis of HIV-exposed infant</td>
     <td>HIV-exposed infant final status at 18 months or 3 months after cessation of breastfeeding (whichever is later).</td>
@@ -33605,10 +34302,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td>VER.6</td>
-    <td></td>
+    <td>Record the verified closing outcome. A negative outcome requires confirmed negative status, documented cessation of breastfeeding, and confirmation that the workbook follow-up date was reached.</td>
   </tr>
   <tr>
-    <td>HIV.F20 Record infant's/child's final HIV diagnosis</td>
+    <td>HIV.F20 Record infant&#x27;s/child&#x27;s final HIV diagnosis</td>
     <td>HIV.E.DE231</td>
     <td>HIV-positive</td>
     <td>The infant is HIV-positive</td>
@@ -33617,7 +34314,7 @@ HIV.A5 Create new client record</td>
     <td>HIV-positive</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>"Infant HIV status"='HIV-positive'</td>
+    <td>&quot;Infant HIV status&quot;=&#x27;HIV-positive&#x27;</td>
     <td>O</td>
     <td>None</td>
     <td></td>
@@ -33625,7 +34322,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.F20 Record infant's/child's final HIV diagnosis</td>
+    <td>HIV.F20 Record infant&#x27;s/child&#x27;s final HIV diagnosis</td>
     <td>HIV.E.DE232</td>
     <td>HIV-negative and no longer breastfeeding</td>
     <td>The infant is HIV-negative and the mother has quit breastfeeding</td>
@@ -33634,15 +34331,15 @@ HIV.A5 Create new client record</td>
     <td>HIV-negative and no longer breastfeeding</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>"Infant HIV status"='HIV-negative'</td>
+    <td>&quot;Infant HIV status&quot;=&#x27;HIV-negative&#x27;</td>
     <td>O</td>
     <td>None</td>
     <td></td>
     <td>VER.6</td>
-    <td></td>
+    <td>Requires verified HIV-negative status, documented cessation of breastfeeding, and confirmation of the workbook follow-up timing.</td>
   </tr>
   <tr>
-    <td>HIV.F20 Record infant's/child's final HIV diagnosis</td>
+    <td>HIV.F20 Record infant&#x27;s/child&#x27;s final HIV diagnosis</td>
     <td>HIV.E.DE233</td>
     <td>HIV status unknown</td>
     <td>The final HIV status of the child is unknown because the infant died, was lost to follow-up or transferred out without ever having an HIV-positive diagnosis or is active in care but was not tested at 18 months</td>
@@ -33651,15 +34348,15 @@ HIV.A5 Create new client record</td>
     <td>HIV status unknown</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>"Infant HIV status" ≠ 'HIV-positive' and "Infant HIV status" ≠ 'HIV-negative'</td>
+    <td>&quot;Infant HIV status&quot; ≠ &#x27;HIV-positive&#x27; and &quot;Infant HIV status&quot; ≠ &#x27;HIV-negative&#x27;</td>
     <td>O</td>
     <td>None</td>
     <td></td>
     <td>VER.6</td>
-    <td></td>
+    <td>Use when status is unknown. The form asks for the documented reason.</td>
   </tr>
   <tr>
-    <td>HIV.F20 Record infant's/child's final HIV diagnosis</td>
+    <td>HIV.F20 Record infant&#x27;s/child&#x27;s final HIV diagnosis</td>
     <td>HIV.E.DE234</td>
     <td>HIV-exposed infant reason for unknown final status</td>
     <td>The outcome for the infant does not have a final outcome, which may because of death, stopped treatment or lost to follow-up.</td>
@@ -33668,15 +34365,15 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>No</td>
     <td>C</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>A process or automated method should be in place to update "On ART" to False when HIV treatment outcomes change</td>
+    <td>Required when final HIV status is unknown.</td>
   </tr>
   <tr>
-    <td>HIV.F20 Record infant's/child's final HIV diagnosis</td>
+    <td>HIV.F20 Record infant&#x27;s/child&#x27;s final HIV diagnosis</td>
     <td>HIV.E.DE235</td>
     <td>Lost to follow-up</td>
     <td>Twenty-eight days or more since last missed appointment</td>
@@ -33685,15 +34382,15 @@ HIV.A5 Create new client record</td>
     <td>Lost to follow-up</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>No</td>
     <td>O</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>Other monitoring frameworks may include missed antiretroviral pickups in either facility or community settings</td>
+    <td></td>
   </tr>
   <tr>
-    <td>HIV.F20 Record infant's/child's final HIV diagnosis</td>
+    <td>HIV.F20 Record infant&#x27;s/child&#x27;s final HIV diagnosis</td>
     <td>HIV.E.DE236</td>
     <td>Transferred out</td>
     <td>The client transferred to another facility</td>
@@ -33702,7 +34399,7 @@ HIV.A5 Create new client record</td>
     <td>Transferred out</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>No</td>
     <td>O</td>
     <td>None</td>
     <td></td>
@@ -33710,7 +34407,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.F20 Record infant's/child's final HIV diagnosis</td>
+    <td>HIV.F20 Record infant&#x27;s/child&#x27;s final HIV diagnosis</td>
     <td>HIV.E.DE237</td>
     <td>Death (documented)</td>
     <td>People living with HIV previously on ART who are confirmed to have died from any cause</td>
@@ -33719,7 +34416,7 @@ HIV.A5 Create new client record</td>
     <td>Death (documented)</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>No</td>
     <td>O</td>
     <td>None</td>
     <td></td>
@@ -33727,7 +34424,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.F20 Record infant's/child's final HIV diagnosis</td>
+    <td>HIV.F20 Record infant&#x27;s/child&#x27;s final HIV diagnosis</td>
     <td>HIV.E.DE238</td>
     <td>Refused (stopped) treatment</td>
     <td>Client was contacted and confirmed to have stopped ART</td>
@@ -33736,15 +34433,15 @@ HIV.A5 Create new client record</td>
     <td>Refused (stopped) treatment</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
+    <td>No</td>
     <td>O</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>Definition from PEPFAR MER 2.4 Guidance (p. 148)</td>
+    <td></td>
   </tr>
   <tr>
-    <td>HIV.F20 Record infant's/child's final HIV diagnosis</td>
+    <td>HIV.F20 Record infant&#x27;s/child&#x27;s final HIV diagnosis</td>
     <td>HIV.E.DE239</td>
     <td>Date of death of infant</td>
     <td>Date that the infant died</td>
@@ -33753,18 +34450,18 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>"Date of death infant"' ≤ Date in which data is entered</td>
+    <td>&quot;Date of death infant&quot;&#x27; ≤ Date in which data is entered</td>
     <td>C</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the documented date or time of death. The form checks known birth and death timing.</td>
   </tr>
   <tr>
-    <td>HIV.F20 Record infant's/child's final HIV diagnosis</td>
+    <td>HIV.F20 Record infant&#x27;s/child&#x27;s final HIV diagnosis</td>
     <td>HIV.E.DE240</td>
     <td>Cause of death of infant</td>
-    <td>The infant's cause of death</td>
+    <td>The infant&#x27;s cause of death</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -33775,10 +34472,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>The application supplies approved causes from the applicable terminology. The historical value set contains a timing flag and cannot identify cause of death.</td>
   </tr>
   <tr>
-    <td>HIV.F20 Record infant's/child's final HIV diagnosis</td>
+    <td>HIV.F20 Record infant&#x27;s/child&#x27;s final HIV diagnosis</td>
     <td>HIV.E.DE241</td>
     <td>Infant died within 24 hours of childbirth</td>
     <td>The infant died within 24 hours of childbirth</td>
@@ -33786,16 +34483,16 @@ HIV.A5 Create new client record</td>
     <td>Boolean</td>
     <td>True/False</td>
     <td>N/A</td>
-    <td>Calculated from "Date of death of infant" and "Date of birth"</td>
+    <td>Calculated from &quot;Date of death of infant&quot; and &quot;Date of birth&quot;</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Calculated only when precise birth and death times, including time zones, are documented. The first 24 hours end at the 24-hour boundary.</td>
   </tr>
   <tr>
-    <td>HIV.F20 Record infant's/child's final HIV diagnosis</td>
+    <td>HIV.F20 Record infant&#x27;s/child&#x27;s final HIV diagnosis</td>
     <td>HIV.E.DE242</td>
     <td>Action(s) needed during infant follow-up visit</td>
     <td>Any actions needed during infant follow-up visit</td>
@@ -33812,7 +34509,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE243</td>
     <td>Timing of additional infant HIV test</td>
     <td>Age in months when additional infant HIV test is performed</td>
@@ -33826,10 +34523,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the documented age in completed months when the additional test was performed.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE244</td>
     <td>Date of sample collection of additional infant HIV test</td>
     <td>Date of sample collection of additional infant HIV test</td>
@@ -33843,13 +34540,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the documented additional sample collection date.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE245</td>
     <td>Haemoglobin (Hb) result</td>
-    <td>Result of woman's haemoglobin test during ANC, labour or delivery. Full blood count testing is recommended, and if not available, use of  haemoglobinometer over haemoglobin colour scale. </td>
+    <td>Result of woman&#x27;s haemoglobin test during ANC, labour or delivery. Full blood count testing is recommended, and if not available, use of haemoglobinometer over haemoglobin colour scale.</td>
     <td>N/A</td>
     <td>Quantity</td>
     <td>N/A</td>
@@ -33860,13 +34557,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the documented haemoglobin quantity in g/dL or g/L.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE246</td>
     <td>Blood group and Rh factor</td>
-    <td>Mother's blood type and blood Rh factor</td>
+    <td>Mother&#x27;s blood type and blood Rh factor</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -33880,10 +34577,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE247</td>
     <td>A+</td>
-    <td>Mother's blood type and blood Rh factor is A+</td>
+    <td>Mother&#x27;s blood type and blood Rh factor is A+</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>A+</td>
@@ -33897,10 +34594,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE248</td>
     <td>A-</td>
-    <td>Mother's blood type and blood Rh factor is A-</td>
+    <td>Mother&#x27;s blood type and blood Rh factor is A-</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>A-</td>
@@ -33914,10 +34611,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE249</td>
     <td>B+</td>
-    <td>Mother's blood type and blood Rh factor is B+</td>
+    <td>Mother&#x27;s blood type and blood Rh factor is B+</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>B+</td>
@@ -33931,10 +34628,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE250</td>
     <td>B-</td>
-    <td>Mother's blood type and blood Rh factor is B-</td>
+    <td>Mother&#x27;s blood type and blood Rh factor is B-</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>B-</td>
@@ -33948,10 +34645,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE251</td>
     <td>O+</td>
-    <td>Mother's blood type and blood Rh factor is O+</td>
+    <td>Mother&#x27;s blood type and blood Rh factor is O+</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>O+</td>
@@ -33965,10 +34662,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE252</td>
     <td>O-</td>
-    <td>Mother's blood type and blood Rh factor is O-</td>
+    <td>Mother&#x27;s blood type and blood Rh factor is O-</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>O-</td>
@@ -33982,10 +34679,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE253</td>
     <td>AB+</td>
-    <td>Mother's blood type and blood Rh factor is AB+</td>
+    <td>Mother&#x27;s blood type and blood Rh factor is AB+</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>AB+</td>
@@ -33999,10 +34696,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE254</td>
     <td>AB-</td>
-    <td>Mother's blood type and blood Rh factor is AB-</td>
+    <td>Mother&#x27;s blood type and blood Rh factor is AB-</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>AB-</td>
@@ -34016,7 +34713,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE255</td>
     <td>Asymptomatic bacteriuria (ASB) test result</td>
     <td>Result of urine culture (or urine Gram-staining if not available over dipstick tests) for diagnosing asymptomatic bacteriuria</td>
@@ -34033,7 +34730,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE256</td>
     <td>Positive</td>
     <td>Result of test for asymptomatic bacteriuria is positive</td>
@@ -34050,7 +34747,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE257</td>
     <td>Negative</td>
     <td>Result of test for asymptomatic bacteriuria is negative</td>
@@ -34067,7 +34764,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE258</td>
     <td>Unknown</td>
     <td>Result of test for asymptomatic bacteriuria is unknown</td>
@@ -34084,7 +34781,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE259</td>
     <td>Urine protein test result</td>
     <td>Results of urine protein test of mother during ANC visit</td>
@@ -34101,10 +34798,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE260</td>
-    <td>0</td>
-    <td>Result of urine protein test of mother during ANC visit is '0'</td>
+    <td>0.0</td>
+    <td>Result of urine protein test of mother during ANC visit is negative</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>0</td>
@@ -34115,13 +34812,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>The form uses the existing code displayed as 0.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE261</td>
     <td>+</td>
-    <td>Result of urine protein test of mother during ANC visit is '+'</td>
+    <td>Result of urine protein test of mother during ANC visit is &#x27;+&#x27;</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>+</td>
@@ -34135,10 +34832,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE262</td>
-    <td>++</td>
-    <td>Result of urine protein test of mother during ANC visit is '++'</td>
+    <td>.++</td>
+    <td>Result of urine protein test of mother during ANC visit is &#x27;++&#x27;</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>++</td>
@@ -34149,186 +34846,16 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>The form uses the existing code displayed as ++.</td>
   </tr>
   <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
+    <td>HIV.E1 Capture or update mother&#x27;s history</td>
     <td>HIV.E.DE263</td>
     <td>+++</td>
-    <td>Result of urine protein test of mother during ANC visit is '+++'</td>
+    <td>Result of urine protein test of mother during ANC visit is &#x27;+++&#x27;</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>+++</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
-    <td>HIV.E.DE264</td>
-    <td>Type of hypertensive disorder</td>
-    <td>Type of hypertensive disorder of the mother</td>
-    <td>Select all that apply</td>
-    <td>Coding</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td>Magee et al., (2022) Pregnancy hypertension: An international Journal of Women's Cardiovascular Health</td>
-  </tr>
-  <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
-    <td>HIV.E.DE265</td>
-    <td>Chronic hypertension</td>
-    <td>Hypertension detected pre-pregnancy or before 20 weeks' gestation</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Chronic hypertension</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
-    <td>HIV.E.DE266</td>
-    <td>Essential</td>
-    <td>Hypertension without a known secondary cause (pre-pregnancy or at less than 20 weeks)</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Essential</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
-    <td>HIV.E.DE267</td>
-    <td>Secondary</td>
-    <td>Hypertension with a known secondary cause (e.g. renal disease; detected pre-pregnancy or at less than 20 weeks)</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Secondary</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
-    <td>HIV.E.DE268</td>
-    <td>White-coat hypertension</td>
-    <td>sBP greater than or equal to 140 and/or dBP greater than or equal to 90 mmHg when measured in the office or clinic, and BP less than 135/85 mmHg using HBPM or ABPM readings (pre-pregnancy or at less than 20 weeks)</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>White-coat hypertension</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
-    <td>HIV.E.DE269</td>
-    <td>Masked hypertension</td>
-    <td>BP that is less than 140/90 mmHg at a clinic/office visit, but greater then or equal to 135/85 mmHg at other times outside the clinic/ office (pre-pregnancy or at less than 20 weeks)</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Masked hypertension</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
-    <td>HIV.E.DE270</td>
-    <td>Gestational hypertension</td>
-    <td>Hypertension arising de novo at greater than or equal to 20 weeks' gestation in the absence of proteinuria or other findings suggestive of pre-eclampsia</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Gestational hypertension</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
-    <td>HIV.E.DE271</td>
-    <td>Transient gestational hypertension</td>
-    <td>Hypertension arising at greater than or equal to 20 weeks' gestation in the clinic, which resolves with repeated BP readings</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Transient gestational hypertension</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
-    <td>HIV.E.DE272</td>
-    <td>Pre-eclampsia</td>
-    <td>Pre-eclampsia</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Pre-eclampsia</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.E1 Capture or update mother's history</td>
-    <td>HIV.E.DE273</td>
-    <td>Superimposed on chronic hypertension</td>
-    <td>Among women with chronic hypertension, development of new proteinuria, another maternal organ dysfunction(s), or evidence of uteroplacental dysfunction.</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Superimposed on chronic hypertension</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>

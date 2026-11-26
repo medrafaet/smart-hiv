@@ -71,6 +71,33 @@ RuleSet: DocumentedTbDiagnosticFindings
   * type = #boolean
   * text = "Documented multidrug-resistant TB (MDR-TB)"
 
+RuleSet: DocumentedMaternalDiagnostics
+* item[+]
+  * id = "HIV.E.DE149"
+  * linkId = "HIV.E.DE149"
+  * type = #choice
+  * text = "Maternal syphilis test result"
+  * required = false
+  * repeats = false
+  * readOnly = false
+  * answerValueSet = Canonical(HIV.E.DE149)
+* item[+]
+  * id = "HIV.E.DE153"
+  * linkId = "HIV.E.DE153"
+  * type = #boolean
+  * text = "Hypertension"
+  * required = false
+  * repeats = false
+  * readOnly = false
+* item[+]
+  * id = "HIV.E.DE154"
+  * linkId = "HIV.E.DE154"
+  * type = #boolean
+  * text = "Pre-eclampsia"
+  * required = false
+  * repeats = false
+  * readOnly = false
+
 Instance: HIV.D20Diagnostics
 InstanceOf: sdc-questionnaire-extr-smap
 Title: "Diagnostics"
@@ -192,31 +219,7 @@ Usage: #definition
   * repeats = false
   * readOnly = false
 * insert DocumentedTbDiagnosticFindings
-* item[+]
-  * id = "HIV.E.DE149"
-  * linkId = "HIV.E.DE149"
-  * type = #choice
-  * text = "Maternal syphilis test result"
-  * required = false
-  * repeats = false
-  * readOnly = false
-  * answerValueSet = "#HIV.E.DE149"
-* item[+]
-  * id = "HIV.E.DE153"
-  * linkId = "HIV.E.DE153"
-  * type = #boolean
-  * text = "Hypertension"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.E.DE154"
-  * linkId = "HIV.E.DE154"
-  * type = #boolean
-  * text = "Pre-eclampsia"
-  * required = false
-  * repeats = false
-  * readOnly = false
+* insert DocumentedMaternalDiagnostics
 * item[+]
   * id = "HIV.G.DE1"
   * linkId = "HIV.G.DE1"

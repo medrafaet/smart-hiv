@@ -12,3 +12,4 @@ Description: "Value set of early infant diagnosis test number 2 test result"
 * HIVConcepts#HIV.E.DE191 "Positive"
 * HIVConcepts#HIV.E.DE192 "Negative"
 * HIVConcepts#HIV.E.DE193 "Indeterminate"
+* HIVConcepts#HIV.E.ET.DE193

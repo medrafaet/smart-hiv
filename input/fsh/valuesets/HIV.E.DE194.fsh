@@ -13,5 +13,4 @@ Description: "Value set of the number of the assay (test kit) in the HIV testing
 * HIVConcepts#HIV.E.DE196 "Assay 1"
 * HIVConcepts#HIV.E.DE197 "Assay 2"
 * HIVConcepts#HIV.E.DE198 "Assay 3"
-* HIVConcepts#HIV.E.DE93 "Assay 1 repeated"
-* HIVConcepts#HIV.E.DE94 "Test result of HIV assay 1"
+* HIVConcepts#HIV.E.DE199 "Assay 1 repeated"
