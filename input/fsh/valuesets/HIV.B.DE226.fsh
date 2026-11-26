@@ -14,5 +14,7 @@ Description: "Value set of syndrome or STI for which client is diagnosed"
 * HIVConcepts#HIV.B.DE229 "Lower Abdominal pain"
 * HIVConcepts#HIV.B.DE230 "Genital ulcer disease syndrome"
 * HIVConcepts#HIV.B.DE231 "Anorectal discharge"
+* HIVConcepts#HIV.B.ET.DE207
+* HIVConcepts#HIV.B.ET.DE208
 * HIVConcepts#HIV.B.DE232 "Sent for testing"
 * HIVConcepts#HIV.B.DE233 "Other"

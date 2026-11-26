@@ -11,4 +11,4 @@ Description: "Value set of the result of the repeated first HIV assay in the tes
 
 * HIVConcepts#HIV.B.DE107 "Reactive"
 * HIVConcepts#HIV.B.DE108 "Non-reactive"
-* HIVConcepts#HIV.B.DE109 "Invalid"
+* HIVConcepts#HIV.B.ET.DE109 "Invalid"

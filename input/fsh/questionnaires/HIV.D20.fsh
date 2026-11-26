@@ -1,15 +1,4 @@
-Instance: HIV.D20Diagnostics
-InstanceOf: sdc-questionnaire-extr-smap
-Title: "Diagnostics"
-Description: "Questionnaire for diagnostics"
-Usage: #definition
-* meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablequestionnaire"
-* meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
-* subjectType = #Patient
-* language = #en
-* status = #draft
-* experimental = true
-
+RuleSet: CareDiagnosticsCd4
 * item[+]
   * id = "HIV.D.DE364"
   * linkId = "HIV.D.DE364"
@@ -18,14 +7,19 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#"{cells}/mm3" "cells/mm³"
+  * extension[http://hl7.org/fhir/StructureDefinition/minValue].valueInteger = 0
 * item[+]
   * id = "HIV.D.DE365"
   * linkId = "HIV.D.DE365"
-  * type = #integer
+  * type = #decimal
   * text = "CD4 cell percentage"
   * required = false
   * repeats = false
   * readOnly = false
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#"%" "%"
+  * extension[http://hl7.org/fhir/StructureDefinition/minValue].valueDecimal = 0
+  * extension[http://hl7.org/fhir/StructureDefinition/maxValue].valueDecimal = 100
 * item[+]
   * id = "HIV.D.DE366"
   * linkId = "HIV.D.DE366"
@@ -37,11 +31,13 @@ Usage: #definition
 * item[+]
   * id = "HIV.D.DE367"
   * linkId = "HIV.D.DE367"
-  * type = #integer
+  * type = #decimal
   * text = "Baseline CD4 count"
   * required = false
   * repeats = false
   * readOnly = false
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#"{cells}/mm3" "cells/mm³"
+  * extension[http://hl7.org/fhir/StructureDefinition/minValue].valueDecimal = 0
 * item[+]
   * id = "HIV.D.DE368"
   * linkId = "HIV.D.DE368"
@@ -54,10 +50,30 @@ Usage: #definition
   * id = "HIV.D.DE369"
   * linkId = "HIV.D.DE369"
   * type = #boolean
-  * text = "Late ART initiation"
+  * text = "Late ART initiation (baseline CD4 measure)"
   * required = false
   * repeats = false
-  * readOnly = false
+  * readOnly = true
+  * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.name = "baselineCd4"
+  * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.language = #text/fhirpath
+  * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE367').answer.value.where(($this is decimal or $this is integer) and $this >= 0)"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.language = #text/fhirpath
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.expression = "iif(%baselineCd4.count() = 1, %baselineCd4 < 200, {})"
+
+Instance: HIV.D20Diagnostics
+InstanceOf: sdc-questionnaire-extr-smap
+Title: "Diagnostics"
+Description: "Questionnaire for diagnostics"
+Usage: #definition
+* meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablequestionnaire"
+* meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
+* subjectType = #Patient
+* language = #en
+* version = "2026-10"
+* status = #draft
+* experimental = true
+
+* insert CareDiagnosticsCd4
 * item[+]
   * id = "HIV.D.DE387"
   * linkId = "HIV.D.DE387"

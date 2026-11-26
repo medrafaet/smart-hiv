@@ -6,4 +6,4 @@ Description: "A profile for MedicationRequest representing a prescription of a c
 * ^experimental = true
 * ^title = "Current PrEP Regimen Prescription"
 * medication[x] only CodeableConcept
-* medicationCodeableConcept from HIV.C.DE17 (required)
+* medicationCodeableConcept from HIV.C.DE17-exchange (required)

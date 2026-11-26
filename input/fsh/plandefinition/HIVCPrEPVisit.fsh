@@ -19,6 +19,7 @@ Usage: #definition
 * action.participant[=].role.text = "Trained Lay Provider"
 * action.action[0].id = "HIV.C.1"
 * action.action[=].title = "Determine reason for visit"
+* action.action[=].definitionCanonical = Canonical(HIV.C1DetermineReasonForVisit)
 * action.action[=].description = "Search for client details in the system and determine reason for visit"
 * action.action[=].participant.type = #practitioner
 * action.action[=].participant.role.text = "Trained Lay Provider"
@@ -29,6 +30,7 @@ Usage: #definition
 * action.action[=].participant.role.text = "Trained Lay Provider"
 * action.action[+].id = "HIV.C.3"
 * action.action[=].title = "Capture or update client history"
+* action.action[=].definitionCanonical = Canonical(HIV.C3CaptureOrUpdateClientHistory)
 * action.action[=].description = "Discuss history with client and review records. Examples of history to take include other diagnoses, medications (including any use of ART), and partner’s HIV status"
 * action.action[=].participant.type = #practitioner
 * action.action[=].participant.role.text = "Trained Lay Provider"
@@ -39,6 +41,7 @@ Usage: #definition
 * action.action[=].participant.role.text = "Trained Lay Provider"
 * action.action[+].id = "HIV.C.6"
 * action.action[=].title = "Post-test package of services"
+* action.action[=].definitionCanonical = Canonical(HIV.C6PostTestPackageOfServices)
 * action.action[=].description = "If the client tested positive for HIV, the client should be counselled and linked to care, based on an essential post-test service package."
 * action.action[=].participant.type = #practitioner
 * action.action[=].participant.role.text = "Trained Lay Provider"
@@ -49,6 +52,7 @@ Usage: #definition
 * action.action[=].participant.role.text = "Trained Lay Provider"
 * action.action[+].id = "HIV.C.8"
 * action.action[=].title = "Suitable for PrEP or PEP?"
+* action.action[=].definitionCanonical = Canonical(HIV.C8SuitableForPrepOrPep)
 * action.action[=].description = "• If the initial HIV serology test result is non-reactive (negative), the client meets suitability criteria, and there are no history, signs or symptoms of an acute viral syndrome, the person could be offered and, if desired, initiated on PrEP."
 * action.action[=].participant.type = #practitioner
 * action.action[=].participant.role.text = "Trained Lay Provider"
@@ -59,6 +63,7 @@ Usage: #definition
 * action.action[=].participant.role.text = "Trained Lay Provider"
 * action.action[+].id = "HIV.C.10"
 * action.action[=].title = "Counsel on risk and prevention"
+* action.action[=].definitionCanonical = Canonical(HIV.C10CounselOnRiskAndPrevention)
 * action.action[=].description = "• If PEP and PrEP are not suitable for the client, such as the client declining medication, the provider may counsel on risk and other prevention options, as well as promote and provide condoms."
 * action.action[=].participant.type = #practitioner
 * action.action[=].participant.role.text = "Trained Lay Provider"
@@ -74,6 +79,7 @@ Usage: #definition
 * action.action[=].participant.role.text = "Trained Lay Provider"
 * action.action[+].id = "HIV.C.17"
 * action.action[=].title = "Determine recommended tests"
+* action.action[=].definitionCanonical = Canonical(HIV.C17DetermineRecommendedTests)
 * action.action[=].description = "In addition to HIV testing, a package of screenings is recommended for new and continuing PrEP users, specific to the chosen prevention option as per national guidelines"
 * action.action[=].participant.type = #patient
 * action.action[=].participant.role.coding.code = #client
@@ -89,6 +95,7 @@ Usage: #definition
 * action.action[=].participant.role.text = "Trained Lay Provider"
 * action.action[+].id = "HIV.C.21"
 * action.action[=].title = "Diagnostics"
+* action.action[=].definitionCanonical = Canonical(HIV.C21Diagnostics)
 * action.action[=].description = "If diagnostics are to be performed, this may take place at this point. Or this may take place at another time during the process, or after, if the client needs to go to a lab."
 * action.action[=].participant.type = #practitioner
 * action.action[=].participant.role.text = "Trained Lay Provider"
@@ -99,11 +106,13 @@ Usage: #definition
 * action.action[=].participant.role.text = "Trained Lay Provider"
 * action.action[+].id = "HIV.C.23"
 * action.action[=].title = "Prescribe or administer PrEP or PEP"
-* action.action[=].description = "Prescribe or administer PrEP, depending upon the PrEP formulation discussed"
+* action.action[=].description = "Record PrEP or PEP prescribed or administered and the clinician's assessment."
+* action.action[=].definitionCanonical = Canonical(HIV.C23PrescribeOrAdministerPrepOrPep)
 * action.action[=].participant.type = #practitioner
 * action.action[=].participant.role.text = "Trained Lay Provider"
 * action.action[+].id = "HIV.C.24"
 * action.action[=].title = "Schedule follow-up"
-* action.action[=].description = "A person using PrEP should have regular HIV testing, such as every three months."
+* action.action[=].description = "Record the date, time and reason for the planned PrEP or PEP follow-up."
+* action.action[=].definitionCanonical = Canonical(HIV.C24ScheduleFollowUp)
 * action.action[=].participant.type = #practitioner
 * action.action[=].participant.role.text = "Trained Lay Provider"

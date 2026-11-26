@@ -1120,10 +1120,12 @@ define "Invalid B.DE101":
     or exists "Invalid B.DE101 Observation"
 define "Invalid B.DE101 Condition":
   [Condition: Concepts."Invalid - HIV.B.DE101"]
+    union [Condition: Concepts."Invalid - HIV.B.ET.DE101"]
 define "Invalid B.DE101 Observation":
   "Test result of HIV assay 2 B.DE98 Observation" O
     where O.status in { 'final', 'amended', 'corrected' }
-      and O.value ~ Concepts."Invalid - HIV.B.DE101"
+      and (O.value ~ Concepts."Invalid - HIV.B.DE101"
+        or O.value ~ Concepts."Invalid - HIV.B.ET.DE101")
 /* End of Invalid B.DE101 */
 
 /*
@@ -1184,10 +1186,12 @@ define "Invalid B.DE105":
     or exists "Invalid B.DE105 Observation"
 define "Invalid B.DE105 Condition":
   [Condition: Concepts."Invalid - HIV.B.DE105"]
+    union [Condition: Concepts."Invalid - HIV.B.ET.DE105"]
 define "Invalid B.DE105 Observation":
   "Test result of HIV assay 3 B.DE102 Observation" O
     where O.status in { 'final', 'amended', 'corrected' }
-      and O.value ~ Concepts."Invalid - HIV.B.DE105"
+      and (O.value ~ Concepts."Invalid - HIV.B.DE105"
+        or O.value ~ Concepts."Invalid - HIV.B.ET.DE105")
 /* End of Invalid B.DE105 */
 
 /*
@@ -1248,10 +1252,12 @@ define "Invalid B.DE109":
     or exists "Invalid B.DE109 Observation"
 define "Invalid B.DE109 Condition":
   [Condition: Concepts."Invalid - HIV.B.DE109"]
+    union [Condition: Concepts."Invalid - HIV.B.ET.DE109"]
 define "Invalid B.DE109 Observation":
   "Test result of HIV assay 1 repeated B.DE106 Observation" O
     where O.status in { 'final', 'amended', 'corrected' }
-      and O.value ~ Concepts."Invalid - HIV.B.DE109"
+      and (O.value ~ Concepts."Invalid - HIV.B.DE109"
+        or O.value ~ Concepts."Invalid - HIV.B.ET.DE109")
 /* End of Invalid B.DE109 */
 
 /*

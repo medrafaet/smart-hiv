@@ -11,3 +11,6 @@ Description: "Value set of clients status of coinfections at the time when ART w
 
 * HIVConcepts#HIV.D.DE447 "Hepatitis B"
 * HIVConcepts#HIV.D.DE448 "Hepatitis C"
+* HIVConcepts#HIV.D.ET.DE88 "Tuberculosis"
+* HIVConcepts#HIV.D.ET.DE89 "Visceral leishmaniasis"
+* HIVConcepts#HIV.D.ET.DE90 "Other coinfection at ART start"

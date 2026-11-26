@@ -4,8 +4,8 @@ Expression:   "'NOT IMPLEMENTED'"
 Severity:     #error
 
 Invariant:    HIV-D-2
-Description:  "'HCV treatment completion date' after 'HCV treatment start date'"
-Expression:   "'NOT IMPLEMENTED'"
+Description:  "The HCV treatment completion date must follow the start date when the dates can be compared."
+Expression:   "(hcvTreatmentCompletionDate > hcvTreatmentStartDate).where($this = false).empty()"
 Severity:     #error
 
 Invariant:    HIV-D-3
@@ -78,6 +78,26 @@ Description:  ">= 50 and <= 250"
 Expression:   "'NOT IMPLEMENTED'"
 Severity:     #error
 
+Invariant: care-chronic-exclusive
+Description: "No chronic or past health conditions and Unknown are each exclusive answers."
+Expression: "existingChronicHealthConditions.count() <= 1 or existingChronicHealthConditions.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.D.DE66' | 'HIV.D.DE67')).empty()"
+Severity: #error
+
+Invariant: care-adherence-percent
+Description: "ART adherence is recorded as a percentage from 0 to 100."
+Expression: "system = 'http://unitsofmeasure.org' and code = '%' and comparator.empty() and value.exists() and value >= 0 and value <= 100"
+Severity: #error
+
+Invariant: care-current-medications-exclusive
+Description: "No medications and Don’t know are each exclusive answers."
+Expression: "currentMedications.count() <= 1 or currentMedications.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.D.DE538' | 'HIV.D.DE539')).empty()"
+Severity: #error
+
+Invariant: care-allergies-exclusive
+Description: "No known allergies and Don’t know are each exclusive answers."
+Expression: "allergies.count() <= 1 or allergies.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.D.DE561' | 'HIV.D.DE562')).empty()"
+Severity: #error
+
 Logical: HIVDCareTreatment
 Title: "HIV.D Care-Treatment"
 Description: "This tab describes the data that may be collected during care and treatment clinical visit for HIV workflow (HIV.D)"
@@ -88,27 +108,72 @@ Description: "This tab describes the data that may be collected during care and 
 * ^name = "HIVDCareTreatment"
 * ^status = #active
 
+* ^mapping[+].identity = "fhir"
+* ^mapping[=].name = "FHIR R4"
+* ^mapping[+].identity = "moh-hiv-dak"
+* ^mapping[=].name = "Ethiopia MoH HIV Data Dictionary"
+* obeys care-chronic-exclusive
+* obeys care-current-medications-exclusive
+* obeys care-allergies-exclusive
+* obeys HIV-D-2
+
 * reasonForVisit 1..* Coding "Reason for visit" "Whether visit was scheduled or unscheduled, clinical only, or for ARV drug pick-up"
   * ^code[+] = HIVConcepts#HIV.D.DE1
 * reasonForVisit from HIV.D.DE1
 * scheduledVisit 1..1 boolean "Scheduled visit" "Is this is a scheduled visit?"
   * ^code[+] = HIVConcepts#HIV.D.DE8
-* bodyTemperature 0..1 integer "Body temperature" "Temperature of the client in Celsius"
+* bodyTemperature 0..1 Quantity "Body temperature" "Temperature measured in degrees Celsius."
   * ^code[+] = HIVConcepts#HIV.D.DE9
-* respiratoryRate 0..1 integer "Respiratory rate" "The number of breaths per minute"
+  * ^code[+] = http://loinc.org#8310-5
+  * ^mapping[+].identity = "fhir"
+  * ^mapping[=].map = "Observation.valueQuantity"
+* respiratoryRate 0..1 Quantity "Respiratory rate" "Breaths per minute, recorded as a whole number."
   * ^code[+] = HIVConcepts#HIV.D.DE10
-* heartRate 0..1 integer "Heart rate" "The number of heartbeats per minute"
+  * ^code[+] = http://loinc.org#9279-1
+  * ^mapping[+].identity = "fhir"
+  * ^mapping[=].map = "Observation.valueQuantity"
+* heartRate 0..1 Quantity "Heart rate" "Heartbeats per minute, recorded as a whole number."
   * ^code[+] = HIVConcepts#HIV.D.DE11
-* bodyHeight 0..1 integer "Body height" "The client's height in centimetres"
+  * ^code[+] = http://loinc.org#8867-4
+  * ^mapping[+].identity = "fhir"
+  * ^mapping[=].map = "Observation.valueQuantity"
+* bodyHeight 0..1 Quantity "Body height" "Height recorded in centimetres."
   * ^code[+] = HIVConcepts#HIV.D.DE12
-* bodyWeight 1..1 integer "Body weight" "The client's current weight in kilograms"
+  * ^code[+] = http://loinc.org#8302-2
+  * ^mapping[+].identity = "fhir"
+  * ^mapping[=].map = "Observation.valueQuantity"
+* bodyWeight 1..1 Quantity "Body weight" "Weight recorded in kilograms."
   * ^code[+] = HIVConcepts#HIV.D.DE13
-* systolicBloodPressure 0..1 integer "Systolic blood pressure" "Systolic blood pressure (SBP) in mmHg"
+  * ^code[+] = http://loinc.org#29463-7
+  * ^mapping[+].identity = "fhir"
+  * ^mapping[=].map = "Observation.valueQuantity"
+* headCircumference 0..1 Quantity "Head circumference" "Measured head circumference in centimetres."
+  * ^code[+] = HIVConcepts#HIV.D.ET.DE1
+  * ^code[+] = http://loinc.org#9843-4
+  * ^mapping[+].identity = "fhir"
+  * ^mapping[=].map = "Observation.valueQuantity"
+* bodyMassIndex 0..1 Quantity "Body mass index" "Calculated weight in kilograms divided by squared height in metres."
+  * ^code[+] = HIVConcepts#HIV.D.ET.DE2
+  * ^code[+] = http://loinc.org#39156-5
+  * ^mapping[+].identity = "fhir"
+  * ^mapping[=].map = "Observation.valueQuantity"
+* midUpperArmCircumference 0..1 Quantity "Mid-upper arm circumference" "Measured mid-upper arm circumference in centimetres."
+  * ^code[+] = HIVConcepts#HIV.D.ET.DE3
+  * ^mapping[+].identity = "fhir"
+  * ^mapping[=].map = "Observation.valueQuantity"
+* systolicBloodPressure 0..1 Quantity "Systolic blood pressure" "Systolic blood pressure in mmHg."
   * ^code[+] = HIVConcepts#HIV.D.DE14
-* diastolicBloodPressure 0..1 integer "Diastolic blood pressure" "Diastolic blood pressure (DBP) in mmHg"
+  * ^code[+] = http://loinc.org#8480-6
+  * ^mapping[+].identity = "fhir"
+  * ^mapping[=].map = "Observation.component.valueQuantity"
+* diastolicBloodPressure 0..1 Quantity "Diastolic blood pressure" "Diastolic blood pressure in mmHg."
   * ^code[+] = HIVConcepts#HIV.D.DE15
+  * ^code[+] = http://loinc.org#8462-4
+  * ^mapping[+].identity = "fhir"
+  * ^mapping[=].map = "Observation.component.valueQuantity"
 * bloodPressureCannotBeTaken 0..1 boolean "Blood pressure cannot be taken" "If the client's blood pressure cannot be taken, this should be indicated here. Otherwise, blood pressure should be measured."
   * ^code[+] = HIVConcepts#HIV.D.DE16
+* seriousIllnessSignsPresent 0..1 boolean "Signs of serious illness found" "Whether the assessment recorded any signs of serious illness."
 * signsOfSeriousIllness 0..* Coding "Signs of serious illness" "Signs that may indicate the client has a serious illness and needs triage or an emergency referral"
   * ^code[+] = HIVConcepts#HIV.D.DE17
 * signsOfSeriousIllness from HIV.D.DE17
@@ -120,13 +185,14 @@ Description: "This tab describes the data that may be collected during care and 
   * ^code[+] = HIVConcepts#HIV.D.DE32
 * numberOfPregnanciesGravida 0..1 integer "Number of pregnancies (gravida)" "Total number of times the woman has been pregnant (gravida)"
   * ^code[+] = HIVConcepts#HIV.D.DE33
-* numberOfMiscarriagesAndOrAbortions 0..1 integer "Number of miscarriages and/or abortions" "Total number of pregnancies lost/ended due to miscarriages and/or abortions before 22 weeks/5 months"
-  * ^code[+] = HIVConcepts#HIV.D.DE34
+* numberOfMiscarriagesAndOrAbortions 0..1 integer "Number of miscarriages and/or abortions" "Total number of pregnancies lost or ended due to miscarriages and/or abortions before 28 weeks/7 months"
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.D.DE34"
 * numberOfLiveBirths 0..1 integer "Number of live births" "Total number of live births after 22 weeks"
   * ^code[+] = HIVConcepts#HIV.D.DE35
-* parity 0..1 integer "Parity" "Calculated parity is the total number of live and stillbirths"
+* parity 0..1 integer "Parity" "Documented total number of live births and stillbirths"
   * ^code[+] = HIVConcepts#HIV.D.DE36
-* serodiscordantPartner 0..1 boolean "Serodiscordant partner" "Client's HIV status is different from a current partner's HIV status"
+* serodiscordantPartner 0..1 boolean "Serodiscordant couple" "Client's HIV status is different from a current partner's HIV status"
   * ^code[+] = HIVConcepts#HIV.D.DE37
 * onArt 1..1 boolean "On ART" "Client is currently taking ART"
   * ^code[+] = HIVConcepts#HIV.D.DE38
@@ -136,16 +202,16 @@ Description: "This tab describes the data that may be collected during care and 
   * ^code[+] = HIVConcepts#HIV.D.DE40
 * dateArtStopped 0..1 date "Date ART stopped" "Date on which client stopped ART"
   * ^code[+] = HIVConcepts#HIV.D.DE41
-* establishedOnArt 0..1 boolean "Established on ART" "Is the client successfully established on ART?"
+* establishedOnArt 0..1 boolean "Established on ART" "Clinician-recorded assessment for a client currently taking ART."
   * ^code[+] = HIVConcepts#HIV.D.DE42
-* artStartType 0..1 Coding "ART start type" "Whether the client is ART naive or is restarting ART"
+* artStartType 0..1 Coding "ART start type" "Whether ART is being initiated, restarted or switched after documented treatment failure."
   * ^code[+] = HIVConcepts#HIV.D.DE43
 * artStartType from HIV.D.DE43
 * dateOfInitiationOnArt 0..1 date "Date of initiation on ART" "The date on which the client was first initiated on ART"
   * ^code[+] = HIVConcepts#HIV.D.DE46
-* timeOnArt 0..1 integer "Time on ART" "Time the client has been on ART since starting or restarting it in years and months"
+* timeOnArt 0..1 Quantity "Time on current ART" "Completed months since the ART start or restart date, measured as of the visit date, using UCUM mo."
   * ^code[+] = HIVConcepts#HIV.D.DE47
-* datesArtRestarted 0..1 date "Date(s) ART restarted" "Date(s) client restarted ART after stopping (intentionally interrupting) for any number of reasons (see 'Reason ART stopped')"
+* datesArtRestarted 0..* date "Date(s) ART restarted" "Date(s) client restarted ART after stopping (intentionally interrupting) for any number of reasons (see 'Reason ART stopped')"
   * ^code[+] = HIVConcepts#HIV.D.DE48
 * artCohort 0..1 date "ART cohort" "Month and year client originally started ART (documented) at a health facility in the system. The cohort is a group of patients who started ART in the same month (or quarter) and year, whose status is followed over time, using the ART register."
   * ^code[+] = HIVConcepts#HIV.D.DE49
@@ -153,64 +219,54 @@ Description: "This tab describes the data that may be collected during care and 
   * ^code[+] = HIVConcepts#HIV.D.DE50
 * dateOfTransferIn 0..1 date "Date of transfer in" "Date client presented at facility (with transfer/referral slip) from another facility (and on ART) within the system"
   * ^code[+] = HIVConcepts#HIV.D.DE51
-* facilityTransferredFrom 0..1 Coding "Facility transferred from" "Name of health facility client was transferred from"
+* facilityTransferredFrom 0..1 Reference(http://fhir.et/core/StructureDefinition/ethiopian-mfr-organization) "Facility transferred from" "Verified MFR organization offering ART from which the client transferred. Required when transfer-in is confirmed."
   * ^code[+] = HIVConcepts#HIV.D.DE52
-* facilityTransferredFrom from HIV.D.DE52
 * dateEnrolledInHivCare 0..1 date "Date enrolled in HIV care" "Date client first enrols in HIV care at the facility. Begins when a person with a confirmed HIV diagnosis presents to a facility where HIV care is provided and a medical record, patient card, file or chart is opened for the first time. This could be at an HIV care/ART, MNCH or TB clinic."
   * ^code[+] = HIVConcepts#HIV.D.DE53
 * ageAtEnrolment 0..1 integer "Age at enrolment" "Client's age when the client was enrolled in ART care"
   * ^code[+] = HIVConcepts#HIV.D.DE54
-* facilityWhereClientFirstEnrolledInHivCare 0..1 Coding "Facility where client first enrolled in HIV care" "Facility where the client first enrolled in HIV care"
-  * ^code[+] = HIVConcepts#HIV.D.DE55
-* facilityWhereClientFirstEnrolledInHivCare from HIV.D.DE55
+* facilityWhereClientFirstStartedArt 0..1 Reference(http://fhir.et/core/StructureDefinition/ethiopian-mfr-organization) "Facility where client first started ART" "Verified MFR organization where the client first began ART."
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.D.DE55"
 * antiretroviralArvDrugsReceivedPriorToEnrolment 0..1 Coding "Antiretroviral (ARV) drugs received prior to enrolment" "Whether or not the client received ARV drugs prior to enrolling into HIV care"
   * ^code[+] = HIVConcepts#HIV.D.DE56
 * antiretroviralArvDrugsReceivedPriorToEnrolment from HIV.D.DE56
 * dateArvDrugsReceivedPriorToEnrolment 0..1 date "Date ARV drugs received prior to enrolment" "Date ARV drugs were started prior to enrolment into HIV care/ART"
   * ^code[+] = HIVConcepts#HIV.D.DE62
-* locationArvDrugsReceivedPriorToEnrolment 0..1 Coding "Location ARV drugs received prior to enrolment" "Health facility (or other location) where ARV drugs were received prior to enrolment into HIV care/ART"
+* locationArvDrugsReceivedPriorToEnrolment 0..1 Reference(http://fhir.et/core/StructureDefinition/ethiopian-mfr-organization or Location) "Location ARV drugs received prior to enrolment" "Identified facility or other location where the client previously received ARVs."
   * ^code[+] = HIVConcepts#HIV.D.DE63
-* locationArvDrugsReceivedPriorToEnrolment from HIV.D.DE63
-* arvDrugRegimenReceivedPriorToEnrolment 0..1 Coding "ARV drug regimen received prior to enrolment" "ARV drug regimen received prior to enrolment into HIV care/ART"
+* arvDrugRegimenReceivedPriorToEnrolment 0..1 Coding "ARV drug regimen received prior to enrolment" "Documented prior regimen from the approved coded list supplied by the application."
   * ^code[+] = HIVConcepts#HIV.D.DE64
-* arvDrugRegimenReceivedPriorToEnrolment from HIV.D.DE64
 * existingChronicHealthConditions 0..* Coding "Existing chronic health conditions" "Does the client have any current chronic health conditions or problems?"
   * ^code[+] = HIVConcepts#HIV.D.DE65
 * existingChronicHealthConditions from HIV.D.DE65
 * otherExistingChronicHealthConditions 0..1 string "Other (specify)" "Other health conditions not included in the list (specify)"
   * ^code[+] = HIVConcepts#HIV.D.DE73
-* originalFirstLineArtRegimen 0..1 Coding "Original first-line ART regimen" "Original full, first-line ARV drug regimen patient started on at this facility"
+* originalFirstLineArtRegimen 0..1 Coding "Original first-line ART regimen" "Original ART regimen started at this facility. Document the approved code supplied by the application."
   * ^code[+] = HIVConcepts#HIV.D.DE74
-* originalFirstLineArtRegimen from HIV.D.DE74
 * currentArtRegimen 0..1 Coding "Current ART regimen" "The current ART regimen the client is taking"
   * ^code[+] = HIVConcepts#HIV.D.DE75
-* currentArtRegimen from HIV.D.DE75
+* currentArtRegimen from HIV.D.DE75 (extensible)
 * currentArtRegimenStartDate 0..1 date "Current ART regimen start date" "The date on which the client started taking the current ART regimen"
   * ^code[+] = HIVConcepts#HIV.D.DE76
-* preferredFirstLineArtRegimen 0..* Coding "Preferred first-line ART regimen" "The preferred first-line ART regimen for the client according to WHO (or national) guidelines"
+* preferredFirstLineArtRegimen 0..* Coding "Preferred first-line ART regimen" "Preferred first-line regimen supplied as an approved decision-support result."
   * ^code[+] = HIVConcepts#HIV.D.DE77
-* preferredFirstLineArtRegimen from HIV.D.DE77
-* alternativeFirstLineArtRegimen 0..* Coding "Alternative first-line ART regimen" "The alternative first-line ART regimen for the client according to WHO (or national) guidelines"
+* alternativeFirstLineArtRegimen 0..* Coding "Alternative first-line ART regimen" "Alternative first-line regimen supplied as an approved decision-support result."
   * ^code[+] = HIVConcepts#HIV.D.DE78
-* alternativeFirstLineArtRegimen from HIV.D.DE78
-* firstLineArtRegimenUnderSpecialCircumstances 0..* Coding "First-line ART regimen under special circumstances" "The first-line ART regimen for the client under special circumstances according to WHO (or national) guidelines"
+* firstLineArtRegimenUnderSpecialCircumstances 0..* Coding "First-line ART regimen under special circumstances" "First-line regimen under special circumstances supplied as an approved decision-support result."
   * ^code[+] = HIVConcepts#HIV.D.DE79
-* firstLineArtRegimenUnderSpecialCircumstances from HIV.D.DE79
-* preferredSecondLineArtRegimen 0..* Coding "Preferred second-line ART regimen" "The preferred second-line ART regimen for the client according to WHO (or national) guidelines"
+* preferredSecondLineArtRegimen 0..* Coding "Preferred second-line ART regimen" "Preferred second-line regimen supplied as an approved decision-support result."
   * ^code[+] = HIVConcepts#HIV.D.DE80
-* preferredSecondLineArtRegimen from HIV.D.DE80
-* alternativeSecondLineArtRegimen 0..* Coding "Alternative second-line ART regimen" "The alternative second-line ART regimen for the client according to WHO (or national) guidelines"
+* alternativeSecondLineArtRegimen 0..* Coding "Alternative second-line ART regimen" "Alternative second-line regimen supplied as an approved decision-support result."
   * ^code[+] = HIVConcepts#HIV.D.DE81
-* alternativeSecondLineArtRegimen from HIV.D.DE81
-* optimalRegimenForTransition 0..* Coding "Optimal regimen for transition" "The optimal regimen for transition to DTG-based regimens for children established on ART"
+* optimalRegimenForTransition 0..* Coding "Optimal regimen for transition" "Transition regimen supplied as an approved decision-support result."
   * ^code[+] = HIVConcepts#HIV.D.DE82
-* optimalRegimenForTransition from HIV.D.DE82
 * currentArtRegimenFirstSecondOrThirdLine 0..1 Coding "Current ART regimen (first-, second-, or third-line)" "ART regimen for treating clients living with HIV, based on national guidance"
   * ^code[+] = HIVConcepts#HIV.D.DE83
 * currentArtRegimenFirstSecondOrThirdLine from HIV.D.DE83
 * artRegimen 0..1 Coding "ART regimen" "List of ART regimens"
   * ^code[+] = HIVConcepts#HIV.D.DE90
-* artRegimen from HIV.D.DE90
+* artRegimen from HIV.D.DE90-capture (extensible)
 * otherArtRegimen 0..1 string "Other (specify)" "Other regimen based upon WHO recommendations (specify)"
   * ^code[+] = HIVConcepts#HIV.D.DE127
 * artRegimenComposition 0..* Coding "ART regimen composition" "Drug composition of client's current ART regimen"
@@ -234,9 +290,8 @@ Description: "This tab describes the data that may be collected during care and 
   * ^code[+] = HIVConcepts#HIV.D.DE166
 * hbvTreatmentTdfStartDate 0..1 date "HBV treatment (TDF) start date" "Date when client started treatment (TDF) for hepatitis B virus (HBV)"
   * ^code[+] = HIVConcepts#HIV.D.DE167
-* hbvTreatmentRegimenPrescribed 0..1 Coding "HBV treatment regimen prescribed" "Hepatitis B virus treatment regimen prescribed"
+* hbvTreatmentRegimenPrescribed 0..1 Coding "HBV treatment regimen prescribed" "Documented hepatitis B treatment regimen from the approved coded list supplied by the application."
   * ^code[+] = HIVConcepts#HIV.D.DE168
-* hbvTreatmentRegimenPrescribed from HIV.D.DE168
 * hcvTestDate 0..1 date "HCV test date" "Date client was tested for hepatitis C virus (HCV antibody, HCV RNA or HCV core antigen)"
   * ^code[+] = HIVConcepts#HIV.D.DE169
 * hcvTestResult 0..1 Coding "HCV test result" "Hepatitis C virus test result (HCV antibody, HCV RNA or HCV core antigen)"
@@ -248,9 +303,8 @@ Description: "This tab describes the data that may be collected during care and 
   * ^code[+] = HIVConcepts#HIV.D.DE175
 * hcvTreatmentCompletionDate 0..1 date "HCV treatment completion date" "Date when client completed treatment for hepatitis C virus (HCV)"
   * ^code[+] = HIVConcepts#HIV.D.DE176
-* hcvTreatmentRegimenPrescribed 0..1 Coding "HCV treatment regimen prescribed" "Hepatitis C virus treatment regimen prescribed"
+* hcvTreatmentRegimenPrescribed 0..1 Coding "HCV treatment regimen prescribed" "Documented hepatitis C treatment regimen from the approved coded list supplied by the application."
   * ^code[+] = HIVConcepts#HIV.D.DE177
-* hcvTreatmentRegimenPrescribed from HIV.D.DE177
 * hcvViralLoadTestDate 0..1 date "HCV viral load test date" "Hepatitis C viral load test date"
   * ^code[+] = HIVConcepts#HIV.D.DE178
 * hcvViralLoadTestResult 0..1 Coding "HCV viral load test result" "Hepatitis C viral load test result (qualitative)"
@@ -259,19 +313,23 @@ Description: "This tab describes the data that may be collected during care and 
 * hcvMedicineType 0..1 Coding "HCV medicine type" "Type of medicine client is prescribed"
   * ^code[+] = HIVConcepts#HIV.D.DE182
 * hcvMedicineType from HIV.D.DE182
-* currentlyOnTdfBasedArt 0..1 boolean "Currently on TDF-based ART" "Client is currently on TDF-based ART regimen"
+* currentlyOnTdfBasedArt 0..1 boolean "Currently on TDF-based ART" "True when the documented current ART composition includes TDF. Leave blank when the current composition is unknown."
   * ^code[+] = HIVConcepts#HIV.D.DE185
 * hivClinicalStage 0..1 Coding "HIV clinical stage" "WHO clinical stage of client based on signs and symptoms. WHO clinical staging is a way to categorize HIV disease severity based on new or recurrent clinical events. There are 4 WHO clinical stages that range from mild symptoms (WHO clinical stage 1) to severe symptoms (WHO clinical stage 4)."
   * ^code[+] = HIVConcepts#HIV.D.DE186
 * hivClinicalStage from HIV.D.DE186
 * numberOfMissedDoses 0..1 integer "Number of missed doses" "Number of doses of antiretroviral therapy (ART) the client missed since the last visit, used for monitoring adherence"
   * ^code[+] = HIVConcepts#HIV.D.DE191
+  * ^minValueInteger = 0
+* artAdherencePercentage 0..1 Quantity "Adherence (%)" "Percentage of prescribed ART doses taken since the last visit, recorded in UCUM percent from 0 to 100."
+* artAdherencePercentage obeys care-adherence-percent
 * receivedViralLoadTestResult 0..1 boolean "Received viral load test result" "Client received results from viral load test"
   * ^code[+] = HIVConcepts#HIV.D.DE192
 * dateViralLoadTestResultsReceivedByClient 0..1 date "Date viral load test results received by client" "The date on which the client received results from viral load test"
   * ^code[+] = HIVConcepts#HIV.D.DE193
-* dateOfViralLoadSampleCollection 0..1 dateTime "Date of viral load sample collection" "Date and time when the sample was collected to test the client's HIV viral load"
+* dateOfViralLoadSampleCollection 0..1 dateTime "Date of viral load test (sample collection)" "Date and time when the sample was collected to test the client's HIV viral load"
   * ^code[+] = HIVConcepts#HIV.D.DE194
+  * ^code[+] = HIVConcepts#HIV.G.DE8
 * dateOfScheduledReviewOfViralLoadTestResults 0..1 date "Date of scheduled review of viral load test results" "Expected date when client's viral load test results will be returned and reviewed"
   * ^code[+] = HIVConcepts#HIV.D.DE195
 * dateOfArtInterruption 0..1 date "Date of ART interruption" "Date of client's ART interruption (ART stop or missed drug pick-up)"
@@ -308,17 +366,27 @@ Description: "This tab describes the data that may be collected during care and 
 * clinicalStageAtStartOfArt from HIV.D.DE358
 * dateOfClinicalStatusChange 0..1 date "Date of clinical status change" "Date on which the client's WHO HIV clinical stage changed, including the date when the client's stage is first determined"
   * ^code[+] = HIVConcepts#HIV.D.DE363
-* cd4Count 0..1 integer "CD4 count" "CD4 cell count in cells/mm^3"
+* cd4Count 0..1 integer "CD4 count" "CD4 cell count in cells per cubic millimetre."
   * ^code[+] = HIVConcepts#HIV.D.DE364
-* cd4CellPercentage 0..1 integer "CD4 cell percentage" "CD4 cell percentage"
+  * ^minValueInteger = 0
+  * ^mapping[+].identity = "fhir"
+  * ^mapping[=].map = "Observation.valueQuantity"
+* cd4CellPercentage 0..1 decimal "CD4 cell percentage" "CD4 cell percentage from 0 to 100."
   * ^code[+] = HIVConcepts#HIV.D.DE365
+  * ^minValueDecimal = 0
+  * ^maxValueDecimal = 100
+  * ^mapping[+].identity = "fhir"
+  * ^mapping[=].map = "Observation.valueQuantity"
 * dateOfCd4CountTest 0..1 dateTime "Date of CD4 count test" "Date and time when CD4 count test was conducted"
   * ^code[+] = HIVConcepts#HIV.D.DE366
-* baselineCd4Count 0..1 integer "Baseline CD4 count" "CD4 count performed at HIV diagnosis"
+* baselineCd4Count 0..1 decimal "Baseline CD4 count" "First documented baseline CD4 result in cells per cubic millimetre, such as a baseline test at ART initiation."
   * ^code[+] = HIVConcepts#HIV.D.DE367
+  * ^minValueDecimal = 0
+  * ^mapping[+].identity = "fhir"
+  * ^mapping[=].map = "Observation.valueQuantity"
 * dateOfBaselineCd4CountTest 0..1 dateTime "Date of baseline CD4 count test" "Date and time when baseline CD4 count test was conducted"
   * ^code[+] = HIVConcepts#HIV.D.DE368
-* lateArtInitiation 0..1 boolean "Late ART initiation" "Client had late ART initiation. That is, the client's first CD4 count from baseline CD4 test performed (such as at HIV diagnosis) was a count of less than 200 cells/mm3"
+* lateArtInitiation 0..1 boolean "Late ART initiation" "Baseline CD4 measure. True when the documented baseline CD4 count is below 200 cells per cubic millimetre."
   * ^code[+] = HIVConcepts#HIV.D.DE369
 * reasonsForDelayedArtInitiation 0..* Coding "Reasons for delayed ART initiation" "Reason why ART was not initiated at diagnosis or within 7 days of diagnosis"
   * ^code[+] = HIVConcepts#HIV.D.DE370
@@ -327,16 +395,22 @@ Description: "This tab describes the data that may be collected during care and 
   * ^code[+] = HIVConcepts#HIV.D.DE381
 * artInitiatedWithin7DaysOfDiagnosis 0..1 boolean "ART initiated within 7 days of diagnosis" "Client initiated ART within 7 days of diagnosis"
   * ^code[+] = HIVConcepts#HIV.D.DE382
-* timeToStartArt 0..1 Coding "Time to start ART" "Time from HIV diagnosis to when client started ART"
+* timeToStartArt 0..1 Coding "Time to start ART" "Interval from the documented date the HIV diagnosis was returned to the client to first ART initiation."
   * ^code[+] = HIVConcepts#HIV.D.DE383
 * timeToStartArt from HIV.D.DE383
-* viralLoadTestResult 0..1 integer "Viral load test result" "Result from the viral load test in number of copies/mL"
+* viralLoadTestResult 0..1 integer "Viral load test result" "Numeric viral load result in copies per millilitre."
   * ^code[+] = HIVConcepts#HIV.D.DE387
+  * ^code[+] = HIVConcepts#HIV.G.DE12
+  * ^minValueInteger = 0
+  * ^mapping[+].identity = "fhir"
+  * ^mapping[=].map = "Observation.valueQuantity"
 * virallySuppressed 0..1 boolean "Virally suppressed" "The client is virally suppressed for HIV, based on the client's most recent viral load test result being less than 1000 copies/mL"
   * ^code[+] = HIVConcepts#HIV.D.DE388
-* dateViralLoadTestResultsReceived 0..1 date "Date viral load test results received" "Date the viral load test result was received from the lab or completed in the facility"
+* dateViralLoadTestResultsReceived 0..1 date "Date facility received or completed the viral load result" "Date the facility received the result from the lab or completed the test on site."
   * ^code[+] = HIVConcepts#HIV.D.DE389
-* viralLoadSuppressionDate 0..1 date "Viral load suppression date" "Date on which the client tested as becoming virally suppressed, as indicated by a viral load test result under 1000 copies/mL"
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.D.DE387"
+* viralLoadSuppressionDate 0..1 date "Viral load suppression date" "Collection date of the latest result below 1000 copies/mL when the immediately preceding result was above 1000 copies/mL."
   * ^code[+] = HIVConcepts#HIV.D.DE390
 * reasonForHivViralLoadTest 0..1 Coding "Reason for HIV viral load test" "Whether the viral load is being tested for routine monitoring on a set schedule or for targeted monitoring for suspected treatment failure"
   * ^code[+] = HIVConcepts#HIV.D.DE391
@@ -386,20 +460,25 @@ Description: "This tab describes the data that may be collected during care and 
   * ^code[+] = HIVConcepts#HIV.D.DE439
 * coTrimoxazoleProphylaxisCompletionDate 0..1 date "Co-trimoxazole prophylaxis completion date" "Completion date of co-trimoxazole prophylaxis prescribed to client"
   * ^code[+] = HIVConcepts#HIV.D.DE440
-* coTrimoxazoleProphylaxisDosage 0..1 integer "Co-trimoxazole prophylaxis dosage" "Dose of co-trimoxazole prophylaxis prescribed to client"
+* coTrimoxazoleProphylaxisDosage 0..1 Quantity "Co-trimoxazole prophylaxis dosage" "Prescribed co-trimoxazole dose with its unit."
   * ^code[+] = HIVConcepts#HIV.D.DE441
 * coTrimoxazoleProphylaxisNumberOfDaysPrescribed 0..1 integer "Co-trimoxazole prophylaxis number of days prescribed" "Number of days of co-trimoxazole prophylaxis prescribed to client"
   * ^code[+] = HIVConcepts#HIV.D.DE442
 * suspicionOfTreatmentFailureOrInterruption 0..1 boolean "Suspicion of treatment failure or interruption" "Client has been on ART, but has stopped taking it or a treatment failure is suspected"
   * ^code[+] = HIVConcepts#HIV.D.DE443
-* artRegimenPrescribed 0..1 Coding "ART regimen prescribed" "INCLUDE VALUE SETS OF REGIMENS"
+* suspectedTreatmentFailure 0..1 boolean "Suspicion of treatment failure" "Clinician records suspected ART treatment failure."
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.D.DE443"
+* documentedTreatmentInterruption 0..1 boolean "Treatment interruption of at least 28 days" "Documented interruption when the client stopped taking ART for at least 28 days."
+* artRegimenPrescribed 0..1 Coding "ART regimen prescribed" "Documented ART prescription using an approved national regimen code supplied by the application."
   * ^code[+] = HIVConcepts#HIV.D.DE444
-* artRegimenPrescribed from HIV.D.DE444
 * antiretroviralToxicity 0..1 boolean "Antiretroviral toxicity" "Client is experiencing antiretroviral drug (ARV) toxicity"
   * ^code[+] = HIVConcepts#HIV.D.DE445
 * coinfectionStatusAtArtStart 0..* Coding "Coinfection status at ART start" "Clients status of coinfections at the time when ART was initiated"
   * ^code[+] = HIVConcepts#HIV.D.DE446
 * coinfectionStatusAtArtStart from HIV.D.DE446
+* otherCoinfectionAtArtStart 0..1 string "Other infection at ART start (specify)" "Details of another infection present at ART start."
+  * ^code[+] = HIVConcepts#HIV.D.ET.DE91
 * pregnantAndBreastfeedingStatusAtArtStart 0..* Coding "Pregnant and breastfeeding status at ART start" "ART status of women to prevent mother-to-child transmission"
   * ^code[+] = HIVConcepts#HIV.D.DE449
 * pregnantAndBreastfeedingStatusAtArtStart from HIV.D.DE449
@@ -407,25 +486,23 @@ Description: "This tab describes the data that may be collected during care and 
   * ^code[+] = HIVConcepts#HIV.D.DE454
 * serodiscordantPartnerAtArtStart 0..1 boolean "Serodiscordant partner at ART start" "Client living with HIV was in an ongoing sexual relationship with an HIV-negative partner when ART was started"
   * ^code[+] = HIVConcepts#HIV.D.DE455
-* regimenStartDate 0..1 date "Regimen start date" "The date on which the client started taking the current ART regimen"
+* regimenStartDate 0..1 date "Regimen start date" "Use the current visit prescription date for a documented change of regimen. Otherwise use the documented current regimen start date."
   * ^code[+] = HIVConcepts#HIV.D.DE456
-* medicationsPrescribed 0..* Coding "Medications prescribed" "Name or regimen code of all other medications prescribed during the visit"
+* medicationsPrescribed 0..* Coding "Medications prescribed" "Approved codes for the other medications prescribed during the visit."
   * ^code[+] = HIVConcepts#HIV.D.DE457
-* medicationsPrescribed from HIV.D.DE457
 * dateMedicationsPrescribed 0..1 date "Date medications prescribed" "Date the medications were prescribed"
   * ^code[+] = HIVConcepts#HIV.D.DE458
 * doseOfMedicationsPrescribed 0..1 integer "Dose of medications prescribed" "Number of doses (quantity taken at a single point in time) of drugs prescribed/dispensed"
   * ^code[+] = HIVConcepts#HIV.D.DE459
 * numberOfDaysMedicationsPrescribed 0..1 integer "Number of days medications prescribed" "Number of days supply of each medication or regimen prescribed during the visit"
   * ^code[+] = HIVConcepts#HIV.D.DE460
-* medicationsDispensed 0..* Coding "Medications dispensed" "Any other medications that were dispensed to client, including preventive treatment"
+* medicationsDispensed 0..* Coding "Medications dispensed" "Approved codes for the other medications dispensed to the client, including preventive treatment."
   * ^code[+] = HIVConcepts#HIV.D.DE461
-* medicationsDispensed from HIV.D.DE461
 * numberOfDaysOfMedicationsDispensed 0..1 integer "Number of days of medications dispensed" "Number of days supply of each medication or regimen dispensed during the visit"
   * ^code[+] = HIVConcepts#HIV.D.DE462
-* dosage 0..1 integer "Dosage" "Prescribed dosage of the medication"
+* dosage 0..1 Quantity "Dosage" "Prescribed medication dose with its unit."
   * ^code[+] = HIVConcepts#HIV.D.DE463
-* frequency 0..1 integer "Frequency" "Prescribed frequency for taking the medication"
+* frequency 0..1 Quantity "Frequency" "How often the medication is taken, expressed using its prescribed period."
   * ^code[+] = HIVConcepts#HIV.D.DE464
 * adherenceCounsellingProvided 0..1 boolean "Adherence counselling provided" "Counselling was carried out during visit"
   * ^code[+] = HIVConcepts#HIV.D.DE465
@@ -441,12 +518,10 @@ Description: "This tab describes the data that may be collected during care and 
 * reasonsForSubstitutionWithinFirstLineRegimen from HIV.D.DE482
 * newAntiretroviralRegimenAfterSubstitutionWithinFirstLineRegimen 0..1 Coding "New antiretroviral regimen after substitution within first-line regimen" "New antiretroviral (ARV) drugs after client changed regimen within the first-line regimen"
   * ^code[+] = HIVConcepts#HIV.D.DE483
-* newAntiretroviralRegimenAfterSubstitutionWithinFirstLineRegimen from HIV.D.DE483
 * dateOfSwitchToSecondLineRegimen 0..1 date "Date of switch to second-line regimen" "Date client was changed from a first-line to second-line ARV drug regimen (switch)"
   * ^code[+] = HIVConcepts#HIV.D.DE484
 * newRegimenAfterSwitchToSecondLineRegimen 0..1 Coding "New regimen after switch to second-line regimen" "New ART regimen after switch to second-line ART regimen"
   * ^code[+] = HIVConcepts#HIV.D.DE485
-* newRegimenAfterSwitchToSecondLineRegimen from HIV.D.DE485
 * reasonForSwitchToSecondLineRegimen 0..1 Coding "Reason for switch to second-line regimen" "Reason why client was switched from first- to second-line ARV drug regimen (see 'Reason for regimen switch' for levels)"
   * ^code[+] = HIVConcepts#HIV.D.DE486
 * reasonForSwitchToSecondLineRegimen from HIV.D.DE486
@@ -457,12 +532,10 @@ Description: "This tab describes the data that may be collected during care and 
 * reasonsForSubstitutionWithinSecondLineRegimen from HIV.D.DE488
 * newRegimensAfterSubstitutionWithinSecondLineRegimen 0..1 Coding "New regimen(s) after substitution within second-line regimen" "New ARV drugs after client changed regimen within the second- line regimen"
   * ^code[+] = HIVConcepts#HIV.D.DE489
-* newRegimensAfterSubstitutionWithinSecondLineRegimen from HIV.D.DE489
 * dateOfSwitchToThirdLineRegimen 0..1 date "Date of switch to third-line regimen" "Date client was changed from a second- to third-line ARV drug regimen (switch)"
   * ^code[+] = HIVConcepts#HIV.D.DE490
 * newRegimenAfterSwitchToThirdLineRegimen 0..1 Coding "New regimen after switch to third-line regimen" "New ART regimen after switch to third-line ART regimen"
   * ^code[+] = HIVConcepts#HIV.D.DE491
-* newRegimenAfterSwitchToThirdLineRegimen from HIV.D.DE491
 * reasonForSwitchToThirdLineRegimen 0..* Coding "Reason for switch to third-line regimen" "Reason why client was switched from second- to third-line ARV drug regimen (see 'Reason for regimen switch' for levels)"
   * ^code[+] = HIVConcepts#HIV.D.DE492
 * reasonForSwitchToThirdLineRegimen from HIV.D.DE492
@@ -473,7 +546,6 @@ Description: "This tab describes the data that may be collected during care and 
 * reasonsForSubstitutionWithinThirdLineRegimen from HIV.D.DE494
 * newRegimensAfterSubstitutionWithinThirdLineRegimen 0..1 Coding "New regimen(s) after substitution within third-line regimen" "New ARV drugs after client changed regimen within the third-line regimen"
   * ^code[+] = HIVConcepts#HIV.D.DE495
-* newRegimensAfterSubstitutionWithinThirdLineRegimen from HIV.D.DE495
 * enhancedAdherenceCounsellingProvided 0..1 boolean "Enhanced adherence counselling provided" "Enhanced adherence counselling was provided to the client during the visit"
   * ^code[+] = HIVConcepts#HIV.D.DE496
 * firstEnhancedAdherenceCounsellingSessionCompleted 0..1 boolean "First enhanced adherence counselling session completed" "A first enhanced adherence counselling was provided to the client during the visit"
@@ -492,8 +564,10 @@ Description: "This tab describes the data that may be collected during care and 
   * ^code[+] = HIVConcepts#HIV.D.DE503
 * addressOfTreatmentSupporter 0..1 string "Address of treatment supporter" "Full address or description of home of treatment supporter"
   * ^code[+] = HIVConcepts#HIV.D.DE504
-* telephoneNumberOfTreatmentSupporter 0..1 Identifier "Telephone number of treatment supporter" "Telephone number if available, or else telephone number of neighbour/friend"
+* telephoneNumberOfTreatmentSupporter 0..1 string "Telephone number of treatment supporter" "Telephone contact for the supporter, recorded as text."
   * ^code[+] = HIVConcepts#HIV.D.DE505
+  * ^mapping[+].identity = "fhir"
+  * ^mapping[=].map = "RelatedPerson.telecom.value where system is phone"
 * homeBasedCareProvider 0..1 string "Home-based care provider" "Name of individual or organization that provides home-based care to client"
   * ^code[+] = HIVConcepts#HIV.D.DE506
 * counsellingProvidedOnDiagnoses 0..1 boolean "Counselling provided on diagnoses" "Counselling provided on diagnoses"
@@ -521,6 +595,18 @@ Description: "This tab describes the data that may be collected during care and 
   * ^code[+] = HIVConcepts#HIV.D.DE517
 * providedSupportForDisclosureAndPartnerServices 0..1 boolean "Provided support for disclosure and partner services" "Offer or refer for support for disclosure and partner services"
   * ^code[+] = HIVConcepts#HIV.D.DE518
+* familyMember 0..* BackboneElement "Family member or partner" "Details recorded for one person in voluntary partner and family services."
+* familyMember.identifier 0..1 Identifier "Unique ID of family member" "Known identifier for the family member, when documented."
+  * ^code[+] = HIVConcepts#HIV.D.DE515
+* familyMember.hivStatus 0..1 Coding "Documented HIV status of family member" "Documented status for this individual."
+  * ^code[+] = HIVConcepts#HIV.D.DE514
+* familyMember.hivStatus from HIV.D.DE514 (required)
+* familyMember.dateOfDeath 0..1 date "Date of death of family member" "Documented date of death for this individual when applicable."
+  * ^code[+] = HIVConcepts#HIV.D.DE516
+* familyMember.dateContactedForIndexTesting 0..1 date "Date partner contacted for index testing" "Date this partner was contacted for index testing."
+  * ^code[+] = HIVConcepts#HIV.D.DE774
+* familyMember.dateTestedForHiv 0..1 date "Date partner tested for HIV" "Date this partner was tested."
+  * ^code[+] = HIVConcepts#HIV.D.DE775
 * otherSupportServices 0..* Coding "Other support services" "Offer or refer for other support services"
   * ^code[+] = HIVConcepts#HIV.D.DE519
 * otherSupportServices from HIV.D.DE519
@@ -533,6 +619,14 @@ Description: "This tab describes the data that may be collected during care and 
   * ^code[+] = HIVConcepts#HIV.D.DE530
 * followUpTestRecommendedDate 0..1 date "Follow-up test recommended date" "A test or screening recommended for the client's care plan at a future date"
   * ^code[+] = HIVConcepts#HIV.D.DE531
+* followUpAppointment 0..* BackboneElement "Follow-up appointment" "An individual follow-up appointment and its types."
+* followUpAppointment.dateTime 0..1 dateTime "Date and time" "Date and time of this appointment, when known."
+  * ^code[+] = HIVConcepts#HIV.D.DE524
+* followUpAppointment.type 1..* Coding "Type of follow-up appointment" "One or more purposes for this appointment."
+  * ^code[+] = HIVConcepts#HIV.D.DE525
+* followUpAppointment.type from HIV.D.DE525 (required)
+* followUpAppointment.otherType 0..1 string "Other appointment type (specify)" "Other purpose for this appointment."
+  * ^code[+] = HIVConcepts#HIV.D.DE530
 * reasonBloodPressureReadingNotDone 0..1 Coding "Reason blood pressure reading not done" "Reason why test was not performed"
   * ^code[+] = HIVConcepts#HIV.D.DE532
 * reasonBloodPressureReadingNotDone from HIV.D.DE532
@@ -556,35 +650,41 @@ Description: "This tab describes the data that may be collected during care and 
 * medicationStatus from HIV.D.DE593
 * hepatitisBNegativeCounsellingConducted 0..1 boolean "Hepatitis B negative counselling conducted" "Hepatitis B negative counselling conducted"
   * ^code[+] = HIVConcepts#HIV.D.DE602
+* vaccinationProvided 0..1 boolean "Vaccine administered" "Whether the assessed vaccine was documented as given."
 * vaccineBrand 0..1 Coding "Vaccine brand" "The brand or trade name used to refer to the vaccine received"
   * ^code[+] = HIVConcepts#HIV.D.DE603
-* vaccineBrand from HIV.D.DE603
 * vaccineType 0..1 Coding "Vaccine type" "Type of vaccine received (such as IPV, OPV)"
   * ^code[+] = HIVConcepts#HIV.D.DE604
-* vaccineType from HIV.D.DE604
 * dateAndTimeOfVaccination 0..1 dateTime "Date and time of vaccination" "Represents the visit/encounter date, which is the date and time when the vaccine was administered to the client"
   * ^code[+] = HIVConcepts#HIV.D.DE605
-* vaccinationLocation 0..1 Coding "Vaccination location" "The service delivery location where the vaccine adminstration occurred"
-  * ^code[+] = HIVConcepts#HIV.D.DE606
-* vaccinationLocation from HIV.D.DE606
+* vaccinationLocation 0..1 Reference(http://fhir.et/core/StructureDefinition/ethiopian-mfr-location) "Vaccination location" "Verified physical MFR site where the vaccine was administered."
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.D.DE606"
+  * ^mapping[+].identity = "fhir"
+  * ^mapping[=].map = "Immunization.location"
 * doseNumber 0..1 integer "Dose number" "Vaccine dose number within series"
   * ^code[+] = HIVConcepts#HIV.D.DE607
-* doseQuantity 0..1 integer "Dose quantity" "The quantity of vaccine product that was administered"
+  * ^minValueInteger = 1
+* doseQuantity 0..1 Quantity "Administered dose and unit" "Quantity of vaccine product administered, with the documented unit."
   * ^code[+] = HIVConcepts#HIV.D.DE608
+  * ^mapping[+].identity = "fhir"
+  * ^mapping[=].map = "Immunization.doseQuantity"
 * totalDosesInSeries 0..1 integer "Total doses in series" "The recommended number of vaccine doses for immunity according to national protocol"
   * ^code[+] = HIVConcepts#HIV.D.DE609
+  * ^minValueInteger = 1
 * diseaseTargeted 0..* Coding "Disease targeted" "Vaccine preventable disease being targeted by vaccine administered"
   * ^code[+] = HIVConcepts#HIV.D.DE610
 * diseaseTargeted from HIV.D.DE610
-* reasonImmunizationWasNotProvided 1..1 Coding "Reason immunization was not provided" "Reason the vaccine dose was not given"
+* reasonImmunizationWasNotProvided 0..1 Coding "Reason immunization was not provided" "Reason the assessed vaccine dose was not given."
   * ^code[+] = HIVConcepts#HIV.D.DE636
 * reasonImmunizationWasNotProvided from HIV.D.DE636
 * otherReasonImmunizationNotProvidedSpecify 0..1 string "Other reason immunization not provided (specify)" "Other reason why the immunization was not provided (specify)"
   * ^code[+] = HIVConcepts#HIV.D.DE642
-* malariaProphylaxis 1..1 boolean "Malaria prophylaxis" "Whether malaria prophylaxis was given"
+* malariaProphylaxis 0..1 boolean "Malaria prophylaxis" "Whether malaria prophylaxis was given when assessed."
   * ^code[+] = HIVConcepts#HIV.D.DE643
-* iptpSpDoseNumberProvided 1..1 integer "IPTp-SP dose number provided" "IPTp-SP dose number that was provided"
+* iptpSpDoseNumberProvided 0..1 integer "IPTp-SP dose number provided" "IPTp-SP dose number when prophylaxis was given."
   * ^code[+] = HIVConcepts#HIV.D.DE644
+  * ^minValueInteger = 1
 * dateIptpSpDoseProvided 0..1 date "Date IPTp-SP dose provided" "Date on which the IPTp-SP dose was provided"
   * ^code[+] = HIVConcepts#HIV.D.DE645
 * reasonMalariaProphylaxisNotProvided 0..* Coding "Reason malaria prophylaxis not provided" "Reason why the treatment was not given"
@@ -594,16 +694,21 @@ Description: "This tab describes the data that may be collected during care and 
   * ^code[+] = HIVConcepts#HIV.D.DE651
 * moreThan28DaysSinceLastMissedAppointment 0..1 boolean "More than 28 days since last missed appointment" "More than 28 days have passed since client's last missed appointment"
   * ^code[+] = HIVConcepts#HIV.D.DE652
+* moreThan28DaysSinceLastScheduledAppointment 0..1 boolean "More than 28 days since last scheduled appointment" "True when the visit date is more than 28 calendar days after the documented last scheduled appointment."
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.D.DE652"
 * aidsRelatedDeath 0..1 boolean "AIDS-related death" "Death of client was AIDS-related"
   * ^code[+] = HIVConcepts#HIV.D.DE653
 * dateOfFirstAidsDiagnosis 0..1 date "Date of first AIDS diagnosis" "Date of client's first AIDS diagnosis"
   * ^code[+] = HIVConcepts#HIV.D.DE654
 * ageAtFinalHpvVaccinationDoseReceived 0..1 integer "Age at final HPV vaccination dose received" "Client's age at date received final HPV vaccination dose"
   * ^code[+] = HIVConcepts#HIV.D.DE655
+  * ^minValueInteger = 0
 * dateOfCervicalCancerScreeningTest 0..1 dateTime "Date of cervical cancer screening test" "Date of cervical cancer screening test"
   * ^code[+] = HIVConcepts#HIV.D.DE656
 * lifetimeScreeningTestNumber 0..1 integer "Lifetime screening test number" "Client's lifetime number of screenings for cervical cancer"
   * ^code[+] = HIVConcepts#HIV.D.DE657
+  * ^minValueInteger = 1
 * cervicalCancerPrimaryScreeningTestType 0..1 Coding "Cervical cancer primary screening test type" "Type of cervical cancer screening test used in primary screening"
   * ^code[+] = HIVConcepts#HIV.D.DE658
 * cervicalCancerPrimaryScreeningTestType from HIV.D.DE658
@@ -664,7 +769,8 @@ Description: "This tab describes the data that may be collected during care and 
   * ^code[+] = HIVConcepts#HIV.D.DE729
 * invasiveCervicalCancerTreatmentEpisode 0..1 integer "Invasive cervical cancer treatment episode" "Client's lifetime number of treatments for invasive cervical cancer"
   * ^code[+] = HIVConcepts#HIV.D.DE730
-* invasiveCervicalCancerTreatmentMethod 1..* Coding "Invasive cervical cancer treatment method" "Invasive cervical cancer treatment method"
+  * ^minValueInteger = 1
+* invasiveCervicalCancerTreatmentMethod 0..* Coding "Invasive cervical cancer treatment method" "Documented treatment methods. Record at least one when an invasive treatment start date is known."
   * ^code[+] = HIVConcepts#HIV.D.DE731
 * invasiveCervicalCancerTreatmentMethod from HIV.D.DE731
 * otherInvasiveCervicalCancerTreatmentMethod 0..1 string "Other (specify)" "Invasive cervical cancer treatment method is a not in list (specify)"
@@ -677,7 +783,7 @@ Description: "This tab describes the data that may be collected during care and 
   * ^code[+] = HIVConcepts#HIV.D.DE743
 * dateOfDeath 0..1 dateTime "Date of death" "If deceased, the date that the client died"
   * ^code[+] = HIVConcepts#HIV.D.DE744
-* cervicalCancerScreeningIntervalAmongstWlhiv 1..1 integer "Cervical cancer screening interval amongst WLHIV" "Country-specific interval between cancer screenings amongst women living with HIV (typically 3 or 5 years)"
+* cervicalCancerScreeningIntervalAmongstWlhiv 0..1 Duration "Cervical cancer screening interval amongst WLHIV" "Documented screening interval with a UCUM time unit when a screening plan is recorded."
   * ^code[+] = HIVConcepts#HIV.D.DE745
 * entryPointForFacilityLevelTesting 0..1 Coding "Entry point for facility-level testing" "Specific point where testing is happening at a facility"
   * ^code[+] = HIVConcepts#HIV.D.DE746
@@ -685,6 +791,8 @@ Description: "This tab describes the data that may be collected during care and 
 * offerOtherClinicalServices 0..* Coding "Offer other clinical services" "Other clinical services offered or referrals given to the client"
   * ^code[+] = HIVConcepts#HIV.D.DE753
 * offerOtherClinicalServices from HIV.D.DE753
+* otherClinicalServicesSpecify 0..1 string "Other clinical services offered (specify)" "Specify other clinical services offered or referrals given to the client."
+  * ^code[+] = HIVConcepts#HIV.D.ET.DE749
 * eligibleForDsdArt 0..1 boolean "Eligible for DSD ART" "Client is eligible for differentiated service delivery (DSD) for ART"
   * ^code[+] = HIVConcepts#HIV.D.DE760
 * dateDsdArtEligibilityAssessed 0..1 date "Date DSD ART eligibility assessed" "Date client was assessed for eligibility for differentiated service delivery (DSD) for ART"
@@ -715,7 +823,7 @@ Description: "This tab describes the data that may be collected during care and 
 * syndromeStiDiagnosed from HIV.D.DE778
 * otherSyndromeStiDiagnosed 0..1 string "Other (specify)" "Other syndrome/STI diagnosed (specify)"
   * ^code[+] = HIVConcepts#HIV.D.DE786
-* anyStiSyndromeDiagnosed 0..1 boolean "Any STI syndrome diagnosed" "Was the client diagnosed with any of the five STI syndromes during this visit?"
+* anyStiSyndromeDiagnosed 0..1 boolean "Any STI syndrome diagnosed" "Whether one of the five syndromes was documented in the syndrome or STI field during this visit."
   * ^code[+] = HIVConcepts#HIV.D.DE787
 * dateOfStiTest 0..1 dateTime "Date of STI test" "Date on which the STI test was conducted"
   * ^code[+] = HIVConcepts#HIV.D.DE788
@@ -802,8 +910,16 @@ Description: "This tab describes the data that may be collected during care and 
   * ^code[+] = HIVConcepts#HIV.D.DE882
 * stiTreatmentDispensedSpecify 0..1 string "STI treatment dispensed (specify)" "STI treatment dispensed to the client"
   * ^code[+] = HIVConcepts#HIV.D.DE883
-* midUpperArmCircumferenceMuac 0..1 integer "Mid-upper arm circumference (MUAC)" "Client's mid-upper arm circumference (MUAC)"
+* midUpperArmCircumferenceMuac 0..1 Quantity "Mid-upper arm circumference (MUAC)" "Client's mid-upper arm circumference (MUAC) in centimetres"
   * ^code[+] = HIVConcepts#HIV.D.DE884
+* nutritionAssessmentDone 0..1 boolean "Nutrition assessment done" "Client assessed for malnutrition at this visit"
+  * ^code[+] = HIVConcepts#HIV.D.ET.DE1288
+* nutritionalStatus 0..1 Coding "Nutritional status" "Documented nutritional status classification of the client"
+  * ^code[+] = HIVConcepts#HIV.D.ET.DE1289
+* nutritionalStatus from HIV.D.ET.DE1289 (required)
+* nutritionSupportProvided 0..1 Coding "Nutrition support provided" "Therapeutic or supplementary food provided to the client"
+  * ^code[+] = HIVConcepts#HIV.D.ET.DE1293
+* nutritionSupportProvided from HIV.D.ET.DE1293 (required)
 * dateOfStartOfFluconazoleProphylaxis 0..1 date "Date of start of fluconazole prophylaxis" "Date of client's start of fluconazole prophylaxis"
   * ^code[+] = HIVConcepts#HIV.D.DE885
 * fluconazoleProphylaxis 0..1 boolean "Fluconazole prophylaxis" "Client provided with fluconazole prophylaxis"
@@ -830,7 +946,7 @@ Description: "This tab describes the data that may be collected during care and 
 * whoFunctionalStatus from HIV.D.DE897
 * tailoredAdherenceCounsellingForAdvancedHivDisease 0..1 boolean "Tailored adherence counselling for advanced HIV disease" "Client provided with tailored adherence counselling for advanced HIV disease"
   * ^code[+] = HIVConcepts#HIV.D.DE901
-* datesOfTracingInterventions 0..1 date "Date(s) of tracing interventions" "Date tracing interventions to support reengagement into HIV care conducted"
+* datesOfTracingInterventions 0..* date "Date(s) of tracing interventions" "Dates tracing interventions to support reengagement into HIV care were conducted"
   * ^code[+] = HIVConcepts#HIV.D.DE902
 * medicationDrug 0..* Coding "Medication/drug" "Current or considered medication/drug, for the purpose of determining drug interactions"
   * ^code[+] = HIVConcepts#HIV.D.DE903

@@ -8,3 +8,4 @@ Description: "Value set of HIV status of each family member at time of patient's
 * ^experimental = true
 * ^name = "HIVDDE514"
 * ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE514"
+* include codes from valueset HIV.B.DE115

@@ -47,9 +47,18 @@ Description: "Client communication preference, such as SMS or voice call. Suppor
 Extension: HivPatientHouseNumber
 Id: hiv-patient-house-number
 Title: "HIV Patient House Number"
-Description: "Client residency house number. Supports Ethiopia HIV.A.ET.DE6."
+Description: "Client residency house number. Supports HIV.A.ET.DE7 in the October 2026 MoH workbook."
 * ^context[+].type = #element
 * ^context[=].expression = "Address"
+* value[x] only string
+* valueString 1..1 MS
+
+Extension: HivPatientCatchmentArea
+Id: hiv-patient-catchment-area
+Title: "HIV Patient Catchment Area"
+Description: "The facility, district, or other administrative area associated with the client. Supports Ethiopia HIV.A.DE43."
+* ^context.type = #element
+* ^context.expression = "Patient"
 * value[x] only string
 * valueString 1..1 MS
 
@@ -59,9 +68,9 @@ Severity: #error
 Expression: "gender = 'female' or gender = 'male'"
 
 Invariant: hiv-a-registration-birth-date-or-age
-Description: "Ethiopia HIV.A requires date of birth, date of birth unknown, or estimated age."
+Description: "Ethiopia HIV.A requires a birth date or estimated age. An estimated age is required when the birth date is marked unknown."
 Severity: #error
-Expression: "birthDate.exists() or extension('http://smart.who.int/hiv/StructureDefinition/hiv-patient-date-of-birth-unknown').value = true or extension('http://smart.who.int/hiv/StructureDefinition/hiv-patient-estimated-age').exists()"
+Expression: "(birthDate.hasValue() or extension('http://smart.who.int/hiv/StructureDefinition/hiv-patient-estimated-age').value.value.hasValue()) and (extension('http://smart.who.int/hiv/StructureDefinition/hiv-patient-date-of-birth-unknown').where(value = true).exists() implies extension('http://smart.who.int/hiv/StructureDefinition/hiv-patient-estimated-age').value.value.hasValue())"
 
 Profile: HivPatient
 Parent: http://fhir.et/core/StructureDefinition/ETPatient
@@ -79,7 +88,8 @@ Description: "Patient profile supporting Ethiopia HIV.A registration demographic
     HivPatientEstimatedAge named estimatedAge 0..1 MS and
     HivPatientCommunicationConsent named communicationConsent 0..1 MS and
     HivPatientReminderMessages named reminderMessages 0..1 MS and
-    HivPatientCommunicationPreference named communicationPreference 0..* MS
+    HivPatientCommunicationPreference named communicationPreference 0..* MS and
+    HivPatientCatchmentArea named catchmentArea 0..1 MS
 * extension[dateOfBirthUnknown] ^short = "Date of birth unknown"
 * extension[estimatedAge] ^short = "Estimated age"
 * extension[communicationConsent] ^short = "Communication consent"
@@ -113,6 +123,7 @@ Description: "Patient profile supporting Ethiopia HIV.A registration demographic
 * name.given 1..1 MS
 * name.given ^short = "First name"
 * name.family 1..1 MS
+* name.family ^comment = "Use the string value for the client's family name when recorded. Carry the father's and grandfather's names in their respective extensions even when the family name string is absent."
 * name.family.extension[fathersName] 1..1 MS
 * name.family.extension[fathersName].valueString 1..1 MS
 * name.family.extension[grandfathersName] 1..1 MS
@@ -124,7 +135,7 @@ Description: "Patient profile supporting Ethiopia HIV.A registration demographic
 
 * birthDate 0..1 MS
 * birthDate ^short = "Date of birth"
-* birthDate ^comment = "Ethiopia HIV.A.DE14 is conditional. If date of birth is unknown, use the Patient dateOfBirthUnknown extension and, when available, the estimatedAge extension."
+* birthDate ^comment = "Record a birth date or an estimated age. If the date is marked unknown using dateOfBirthUnknown, provide estimatedAge."
 * birthDate.extension contains http://hl7.org/fhir/StructureDefinition/data-absent-reason named birthDateAbsentReason 0..1 MS
 * birthDate.extension[birthDateAbsentReason] ^short = "Reason date of birth is absent"
 
@@ -161,6 +172,7 @@ Description: "Patient profile supporting Ethiopia HIV.A registration demographic
 * address.state 0..1 MS
 * address.state ^short = "Region"
 * address.country 0..1 MS
+* address.country ^comment = "Record the two-letter ISO 3166-1 code for the country of residence."
 
 * contact 0..* MS
 * contact ^short = "Alternate contact"

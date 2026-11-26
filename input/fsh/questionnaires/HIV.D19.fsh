@@ -1,105 +1,110 @@
 Instance: HIV.D19AssessForVaccinePreventableDiseases
 InstanceOf: sdc-questionnaire-extr-smap
 Title: "Assess for vaccine-preventable diseases"
-Description: "Questionnaire for assess for vaccine-preventable diseases"
+Description: "Records one vaccination assessment, including the product and site when administered and a reason when it was not given."
 Usage: #definition
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablequestionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
 * subjectType = #Patient
 * language = #en
+* version = "2026-10"
 * status = #draft
 * experimental = true
+* extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext].extension[name].valueCoding.code = #careVaccination
+* extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext].extension[type].valueCode = #Parameters
+* extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext].extension[description].valueString = "Supply approved national vaccineBrand and vaccineType Coding choices and vaccinationLocation references to verified ET Base MFR Locations. Supply repeated parameters for choices and empty Parameters when context is unavailable."
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[key].valueId = "care-vaccination-dose"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[severity].valueCode = #error
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[human].valueString = "Record a positive dose with its unit. The dose number must fit within the documented series total when both are known."
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.language = #text/fhirpath
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.expression = """
+  %resource.item.where(linkId = 'HIV.D.DE608').answer.value.ofType(Quantity).all(
+    value.exists() and value > 0 and comparator.empty() and (unit.where(trim().length() > 0).exists() or (system.exists() and code.exists()))) and
+  (%resource.item.where(linkId = 'HIV.D.DE607').answer.value.ofType(integer) >
+    %resource.item.where(linkId = 'HIV.D.DE609').answer.value.ofType(integer)).where($this = true).empty()
+"""
 
 * item[+]
-  * id = "HIV.D.DE602"
   * linkId = "HIV.D.DE602"
   * type = #boolean
   * text = "Hepatitis B negative counselling conducted"
-  * required = false
-  * repeats = false
-  * readOnly = false
 * item[+]
-  * id = "HIV.D.DE603"
+  * linkId = "vaccinationProvided"
+  * type = #boolean
+  * text = "Was the vaccine administered?"
+* item[+]
   * linkId = "HIV.D.DE603"
   * type = #choice
   * text = "Vaccine brand"
-  * required = false
-  * repeats = false
-  * readOnly = false
-  * answerValueSet = "#HIV.D.DE603"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression].valueExpression.language = #text/fhirpath
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression].valueExpression.expression = "%careVaccination.parameter.where(name = 'vaccineBrand').value.ofType(Coding).where(system.exists() and code.exists())"
 * item[+]
-  * id = "HIV.D.DE604"
   * linkId = "HIV.D.DE604"
   * type = #choice
   * text = "Vaccine type"
-  * required = false
-  * repeats = false
-  * readOnly = false
-  * answerValueSet = "#HIV.D.DE604"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression].valueExpression.language = #text/fhirpath
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression].valueExpression.expression = "%careVaccination.parameter.where(name = 'vaccineType').value.ofType(Coding).where(system.exists() and code.exists())"
 * item[+]
-  * id = "HIV.D.DE605"
   * linkId = "HIV.D.DE605"
   * type = #dateTime
   * text = "Date and time of vaccination"
-  * required = false
-  * repeats = false
-  * readOnly = false
+  * enableWhen.question = "vaccinationProvided"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
 * item[+]
-  * id = "HIV.D.DE606"
   * linkId = "HIV.D.DE606"
-  * type = #choice
+  * type = #reference
   * text = "Vaccination location"
-  * required = false
-  * repeats = false
-  * readOnly = false
-  * answerValueSet = "#HIV.D.DE606"
+  * enableWhen.question = "vaccinationProvided"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource].valueCode = #Location
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile].valueCanonical = "http://fhir.et/core/StructureDefinition/ethiopian-mfr-location"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression].valueExpression.language = #text/fhirpath
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression].valueExpression.expression = "%careVaccination.parameter.where(name = 'vaccinationLocation').value.ofType(Reference).where(reference.matches('(^|/)Location/[A-Za-z0-9.-]+(/_history/[A-Za-z0-9.-]+)?$'))"
 * item[+]
-  * id = "HIV.D.DE607"
   * linkId = "HIV.D.DE607"
   * type = #integer
   * text = "Dose number"
-  * required = false
-  * repeats = false
-  * readOnly = false
+  * enableWhen.question = "vaccinationProvided"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
+  * extension[http://hl7.org/fhir/StructureDefinition/minValue].valueInteger = 1
 * item[+]
-  * id = "HIV.D.DE608"
   * linkId = "HIV.D.DE608"
-  * type = #integer
-  * text = "Dose quantity"
-  * required = false
-  * repeats = false
-  * readOnly = false
+  * type = #quantity
+  * text = "Administered dose and unit"
+  * enableWhen.question = "vaccinationProvided"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
 * item[+]
-  * id = "HIV.D.DE609"
   * linkId = "HIV.D.DE609"
   * type = #integer
   * text = "Total doses in series"
-  * required = false
-  * repeats = false
-  * readOnly = false
+  * enableWhen.question = "vaccinationProvided"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
+  * extension[http://hl7.org/fhir/StructureDefinition/minValue].valueInteger = 1
 * item[+]
-  * id = "HIV.D.DE610"
   * linkId = "HIV.D.DE610"
   * type = #choice
   * text = "Disease targeted"
-  * required = false
-  * repeats = false
-  * readOnly = false
-  * answerValueSet = "#HIV.D.DE610"
+  * repeats = true
+  * answerValueSet = Canonical(HIV.D.DE610)
 * item[+]
-  * id = "HIV.D.DE636"
   * linkId = "HIV.D.DE636"
   * type = #choice
   * text = "Reason immunization was not provided"
   * required = true
-  * repeats = false
-  * readOnly = false
-  * answerValueSet = "#HIV.D.DE636"
+  * answerValueSet = Canonical(HIV.D.DE636)
+  * enableWhen.question = "vaccinationProvided"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = false
 * item[+]
-  * id = "HIV.D.DE642"
   * linkId = "HIV.D.DE642"
   * type = #string
-  * text = "Other reason immunization not provided (specify)"
-  * required = false
-  * repeats = false
-  * readOnly = false
+  * text = "Other reason immunization was not provided (specify)"
+  * required = true
+  * enableWhen.question = "HIV.D.DE636"
+  * enableWhen.operator = #=
+  * enableWhen.answerCoding = HIVConcepts#HIV.D.DE641

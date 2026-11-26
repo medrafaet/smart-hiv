@@ -1,12 +1,13 @@
 Instance: HIV.B18ProvideVoluntaryPartnerAndFamilyServices
 InstanceOf: sdc-questionnaire-extr-smap
 Title: "Provide voluntary partner and family services"
-Description: "Questionnaire for provide voluntary partner and family services"
+Description: "Records the types of contacts identified for voluntary partner and family services."
 Usage: #definition
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablequestionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
 * subjectType = #Patient
 * language = #en
+* version = "2026-10"
 * status = #draft
 * experimental = true
 
@@ -16,6 +17,6 @@ Usage: #definition
   * type = #choice
   * text = "Type of contact elicited"
   * required = false
-  * repeats = false
+  * repeats = true
   * readOnly = false
-  * answerValueSet = "#HIV.B.DE74"
+  * answerValueSet = Canonical(HIV.B.DE74)

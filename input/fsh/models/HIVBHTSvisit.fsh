@@ -9,8 +9,8 @@ Expression:   "'NOT IMPLEMENTED'"
 Severity:     #error
 
 Invariant:    HIV-B-3
-Description:  "4 Weeks <= 'Gestational age' <= 40 Weeks"
-Expression:   "'NOT IMPLEMENTED'"
+Description:  "Gestational age must be between 4 and 40 weeks, or 28 and 280 days."
+Expression:   "system = 'http://unitsofmeasure.org' and value.exists() and comparator.empty() and ((code = 'wk' and value >= 4 and value <= 40) or (code = 'd' and value >= 28 and value <= 280))"
 Severity:     #error
 
 Invariant:    HIV-B-4
@@ -47,6 +47,8 @@ Description: "This tab describes the data that are collected during the HIV Test
 * ^experimental = true
 * ^name = "HIVBHTSvisit"
 * ^status = #active
+* ^mapping[+].identity = "moh-hiv-dak"
+* ^mapping[=].name = "Ethiopia MoH HIV Data Dictionary"
 
 * reasonForVisit 1..* Coding "Reason for visit" "Reason for HIV testing services visit"
   * ^code[+] = HIVConcepts#HIV.B.DE1
@@ -54,12 +56,12 @@ Description: "This tab describes the data that are collected during the HIV Test
 * referredThroughPartnerServices 1..* Coding "Referred through partner services" "Client reported coming to the facility after receiving a provider-assisted referral or patient referral from a contact or partner"
   * ^code[+] = HIVConcepts#HIV.B.DE5
 * referredThroughPartnerServices from HIV.B.DE5
-* typeOfContactOrPartnerForPartnerServices 0..* Coding "Type of contact or partner for partner services" "Client's relationship to the person that referred the client for partner services or family services"
+* typeOfContactOrPartnerForPartnerServices 0..* Coding "Type of contact or partner for partner services" "Client's relationship to the person who referred them, captured when a partner-service referral is recorded and exchanged using the HTS Encounter partner contact relationship extension"
   * ^code[+] = HIVConcepts#HIV.B.DE8
 * typeOfContactOrPartnerForPartnerServices from HIV.B.DE8
 * contactWithAndSuspectedExposureToHiv 1..1 boolean "Contact with and (suspected) exposure to HIV" "When the client is reported to have had suspected exposure to HIV"
   * ^code[+] = HIVConcepts#HIV.B.DE13
-* dateTimeOfSuspectedExposureToHiv 0..1 dateTime "Date/time of suspected exposure to HIV" "Date and time when the client had suspected exposure to HIV"
+* dateTimeOfSuspectedExposureToHiv 0..1 dateTime "Date/time of suspected exposure to HIV" "Date and time of suspected exposure, recorded when exposure is reported and the date and time are known"
   * ^code[+] = HIVConcepts#HIV.B.DE14
 * testingEntryPoint 1..1 Coding "Testing entry point" "Whether testing is happening in the community or at a facility"
   * ^code[+] = HIVConcepts#HIV.B.DE15
@@ -70,10 +72,14 @@ Description: "This tab describes the data that are collected during the HIV Test
 * entryPointForFacilityLevelTesting 0..1 Coding "Entry point for facility-level testing" "Specific point where testing is happening at a facility"
   * ^code[+] = HIVConcepts#HIV.B.DE22
 * entryPointForFacilityLevelTesting from HIV.B.DE22
+* testingModality 1..1 Coding "HIV testing modality" "The approach used to provide HIV testing services."
+  * ^code[+] = HIVConcepts#HIV.B.ET.DE26
+* testingModality from HIV.B.ET.DE26 (required)
 * currentlyPregnant 0..1 boolean "Currently pregnant" "Client is currently pregnant"
   * ^code[+] = HIVConcepts#HIV.B.DE29
-* gestationalAge 0..1 integer "Gestational age" "Gestational age in weeks and/or days depending on the source of gestational age"
+* gestationalAge 0..1 Quantity "Gestational age" "Duration in UCUM weeks or days, captured when the client is currently pregnant."
   * ^code[+] = HIVConcepts#HIV.B.DE30
+* gestationalAge obeys HIV-B-3
 * expectedDateOfDeliveryEdd 0..1 date "Expected date of delivery (EDD)" "Expected date of delivery based on gestational age"
   * ^code[+] = HIVConcepts#HIV.B.DE31
 * breastfeeding 0..1 boolean "Breastfeeding" "Infant is being breastfed by mother"
@@ -81,7 +87,7 @@ Description: "This tab describes the data that are collected during the HIV Test
 * partnerHivStatusReported 0..1 Coding "Partner HIV status (reported)" "The HIV status of the client's partner."
   * ^code[+] = HIVConcepts#HIV.B.DE33
 * partnerHivStatusReported from HIV.B.DE33
-* partnerIsFromAKeyPopulation 0..* Coding "Partner is from a key population" "Client's partner is a member of a key population, that has an increased risk of HIV"
+* partnerIsFromAKeyPopulation 0..* Coding "Partner is from a population at high risk for HIV" "Population groups at high risk for HIV to which the client's partner belongs, according to the Ethiopia data dictionary."
   * ^code[+] = HIVConcepts#HIV.B.DE37
 * partnerIsFromAKeyPopulation from HIV.B.DE37
 * hasUsedAnHivSelfTestBeforeReported 0..1 boolean "Has used an HIV self-test before (reported)" "The client reported having used an HIV self-test before"
@@ -93,15 +99,9 @@ Description: "This tab describes the data that are collected during the HIV Test
   * ^code[+] = HIVConcepts#HIV.B.DE48
 * keyPopulationMember 0..1 boolean "Key population member" "Client is a member of a key population that has an increased risk of HIV"
   * ^code[+] = HIVConcepts#HIV.B.DE49
-* keyPopulationMemberType 0..* Coding "Key population member type" "The type of key population that the client is included in"
+* keyPopulationMemberType 0..* Coding "Key and priority population member type" "The key and priority populations to which the client belongs. The age-based options use the client's age at the visit and recorded registration gender."
   * ^code[+] = HIVConcepts#HIV.B.DE50
 * keyPopulationMemberType from HIV.B.DE50
-* adolescentGirl 0..1 boolean "Adolescent girl" "Calculated field based on age and gender, if client is 10 years or older and under 20 years old"
-  * ^code[+] = HIVConcepts#HIV.B.DE56
-* youngWoman 0..1 boolean "Young woman" "Calculated field based on age and gender, if client is 20 years or older and under 25 years old"
-  * ^code[+] = HIVConcepts#HIV.B.DE57
-* orphanOrVulnerableChild 0..1 boolean "Orphan or vulnerable child" "Client considered an orphan or vulnerable child"
-  * ^code[+] = HIVConcepts#HIV.B.DE58
 * informedOfHivTestResult 0..1 boolean "Informed of HIV test result" "Client has been informed of their HIV test result"
   * ^code[+] = HIVConcepts#HIV.B.DE59
 * dateHivTestResultsReturned 0..1 date "Date HIV test results returned" "Date HIV test result returned to client"
@@ -109,11 +109,10 @@ Description: "This tab describes the data that are collected during the HIV Test
 * hivExposureType 0..* Coding "HIV exposure type" "Ways in which the client was exposed to HIV"
   * ^code[+] = HIVConcepts#HIV.B.DE61
 * hivExposureType from HIV.B.DE61
-* dateInformedOfHivPositiveDiagnosis 0..1 date "Date informed of HIV-positive diagnosis" "The date on which the client was diagnosed with HIV"
+* dateInformedOfHivPositiveDiagnosis 0..1 date "Date informed of HIV-positive diagnosis" "The date on which the client was diagnosed with HIV and informed."
   * ^code[+] = HIVConcepts#HIV.B.DE65
-* hivDiagnosingFacility 1..1 Coding "HIV diagnosing facility" "The facility where the client received an HIV-positive diagnosis"
+* hivDiagnosingFacility 0..1 Reference(HivHtsDiagnosingFacilityOrganization) "HIV diagnosing facility" "MFR organization where the client received an HIV-positive diagnosis. Required when a prior HIV-positive diagnosis is known."
   * ^code[+] = HIVConcepts#HIV.B.DE66
-* hivDiagnosingFacility from HIV.B.DE66
 * dateOfFirstPositiveTestIndicativeOfHivDiagnosis 0..1 date "Date of first positive test indicative of HIV diagnosis" "Earliest date of HIV diagnosis determined according to the national HIV testing algorithm"
   * ^code[+] = HIVConcepts#HIV.B.DE67
 * hivSerotype 0..1 Coding "HIV serotype" "The client's HIV serotype"
@@ -123,14 +122,14 @@ Description: "This tab describes the data that are collected during the HIV Test
   * ^code[+] = HIVConcepts#HIV.B.DE71
 * artStartDate 0..1 date "ART start date" "The date on which the client started or restarted antiretroviral therapy (ART)"
   * ^code[+] = HIVConcepts#HIV.B.DE72
-* ageAtDiagnosis 0..1 integer "Age at diagnosis" "The client's age (in years) when given an HIV diagnosis"
+* ageAtDiagnosis 0..1 integer "Age at diagnosis" "Completed years between the client's date of birth and the date the HIV-positive diagnosis was communicated."
   * ^code[+] = HIVConcepts#HIV.B.DE73
 * typeOfContactElicited 0..* Coding "Type of contact elicited" "Client's relationship to the contact identified for voluntary partner services or family services"
   * ^code[+] = HIVConcepts#HIV.B.DE74
 * typeOfContactElicited from HIV.B.DE74
 * hivTestOrdered 0..1 boolean "HIV test ordered" "An HIV test of the client was ordered by the provider"
   * ^code[+] = HIVConcepts#HIV.B.DE79
-* hivTestConducted 0..1 boolean "HIV test conducted" "An HIV test was performed on the client during the visit"
+* hivTestConducted 0..1 boolean "HIV test conducted" "Calculated in the HTS form from whether an overall HIV test result is recorded."
   * ^code[+] = HIVConcepts#HIV.B.DE80
 * hivTestType 0..1 Coding "HIV test type" "Type of HIV test"
   * ^code[+] = HIVConcepts#HIV.B.DE81
@@ -162,9 +161,8 @@ Description: "This tab describes the data that are collected during the HIV Test
 * hivStatus from HIV.B.DE115
 * datePositiveHivTestConfirmed 0..1 date "Date positive HIV test confirmed" "Date patient received positive HIV test confirmation (with written documentation)"
   * ^code[+] = HIVConcepts#HIV.B.DE119
-* siteWherePositiveHivTestConfirmed 0..1 Coding "Site where positive HIV test confirmed" "Name or identifier of health facility where HIV test was confirmed"
+* siteWherePositiveHivTestConfirmed 0..1 Reference(HivHtsDiagnosingFacilityOrganization) "Site where positive HIV test confirmed" "MFR organization where positive HIV test confirmation was documented."
   * ^code[+] = HIVConcepts#HIV.B.DE120
-* siteWherePositiveHivTestConfirmed from HIV.B.DE120
 * probableRouteOfTransmission 0..* Coding "Probable route of transmission" "Probable route(s) of transmission of HIV to client"
   * ^code[+] = HIVConcepts#HIV.B.DE121
 * probableRouteOfTransmission from HIV.B.DE121
@@ -184,7 +182,7 @@ Description: "This tab describes the data that are collected during the HIV Test
   * ^code[+] = HIVConcepts#HIV.B.DE140
 * partnerVirallySuppressedOnArt 0..1 boolean "Partner virally suppressed on ART" "ART and virally suppression status of a partner of the client"
   * ^code[+] = HIVConcepts#HIV.B.DE141
-* counsellingProvided 1..* Coding "Counselling provided" "Whether counselling was provided to a client during the visit"
+* counsellingProvided 0..* Coding "Counselling provided" "Listed counselling or linkage actions carried out during the visit. QA Preview permits an empty list when none of the coded actions applies."
   * ^code[+] = HIVConcepts#HIV.B.DE142
 * counsellingProvided from HIV.B.DE142
 * preventionServicesOfferedAndReferrals 1..* Coding "Prevention services offered and referrals" "Offer or refer to prevention services"
@@ -214,18 +212,28 @@ Description: "This tab describes the data that are collected during the HIV Test
   * ^code[+] = HIVConcepts#HIV.B.DE187
 * acceptedSocialNetworkBasedPartnerServices 0..1 boolean "Accepted social network-based/partner services" "Whether the client accepted social network-based partner services"
   * ^code[+] = HIVConcepts#HIV.B.DE188
-* contactFirstNameToOfferSocialNetworkBasedPartnerServices 0..1 string "Contact first name to offer social network-based/partner services" "First name of each contact given by the client to offer social network-based/partner services"
-  * ^code[+] = HIVConcepts#HIV.B.DE189
-* contactLastNameToOfferSocialNetworkBasedPartnerServices 0..1 string "Contact last name to offer social network-based/partner services" "Last or family name of each contact given by the client to offer social network-based/partner services"
-  * ^code[+] = HIVConcepts#HIV.B.DE190
+* indexContact 0..* BackboneElement "Index contact" "Details supplied for an individual contact after the client accepts voluntary partner or social network services."
+* indexContact.fullName 0..1 string "Full name of contact" "Full name of the elicited contact."
+  * ^code[+] = HIVConcepts#HIV.B.ET.DE19
+* indexContact.phoneNumber 0..1 string "Phone number" "Telephone number for this contact."
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.B.ET.DE11"
+* indexContact.physicalAddress 0..1 string "Physical address" "Physical address for this contact."
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.B.ET.DE18"
+* indexContact.statusAlreadyDisclosed 0..1 boolean "Index client has disclosed their HIV status" "Whether the index client has already disclosed their HIV status to this contact."
+  * ^code[+] = HIVConcepts#HIV.B.ET.DE12
+* indexContact.notificationMethod 0..1 Coding "Notification plan or method" "Notification method agreed for this contact."
+  * ^code[+] = HIVConcepts#HIV.B.ET.DE13
+* indexContact.notificationMethod from HIV.B.ET.DE13 (required)
 * typeOfFollowUpAppointment 0..* Coding "Type of follow-up appointment" "Type of follow-up appointment for testing services"
   * ^code[+] = HIVConcepts#HIV.B.DE191
 * typeOfFollowUpAppointment from HIV.B.DE191
 * otherReasonForTheFollowUpAppointmentSpecify 0..1 string "Other reason for the follow-up appointment (specify)" "Other reason for the follow-up appointment (specify)"
   * ^code[+] = HIVConcepts#HIV.B.DE194
-* dateTimeOfFollowUpAppointment 0..1 dateTime "Date/time of follow-up appointment" "Date the patient is to return for monitoring, re-supply or any other reason"
+* dateTimeOfFollowUpAppointment 0..1 dateTime "Date/time of follow-up appointment" "Booked date and time for the HTS follow-up appointment."
   * ^code[+] = HIVConcepts#HIV.B.DE195
-* recommendedFollowUpDate 0..1 dateTime "Recommended follow-up date" "Date when follow-up is recommended based on follow up requirements"
+* recommendedFollowUpDate 0..1 dateTime "Recommended follow-up date" "Recommended date and time for follow-up, recorded independently of any appointment booking."
   * ^code[+] = HIVConcepts#HIV.B.DE196
 * vmmcProcedure 0..1 boolean "VMMC procedure" "Whether a voluntary medical male circumcision procedure was performed"
   * ^code[+] = HIVConcepts#HIV.B.DE197
@@ -255,7 +263,7 @@ Description: "This tab describes the data that are collected during the HIV Test
 * syndromeStiDiagnosed from HIV.B.DE226
 * otherSyndromeStiDiagnosed 0..1 string "Other (specify)" "Other syndrome/STI diagnosed (specify)"
   * ^code[+] = HIVConcepts#HIV.B.DE234
-* anyStiSyndromeDiagnosed 0..1 boolean "Any STI syndrome diagnosed" "Was the client diagnosed with any of the five STI syndromes during this visit?"
+* anyStiSyndromeDiagnosed 0..1 boolean "Any STI syndrome diagnosed" "Calculated from the five syndromes named in the October 2026 workbook calculation."
   * ^code[+] = HIVConcepts#HIV.B.DE235
 * dateOfStiTest 0..1 dateTime "Date of STI test" "Date on which the STI test was conducted"
   * ^code[+] = HIVConcepts#HIV.B.DE236

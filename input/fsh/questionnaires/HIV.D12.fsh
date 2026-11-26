@@ -1,14 +1,23 @@
 Instance: HIV.D12DetermineRecommendedScreeningsAndTests
 InstanceOf: sdc-questionnaire-extr-smap
 Title: "Determine recommended screenings and tests"
-Description: "Questionnaire for determine recommended screenings and tests"
+Description: "Records services offered or referred and documented hepatitis B and C testing and treatment during Care and Treatment."
 Usage: #definition
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablequestionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
 * subjectType = #Patient
 * language = #en
+* version = "2026-10"
 * status = #draft
 * experimental = true
+* extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext].extension[name].valueCoding.code = #careScreening
+* extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext].extension[type].valueCode = #Parameters
+* extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext].extension[description].valueString = "Supply approved HBV and HCV treatment choices as repeated hbvTreatmentRegimen and hcvTreatmentRegimen Coding parameters. Supply the complete current ART composition from HIV.D.DE128 as repeated artRegimenComposition codings when documented. Supply empty Parameters when context is unavailable."
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[key].valueId = "HIV-D-2"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[severity].valueCode = #error
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[human].valueString = "The HCV treatment completion date must follow the start date."
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.language = #text/fhirpath
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.expression = "(%resource.item.where(linkId = 'HIV.D.DE176').answer.value.ofType(date) > %resource.item.where(linkId = 'HIV.D.DE175').answer.value.ofType(date)).where($this = false).empty()"
 
 * item[+]
   * id = "HIV.D.DE152"
@@ -16,18 +25,18 @@ Usage: #definition
   * type = #choice
   * text = "Prevention services offered and referrals"
   * required = true
-  * repeats = false
+  * repeats = true
   * readOnly = false
-  * answerValueSet = "#HIV.D.DE152"
+  * answerValueSet = Canonical(HIV.D.DE152)
 * item[+]
   * id = "HIV.D.DE156"
   * linkId = "HIV.D.DE156"
   * type = #choice
   * text = "Sexual and reproductive health integrated services"
   * required = true
-  * repeats = false
+  * repeats = true
   * readOnly = false
-  * answerValueSet = "#HIV.D.DE156"
+  * answerValueSet = Canonical(HIV.D.DE156)
 * item[+]
   * id = "HIV.D.DE161"
   * linkId = "HIV.D.DE161"
@@ -44,7 +53,7 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
-  * answerValueSet = "#HIV.D.DE162"
+  * answerValueSet = Canonical(HIV.D.DE162)
 * item[+]
   * id = "HIV.D.DE166"
   * linkId = "HIV.D.DE166"
@@ -69,7 +78,8 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
-  * answerValueSet = "#HIV.D.DE168"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression].valueExpression.language = #text/fhirpath
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression].valueExpression.expression = "%careScreening.parameter.where(name = 'hbvTreatmentRegimen').value.ofType(Coding).where(system.exists() and code.exists())"
 * item[+]
   * id = "HIV.D.DE169"
   * linkId = "HIV.D.DE169"
@@ -86,7 +96,7 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
-  * answerValueSet = "#HIV.D.DE170"
+  * answerValueSet = Canonical(HIV.D.DE170)
 * item[+]
   * id = "HIV.D.DE174"
   * linkId = "HIV.D.DE174"
@@ -119,7 +129,8 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
-  * answerValueSet = "#HIV.D.DE177"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression].valueExpression.language = #text/fhirpath
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression].valueExpression.expression = "%careScreening.parameter.where(name = 'hcvTreatmentRegimen').value.ofType(Coding).where(system.exists() and code.exists())"
 * item[+]
   * id = "HIV.D.DE178"
   * linkId = "HIV.D.DE178"
@@ -136,7 +147,7 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
-  * answerValueSet = "#HIV.D.DE179"
+  * answerValueSet = Canonical(HIV.D.DE179)
 * item[+]
   * id = "HIV.D.DE182"
   * linkId = "HIV.D.DE182"
@@ -145,7 +156,7 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
-  * answerValueSet = "#HIV.D.DE182"
+  * answerValueSet = Canonical(HIV.D.DE182)
 * item[+]
   * id = "HIV.D.DE185"
   * linkId = "HIV.D.DE185"
@@ -153,22 +164,27 @@ Usage: #definition
   * text = "Currently on TDF-based ART"
   * required = false
   * repeats = false
-  * readOnly = false
+  * readOnly = true
+  * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.name = "artComposition"
+  * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.language = #text/fhirpath
+  * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.expression = "%careScreening.parameter.where(name = 'artRegimenComposition')"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.language = #text/fhirpath
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.expression = "iif(%artComposition.exists() and %artComposition.all(value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code.exists()).exists()), %artComposition.value.ofType(Coding).where(code = 'HIV.D.DE135').exists(), {})"
 * item[+]
   * id = "HIV.D.DE229"
   * linkId = "HIV.D.DE229"
   * type = #choice
   * text = "General care activities recommended"
   * required = false
-  * repeats = false
+  * repeats = true
   * readOnly = false
-  * answerValueSet = "#HIV.D.DE229"
+  * answerValueSet = Canonical(HIV.D.DE229)
 * item[+]
   * id = "HIV.D.DE247"
   * linkId = "HIV.D.DE247"
   * type = #choice
   * text = "Preventing and treating coinfections"
   * required = false
-  * repeats = false
+  * repeats = true
   * readOnly = false
-  * answerValueSet = "#HIV.D.DE247"
+  * answerValueSet = Canonical(HIV.D.DE247-capture)

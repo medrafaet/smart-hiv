@@ -22,6 +22,7 @@ Description: "Example Patient conforming to the HIV Patient profile for Ethiopia
 * extension[communicationPreference].valueCodeableConcept = HIVConcepts#HIV.A.DE47 "Text message/SMS"
 * extension[education].valueCodeableConcept = http://fhir.et/core/CodeSystem/education-status-cs#primary "Primary school"
 * extension[Occupation].valueCodeableConcept = http://fhir.et/core/CodeSystem/occupation#emp "Employed"
+* extension[catchmentArea].valueString = "Example clinic catchment"
 * telecom[phone].system = #phone
 * telecom[phone].value = "+251911234567"
 * telecom[email].system = #email

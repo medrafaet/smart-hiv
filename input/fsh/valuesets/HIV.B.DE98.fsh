@@ -11,4 +11,4 @@ Description: "Value set of the result of the second HIV assay in the testing str
 
 * HIVConcepts#HIV.B.DE99 "Reactive"
 * HIVConcepts#HIV.B.DE100 "Non-reactive"
-* HIVConcepts#HIV.B.DE101 "Invalid"
+* HIVConcepts#HIV.B.ET.DE101 "Invalid"

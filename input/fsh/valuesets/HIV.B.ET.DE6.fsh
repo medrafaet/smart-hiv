@@ -1,6 +1,6 @@
 ValueSet: HIV.B.ET.DE6
-Title: "Ethiopia HTS Priority or High-risk Population ValueSet"
-Description: "Value set of Ethiopia-specific priority or high-risk population categories added for HTS. WHO key-population value sets are retained separately where the workbook appears to mismatch existing WHO IDs."
+Title: "Historical Ethiopia HTS Priority or High-risk Population ValueSet"
+Description: "Earlier Ethiopia HTS population options. The October 2026 history questionnaire uses HIV.B.DE50."
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"
@@ -13,4 +13,4 @@ Description: "Value set of Ethiopia-specific priority or high-risk population ca
 * HIVConcepts#HIV.B.ET.DE7 "Client is divorced"
 * HIVConcepts#HIV.B.ET.DE8 "Long distance truck drivers"
 * HIVConcepts#HIV.B.ET.DE9 "Daily labourers"
-* HIVConcepts#HIV.B.ET.DE10 "People in humanitarina settigns"
+* HIVConcepts#HIV.B.ET.DE10 "People in humanitarian settings"

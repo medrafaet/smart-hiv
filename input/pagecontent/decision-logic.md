@@ -365,6 +365,8 @@ WHO consolidated guidelines on tuberculosis, Module 3: Diagnosis - Rapid diagnos
 
 ### HIV.D15.DT
 
+The QA Preview form records findings for the staging assessment and the clinician's documented stage at ART initiation. WHO clinical staging logic below is retained for reference. Automated staging needs national review. The existing rule points to the TB screening library, and the staging library checks the stage 3 condition when producing stage 4 guidance.
+
 **Business Rule**: Determine WHO clinical staging of HIV disease in adults, adolescents and children
 
 **Trigger**: HIV.D15 Determine clinical stage of HIV
@@ -1699,6 +1701,8 @@ Figure 8.6 WHO recommended testing strategy for dual detection of HIV and syphil
 
 ### HIV.C23.DT
 
+The QA Preview questionnaire records the clinician's prescription and assessment. The WHO decision table below is retained as a reference. Applying it to the October Ethiopia workbook requires review of the exposure duration field, the PEP regimen rows and the product-specific contraindications.
+
 **Business Rule**: Determine PEP or PrEP regimen
 
 **Trigger**: HIV.C23 Prescribe or administer PrEP or PEP
@@ -2068,6 +2072,8 @@ Immediately take action or refer for care if client is showing this sign of a se
 
 
 ### HIV.B7.DT
+
+For QA Preview, the HTS questionnaire captures the test result and HIV status reported after applying the national testing algorithm. The table below is the WHO reference. The accompanying CQL contains a partial implementation of that reference and is unsuitable for assigning a diagnosis.
 
 **Business Rule**: WHO standard testing strategy for HIV-1 diagnosis (among people ≥18 months of age)
 
@@ -4081,6 +4087,8 @@ Chapter 6: General care and managing common coinfections and comorbidities.</td>
 
 ### HIV.D17.DT
 
+For QA Preview, the form records treatment failure as documented by the clinician. The October Ethiopia workbook and the WHO reference table below use different CD4 thresholds for immunological failure. Confirm the national criterion before applying automated classification.
+
 **Business Rule**: Check for treatment failure
 
 
@@ -4288,6 +4296,8 @@ The condition must be differentiated from immune reconstitution inflammatory syn
 
 
 ### HIV.D21.1.DT
+
+For QA Preview, the client history form displays regimen recommendations supplied by the application after applying verified national decision support. The WHO table below is retained for reference. The grouped recommendations in the October Ethiopia workbook still require national validation before use as selection rules.
 
 **Business Rule**: Determine ART Regimen
 

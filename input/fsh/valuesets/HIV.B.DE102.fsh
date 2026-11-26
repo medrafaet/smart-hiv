@@ -11,4 +11,4 @@ Description: "Value set of the result of the third HIV assay in the testing stra
 
 * HIVConcepts#HIV.B.DE103 "Reactive"
 * HIVConcepts#HIV.B.DE104 "Non-reactive"
-* HIVConcepts#HIV.B.DE105 "Invalid"
+* HIVConcepts#HIV.B.ET.DE105 "Invalid"

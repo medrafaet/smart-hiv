@@ -6,5 +6,5 @@ Description: "A profile for MedicationRequest representing a prescription of a P
 * ^experimental = true
 * ^title = "PrEP Product Prescription"
 * medication[x] only CodeableConcept
-* medicationCodeableConcept from HIV.C.DE80 (required)
+* medicationCodeableConcept from HIV.C.DE80-exchange (required)
 * reasonCode = HIVConcepts#HIV.C.DE76

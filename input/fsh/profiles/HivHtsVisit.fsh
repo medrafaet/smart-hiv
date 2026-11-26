@@ -28,6 +28,16 @@ Description: "Specific facility point where HIV testing is happening. Supports E
 * valueCodeableConcept 1..1 MS
 * valueCodeableConcept from HIV.B.DE22 (required)
 
+Extension: HivHtsVisitTestingModality
+Id: hiv-hts-visit-testing-modality
+Title: "HIV HTS Visit Testing Modality"
+Description: "The approach used to provide HIV testing services. Supports Ethiopia HIV.B.ET.DE26."
+* ^context.type = #element
+* ^context.expression = "Encounter"
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1 MS
+* valueCodeableConcept from HIV.B.ET.DE26 (required)
+
 Extension: HivHtsVisitReferredThroughPartnerServices
 Id: hiv-hts-visit-referred-through-partner-services
 Title: "HIV HTS Visit Referred Through Partner Services"
@@ -37,6 +47,16 @@ Description: "How the client was referred through partner services. Supports Eth
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1 MS
 * valueCodeableConcept from HIV.B.DE5 (required)
+
+Extension: HivHtsVisitPartnerContactRelationship
+Id: hiv-hts-visit-partner-contact-relationship
+Title: "HTS Visit Partner or Contact Relationship"
+Description: "The client's relationship to the person who referred them for partner or family services. Supports Ethiopia HIV.B.DE8."
+* ^context.type = #element
+* ^context.expression = "Encounter"
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1 MS
+* valueCodeableConcept from HIV.B.DE8 (required)
 
 Extension: HivHtsVisitContactWithSuspectedExposureToHiv
 Id: hiv-hts-visit-contact-with-suspected-exposure-to-hiv
@@ -77,9 +97,18 @@ Severity: #warning
 Expression: "extension('http://smart.who.int/hiv/StructureDefinition/hiv-hts-visit-testing-entry-point').value.coding.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.B.DE17').exists() implies extension('http://smart.who.int/hiv/StructureDefinition/hiv-hts-visit-facility-entry-point').exists()"
 
 Invariant: hiv-b-hts-suspected-exposure-date
-Description: "If suspected HIV exposure is recorded as true, the suspected exposure date/time should be captured when known."
+Description: "Supply an exposure date and time only when suspected HIV exposure is recorded."
 Severity: #warning
-Expression: "extension('http://smart.who.int/hiv/StructureDefinition/hiv-hts-visit-contact-with-suspected-exposure-to-hiv').value = true implies extension('http://smart.who.int/hiv/StructureDefinition/hiv-hts-visit-suspected-exposure-date-time').exists()"
+Expression: "extension('http://smart.who.int/hiv/StructureDefinition/hiv-hts-visit-suspected-exposure-date-time').exists() implies extension('http://smart.who.int/hiv/StructureDefinition/hiv-hts-visit-contact-with-suspected-exposure-to-hiv').where(value = true).exists()"
+
+Extension: HivHtsRecommendedFollowUpDate
+Id: hiv-hts-recommended-follow-up-date
+Title: "HTS Recommended Follow-up Date"
+Description: "Recommended follow-up date and time for an HTS visit. Supports HIV.B.DE196."
+* ^context.type = #element
+* ^context.expression = "Encounter"
+* value[x] only dateTime
+* valueDateTime 1..1 MS
 
 Profile: HivHtsVisit
 Parent: HivEncounter
@@ -96,10 +125,13 @@ Description: "Encounter for HIV testing services visit. This profile captures th
     HivHtsVisitTestingEntryPoint named testingEntryPoint 1..1 MS and
     HivHtsVisitCommunityEntryPoint named communityEntryPoint 0..1 MS and
     HivHtsVisitFacilityEntryPoint named facilityEntryPoint 0..1 MS and
+    HivHtsVisitTestingModality named testingModality 0..1 MS and
     HivHtsVisitReferredThroughPartnerServices named referredThroughPartnerServices 1..* MS and
+    HivHtsVisitPartnerContactRelationship named partnerContactRelationship 0..* MS and
     HivHtsVisitContactWithSuspectedExposureToHiv named contactWithSuspectedExposureToHiv 1..1 MS and
     HivHtsVisitSuspectedExposureDateTime named suspectedExposureDateTime 0..1 MS and
-    HivHtsVisitHivDiagnosingFacility named hivDiagnosingFacility 0..1 MS
+    HivHtsVisitHivDiagnosingFacility named hivDiagnosingFacility 0..1 MS and
+    HivHtsRecommendedFollowUpDate named recommendedFollowUpDate 0..1 MS
 * extension[testingEntryPoint] ^short = "Testing entry point"
 * extension[testingEntryPoint] ^definition = "Whether testing is happening in the community or at a facility. Ethiopia HIV.B.DE15 is required."
 * extension[communityEntryPoint] ^short = "Entry point for community-level testing"
@@ -142,7 +174,7 @@ Description: "Encounter for HIV testing services visit. This profile captures th
 * appointment 0..* MS
 * appointment only Reference(HivHtsFollowUpAppointment)
 * appointment ^short = "HTS follow-up appointment"
-* appointment ^definition = "Appointment created for the recommended HTS follow-up date or scheduled follow-up workflow."
+* appointment ^definition = "Appointment created for a scheduled HTS follow-up."
 * diagnosis 0..* MS
 * diagnosis ^short = "Conditions linked to this HTS visit"
 * diagnosis ^comment = "Use to reference confirmed diagnoses such as an HIV status condition when the national status representation is confirmed."

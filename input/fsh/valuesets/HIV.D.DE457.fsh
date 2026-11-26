@@ -9,6 +9,5 @@ Description: "Value set of name or regimen code of all other medications prescri
 * ^name = "HIVDDE457"
 * ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE457"
 
-* HIVConcepts#HIV.D.DE458 "Date medications prescribed"
-* HIVConcepts#HIV.D.DE459 "Dose of medications prescribed"
-* HIVConcepts#HIV.D.DE460 "Number of days medications prescribed"
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/valueset-rules-text"
+* ^extension[=].valueMarkdown = "Use approved medication codes from the prescribing application. Record the date, dose and duration separately for each medication."

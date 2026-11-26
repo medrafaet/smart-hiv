@@ -11,8 +11,5 @@ Description: "Value set of listing of tests for clients on or starting pre-expos
 
 * HIVConcepts#HIV.C.DE64 "Serum creatinine test"
 * HIVConcepts#HIV.C.DE65 "Hepatitis B test"
-* HIVConcepts#HIV.C.DE66 "Hepatitis C test"
-* HIVConcepts#HIV.C.DE67 "Syphilis test"
 * HIVConcepts#HIV.C.DE68 "Other screening for STIs"
 * HIVConcepts#HIV.C.DE69 "Pregnancy testing"
-* HIVConcepts#HIV.C.DE70 "Review vaccination history"

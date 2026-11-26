@@ -12,10 +12,13 @@ Description: "Example Ethiopia-focused HIV testing services visit encounter."
 * period.end = "2023-01-01T10:00:00Z"
 * serviceProvider = Reference(ExampleHivHtsDiagnosingFacility)
 * appointment = Reference(ExampleHivHtsFollowUpAppointment)
+* extension[recommendedFollowUpDate].valueDateTime = "2023-03-28T09:00:00Z"
 * reasonCode[+] = HIVConcepts#HIV.B.DE2 "First-time HIV test"
 * extension[testingEntryPoint].valueCodeableConcept = HIVConcepts#HIV.B.DE17 "Facility-level testing"
 * extension[facilityEntryPoint].valueCodeableConcept = HIVConcepts#HIV.B.DE25 "Voluntary counselling and testing (within a health facility setting)"
+* extension[testingModality].valueCodeableConcept = HIVConcepts#HIV.B.ET.DE28 "Voluntary counselling and testing (VCT)"
 * extension[referredThroughPartnerServices][+].valueCodeableConcept = HIVConcepts#HIV.B.DE6 "Partner or contact of an index case"
+* extension[partnerContactRelationship][+].valueCodeableConcept = HIVConcepts#HIV.B.ET.DE4 "Siblings"
 * extension[contactWithSuspectedExposureToHiv].valueBoolean = false
 * extension[hivDiagnosingFacility].valueReference = Reference(ExampleHivHtsDiagnosingFacility)
 
@@ -32,7 +35,7 @@ Description: "Example organization representing the HTS diagnosing facility."
 Instance: ExampleHivHtsFollowUpAppointment
 InstanceOf: HivHtsFollowUpAppointment
 Title: "Example HIV HTS Follow-up Appointment"
-Description: "Example Appointment for the recommended HTS follow-up date."
+Description: "Example appointment booked for HTS follow-up."
 
 * status = #booked
 * reasonCode[+] = HIVConcepts#HIV.B.DE192 "Retesting for HIV"

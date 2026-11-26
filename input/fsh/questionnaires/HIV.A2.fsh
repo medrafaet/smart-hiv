@@ -7,8 +7,19 @@ Usage: #definition
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
 * subjectType = #Patient
 * language = #en
+* version = "2026-10"
 * status = #draft
 * experimental = true
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[key].valueId = "registration-visit-date"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[severity].valueCode = #error
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[human].valueString = "The visit date and time must be at or before the current time."
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.language = #text/fhirpath
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.A.DE3').answer.value <= now()"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[key].valueId = "registration-name-characters"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[severity].valueCode = #error
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[human].valueString = "Use only letters, periods, and hyphens in names."
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[expression].valueExpression.language = #text/fhirpath
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.A.DE1' or linkId = 'HIV.A.ET.DE1' or linkId = 'HIV.A.ET.DE2' or linkId = 'HIV.A.DE2').answer.value.all($this.matches('^[\\\\p{L}\\\\p{M}.-]+$'))"
 
 * item[+]
   * id = "HIV.A.DE1"
@@ -27,11 +38,19 @@ Usage: #definition
   * repeats = false
   * readOnly = false
 * item[+]
-  * id = "HIV.A.DE2"
-  * linkId = "HIV.A.DE2"
+  * id = "HIV.A.ET.DE2"
+  * linkId = "HIV.A.ET.DE2"
   * type = #string
   * text = "Grandfather name"
   * required = true
+  * repeats = false
+  * readOnly = false
+* item[+]
+  * id = "HIV.A.DE2"
+  * linkId = "HIV.A.DE2"
+  * type = #string
+  * text = "Family name"
+  * required = false
   * repeats = false
   * readOnly = false
 * item[+]
@@ -55,7 +74,10 @@ Usage: #definition
   * linkId = "HIV.A.DE5"
   * type = #choice
   * text = "Referred by"
-  * required = false
+  * required = true
   * repeats = false
   * readOnly = false
-  * answerValueSet = "#HIV.A.DE5"
+  * answerValueSet = Canonical(HIV.A.DE5)
+  * enableWhen[+].question = "HIV.A.DE4"
+  * enableWhen[=].operator = #=
+  * enableWhen[=].answerBoolean = true

@@ -7,6 +7,7 @@ Usage: #definition
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
 * subjectType = #Patient
 * language = #en
+* version = "2026-10"
 * status = #draft
 * experimental = true
 
@@ -16,17 +17,20 @@ Usage: #definition
   * type = #choice
   * text = "Type of follow-up appointment"
   * required = false
-  * repeats = false
+  * repeats = true
   * readOnly = false
-  * answerValueSet = "#HIV.B.DE191"
+  * answerValueSet = Canonical(HIV.B.DE191)
 * item[+]
   * id = "HIV.B.DE194"
   * linkId = "HIV.B.DE194"
   * type = #string
   * text = "Other reason for the follow-up appointment (specify)"
-  * required = false
+  * required = true
   * repeats = false
   * readOnly = false
+  * enableWhen.question = "HIV.B.DE191"
+  * enableWhen.operator = #=
+  * enableWhen.answerCoding = HIVConcepts#HIV.B.DE193
 * item[+]
   * id = "HIV.B.DE195"
   * linkId = "HIV.B.DE195"

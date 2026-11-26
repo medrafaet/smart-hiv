@@ -8,5 +8,5 @@ Description: "Value set of reason why client was switched from first- to second-
 * ^experimental = true
 * ^name = "HIVDDE486"
 * ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE486"
-* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/valueset-rules-text"
-* ^extension[=].valueMarkdown = "This should be a context-specific list of reason why client was switched from first- to second-line ARV drug regimen"
+
+* include codes from valueset HIV.D.DE430
