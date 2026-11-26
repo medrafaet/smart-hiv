@@ -27582,13 +27582,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.D15.DT, HIV.D17.DT</td>
     <td></td>
-    <td></td>
+    <td>Care staging already records TB findings with the full staging list (HIV.D.DE289). The HIV/TB terminology remains available for exchange.</td>
   </tr>
   <tr>
     <td>HIV.D15 Determine clinical stage of HIV</td>
     <td>HIV.D.DE935</td>
     <td>Pulmonary TB</td>
-    <td>Client's symptoms include pulmonary TB</td>
+    <td>Client&#x27;s symptoms include pulmonary TB</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Pulmonary TB</td>
@@ -27599,33 +27599,16 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.D15.DT, HIV.D17.DT</td>
     <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.D15 Determine clinical stage of HIV</td>
-    <td>HIV.D.DE936</td>
-    <td>Lymph node TB</td>
-    <td>Client's symptoms include lymph node TB</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Lymph node TB</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td></td>
-    <td>None</td>
-    <td>HIV.D15.DT, HIV.D17.DT</td>
-    <td></td>
-    <td></td>
+    <td>Pulmonary TB is available in the staging form as HIV.D.DE312.</td>
   </tr>
   <tr>
     <td>HIV.D15 Determine clinical stage of HIV</td>
     <td>HIV.D.DE937</td>
     <td>Extrapulmonary TB</td>
-    <td>Client's symptoms include extrapulmonary tuberculosis (TB)</td>
+    <td>Client&#x27;s symptoms include extrapulmonary tuberculosis</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Extrapulmonary TB</td>
+    <td>Extrapulmonary tuberculosis</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -27633,7 +27616,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.D15.DT, HIV.D17.DT</td>
     <td></td>
-    <td></td>
+    <td>Extrapulmonary TB is available in the staging form as HIV.D.DE338. The staging form also retains the distinct lymph node TB option (HIV.D.DE313).</td>
   </tr>
   <tr>
     <td>HIV.D8 Capture or update client history</td>
@@ -27654,6 +27637,40 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.D8 Capture or update client history</td>
+    <td>HIV.D.ET.DE938</td>
+    <td>Mono drug resistance TB</td>
+    <td>resistant to one first-line anti-TB drug only</td>
+    <td>N/A</td>
+    <td>Boolean</td>
+    <td>True/False</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Record the documented resistance classification.</td>
+  </tr>
+  <tr>
+    <td>HIV.D8 Capture or update client history</td>
+    <td>HIV.D.ET.DE939</td>
+    <td>XDR TB</td>
+    <td>MDR-TB with additional resistance to certain second-line drugs.</td>
+    <td>N/A</td>
+    <td>Boolean</td>
+    <td>True/False</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Record the documented resistance classification.</td>
+  </tr>
+  <tr>
+    <td>HIV.D8 Capture or update client history</td>
     <td>HIV.D.DE939</td>
     <td>TB diagnosis result</td>
     <td>Final result of the TB investigation (bacteriological and/or clinical)</td>
@@ -27667,7 +27684,7 @@ HIV.A5 Create new client record</td>
     <td></td>
     <td>HIV.B9.DT</td>
     <td>HTS.2, HTS.3, HTS.4</td>
-    <td></td>
+    <td>Record the final result when documented. Leave it blank while the investigation is pending.</td>
   </tr>
   <tr>
     <td>HIV.D8 Capture or update client history</td>
@@ -27713,12 +27730,12 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>Required if "TB diagnosis result"='Diagnosed TB'</td>
+    <td>Required if &quot;TB diagnosis result&quot;=&#x27;Diagnosed TB&#x27;</td>
     <td>C</td>
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when diagnosed TB is recorded.</td>
   </tr>
   <tr>
     <td>HIV.D8 Capture or update client history</td>
@@ -27763,7 +27780,7 @@ HIV.A5 Create new client record</td>
     <td>Boolean</td>
     <td>True/False</td>
     <td>N/A</td>
-    <td>True if "Risk factors, comorbidities and coinfections signs and symptoms"='Presumptive TB'</td>
+    <td>True if &quot;Risk factors, comorbidities and coinfections signs and symptoms&quot;=&#x27;Presumptive TB&#x27;</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
@@ -27783,10 +27800,10 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Presumptive TB"=True</td>
+    <td>Required if &quot;Presumptive TB&quot;=True</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when presumptive TB is recorded.</td>
   </tr>
   <tr>
     <td>HIV.D8 Capture or update client history</td>
@@ -27803,7 +27820,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>The preview includes six workbook choices. The exchange vocabulary also accepts the existing Re-registered and Unknown codes.</td>
   </tr>
   <tr>
     <td>HIV.D8 Capture or update client history</td>
@@ -27825,7 +27842,7 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.D8 Capture or update client history</td>
     <td>HIV.D.DE949</td>
-    <td>Recurrent</td>
+    <td>Relapse</td>
     <td>A person with TB disease who was previously treated for TB, was declared cured or treatment completed at the end of their most recent course of TB treatment and is now diagnosed with a new episode of TB.</td>
     <td>Input Option</td>
     <td>Codes</td>
@@ -27837,41 +27854,92 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>The workbook label is Relapse and the Input Options cell says Recurrent. The form uses the existing Recurrent code and display.</td>
   </tr>
   <tr>
     <td>HIV.D8 Capture or update client history</td>
-    <td>HIV.D.DE950</td>
-    <td>Re-registered</td>
-    <td>A person with TB disease who had been notified previously as a TB case, but was not declared cured or treatment completed, and is now being registered for a new course of TB treatment. </td>
+    <td>HIV.D.ET.DE3</td>
+    <td>Treatement after failure</td>
+    <td>sputum smear or culture positive) or becomes positive again during treatment despite receiving anti-TB therapy</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Re-registered</td>
+    <td>failure</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
     <td></td>
     <td></td>
     <td></td>
+    <td></td>
+    <td></td>
+    <td>This workbook identifier also identifies a different concept in Care and Treatment. The TB choice uses the HIV/TB treatment history code system.</td>
   </tr>
   <tr>
     <td>HIV.D8 Capture or update client history</td>
-    <td>HIV.D.DE951</td>
-    <td>Unknown</td>
-    <td>A person with TB disease who has undocumented history of TB treatment</td>
+    <td>HIV.D.ET.DE4</td>
+    <td>Treatment after lost</td>
+    <td>Interrupted treatment for a significant period and did not complete the prescribed regimen, and then returns for care.</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Unknown</td>
+    <td>Treatment after lost</td>
     <td>N/A</td>
+    <td>N.A</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>This workbook identifier also identifies a different concept in Care and Treatment. The TB choice uses the HIV/TB treatment history code system.</td>
+  </tr>
+  <tr>
+    <td>HIV.D8 Capture or update client history</td>
+    <td>HIV.D.ET.DE5</td>
+    <td>Transfer in</td>
+    <td>A TB patient who is transferred from another treatment unit or health facility and is registered at the receiving facility to continue anti-TB treatment.</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Transfer in</td>
     <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
     <td></td>
     <td></td>
     <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>This workbook identifier also identifies a different concept in Care and Treatment. The TB choice uses the HIV/TB treatment history code system.</td>
+  </tr>
+  <tr>
+    <td>HIV.D8 Capture or update client history</td>
+    <td>HIV.D.ET.DE6</td>
+    <td>Others</td>
+    <td>Other TB treatment History</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Others</td>
+    <td>N/A</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>This workbook identifier also identifies a different concept in Care and Treatment. The TB choice uses the HIV/TB treatment history code system.</td>
+  </tr>
+  <tr>
+    <td>HIV.D8 Capture or update client history</td>
+    <td>HIV.D.ET.DE9</td>
+    <td>Other (Specify)</td>
+    <td>Specify if there was other TB treatment History</td>
+    <td>N/A</td>
+    <td>String</td>
+    <td></td>
+    <td>N/A</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Specify the documented history when Other is selected. The model maps this text field to the HIV/TB worksheet row.</td>
   </tr>
   <tr>
     <td>HIV.D8 Capture or update client history</td>
@@ -27885,10 +27953,10 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>DateTime ≤ Current DateTime</td>
     <td>C</td>
-    <td>Required if "TB diagnosis result" IS NOT NULL</td>
+    <td>Required if &quot;TB diagnosis result&quot; IS NOT NULL</td>
     <td></td>
     <td>DFT.4, DFT.5, TBH.4</td>
-    <td></td>
+    <td>Required for diagnosed TB in the preview. The workbook says to require it for any result, including TB excluded, although the definition is the date a diagnosis was established. Confirm how the date of exclusion should be recorded.</td>
   </tr>
   <tr>
     <td>HIV.D8 Capture or update client history</td>
@@ -27922,7 +27990,7 @@ HIV.A5 Create new client record</td>
     <td></td>
     <td></td>
     <td>TBH.1, TBH.2</td>
-    <td></td>
+    <td>The preview requires a start date when current preventive treatment is documented. A known start date can also be recorded for a previous course.</td>
   </tr>
   <tr>
     <td>HIV.D8 Capture or update client history</td>
@@ -27939,7 +28007,7 @@ HIV.A5 Create new client record</td>
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the known completion date. The workbook leaves the requirement condition unspecified.</td>
   </tr>
   <tr>
     <td>HIV.D4 Screen for TB</td>
@@ -27956,24 +28024,7 @@ HIV.A5 Create new client record</td>
     <td></td>
     <td>HIV.D4.DT</td>
     <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.D4 Screen for TB</td>
-    <td>HIV.D.DE957</td>
-    <td>Screening with cough</td>
-    <td>Client screened for TB based on cough symptom</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Screening with cough</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.D4.DT</td>
-    <td></td>
-    <td></td>
+    <td>Record all applicable methods when screening was conducted.</td>
   </tr>
   <tr>
     <td>HIV.D4 Screen for TB</td>
@@ -28011,57 +28062,6 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.D4 Screen for TB</td>
-    <td>HIV.D.DE960</td>
-    <td>CRP single screening algorithm</td>
-    <td>Client screened for TB based on C-reactive protein (CRP) testing</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>CRP single screening algorithm</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.D4.DT</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.D4 Screen for TB</td>
-    <td>HIV.D.DE961</td>
-    <td>CXR single screening algorithm</td>
-    <td>Client screened for TB with a chest radiography (CXR)</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>CXR single screening algorithm</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.D4.DT</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.D4 Screen for TB</td>
-    <td>HIV.D.DE962</td>
-    <td>Parallel screening algorithm with W4SS and CRP</td>
-    <td>Client screened for TB using parallel screening with WHO-recommended four-symptom screen and C-reactive protein (CRP) testing</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Parallel screening algorithm with W4SS and CRP</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.D4.DT</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.D4 Screen for TB</td>
     <td>HIV.D.DE963</td>
     <td>Sequential positive screening algorithm with W4SS and CRP</td>
     <td>Client screened for TB using sequential positive screening with WHO-recommended four-symptom screen and C-reactive protein (CRP) testing.</td>
@@ -28079,24 +28079,7 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.D4 Screen for TB</td>
-    <td>HIV.D.DE964</td>
-    <td>Sequential negative screening algorithm with W4SS and CRP</td>
-    <td>Client screened for TB using sequential negative screening with WHO-recommended four-symptom screen and C-reactive protein (CRP) testing</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Sequential negative screening algorithm with W4SS and CRP</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.D4.DT</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.D4 Screen for TB</td>
-    <td>HIV.D.DE965</td>
+    <td>HIV.D.DE962</td>
     <td>Parallel screening algorithm with W4SS and CXR</td>
     <td>Client screened for TB using the parallel screening algorithm with W4SS and CXR</td>
     <td>Input Option</td>
@@ -28109,41 +28092,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.D4.DT</td>
     <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.D4 Screen for TB</td>
-    <td>HIV.D.DE966</td>
-    <td>Sequential positive screening algorithm with W4SS and CXR</td>
-    <td>Client screened for TB using sequential positive screening with WHO-recommended four-symptom screen and chest radiography</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Sequential positive screening algorithm with W4SS and CXR</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.D4.DT</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.D4 Screen for TB</td>
-    <td>HIV.D.DE967</td>
-    <td>Sequential negative screening algorithm with W4SS and CXR</td>
-    <td>Client screened for TB using sequential negative screening with WHO-recommended four-symptom screen and chest radiography</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Sequential negative screening algorithm with W4SS and CXR</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.D4.DT</td>
-    <td></td>
-    <td></td>
+    <td>The workbook uses HIV.D.DE962 for parallel screening with W4SS and CXR. That published code identifies W4SS and CRP. The form uses the existing W4SS and CXR code HIV.D.DE965.</td>
   </tr>
   <tr>
     <td>HIV.D4 Screen for TB</td>
@@ -28181,6 +28130,40 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.D4 Screen for TB</td>
+    <td>HIV.D.ET.DE961</td>
+    <td>Screening with CXR</td>
+    <td>Client screened for TB with a chest radiography (CXR)</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Screening with CXR</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>O</td>
+    <td>None</td>
+    <td>HIV.D4.DT</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.D4 Screen for TB</td>
+    <td>HIV.D.ET.DE7</td>
+    <td>Screening with LF-LAM</td>
+    <td>TB screening with LF-LAM is a rapid, urine-based test used primarily among people with HIV Infection who have advanced immunosuppression or are seriously ill, to assist in the diagnosis of active tuberculosis</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Screening with LF-LAM</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>The identifier also identifies an ART regimen in Care and Treatment. The TB option uses the HIV/TB workbook code system.</td>
+  </tr>
+  <tr>
+    <td>HIV.D4 Screen for TB</td>
     <td>HIV.D.DE970</td>
     <td>Other TB screening algorithm</td>
     <td>Client screened for tuberculosis (TB) with a different screening method not listed</td>
@@ -28208,10 +28191,10 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "TB screening algorithm"='Other TB screening algorithm'</td>
+    <td>Required if &quot;TB screening algorithm&quot;=&#x27;Other TB screening algorithm&#x27;</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when Other is selected among the screening methods.</td>
   </tr>
   <tr>
     <td>HIV.D4 Screen for TB</td>
@@ -28267,11 +28250,11 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.D4 Screen for TB</td>
     <td>HIV.D.DE975</td>
-    <td>Prolonged cough (>=2w)</td>
+    <td>Prolonged cough (&gt;=2w)</td>
     <td>Client has a prolonged cough of 2 weeks or more</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Prolonged cough (>=2w)</td>
+    <td>Prolonged cough (&gt;=2w)</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -28288,15 +28271,15 @@ HIV.A5 Create new client record</td>
     <td>Client has a fever with a measured temperature of 102.2 °F/39 °C or greater</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Fever of 39 °C or greater</td>
+    <td>Fever</td>
     <td>N/A</td>
     <td>Temperature ≥ 39 °C</td>
-    <td>None</td>
+    <td>N/A</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.D4.DT</td>
     <td></td>
-    <td></td>
+    <td>Record the documented finding. This form does not apply that criterion to determine the overall screening result.</td>
   </tr>
   <tr>
     <td>HIV.D4 Screen for TB</td>
@@ -28305,7 +28288,7 @@ HIV.A5 Create new client record</td>
     <td>Unexplained weight loss</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Weight loss (reported)</td>
+    <td>Weight loss</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -28336,7 +28319,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.D4 Screen for TB</td>
     <td>HIV.D.DE979</td>
     <td>Poor weight gain</td>
-    <td>Client reports poor weight gain of child or infant or growth curve flattening or weight for age <-2 Z-scores.</td>
+    <td>Client reports poor weight gain of child or infant or growth curve flattening or weight for age &lt;-2 Z-scores.</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Poor weight gain</td>
@@ -28466,7 +28449,7 @@ HIV.A5 Create new client record</td>
     <td></td>
     <td>HIV.D4.DT</td>
     <td>DFT.2, DFT.3, DFT.4, DFT.5, TBH.3</td>
-    <td></td>
+    <td>Record the documented screening result. Pending screening can remain without a result. The exchange vocabulary also retains the legacy Inconclusive code.</td>
   </tr>
   <tr>
     <td>HIV.D4 Screen for TB</td>
@@ -28504,23 +28487,6 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.D4 Screen for TB</td>
-    <td>HIV.D.DE989</td>
-    <td>Inconclusive</td>
-    <td>Screening result was inconclusive for tuberculosis (TB)</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Inconclusive</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.D4.DT</td>
-    <td>DFT.2, DFT.3, DFT.4, DFT.5, TBH.3</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.D4 Screen for TB</td>
     <td>HIV.D.DE990</td>
     <td>TB screening date</td>
     <td>Date the TB screening was conducted</td>
@@ -28534,7 +28500,7 @@ HIV.A5 Create new client record</td>
     <td></td>
     <td></td>
     <td>DFT.1, DFT.2, DFT.3, DFT.4, DFT.5, TBH.3</td>
-    <td></td>
+    <td>Required when screening was conducted.</td>
   </tr>
   <tr>
     <td>HIV.D4 Screen for TB</td>
@@ -28548,10 +28514,10 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "TB screening date" is NOT NULL; will be "TB screening date" if TB screening only includes symptom screening.</td>
+    <td>Required if &quot;TB screening date&quot; is NOT NULL; will be &quot;TB screening date&quot; if TB screening only includes symptom screening.</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>When the screening date and a result are recorded, enter the date the result became available. For symptom-only screening, use the screening date. A pending result leaves this date blank.</td>
   </tr>
   <tr>
     <td>HIV.D4 Screen for TB</td>
@@ -28568,7 +28534,7 @@ HIV.A5 Create new client record</td>
     <td></td>
     <td></td>
     <td>DFT.3, DFT.4, DFT.5, TBH.3</td>
-    <td></td>
+    <td>Required when a diagnostic test, sample collection, or test result date is recorded.</td>
   </tr>
   <tr>
     <td>HIV.D4 Screen for TB</td>
@@ -28636,6 +28602,23 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td>DFT.3, DFT.4, DFT.5, TBH.3</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.D4 Screen for TB</td>
+    <td>HIV.D.ET.DE996</td>
+    <td>Cytology/ histopathology</td>
+    <td>The microscopic examination of cells (cytology) or tissue specimens (histopathology) to identify features suggestive of tuberculosis (TB) caused by Mycobacterium tuberculosis.</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Cytology</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -28727,7 +28710,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.D8 Capture or update client history</td>
     <td>HIV.D.DE1002</td>
     <td>TB treatment outcome</td>
-    <td>Indicates patient's TB treatment outcome</td>
+    <td>Indicates patient&#x27;s TB treatment outcome</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -28744,10 +28727,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.D8 Capture or update client history</td>
     <td>HIV.D.DE1003</td>
     <td>Treatment failed</td>
-    <td>The treatment regimen terminated or permanently changed to a new regimen or treatment strategy. Reasons for the change include:
-- no clinical response or no bacteriological response, or both (see note;
-- adverse drug reaction; or
-- evidence of additional drug-resistance to medicines in the regimen.</td>
+    <td>The treatment regimen terminated or permanently changed to a new regimen or treatment strategy. Reasons for the change include: - no clinical response or no bacteriological response, or both (see note; - adverse drug reaction; or - evidence of additional drug-resistance to medicines in the regimen.</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Treatment failed</td>
@@ -28832,7 +28812,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.D8 Capture or update client history</td>
     <td>HIV.D.DE1008</td>
     <td>Not evaluated</td>
-    <td>No treatment outcome was assigned. This includes cases 'transferred out' to another treatment unit and whose treatment outcome is unknown; however, it excludes those lost to follow-up.</td>
+    <td>No treatment outcome was assigned. This includes cases &#x27;transferred out&#x27; to another treatment unit and whose treatment outcome is unknown; however, it excludes those lost to follow up</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Not evaluated</td>
@@ -28843,7 +28823,41 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
+    <td>The secondary definition continues in the completion date row. The existing code definition keeps the full sentence.</td>
+  </tr>
+  <tr>
+    <td>HIV.D8 Capture or update client history</td>
+    <td>HIV.D.D.ET.E1009</td>
+    <td>Moved to MDR TB</td>
+    <td>initially registered and treated as having drug-susceptible TB but is later found to have multidrug-resistant tuberculosis (MDR-TB)</td>
+    <td>Input Option</td>
+    <td>Codes</td>
     <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>The workbook identifier is malformed. Confirm the intended code before offering this as an outcome.</td>
+  </tr>
+  <tr>
+    <td>HIV.D8 Capture or update client history</td>
+    <td>HIV.D.ET.DE1100</td>
+    <td>Treatment success</td>
+    <td>Treatment success is a tuberculosis treatment outcome that combines patients who are classified as cured and those who have completed treatment.</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Use this summary classification when success was documented at that level. Select the specific outcome when documented as Cured or Treatment completed.</td>
   </tr>
   <tr>
     <td>HIV.D8 Capture or update client history</td>
@@ -28860,7 +28874,7 @@ HIV.A5 Create new client record</td>
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the documented completion date. The secondary definition fragment “lost to follow-up.” completes the description of Not evaluated.</td>
   </tr>
   <tr>
     <td>HIV.D8 Capture or update client history</td>
@@ -28870,14 +28884,14 @@ HIV.A5 Create new client record</td>
     <td>Select all that apply</td>
     <td>Coding</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record all documented drugs in the TB regimen. The exchange vocabulary retains Rifabutin for existing records.</td>
   </tr>
   <tr>
     <td>HIV.D8 Capture or update client history</td>
@@ -28887,7 +28901,7 @@ HIV.A5 Create new client record</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Isoniazid</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>N/A</td>
     <td>None</td>
     <td>O</td>
@@ -28904,24 +28918,7 @@ HIV.A5 Create new client record</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Rifampicin</td>
-    <td>N/A</td>
-    <td>N/A</td>
     <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.D8 Capture or update client history</td>
-    <td>HIV.D.DE1013</td>
-    <td>Rifabutin</td>
-    <td>Client is currently taking rifabutin</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Rifabutin</td>
-    <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
     <td>O</td>
@@ -28938,7 +28935,7 @@ HIV.A5 Create new client record</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Ethambutol</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>N/A</td>
     <td>None</td>
     <td>O</td>
@@ -28955,7 +28952,7 @@ HIV.A5 Create new client record</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Levofloxacin</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>N/A</td>
     <td>None</td>
     <td>O</td>
@@ -28972,7 +28969,7 @@ HIV.A5 Create new client record</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Pyrazinamide</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>N/A</td>
     <td>None</td>
     <td>O</td>
@@ -28980,6 +28977,278 @@ HIV.A5 Create new client record</td>
     <td></td>
     <td></td>
     <td></td>
+  </tr>
+  <tr>
+    <td>HIV.D8 Capture or update client history</td>
+    <td>HIV.D.ET.DE1016</td>
+    <td>Moxifloxacin</td>
+    <td>Client is currently taking Moxifloxacin - Drugs for MDR TB (based on the national guidelines)</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Moxifloxacin</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.D8 Capture or update client history</td>
+    <td>HIV.D.ET.DE999</td>
+    <td>Bedaquiline</td>
+    <td>Client is currently taking Bedaquiline- Drugs for MDR TB (based on the national guidelines)</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Bedaquiline</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.D8 Capture or update client history</td>
+    <td>HIV.D.ET.DE1000</td>
+    <td>Linezolide</td>
+    <td>Client is currently taking Linezolide - Drugs for MDR TB (based on the national guidelines)</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Linezolide</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.D8 Capture or update client history</td>
+    <td>HIV.D.ET.DE1001</td>
+    <td>Clofazimine</td>
+    <td>Client is currently taking Clofazimine - Drugs for MDR TB (based on the national guidelines)</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Clofazimine</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.D8 Capture or update client history</td>
+    <td>HIV.D.ET.DE1002</td>
+    <td>Cycloserine</td>
+    <td>Client is currently taking Cycloserine - Drugs for MDR TB (based on the national guidelines)</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Cycloserine</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.D8 Capture or update client history</td>
+    <td>HIV.D.ET.DE1003</td>
+    <td>Terizidone</td>
+    <td>Client is currently taking Terizidone- Drugs for MDR TB (based on the national guidelines)</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Terizidone</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.D8 Capture or update client history</td>
+    <td>HIV.D.ET.DE1004</td>
+    <td>Delamanid</td>
+    <td>Client is currently taking Delamanid- Drugs for MDR TB (based on the national guidelines)</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Delamanid</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.D8 Capture or update client history</td>
+    <td>HIV.D.ET.DE1005</td>
+    <td>Imipenem-cilastatine</td>
+    <td>Client is currently taking Imipenem-cilastatine - Drugs for MDR TB (based on the national guidelines)</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Imipenem-cilastatine</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>The coded display uses the standardized spelling Imipenem-cilastatin.</td>
+  </tr>
+  <tr>
+    <td>HIV.D8 Capture or update client history</td>
+    <td>HIV.D.ET.DE1006</td>
+    <td>Meropenem</td>
+    <td>Client is currently taking Meropenem - Drugs for MDR TB (based on the national guidelines)</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Meropenem</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.D8 Capture or update client history</td>
+    <td>HIV.D.ET.DE1007</td>
+    <td>Amikacine</td>
+    <td>Client is currently taking Amikacine - Drugs for MDR TB (based on the national guidelines)</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Amikacine</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>The coded display uses the standardized spelling Amikacin.</td>
+  </tr>
+  <tr>
+    <td>HIV.D8 Capture or update client history</td>
+    <td>HIV.D.ET.DE1008</td>
+    <td>Streptomycin</td>
+    <td>Client is currently taking Streptomycin- Drugs for MDR TB (based on the national guidelines)</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Streptomycin</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.D8 Capture or update client history</td>
+    <td>HIV.D.ET.DE1009</td>
+    <td>Ethionamide</td>
+    <td>Client is currently taking Ethionamide- Drugs for MDR TB (based on the national guidelines)</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Ethionamide</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.D8 Capture or update client history</td>
+    <td>HIV.D.ET.DE1010</td>
+    <td>Prothionamide</td>
+    <td>Client is currently taking Prothionamide- Drugs for MDR TB (based on the national guidelines)</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Prothionamide</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.D8 Capture or update client history</td>
+    <td>HIV.D.ET.DE1011</td>
+    <td>Para-aminosalicylic acid</td>
+    <td>Client is currently taking Para-aminosalicylic acid - Drugs for MDR TB (based on the national guidelines)</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Para-aminosalicylic acid</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.D8 Capture or update client history</td>
+    <td>HIV.D.ET.DE1012</td>
+    <td>Clavunalic acid</td>
+    <td>Client is currently taking Clavunalic acid - Drugs for MDR TB (based on the national guidelines)</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Clavunalic acid</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>The coded display uses the standardized spelling Clavulanic acid.</td>
+  </tr>
+  <tr>
+    <td>HIV.D8 Capture or update client history</td>
+    <td>HIV.D.ET.DE1013</td>
+    <td>Pretonamide</td>
+    <td>Client is currently taking Pretonamide- Drugs for MDR TB (based on the national guidelines)</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Pretonamide</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>The coded display uses the standardized spelling Pretomanid.</td>
   </tr>
   <tr>
     <td>HIV.D14 Prevent, screen, and manage comorbidities and coinfections</td>
@@ -28996,13 +29265,13 @@ HIV.A5 Create new client record</td>
     <td></td>
     <td></td>
     <td>TBH.1</td>
-    <td></td>
+    <td>Record the clinician’s eligibility assessment.</td>
   </tr>
   <tr>
     <td>HIV.D14 Prevent, screen, and manage comorbidities and coinfections</td>
     <td>HIV.D.DE1018</td>
     <td>Date when eligibility for TB preventive treatment (TPT) was determined</td>
-    <td>Date when a determination of the client's eligibility for TPT was made</td>
+    <td>Date when a determination of the client&#x27;s eligibility for TPT was made</td>
     <td>N/A</td>
     <td>Date</td>
     <td>N/A</td>
@@ -29013,13 +29282,13 @@ HIV.A5 Create new client record</td>
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when eligibility was assessed, for either Yes or No.</td>
   </tr>
   <tr>
     <td>HIV.D23 Prescribe</td>
     <td>HIV.D.DE1019</td>
     <td>TB status at ART start</td>
-    <td>Client's tuberculosis (TB) status when antiretroviral therapy (ART) is started</td>
+    <td>Client&#x27;s tuberculosis (TB) status when antiretroviral therapy (ART) is started</td>
     <td>N/A</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -29030,7 +29299,7 @@ HIV.A5 Create new client record</td>
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the documented TB status at ART initiation.</td>
   </tr>
   <tr>
     <td>HIV.D23 Prescribe</td>
@@ -29104,18 +29373,35 @@ HIV.A5 Create new client record</td>
     <td>HIV.D20 Diagnostics</td>
     <td>HIV.D.DE1024</td>
     <td>TB meningitis</td>
-    <td>Type of extrapulmonary TB identified for the client is TB meningitis</td>
+    <td>TB meningitis</td>
     <td>N/A</td>
     <td>Boolean</td>
     <td>True/False</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>N/A</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>TB meningitis has ramifications for ART initiation, see Table 4.2: Summary table for the timing of ART initiation among people living with HIV in WHO's Consolidated guidelines on HIV prevention, testing, treatment, service delivery and monitoring: recommendations for a public health approach (2021)</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.D20 Diagnostics</td>
+    <td>HIV.D.ET.DE1024</td>
+    <td>MDR TB</td>
+    <td>MDR-TB (Multidrug-Resistant Tuberculosis) is tuberculosis caused by Mycobacterium tuberculosis that is resistant to at least:Isoniazid, and Rifampicin.</td>
+    <td>N/A</td>
+    <td>Boolean</td>
+    <td>True/False</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Record the documented resistance classification.</td>
   </tr>
   <tr>
     <td>HIV.D4 Screen for TB</td>
@@ -29138,7 +29424,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.D4 Screen for TB</td>
     <td>HIV.D.DE1026</td>
     <td>C reactive protein test result</td>
-    <td>Test result of the client's C reactive protein test result in mg/L</td>
+    <td>Test result of the client&#x27;s C reactive protein test result in mg/L</td>
     <td>N/A</td>
     <td>Quantity</td>
     <td>N/A</td>
@@ -29149,13 +29435,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.D4.DT</td>
     <td></td>
-    <td></td>
+    <td>Record a decimal quantity in mg/L.</td>
   </tr>
   <tr>
     <td>HIV.D4 Screen for TB</td>
     <td>HIV.D.DE1027</td>
     <td>C reactive protein test result date</td>
-    <td>The date when the client's test result for C reactive protein is available</td>
+    <td>The date when the client&#x27;s test result for C reactive protein is available</td>
     <td>N/A</td>
     <td>Date</td>
     <td>N/A</td>
@@ -29180,16 +29466,16 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "TB preventive treatment (TPT) status"='On TPT'</td>
+    <td>Required if &quot;TB preventive treatment (TPT) status&quot;=&#x27;On TPT&#x27;</td>
     <td></td>
     <td>TBH.1, TBH.2</td>
-    <td></td>
+    <td>Required when the recorded status is On TPT. The exchange vocabulary retains the legacy levofloxacin option.</td>
   </tr>
   <tr>
     <td>HIV.D4 Screen for TB</td>
     <td>HIV.D.DE1029</td>
     <td>3HP</td>
-    <td>The client's current TPT regimen is 3HP</td>
+    <td>The client&#x27;s current TPT regimen is 3HP</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>3HP</td>
@@ -29206,7 +29492,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.D4 Screen for TB</td>
     <td>HIV.D.DE1030</td>
     <td>1HP</td>
-    <td>The client's current TPT regimen is 1HP</td>
+    <td>The client&#x27;s current TPT regimen is 1HP</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>1HP</td>
@@ -29223,7 +29509,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.D4 Screen for TB</td>
     <td>HIV.D.DE1031</td>
     <td>6H</td>
-    <td>The client's current TPT regimen is 6H</td>
+    <td>The client&#x27;s current TPT regimen is 6H</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>6H</td>
@@ -29238,26 +29524,43 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.D4 Screen for TB</td>
-    <td>HIV.D.DE1032</td>
-    <td>Six months of levofloxacin daily</td>
-    <td>The client's current TPT regimen is six months of levofloxacin daily</td>
+    <td>HIV.D.ET.DE1031</td>
+    <td>9H</td>
+    <td>The client&#x27;s current TPT regimen is 9H</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Six months of levofloxacin daily</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
+    <td>9H</td>
     <td></td>
-    <td>TBH.1, TBH.2</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.D4 Screen for TB</td>
+    <td>HIV.D.ET.DE1032</td>
+    <td>3HR</td>
+    <td>3HR is a short-course tuberculosis preventive treatment (TPT) regimen used for latent TB infection</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>3HR</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
     <td>HIV.D4 Screen for TB</td>
     <td>HIV.D.DE1033</td>
     <td>Other TB preventive treatment (TPT) regimen</td>
-    <td>The client's current TPT regimen is another regimen than those listed above</td>
+    <td>The client&#x27;s current TPT regimen is another regimen than those listed above</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Other TB preventive treatment (TPT) regimen</td>
@@ -29294,7 +29597,7 @@ HIV.A5 Create new client record</td>
     <td>The client did not start the TB preventive treatment (TPT)</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Not started</td>
+    <td>N/A</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -29311,7 +29614,7 @@ HIV.A5 Create new client record</td>
     <td>The client started the TB preventive treatment (TPT) and is currently taking the medication, without treatment interruptions</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>On TPT</td>
+    <td>N/A</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -29324,11 +29627,11 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.D4 Screen for TB</td>
     <td>HIV.D.DE1037</td>
-    <td>On TPT with interruptions</td>
+    <td>On TPT with interuptions</td>
     <td>The client started the TB preventive treatment (TPT) and is currently taking the medication, with treatment interruptions</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>On TPT with interruptions</td>
+    <td>N/A</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -29342,10 +29645,10 @@ HIV.A5 Create new client record</td>
     <td>HIV.D4 Screen for TB</td>
     <td>HIV.D.DE1038</td>
     <td>On hold</td>
-    <td>The health care worker has temporarily stopped the TB preventive treatment (TPT), but TPT is expected to continue again later. May also be called "suspended".</td>
+    <td>The health care worker has temporarily stopped the TB preventive treatment (TPT), but TPT is expected to continue again later. May also be called &quot;suspended&quot;.</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>On hold</td>
+    <td>N/A</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -29362,7 +29665,7 @@ HIV.A5 Create new client record</td>
     <td>TB preventive treatment (TPT) was completed</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Completed</td>
+    <td>N/A</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>

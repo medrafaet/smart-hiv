@@ -60,6 +60,17 @@ RuleSet: CareDiagnosticsCd4
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.language = #text/fhirpath
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.expression = "iif(%baselineCd4.count() = 1, %baselineCd4 < 200, {})"
 
+RuleSet: DocumentedTbDiagnosticFindings
+* item[+]
+  * id = "HIV.D.DE1024"
+  * linkId = "HIV.D.DE1024"
+  * type = #boolean
+  * text = "TB meningitis"
+* item[+]
+  * linkId = "HIV.D.ET.DE1024"
+  * type = #boolean
+  * text = "Documented multidrug-resistant TB (MDR-TB)"
+
 Instance: HIV.D20Diagnostics
 InstanceOf: sdc-questionnaire-extr-smap
 Title: "Diagnostics"
@@ -180,14 +191,7 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
-* item[+]
-  * id = "HIV.D.DE1024"
-  * linkId = "HIV.D.DE1024"
-  * type = #boolean
-  * text = "TB meningitis"
-  * required = false
-  * repeats = false
-  * readOnly = false
+* insert DocumentedTbDiagnosticFindings
 * item[+]
   * id = "HIV.E.DE149"
   * linkId = "HIV.E.DE149"

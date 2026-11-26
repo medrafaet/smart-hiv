@@ -283,6 +283,11 @@ RuleSet: CareRegimenReview
   * linkId = "HIV.D.DE933"
   * type = #boolean
   * text = "Medication change recommended"
+* item[+]
+  * id = "HIV.D.DE1023"
+  * linkId = "HIV.D.DE1023"
+  * type = #boolean
+  * text = "TB prevention services accepted"
 
 Instance: HIV.D21DetermineRegimenAndTreatmentOptions
 InstanceOf: sdc-questionnaire-extr-smap
@@ -298,14 +303,6 @@ Usage: #definition
 * experimental = true
 
 * insert CareRegimenReview
-* item[+]
-  * id = "HIV.D.DE1023"
-  * linkId = "HIV.D.DE1023"
-  * type = #boolean
-  * text = "TB prevention services accepted"
-  * required = false
-  * repeats = false
-  * readOnly = false
 
 Instance: HIV.D21CareRegimenReview
 InstanceOf: sdc-questionnaire-extr-smap

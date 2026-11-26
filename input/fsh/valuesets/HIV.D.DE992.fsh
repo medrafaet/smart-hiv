@@ -13,3 +13,4 @@ Description: "Value set of the type of diagnostic test performed to detect tuber
 * HIVConcepts#HIV.D.DE994 "mWRD test for TB"
 * HIVConcepts#HIV.D.DE995 "Microscopy - Sputum acid-fast bacilli (AFB)"
 * HIVConcepts#HIV.D.DE996 "TB Culture"
+* HIVConcepts#HIV.D.ET.DE996

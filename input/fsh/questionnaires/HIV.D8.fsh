@@ -77,6 +77,16 @@ Usage: #definition
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][9].extension[human].valueString = "Record a positive number of pregnancies if currently pregnant."
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][9].extension[expression].valueExpression.language = #text/fhirpath
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][9].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE31').answer.value.where($this = true).exists() implies %resource.item.where(linkId = 'HIV.D.DE33').answer.value.ofType(integer).where($this > 0).exists()"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][10].extension[key].valueId = "tb-diagnosis-date"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][10].extension[severity].valueCode = #error
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][10].extension[human].valueString = "Record the TB diagnosis date as today or earlier."
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][10].extension[expression].valueExpression.language = #text/fhirpath
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][10].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE952').answer.value.ofType(date).all($this <= today().toString().substring(0, $this.toString().length()).toDate())"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][11].extension[key].valueId = "tpt-start-required"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][11].extension[severity].valueCode = #error
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][11].extension[human].valueString = "Record the start date when the client is currently taking TB preventive treatment."
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][11].extension[expression].valueExpression.language = #text/fhirpath
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][11].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE953').answer.value.where($this = true).exists() implies %resource.item.where(linkId = 'HIV.D.DE954').answer.value.ofType(date).exists()"
 
 * item[+]
   * id = "HIV.D.DE31"
@@ -827,6 +837,14 @@ Usage: #definition
   * repeats = false
   * readOnly = false
 * item[+]
+  * linkId = "HIV.D.ET.DE938"
+  * type = #boolean
+  * text = "Documented mono drug-resistant TB"
+* item[+]
+  * linkId = "HIV.D.ET.DE939"
+  * type = #boolean
+  * text = "Documented extensively drug-resistant TB (XDR-TB)"
+* item[+]
   * id = "HIV.D.DE939"
   * linkId = "HIV.D.DE939"
   * type = #choice
@@ -840,10 +858,13 @@ Usage: #definition
   * linkId = "HIV.D.DE942"
   * type = #choice
   * text = "Method of TB diagnosis"
-  * required = false
+  * required = true
   * repeats = false
   * readOnly = false
   * answerValueSet = Canonical(HIV.D.DE942)
+  * enableWhen.question = "HIV.D.DE939"
+  * enableWhen.operator = #=
+  * enableWhen.answerCoding = HIVConcepts#HIV.D.DE940
 * item[+]
   * id = "HIV.D.DE945"
   * linkId = "HIV.D.DE945"
@@ -857,9 +878,12 @@ Usage: #definition
   * linkId = "HIV.D.DE946"
   * type = #date
   * text = "Presumptive TB registration date"
-  * required = false
+  * required = true
   * repeats = false
   * readOnly = false
+  * enableWhen.question = "HIV.D.DE945"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
 * item[+]
   * id = "HIV.D.DE947"
   * linkId = "HIV.D.DE947"
@@ -868,15 +892,26 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
-  * answerValueSet = Canonical(HIV.D.DE947)
+  * answerValueSet = Canonical(HIV.D.DE947-capture)
+* item[+]
+  * linkId = "HIV.D.ET.DE9"
+  * type = #string
+  * text = "Other TB treatment history (specify)"
+  * required = true
+  * enableWhen.question = "HIV.D.DE947"
+  * enableWhen.operator = #=
+  * enableWhen.answerCoding = HIVTBWorkbookConcepts#HIV.D.ET.DE6
 * item[+]
   * id = "HIV.D.DE952"
   * linkId = "HIV.D.DE952"
   * type = #date
   * text = "Date of TB diagnosis"
-  * required = false
+  * required = true
   * repeats = false
   * readOnly = false
+  * enableWhen.question = "HIV.D.DE939"
+  * enableWhen.operator = #=
+  * enableWhen.answerCoding = HIVConcepts#HIV.D.DE940
 * item[+]
   * id = "HIV.D.DE953"
   * linkId = "HIV.D.DE953"
@@ -940,6 +975,6 @@ Usage: #definition
   * type = #choice
   * text = "TB treatment regimen composition"
   * required = false
-  * repeats = false
+  * repeats = true
   * readOnly = false
-  * answerValueSet = Canonical(HIV.D.DE1010)
+  * answerValueSet = Canonical(HIV.D.DE1010-capture)

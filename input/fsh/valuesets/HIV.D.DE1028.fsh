@@ -14,3 +14,5 @@ Description: "Value set of type of TPT regimen the client is currently on"
 * HIVConcepts#HIV.D.DE1031 "6H"
 * HIVConcepts#HIV.D.DE1032 "Six months of levofloxacin daily"
 * HIVConcepts#HIV.D.DE1033 "Other TB preventive treatment (TPT) regimen"
+* HIVConcepts#HIV.D.ET.DE1031
+* HIVConcepts#HIV.D.ET.DE1032

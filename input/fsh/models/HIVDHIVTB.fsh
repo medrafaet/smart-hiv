@@ -1,11 +1,11 @@
 Invariant:    HIV-D-17
-Description:  "DateTime <= Current DateTime"
-Expression:   "'NOT IMPLEMENTED'"
+Description:  "The TB diagnosis date must be on or before today."
+Expression:   "dateOfTbDiagnosis.all($this <= today().toString().substring(0, $this.toString().length()).toDate())"
 Severity:     #error
 
 Invariant:    HIV-D-18
-Description:  "Required if 'TB diagnosis result'='Diagnosed TB'"
-Expression:   "'NOT IMPLEMENTED'"
+Description:  "Record the diagnosis method and date when the investigation confirms TB."
+Expression:   "tbDiagnosisResult.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.D.DE940').exists() implies (methodOfTbDiagnosis.exists() and dateOfTbDiagnosis.exists())"
 Severity:     #error
 
 Logical: HIVDHIVTB
@@ -17,12 +17,19 @@ Description: "This tab describes the data that may be collected during care and 
 * ^experimental = true
 * ^name = "HIVDHIVTB"
 * ^status = #active
+* ^mapping.identity = "moh-hiv-dak"
+* ^mapping.name = "Ethiopia MoH HIV/TB Data Dictionary"
+* obeys HIV-D-17 and HIV-D-18
 
 * whoHivClinicalStageConditionOrSymptom 0..* Coding "WHO HIV clinical stage condition or symptom" "New or recurrent clinical events used to categorize HIV disease severity based at baseline and follow up"
   * ^code[+] = HIVConcepts#HIV.D.DE934
 * whoHivClinicalStageConditionOrSymptom from HIV.D.DE934
 * tbDisease 0..1 boolean "TB disease" "Whether the client has tuberculosis (TB) disease. Sometimes known as active TB"
   * ^code[+] = HIVConcepts#HIV.D.DE938
+* monoDrugResistanceTb 0..1 boolean "Mono drug resistance TB" "Documented TB resistance to one first-line anti-TB drug only."
+  * ^code[+] = HIVConcepts#HIV.D.ET.DE938
+* extensivelyDrugResistantTb 0..1 boolean "XDR TB" "Documented extensively drug-resistant tuberculosis."
+  * ^code[+] = HIVConcepts#HIV.D.ET.DE939
 * tbDiagnosisResult 0..1 Coding "TB diagnosis result" "Final result of the TB investigation (bacteriological and/or clinical)"
   * ^code[+] = HIVConcepts#HIV.D.DE939
 * tbDiagnosisResult from HIV.D.DE939
@@ -36,6 +43,9 @@ Description: "This tab describes the data that may be collected during care and 
 * tbTreatmentHistory 0..1 Coding "TB treatment history" "History of previous TB treatment"
   * ^code[+] = HIVConcepts#HIV.D.DE947
 * tbTreatmentHistory from HIV.D.DE947
+* otherTbTreatmentHistory 0..1 string "Other TB treatment history (specify)" "Other documented TB treatment history."
+  * ^mapping.identity = "moh-hiv-dak"
+  * ^mapping.map = "HIV.D.ET.DE9"
 * dateOfTbDiagnosis 0..1 date "Date of TB diagnosis" "The date when the diagnosis was established"
   * ^code[+] = HIVConcepts#HIV.D.DE952
 * currentlyOnTbPreventiveTreatmentTpt 1..1 boolean "Currently on TB preventive treatment (TPT)" "Client is currently taking TPT"
@@ -95,9 +105,11 @@ Description: "This tab describes the data that may be collected during care and 
   * ^code[+] = HIVConcepts#HIV.D.DE1023
 * tbMeningitis 0..1 boolean "TB meningitis" "Type of extrapulmonary TB identified for the client is TB meningitis"
   * ^code[+] = HIVConcepts#HIV.D.DE1024
+* multidrugResistantTb 0..1 boolean "MDR TB" "Documented multidrug-resistant tuberculosis."
+  * ^code[+] = HIVConcepts#HIV.D.ET.DE1024
 * cReactiveProteinTestDate 0..1 date "C reactive protein test date" "The date on which the client has a test for C reactive protein"
   * ^code[+] = HIVConcepts#HIV.D.DE1025
-* cReactiveProteinTestResult 0..1 integer "C reactive protein test result" "Test result of the client's C reactive protein test result in mg/L"
+* cReactiveProteinTestResult 0..1 Quantity "C reactive protein test result" "Test result of the client's C reactive protein test result in mg/L"
   * ^code[+] = HIVConcepts#HIV.D.DE1026
 * cReactiveProteinTestResultDate 0..1 date "C reactive protein test result date" "The date when the client's test result for C reactive protein is available"
   * ^code[+] = HIVConcepts#HIV.D.DE1027

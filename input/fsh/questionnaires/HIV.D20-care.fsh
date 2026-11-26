@@ -130,3 +130,4 @@ Usage: #definition
   * enableWhen.question = "HIV.D.DE416"
   * enableWhen.operator = #=
   * enableWhen.answerBoolean = true
+* insert DocumentedTbDiagnosticFindings

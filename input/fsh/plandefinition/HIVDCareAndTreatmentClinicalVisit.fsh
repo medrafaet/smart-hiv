@@ -37,6 +37,7 @@ Usage: #definition
 * action.action[=].participant.role.text = "Trained Lay Provider"
 * action.action[+].id = "HIV.D.4"
 * action.action[=].title = "Screen for TB"
+* action.action[=].definitionCanonical = Canonical(HIV.D4ScreenForTb)
 * action.action[=].description = "Adults and adolescents living with HIV should be screened for TB according to a clinical algorithm"
 * action.action[=].participant.type = #practitioner
 * action.action[=].participant.role.text = "Trained Lay Provider"

@@ -10,6 +10,11 @@ Usage: #definition
 * version = "2026-10"
 * status = #draft
 * experimental = true
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[key].valueId = "tpt-eligibility-date"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[severity].valueCode = #error
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[human].valueString = "Record the TB preventive treatment eligibility assessment date as today or earlier."
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.language = #text/fhirpath
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE1018').answer.value.ofType(date).all($this <= today().toString().substring(0, $this.toString().length()).toDate())"
 
 * item[+]
   * id = "HIV.D.DE259"
@@ -44,6 +49,9 @@ Usage: #definition
   * linkId = "HIV.D.DE1018"
   * type = #date
   * text = "Date when eligibility for TB preventive treatment (TPT) was determined"
-  * required = false
+  * required = true
   * repeats = false
   * readOnly = false
+  * enableWhen.question = "HIV.D.DE1017"
+  * enableWhen.operator = #exists
+  * enableWhen.answerBoolean = true
