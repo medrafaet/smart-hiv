@@ -1,12 +1,7 @@
-Invariant:    HIV-H-1
-Description:  "Not selectable with 'Did not initiate ART'"
-Expression:   "'NOT IMPLEMENTED'"
-Severity:     #error
-
-Invariant:    HIV-H-2
-Description:  "Not selectable with 'Inconclusive HIV status'"
-Expression:   "'NOT IMPLEMENTED'"
-Severity:     #error
+Invariant: hiv-h-follow-up-logical-reasons
+Description: "Did not initiate ART and Inconclusive HIV status are mutually exclusive."
+Expression: "reasonForFollowUp.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.H.DE4').empty() or reasonForFollowUp.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.H.DE6').empty()"
+Severity: #error
 
 Logical: HIVHFollowup
 Title: "HIV.H Follow-up"
@@ -17,6 +12,7 @@ Description: "This tab describes the data that are collected during the follow-u
 * ^experimental = true
 * ^name = "HIVHFollowup"
 * ^status = #active
+* obeys hiv-h-follow-up-logical-reasons
 
 * reasonForFollowUp 1..* Coding "Reason for follow-up" "The reason why the client is being followed up"
   * ^code[+] = HIVConcepts#HIV.H.DE1
@@ -25,14 +21,14 @@ Description: "This tab describes the data that are collected during the follow-u
   * ^code[+] = HIVConcepts#HIV.H.DE9
 * clientContactAttempted 0..1 boolean "Client contact attempted" "An attempt to locate the client was made"
   * ^code[+] = HIVConcepts#HIV.H.DE10
-* dateOfContactAttempt 1..1 dateTime "Date of contact attempt" "Date of attempt to contact client"
+* dateOfContactAttempt 0..1 dateTime "Date of contact attempt" "Required for a recorded tracing attempt"
   * ^code[+] = HIVConcepts#HIV.H.DE11
-* contactAttemptedBy 1..1 string "Contact attempted by" "Who attempted to reach out to the client"
+* contactAttemptedBy 0..1 string "Contact attempted by" "Person or role that made the documented attempt"
   * ^code[+] = HIVConcepts#HIV.H.DE12
-* contactMethod 1..1 Coding "Contact method" "Method used to try to reach out to the client"
+* contactMethod 0..1 Coding "Contact method" "Method used for the documented attempt"
   * ^code[+] = HIVConcepts#HIV.H.DE13
 * contactMethod from HIV.H.DE13
-* sourceOfInformation 1..1 Coding "Source of information" "Source of information about the client"
+* sourceOfInformation 0..1 Coding "Source of information" "Source required when information about the client was obtained"
   * ^code[+] = HIVConcepts#HIV.H.DE17
 * sourceOfInformation from HIV.H.DE17
 * otherSourceOfInformationSpecify 0..1 string "Other source of information (specify)" "Information about the client's status was provided by someone else (specify)"
@@ -57,23 +53,22 @@ Description: "This tab describes the data that are collected during the follow-u
   * ^code[+] = HIVConcepts#HIV.H.DE39
 * placeOfDeath 0..1 string "Place of death" "Where the client died, if known"
   * ^code[+] = HIVConcepts#HIV.H.DE40
-* hivTreatmentOutcome 0..1 Coding "HIV treatment outcome" "The outcome for the client which is used for reporting retention/attrition."
+* hivTreatmentOutcome 0..1 Coding "HIV treatment outcome" "Documented programme outcome, including currently on ART"
   * ^code[+] = HIVConcepts#HIV.H.DE41
 * hivTreatmentOutcome from HIV.H.DE41
 * datePatientLostToFollowUp 0..1 date "Date patient lost to follow-up" "Date patient was lost to follow-up (LTFU)"
   * ^code[+] = HIVConcepts#HIV.H.DE46
-* onArt 0..1 boolean "On ART" "Client is currently taking ART "
+* onArt 0..1 boolean "Legacy On ART indicator" "Retained for earlier records. New records capture HIV.H.DE47 as a treatment outcome."
   * ^code[+] = HIVConcepts#HIV.H.DE47
 * dateHivTreatmentOutcomeChanged 0..1 date "Date HIV treatment outcome changed" "The date on which the client's outcome (lost to follow-up, transferred out, death (documented), or refused (stopped) treatment) changed"
   * ^code[+] = HIVConcepts#HIV.H.DE48
 * transferConfirmed 0..1 boolean "Transfer confirmed" "Select if transfer to another facility is confirmed"
   * ^code[+] = HIVConcepts#HIV.H.DE49
-* transferToFacility 0..1 Coding "Transfer to facility" "Name of health facility client was transferred to"
+* transferToFacility 0..1 Reference(http://fhir.et/core/StructureDefinition/ethiopian-mfr-organization) "Transfer to facility" "Verified receiving facility from the Master Facility Registry"
   * ^code[+] = HIVConcepts#HIV.H.DE50
-* transferToFacility from HIV.H.DE50
 * dateOfTransferOut 0..1 date "Date of transfer out" "The date the client transferred out of the facility to be provided with care at another facility"
   * ^code[+] = HIVConcepts#HIV.H.DE51
-* adherenceAssessment 0..1 boolean "Adherence assessment" "Whether client is adherent or not to ART regimen per national guidelines (immunological or virological monitoring)"
+* adherenceAssessment 0..1 boolean "Documented ART adherence status" "Whether the client was assessed as adherent to ART"
   * ^code[+] = HIVConcepts#HIV.H.DE52
 * reasonsForAdherenceProblem 0..* Coding "Reason(s) for adherence problem" "Reason why client is not adherent"
   * ^code[+] = HIVConcepts#HIV.H.DE53

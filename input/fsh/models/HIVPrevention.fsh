@@ -1,21 +1,28 @@
-Invariant:    HIV-Prevention-1
-Description:  "Date <= Current Date"
-Expression:   "'NOT IMPLEMENTED'"
-Severity:     #error
+Invariant: hiv-prevention-access-date
+Description: "An intervention access record requires the documented date of access."
+Expression: "hivPreventionIntervention.exists() implies dateAccessedHivPreventionIntervention.exists()"
+Severity: #error
+
+Invariant: hiv-prevention-event-dates
+Description: "Enter today or an earlier date for documented prevention events."
+Expression: "(dateAccessedHivPreventionIntervention | dateOamtInitiated | dateOamtDoseReceived | dateOamtTakeAwayDosesDispensed | dateFirstMaintenanceDoseReceived | dateOfLossToFollowUpOrOamtStopped | dateMedicationsDispensed | dateMedicationsPrescribed).all($this <= today().toString().substring(0, $this.toString().length()).toDate())"
+Severity: #error
 
 Logical: HIVPrevention
 Title: "HIV.Prevention"
-Description: "This tab describes the data that are collected during HIV prevention activities (not covered in the previous business processes)"
+Description: "HIV prevention service access, reported contact status, OAMT history and related medication records."
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"
 * ^extension[http://hl7.org/fhir/tools/StructureDefinition/logical-target].valueBoolean = true
 * ^experimental = true
 * ^name = "HIVPrevention"
+* ^version = "2026-10"
 * ^status = #active
+* obeys hiv-prevention-access-date and hiv-prevention-event-dates
 
-* atElevatedRiskForHivAcquisition 0..1 boolean "At elevated risk for HIV acquisition" "Client is at elevated risk for HIV acquisition, defined according to country/programme context"
+* atElevatedRiskForHivAcquisition 0..1 boolean "At substantial risk for HIV acquisition" "Client is at elevated risk for HIV acquisition, defined according to country/programme context"
   * ^code[+] = HIVConcepts#HIV.PRV.DE1
-* hivPreventionIntervention 0..* Coding "HIV prevention intervention" "HIV prevention intervention that client accessed"
+* hivPreventionIntervention 0..1 Coding "HIV prevention intervention" "One prevention service through which the client accessed services at this facility"
   * ^code[+] = HIVConcepts#HIV.PRV.DE2
 * hivPreventionIntervention from HIV.PRV.DE2
 * otherHivPreventionIntervention 0..1 string "Other (specify)" "Client accessed other HIV prevention services (specify)"
@@ -25,9 +32,9 @@ Description: "This tab describes the data that are collected during HIV preventi
 * hivStatusOfContact 0..1 Coding "HIV status of contact" "The HIV status of the client's contact"
   * ^code[+] = HIVConcepts#HIV.PRV.DE11
 * hivStatusOfContact from HIV.PRV.DE11
-* dateInjectingEquipmentProvided 0..1 date "Date injecting equipment provided" "Date client was provided with injecting equipment"
+* dateInjectingEquipmentProvided 0..1 date "Legacy date injecting equipment provided" "Retained for exchange of earlier records"
   * ^code[+] = HIVConcepts#HIV.PRV.DE15
-* numberOfNeedlesSyringesProvided 0..1 integer "Number of needles-syringes provided" "Number of needles-syringes provided to client"
+* numberOfNeedlesSyringesProvided 0..1 integer "Legacy number of needles-syringes provided" "Retained for exchange of earlier records"
   * ^code[+] = HIVConcepts#HIV.PRV.DE16
 * dateOamtInitiated 0..1 date "Date OAMT initiated" "Date client initiated opioid agonist maintenance treatment (OAMT)"
   * ^code[+] = HIVConcepts#HIV.PRV.DE17

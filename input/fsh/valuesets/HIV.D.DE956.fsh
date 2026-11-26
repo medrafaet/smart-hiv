@@ -23,3 +23,5 @@ Description: "Value set of screening algorithm selected for screening activities
 * HIVConcepts#HIV.D.DE968 "Screening with mWRD"
 * HIVConcepts#HIV.D.DE969 "Clinical assessment"
 * HIVConcepts#HIV.D.DE970 "Other TB screening algorithm"
+* HIVConcepts#HIV.D.ET.DE961
+* HIVTBWorkbookConcepts#HIV.D.ET.DE7

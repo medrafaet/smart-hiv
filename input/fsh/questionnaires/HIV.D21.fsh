@@ -204,6 +204,7 @@ RuleSet: CareRegimenReview
     * enableWhen.answerCoding = HIVConcepts#HIV.D.DE650
 * item[+]
   * linkId = "moreThan28DaysSinceLastScheduledAppointment"
+  * code = HIVConcepts#HIV.SURV.16
   * type = #boolean
   * text = "More than 28 days since last scheduled appointment"
   * readOnly = true
@@ -283,6 +284,11 @@ RuleSet: CareRegimenReview
   * linkId = "HIV.D.DE933"
   * type = #boolean
   * text = "Medication change recommended"
+* item[+]
+  * id = "HIV.D.DE1023"
+  * linkId = "HIV.D.DE1023"
+  * type = #boolean
+  * text = "TB prevention services accepted"
 
 Instance: HIV.D21DetermineRegimenAndTreatmentOptions
 InstanceOf: sdc-questionnaire-extr-smap
@@ -298,14 +304,6 @@ Usage: #definition
 * experimental = true
 
 * insert CareRegimenReview
-* item[+]
-  * id = "HIV.D.DE1023"
-  * linkId = "HIV.D.DE1023"
-  * type = #boolean
-  * text = "TB prevention services accepted"
-  * required = false
-  * repeats = false
-  * readOnly = false
 
 Instance: HIV.D21CareRegimenReview
 InstanceOf: sdc-questionnaire-extr-smap

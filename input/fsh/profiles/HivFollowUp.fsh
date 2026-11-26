@@ -1,7 +1,7 @@
 Extension: HivFollowUpClientContactTraced
 Id: hiv-follow-up-client-contact-traced
 Title: "HIV Follow-up Client Contact Traced"
-Description: "Indicates whether the client was traced or contacted during follow-up. Supports Ethiopia HIV.H.DE10."
+Description: "Indicates whether an attempt to locate the client was made. Supports Ethiopia HIV.H.DE10."
 * ^context[+].type = #element
 * ^context[=].expression = "Communication"
 * value[x] only boolean
@@ -167,12 +167,12 @@ Description: "Indicates whether transfer to another facility was confirmed. Supp
 Extension: HivFollowUpTransferToFacility
 Id: hiv-follow-up-transfer-to-facility
 Title: "HIV Follow-up Transfer To Facility"
-Description: "Facility to which the client transferred. Supports Ethiopia HIV.H.DE50 as an Organization reference pending national facility-registry confirmation."
+Description: "Receiving facility from the Ethiopian Master Facility Registry, supporting HIV.H.DE50."
 * ^context[+].type = #element
 * ^context[=].expression = "Communication"
 * value[x] only Reference
 * valueReference 1..1 MS
-* valueReference only Reference(Organization)
+* valueReference only Reference(http://fhir.et/core/StructureDefinition/ethiopian-mfr-organization)
 
 Extension: HivFollowUpDateOfTransferOut
 Id: hiv-follow-up-date-of-transfer-out
@@ -186,7 +186,16 @@ Description: "Date the client transferred out. Supports Ethiopia HIV.H.DE51."
 Extension: HivFollowUpAdherenceAssessment
 Id: hiv-follow-up-adherence-assessment
 Title: "HIV Follow-up Adherence Assessment"
-Description: "Indicates whether adherence was assessed during follow-up. Supports Ethiopia HIV.H.DE52."
+Description: "Legacy indicator of whether adherence was assessed during follow-up."
+* ^context[+].type = #element
+* ^context[=].expression = "Communication"
+* value[x] only boolean
+* valueBoolean 1..1 MS
+
+Extension: HivFollowUpArtAdherenceStatus
+Id: hiv-follow-up-art-adherence-status
+Title: "HIV Follow-up ART Adherence Status"
+Description: "Documented assessment of whether the client adheres to ART. Supports HIV.H.DE52."
 * ^context[+].type = #element
 * ^context[=].expression = "Communication"
 * value[x] only boolean
@@ -195,7 +204,7 @@ Description: "Indicates whether adherence was assessed during follow-up. Support
 Extension: HivFollowUpAdherenceProblemReason
 Id: hiv-follow-up-adherence-problem-reason
 Title: "HIV Follow-up Adherence Problem Reason"
-Description: "Reason the client is not adherent. Supports Ethiopia HIV.H.DE53; binding is preferred pending review of Ethiopia-specific additions and shifted option labels."
+Description: "Documented reason for the adherence problem. Supports Ethiopia HIV.H.DE53."
 * ^context[+].type = #element
 * ^context[=].expression = "Communication"
 * value[x] only CodeableConcept
@@ -205,7 +214,7 @@ Description: "Reason the client is not adherent. Supports Ethiopia HIV.H.DE53; b
 Extension: HivFollowUpOtherAdherenceProblemReason
 Id: hiv-follow-up-other-adherence-problem-reason
 Title: "HIV Follow-up Other Adherence Problem Reason"
-Description: "Free-text reason when the adherence problem reason is Other. Supports Ethiopia HIV.H.DE73."
+Description: "Free-text reason when the adherence problem reason is Other. Supports Ethiopia HIV.H.DE72."
 * ^context[+].type = #element
 * ^context[=].expression = "Communication"
 * value[x] only string
@@ -214,7 +223,7 @@ Description: "Free-text reason when the adherence problem reason is Other. Suppo
 Extension: HivFollowUpDateArtStopped
 Id: hiv-follow-up-date-art-stopped
 Title: "HIV Follow-up Date ART Stopped"
-Description: "Date on which the client stopped ART. Supports Ethiopia HIV.H.DE74."
+Description: "Date on which the client stopped ART. Supports Ethiopia HIV.H.DE73."
 * ^context[+].type = #element
 * ^context[=].expression = "Communication"
 * value[x] only date
@@ -223,7 +232,7 @@ Description: "Date on which the client stopped ART. Supports Ethiopia HIV.H.DE74
 Extension: HivFollowUpReasonArtStopped
 Id: hiv-follow-up-reason-art-stopped
 Title: "HIV Follow-up Reason ART Stopped"
-Description: "Reason the client intentionally stopped ART. Supports Ethiopia HIV.H.DE75; binding is preferred pending review of Ethiopia-specific additions and shifted option labels."
+Description: "Documented reason the client stopped ART. Supports Ethiopia HIV.H.DE74."
 * ^context[+].type = #element
 * ^context[=].expression = "Communication"
 * value[x] only CodeableConcept
@@ -233,7 +242,7 @@ Description: "Reason the client intentionally stopped ART. Supports Ethiopia HIV
 Extension: HivFollowUpOtherReasonArtStopped
 Id: hiv-follow-up-other-reason-art-stopped
 Title: "HIV Follow-up Other Reason ART Stopped"
-Description: "Free-text reason when the reason ART stopped is Other. Supports Ethiopia HIV.H.DE82."
+Description: "Free-text reason when the reason ART stopped is Other. Supports Ethiopia HIV.H.DE81."
 * ^context[+].type = #element
 * ^context[=].expression = "Communication"
 * value[x] only string
@@ -243,6 +252,11 @@ Invariant: hiv-h-follow-up-other-reason
 Description: "If reason for follow-up is Other, other follow-up reason should be captured."
 Severity: #warning
 Expression: "reasonCode.coding.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.H.DE8').exists() implies extension('http://smart.who.int/hiv/StructureDefinition/hiv-follow-up-other-reason').exists()"
+
+Invariant: hiv-h-follow-up-exclusive-reasons
+Description: "Did not initiate ART and Inconclusive HIV status are mutually exclusive."
+Severity: #error
+Expression: "reasonCode.coding.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.H.DE4').empty() or reasonCode.coding.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.H.DE6').empty()"
 
 Invariant: hiv-h-follow-up-other-source
 Description: "If source of information is Other, other source of information should be captured."
@@ -268,6 +282,7 @@ Description: "Appointment representing a planned HIV.H follow-up or tracing cont
 * ^experimental = true
 * ^status = #active
 * ^title = "HIV Follow-up Appointment"
+* obeys hiv-h-follow-up-exclusive-reasons
 
 * status 1..1 MS
 * reasonCode 1..* MS
@@ -291,13 +306,13 @@ Description: "Communication profile representing a completed or attempted HIV.H 
 * ^experimental = true
 * ^status = #active
 * ^title = "HIV Follow-up Contact"
-* obeys hiv-h-follow-up-other-reason and hiv-h-follow-up-other-source and hiv-h-follow-up-moved-address and hiv-h-follow-up-died-reported
+* obeys hiv-h-follow-up-other-reason and hiv-h-follow-up-exclusive-reasons and hiv-h-follow-up-other-source and hiv-h-follow-up-moved-address and hiv-h-follow-up-died-reported
 
 * extension contains
     HivFollowUpClientContactTraced named clientContactTraced 0..1 MS and
     HivFollowUpContactTracedBy named contactTracedBy 1..1 MS and
     HivFollowUpOtherReason named otherFollowUpReason 0..1 MS and
-    HivFollowUpSourceOfInformation named sourceOfInformation 1..1 MS and
+    HivFollowUpSourceOfInformation named sourceOfInformation 0..1 MS and
     HivFollowUpOtherSourceOfInformation named otherSourceOfInformation 0..1 MS and
     HivFollowUpOutreachOutcome named outreachOutcome 0..1 MS and
     HivFollowUpMovedFromCatchmentArea named movedFromCatchmentArea 0..1 MS and
@@ -315,6 +330,7 @@ Description: "Communication profile representing a completed or attempted HIV.H 
     HivFollowUpTransferToFacility named transferToFacility 0..1 MS and
     HivFollowUpDateOfTransferOut named dateOfTransferOut 0..1 MS and
     HivFollowUpAdherenceAssessment named adherenceAssessment 0..1 MS and
+    HivFollowUpArtAdherenceStatus named artAdherenceStatus 0..1 MS and
     HivFollowUpAdherenceProblemReason named adherenceProblemReason 0..* MS and
     HivFollowUpOtherAdherenceProblemReason named otherAdherenceProblemReason 0..1 MS and
     HivFollowUpDateArtStopped named dateArtStopped 0..1 MS and

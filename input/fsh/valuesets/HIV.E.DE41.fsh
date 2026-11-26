@@ -12,3 +12,4 @@ Description: "Value set of when the pregnant woman or mother initiated ART, for 
 * HIVConcepts#HIV.E.DE42 "Already on ART at first antenatal care visit"
 * HIVConcepts#HIV.E.DE43 "Newly on ART during pregnancy"
 * HIVConcepts#HIV.E.DE44 "Newly on ART during labour and delivery"
+* HIVConcepts#HIV.E.ET.DE3

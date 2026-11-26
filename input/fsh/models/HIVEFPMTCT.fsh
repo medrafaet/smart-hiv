@@ -9,8 +9,8 @@ Expression:   "'NOT IMPLEMENTED'"
 Severity:     #error
 
 Invariant:    HIV-E-3
-Description:  "'Delivery date' <= Date in which data is entered"
-Expression:   "'NOT IMPLEMENTED'"
+Description:  "Delivery date must be today or earlier."
+Expression:   "deliveryDate.all($this <= today().toString().substring(0, $this.toString().length()).toDate())"
 Severity:     #error
 
 Invariant:    HIV-E-4
@@ -89,13 +89,13 @@ Expression:   "'NOT IMPLEMENTED'"
 Severity:     #error
 
 Invariant:    HIV-E-19
-Description:  "Date of death' <= Date in which data is entered"
-Expression:   "'NOT IMPLEMENTED'"
+Description:  "Maternal date of death must be today or earlier."
+Expression:   "dateOfDeathOfMother.all($this <= today().toString().substring(0, $this.toString().length()).toDate())"
 Severity:     #error
 
 Invariant:    HIV-E-20
-Description:  "Date of miscarriage/abortion' <= Date in which data is entered"
-Expression:   "'NOT IMPLEMENTED'"
+Description:  "Date of miscarriage or abortion must be today or earlier."
+Expression:   "dateOfMiscarriageOrAbortion.all($this <= today().toString().substring(0, $this.toString().length()).toDate())"
 Severity:     #error
 
 Invariant:    HIV-E-21
@@ -138,6 +138,11 @@ Description:  "Only letters and special characters (period, dash) allowed."
 Expression:   "'NOT IMPLEMENTED'"
 Severity:     #error
 
+Invariant: pmtct-delivery-details
+Description: "Record the delivery date and place for a live birth or stillbirth."
+Expression: "pregnancyOutcome.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.E.DE48' | 'HIV.E.DE51')).exists() implies (deliveryDate.exists() and placeOfDelivery.exists())"
+Severity: #error
+
 Logical: HIVEPMTCT
 Title: "HIV.E-F PMTCT"
 Description: "This tab describes the data that are collected relevant to HIV care and treatment of pregnant and postpartum women and their newborns during the delivery and postpartum care and the infant diagnosis and final HIV status workflows (HIV.E and HIV.F)"
@@ -147,16 +152,24 @@ Description: "This tab describes the data that are collected relevant to HIV car
 * ^experimental = true
 * ^name = "HIVEPMTCT"
 * ^status = #active
+* ^mapping[+].identity = "moh-hiv-dak"
+* ^mapping[=].name = "Ethiopia MoH HIV Data Dictionary"
+* obeys HIV-E-3 and HIV-E-19 and HIV-E-20 and pmtct-delivery-details
 
-* pregnantWomanFirstName 0..1 string "Pregnant woman's first name" "Pregnant woman's first or given name"
+* pregnantWomanFirstName 0..1 string "Mother's given name" "Given name of the maternal client"
   * ^code[+] = HIVConcepts#HIV.E.DE1
-* pregnantWomanSurname 0..1 string "Pregnant woman's surname" "Pregnant woman's family name or last name"
+* pregnantWomanFatherName 0..1 string "Mother's father's name" "Father's name, represented by the Ethiopian base Patient name.family fathersName extension"
+  * ^code[+] = HIVConcepts#HIV.E.ET.DE1
+* pregnantWomanGrandfatherName 0..1 string "Mother's grandfather's name" "Grandfather's name, represented by the Ethiopian base Patient name.family grandfathersName extension"
+  * ^code[+] = HIVConcepts#HIV.E.ET.DE44
+* pregnantWomanSurname 0..1 string "Mother's family name" "Family name of the maternal client, when recorded"
   * ^code[+] = HIVConcepts#HIV.E.DE2
-* pregnantWomanUniqueId 0..1 Identifier "Pregnant woman's unique ID" "Unique identifier generated for new clients or a universal ID, if used in the country"
-  * ^code[+] = HIVConcepts#HIV.E.DE3
-* antenatalCareNumber 0..1 Identifier "Antenatal care number" "Identification number assigned to woman at first visit to the ANC based on national system"
+* pregnantWomanUniqueId 0..1 Identifier "Unique ART ID number" "Programme identifier for the maternal client when enrolled in HIV care"
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.E.DE3"
+* antenatalCareNumber 0..1 Identifier "Antenatal care serial number" "Identification number assigned to the maternal client at the first antenatal care visit"
   * ^code[+] = HIVConcepts#HIV.E.DE4
-* gestationalAge 1..1 integer "Gestational age" "Gestational age in weeks and/or days depending on the source of gestational age"
+* gestationalAge 1..1 integer "Gestational age" "Documented gestational age in completed weeks"
   * ^code[+] = HIVConcepts#HIV.E.DE5
 * sourceOfGestationalAge 1..1 Coding "Source of gestational age" "Gestational age can be calculated multiple ways. This data element describes where the gestational age above has been calculated from."
   * ^code[+] = HIVConcepts#HIV.E.DE6
@@ -167,14 +180,17 @@ Description: "This tab describes the data that are collected relevant to HIV car
   * ^code[+] = HIVConcepts#HIV.E.DE11
 * numberOfPreviousPregnancies 1..1 integer "Number of previous pregnancies" "This calculates the total number of all previous pregnancies (i.e. not including this current pregnancy). This is done for easier obstetric history calculations."
   * ^code[+] = HIVConcepts#HIV.E.DE12
-* numberOfMiscarriagesAndOrAbortions 1..1 integer "Number of miscarriages and/or abortions" "Total number of pregnancies lost or ended due to miscarriages and/or abortions before 22 weeks / 5 months"
-  * ^code[+] = HIVConcepts#HIV.E.DE13
-* numberOfLiveBirths 1..1 integer "Number of live births" "Total number of live births after 22 weeks"
-  * ^code[+] = HIVConcepts#HIV.E.DE14
+* numberOfMiscarriagesAndOrAbortions 1..1 integer "Number of miscarriages and/or abortions" "Total number of previous pregnancies lost or ended due to miscarriages and/or abortions before 28 weeks"
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.E.DE13"
+* numberOfLiveBirths 1..1 integer "Number of live births" "Total number of live births after 28 weeks in previous pregnancies"
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.E.DE14"
 * numberOfCaesarianSections 1..1 integer "Number of caesarian sections" "Total number of caesarean sections"
   * ^code[+] = HIVConcepts#HIV.E.DE15
-* numberOfStillbirths 1..1 integer "Number of stillbirths" "Total number of stillbirths after 22 weeks"
-  * ^code[+] = HIVConcepts#HIV.E.DE16
+* numberOfStillbirths 1..1 integer "Number of stillbirths" "Total number of births after 28 weeks with no signs of life in previous pregnancies"
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.E.DE16"
 * pastPregnancyComplications 0..* Coding "Past pregnancy complications" "Whether the woman has had any complications or problems in any previous pregnancy"
   * ^code[+] = HIVConcepts#HIV.E.DE17
 * pastPregnancyComplications from HIV.E.DE17
@@ -195,7 +211,7 @@ Description: "This tab describes the data that are collected relevant to HIV car
 * timingOfArtInitiation from HIV.E.DE41
 * maternalUseOfRecommendedArtRegimen 0..1 boolean "Maternal use of recommended ART regimen" "Whether the mother is taking a recommended ART regimen"
   * ^code[+] = HIVConcepts#HIV.E.DE45
-* deliveryDate 1..1 date "Delivery date" "Date on which the woman delivered"
+* deliveryDate 0..1 date "Delivery date" "Date on which the woman delivered. Required when a live birth or stillbirth is recorded."
   * ^code[+] = HIVConcepts#HIV.E.DE46
 * pregnancyOutcome 0..1 Coding "Pregnancy outcome" "Outcome of current pregnancy"
   * ^code[+] = HIVConcepts#HIV.E.DE47
@@ -215,17 +231,18 @@ Description: "This tab describes the data that are collected relevant to HIV car
   * ^code[+] = HIVConcepts#HIV.E.DE60
 * smallForGestationalAgeSga 0..1 boolean "Small for gestational age (SGA)" "Whether the infant was small for gestational age (SGA) at birth (less than 10th percentile)"
   * ^code[+] = HIVConcepts#HIV.E.DE61
-* pretermBirthStatus 0..1 Coding "Preterm birth status" "The woman gave birth when the gestational age is less than 37 weeks"
+* pretermBirthStatus 0..1 Coding "Preterm birth status" "Birth timing category based on gestational age at delivery, including births that were not preterm"
   * ^code[+] = HIVConcepts#HIV.E.DE62
 * pretermBirthStatus from HIV.E.DE62
-* maternalArtStartDate 0..1 date "Maternal ART start date" "The date on which the infant was started or restarted on ART"
-  * ^code[+] = HIVConcepts#HIV.E.DE66
-* placeOfDelivery 1..1 Coding "Place of delivery" "The type of place where the woman delivered"
+* maternalArtStartDate 0..1 date "Maternal ART start date" "Documented ART start date for the maternal client"
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.E.DE66"
+* placeOfDelivery 0..1 Coding "Place of delivery" "The type of place where the woman delivered. Required when a live birth or stillbirth is recorded."
   * ^code[+] = HIVConcepts#HIV.E.DE67
 * placeOfDelivery from HIV.E.DE67
 * otherPlaceOfDelivery 0..1 string "Other (specify)" "The woman delivered at another location that is not at home or at a health facility (specify)"
   * ^code[+] = HIVConcepts#HIV.E.DE71
-* deliveryFacility 0..1 string "Delivery facility" "Facility where the infant or child was born"
+* deliveryFacility 0..1 string "Delivery facility name" "Recorded name of the health facility where the birth took place"
   * ^code[+] = HIVConcepts#HIV.E.DE72
 * dateOfMiscarriageOrAbortion 0..1 date "Date of miscarriage or abortion" "Date of the miscarriage/abortion"
   * ^code[+] = HIVConcepts#HIV.E.DE73
@@ -234,50 +251,71 @@ Description: "This tab describes the data that are collected relevant to HIV car
 * causeOfDeathOfMother 0..1 Coding "Cause of death of mother" "The woman's cause of death"
   * ^code[+] = HIVConcepts#HIV.E.DE75
 * causeOfDeathOfMother from HIV.E.DE75
-* infantFirstName 1..1 string "Infant's first name" "Infant's first or given name"
+* documentedMaternalCauseOfDeath 0..1 string "Documented cause of death of mother" "Cause recorded in maternal follow-up as text"
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.E.DE75"
+* infantFirstName 0..1 string "Infant's first name" "Infant's first or given name, required when recording linked infant history"
   * ^code[+] = HIVConcepts#HIV.E.DE76
-* infantSurname 1..1 string "Infant's surname" "Infant's family name or last name"
+* infantFatherName 0..1 string "Infant's father's name" "Name of the infant's father, exchanged in the Ethiopian base Patient name.family fathersName extension"
+  * ^code[+] = HIVConcepts#HIV.E.ET.DE77
+* infantGrandfatherName 0..1 string "Infant's grandfather's name" "Name of the infant's grandfather, exchanged in the Ethiopian base Patient name.family grandfathersName extension"
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.E. ET.DE78"
+* infantSurname 0..1 string "Infant's family name" "Infant's family name or last name, when recorded"
   * ^code[+] = HIVConcepts#HIV.E.DE77
-* infantUniqueId 1..1 Identifier "Infant's unique ID" "Unique identifier generated for new clients or a universal ID, if used in the country"
-  * ^code[+] = HIVConcepts#HIV.E.DE78
+* infantUniqueId 0..1 Identifier "Infant's MRN" "Infant's facility medical record number, required when recording linked infant history and exchanged in the Ethiopian base Patient MRN slice"
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.E.DE78"
 * motherFirstName 0..1 string "Mother's first name" "Biological mother's first or given name"
   * ^code[+] = HIVConcepts#HIV.E.DE79
+* motherFatherName 0..1 string "Biological mother's father's name" "Name of the infant's biological mother's father"
+  * ^code[+] = HIVConcepts#HIV.E.ET.DE82
+* motherGrandfatherName 0..1 string "Biological mother's grandfather's name" "Name of the infant's biological mother's grandfather"
+  * ^code[+] = HIVConcepts#HIV.E.ET.DE85
 * motherSurname 0..1 string "Mother's surname" "Biological mother's family name or last name"
   * ^code[+] = HIVConcepts#HIV.E.DE80
-* motherUniqueId 0..1 Identifier "Mother's unique ID" "Unique identifier generated for new clients or a universal ID, if used in the country"
-  * ^code[+] = HIVConcepts#HIV.E.DE81
+* motherUniqueId 0..1 Identifier "Mother's unique ART number" "HIV programme identifier of the infant's biological mother when assigned"
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.E.DE81"
 * caregiverFirstName 0..1 string "Caregiver's first name" "Caregiver's first or given name"
   * ^code[+] = HIVConcepts#HIV.E.DE82
 * caregiverSurname 0..1 string "Caregiver's surname" "Caregiver's family name or last name"
   * ^code[+] = HIVConcepts#HIV.E.DE83
-* caregiverUniqueIdentifier 0..1 Identifier "Caregiver's unique identifier" "Unique identifier generated for new clients or a universal ID, if used in the country"
-  * ^code[+] = HIVConcepts#HIV.E.DE84
-* ancContactDate 1..1 dateTime "ANC contact date" "The date and time of the client's ANC contact (in the ANC DAK this is called 'Contact date')"
+* caregiverFatherName 0..1 string "Caregiver's father's name" "Name of the caregiver's father"
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.E.DE83"
+* caregiverGrandfatherName 0..1 string "Caregiver's grandfather's name" "Name of the caregiver's grandfather"
+  * ^code[+] = HIVConcepts#HIV.E.ET.DE83
+* caregiverUniqueIdentifier 0..1 Identifier "Caregiver's national ID" "National identifier belonging to the caregiver"
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.E.DE84"
+* ancContactDate 0..1 dateTime "ANC contact date" "Date and time of the recorded antenatal care contact"
   * ^code[+] = HIVConcepts#HIV.E.DE85
-* referral 1..1 boolean "Referral" "If infant was referred for care"
+* referral 0..1 boolean "Infant referred for care" "Required when recording linked infant history"
   * ^code[+] = HIVConcepts#HIV.E.DE86
 * infantDateOfBirth 0..1 date "Infant date of birth" "The infant's date of birth (DOB) if known"
   * ^code[+] = HIVConcepts#HIV.E.DE87
 * dateOfBirthOfInfantUnknown 0..1 boolean "Date of birth of infant unknown" "Is the client's DOB unknown?"
   * ^code[+] = HIVConcepts#HIV.E.DE88
-* estimatedAgeOfInfant 0..1 integer "Estimated age of infant" "If DOB is unknown, enter the client's estimated age. Display client's age in number of years"
+* estimatedAgeOfInfant 0..1 decimal "Estimated age of infant" "Estimated age in years, required when date of birth is explicitly unknown"
   * ^code[+] = HIVConcepts#HIV.E.DE89
-* ageOfInfant 0..1 integer "Age of infant" "Infant age calculated using date of birth"
+* ageOfInfant 0..1 decimal "Age of infant" "Age in years using the workbook formula from a verified date of birth and contact date"
   * ^code[+] = HIVConcepts#HIV.E.DE90
-* genderOfInfant 1..1 Coding "Gender of infant" "Gender of the infant"
+* genderOfInfant 0..1 Coding "Recorded sex of infant" "Required when recording linked infant history"
   * ^code[+] = HIVConcepts#HIV.E.DE91
 * genderOfInfant from HIV.E.DE91
-* infantHeight 0..1 integer "Infant height" "The infant's height in centimetres"
+* infantHeight 0..1 Quantity "Infant height" "The infant's length or height in centimetres"
   * ^code[+] = HIVConcepts#HIV.E.DE95
-* infantWeight 0..1 integer "Infant weight" "The infant's current weight in kilograms"
+* infantWeight 0..1 Quantity "Infant weight" "The infant's current weight in kilograms"
   * ^code[+] = HIVConcepts#HIV.E.DE96
-* birthWeight 0..1 integer "Birth weight" "Birth weight in kg of the baby"
-  * ^code[+] = HIVConcepts#HIV.E.DE97
-* lowBirthWeight 0..1 boolean "Low birth weight" "Note if infant </¬¨‚â•2500 g at birth"
+* birthWeight 0..1 Quantity "Birth weight" "Birth weight recorded in grams"
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.E.DE97"
+* lowBirthWeight 0..1 boolean "Low birth weight" "Birth weight below 2500 g"
   * ^code[+] = HIVConcepts#HIV.E.DE98
-* lengthOfInfant 0..1 integer "Length of infant" "Length of infant at birth in cm"
+* lengthOfInfant 0..1 Quantity "Length of infant" "Length of infant at birth in whole centimetres"
   * ^code[+] = HIVConcepts#HIV.E.DE99
-* headCircumference 0..1 integer "Head circumference" "Head circumference of infant at birth in cm"
+* headCircumference 0..1 Quantity "Head circumference" "Head circumference of infant at birth in whole centimetres"
   * ^code[+] = HIVConcepts#HIV.E.DE100
 * motherHivTestConducted 0..1 boolean "Mother HIV test conducted" "Whether an HIV test of the mother was conducted"
   * ^code[+] = HIVConcepts#HIV.E.DE101
@@ -293,6 +331,9 @@ Description: "This tab describes the data that are collected relevant to HIV car
 * infantOrChildExposureToHiv from HIV.E.DE108
 * hivExposedInfantOrChild 0..1 boolean "HIV-exposed infant or child" "Whether the infant or child was determined to have had HIV exposure"
   * ^code[+] = HIVConcepts#HIV.E.DE112
+* exposedInfantStillBreastfeeding 0..1 boolean "HIV-exposed infant is still breastfeeding" "Whether the infant with documented HIV exposure is still breastfeeding"
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.E.DE112"
 * keyPopulationMember 0..1 boolean "Key population member" "Mother is a member of a key population which has an increased risk of HIV"
   * ^code[+] = HIVConcepts#HIV.E.DE113
 * keyPopulationMemberType 0..* Coding "Key population member type" "The type of key population that the infant's mother is included in"
@@ -300,7 +341,7 @@ Description: "This tab describes the data that are collected relevant to HIV car
 * keyPopulationMemberType from HIV.E.DE114
 * postpartumFamilyPlanningCounsellingConducted 0..1 boolean "Postpartum family planning counselling conducted" "Provide family planning and contraception counselling"
   * ^code[+] = HIVConcepts#HIV.E.DE119
-* ageOfInfantOnHivTestDate 0..1 integer "Age of infant on HIV test date" "Infant's age when an HIV test is performed in months and years (calculated from date of birth)"
+* ageOfInfantOnHivTestDate 0..1 decimal "Age of infant on HIV test date" "Age in years for the documented test date, calculated from the verified dates of birth and test"
   * ^code[+] = HIVConcepts#HIV.E.DE120
 * arvAdherenceCounselling 0..1 boolean "ARV adherence counselling" "Counselling was carried out during visit"
   * ^code[+] = HIVConcepts#HIV.E.DE121
@@ -325,12 +366,12 @@ Description: "This tab describes the data that are collected relevant to HIV car
   * ^code[+] = HIVConcepts#HIV.E.DE133
 * takingIronAndFolicAcidIfaTablets 0..1 boolean "Taking iron and folic acid (IFA) tablets" "Is client taking her iron and folic acid (IFA) tablets? Select whether the woman is continuing to take IFA supplements"
   * ^code[+] = HIVConcepts#HIV.E.DE134
-* amountOfIronPrescribed 0..1 integer "Amount of iron prescribed" "Amount of iron supplements prescribed in milligrams for intake"
+* amountOfIronPrescribed 0..1 Quantity "Amount of iron prescribed" "Documented iron intake prescribed in milligrams"
   * ^code[+] = HIVConcepts#HIV.E.DE135
 * typeOfIronSupplementDosageProvided 0..1 Coding "Type of iron supplement dosage provided" "Whether the amount of iron prescribed is for daily or weekly intake"
   * ^code[+] = HIVConcepts#HIV.E.DE136
 * typeOfIronSupplementDosageProvided from HIV.E.DE136
-* amountOfDailyDoseOfFolicAcidPrescribed 0..1 integer "Amount of daily dose of folic acid prescribed" "Amount of folic acid supplements prescribed in milligrams for daily intake"
+* amountOfDailyDoseOfFolicAcidPrescribed 0..1 Quantity "Amount of daily dose of folic acid prescribed" "Documented daily folic acid dose in milligrams"
   * ^code[+] = HIVConcepts#HIV.E.DE139
 * dateInfantArvProphylaxisDispensedOrStarted 0..1 date "Date infant ARV prophylaxis dispensed (or started)" "Date HIV-exposed infant received ARV prophylaxis (for the first time)"
   * ^code[+] = HIVConcepts#HIV.E.DE140
@@ -358,7 +399,7 @@ Description: "This tab describes the data that are collected relevant to HIV car
   * ^code[+] = HIVConcepts#HIV.E.DE162
 * infantCoTrimoxazoleProphylaxisStartDate 0..1 date "Infant's co-trimoxazole prophylaxis start date" "Start date of co-trimoxazole prophylaxis"
   * ^code[+] = HIVConcepts#HIV.E.DE163
-* infantAgeWhenCoTrimoxazoleProphylaxisWasStarted 0..1 integer "Infant's age when co-trimoxazole prophylaxis was started" "The number of weeks or months infant was when started on co-trimoxazole (CTX) prophylaxis preventive therapy"
+* infantAgeWhenCoTrimoxazoleProphylaxisWasStarted 0..1 decimal "Infant's age when co-trimoxazole prophylaxis was started" "Verified age in months on the documented co-trimoxazole prophylaxis start date"
   * ^code[+] = HIVConcepts#HIV.E.DE164
 * presumptiveClinicalDiagnosisOfSevereHivInfectionInInfants 0..1 boolean "Presumptive clinical diagnosis of severe HIV infection in infants" "Presumptive clinical diagnosis of severe HIV infection in infants"
   * ^code[+] = HIVConcepts#HIV.E.DE165
@@ -428,7 +469,7 @@ Description: "This tab describes the data that are collected relevant to HIV car
   * ^code[+] = HIVConcepts#HIV.E.DE239
 * causeOfDeathOfInfant 0..1 Coding "Cause of death of infant" "The infant's cause of death"
   * ^code[+] = HIVConcepts#HIV.E.DE240
-* causeOfDeathOfInfant from HIV.E.DE240
+
 * infantDiedWithin24HoursOfChildbirth 0..1 boolean "Infant died within 24 hours of childbirth" "The infant died within 24 hours of childbirth"
   * ^code[+] = HIVConcepts#HIV.E.DE241
 * actionsNeededDuringInfantFollowUpVisit 0..1 string "Action(s) needed during infant follow-up visit" "Any actions needed during infant follow-up visit"
@@ -437,7 +478,7 @@ Description: "This tab describes the data that are collected relevant to HIV car
   * ^code[+] = HIVConcepts#HIV.E.DE243
 * dateOfSampleCollectionOfAdditionalInfantHivTest 0..1 date "Date of sample collection of additional infant HIV test" "Date of sample collection of additional infant HIV test"
   * ^code[+] = HIVConcepts#HIV.E.DE244
-* haemoglobinHbResult 0..1 integer "Haemoglobin (Hb) result" "Result of woman's haemoglobin test during ANC, labour or delivery. Full blood count testing is recommended, and if not available, use of  haemoglobinometer over haemoglobin colour scale. "
+* haemoglobinHbResult 0..1 Quantity "Haemoglobin (Hb) result" "Documented maternal haemoglobin measurement during ANC, labour, or delivery"
   * ^code[+] = HIVConcepts#HIV.E.DE245
 * bloodGroupAndRhFactor 0..1 Coding "Blood group and Rh factor" "Mother's blood type and blood Rh factor"
   * ^code[+] = HIVConcepts#HIV.E.DE246
@@ -451,3 +492,33 @@ Description: "This tab describes the data that are collected relevant to HIV car
 * typeOfHypertensiveDisorder 0..* Coding "Type of hypertensive disorder" "Type of hypertensive disorder of the mother"
   * ^code[+] = HIVConcepts#HIV.E.DE264
 * typeOfHypertensiveDisorder from HIV.E.DE264
+* maternalPrepProvided 0..1 boolean "PrEP provided to the maternal client" "PrEP provided to the maternal client as documented in the PMTCT workflow"
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.E.DE159"
+* integratedPmtctRegisterDate 0..1 date "Integrated PMTCT register date" "Integrated PMTCT register date as documented in the PMTCT workflow"
+  * ^code[+] = HIVConcepts#HIV.E.ET.DE177
+* maternalCohortDate 0..1 date "Maternal cohort date" "Maternal cohort date as documented in the PMTCT workflow"
+  * ^code[+] = HIVConcepts#HIV.E.ET.DE178
+* heiCohortDate 0..1 date "HIV-exposed infant cohort date" "HIV-exposed infant cohort date as documented in the PMTCT workflow"
+  * ^code[+] = HIVConcepts#HIV.E.ET.DE179
+* infantConfirmatoryAntibodyResult 0..1 Coding "Infant confirmatory antibody result" "Infant confirmatory antibody result as documented in the PMTCT workflow"
+  * ^code[+] = HIVConcepts#HIV.E.ET.DE194
+* infantConfirmatoryAntibodyResult from HIV.E.ET.DE194
+* childAntibodyAssayNumber 0..1 Coding "Child antibody assay number" "Child antibody assay number as documented in the PMTCT workflow"
+  * ^code[+] = HIVConcepts#HIV.E.ET.DE197
+* childAntibodyAssayNumber from HIV.E.ET.DE197
+* childAntibodyAssay1Result 0..1 Coding "Child HIV assay 1 result" "Child HIV assay 1 result as documented in the PMTCT workflow"
+  * ^code[+] = HIVConcepts#HIV.E.ET.DE202
+* childAntibodyAssay1Result from HIV.E.ET.DE202
+* childAntibodyAssay2Result 0..1 Coding "Child HIV assay 2 result" "Child HIV assay 2 result as documented in the PMTCT workflow"
+  * ^code[+] = HIVConcepts#HIV.E.ET.DE206
+* childAntibodyAssay2Result from HIV.E.ET.DE206
+* childAntibodyAssay3Result 0..1 Coding "Child HIV assay 3 result" "Child HIV assay 3 result as documented in the PMTCT workflow"
+  * ^code[+] = HIVConcepts#HIV.E.ET.DE210
+* childAntibodyAssay3Result from HIV.E.ET.DE210
+* childAntibodyRepeatedAssay1Result 0..1 Coding "Child repeated HIV assay 1 result" "Child repeated HIV assay 1 result as documented in the PMTCT workflow"
+  * ^code[+] = HIVConcepts#HIV.E.ET.DE214
+* childAntibodyRepeatedAssay1Result from HIV.E.ET.DE214
+* maternalHepatitisBAssay1Result 0..1 Coding "Maternal hepatitis B assay 1 result" "Maternal hepatitis B assay 1 result as documented in the PMTCT workflow"
+  * ^code[+] = HIVConcepts#HIV.E.ET.DE222
+* maternalHepatitisBAssay1Result from HIV.E.ET.DE222

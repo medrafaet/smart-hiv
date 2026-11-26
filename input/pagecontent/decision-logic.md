@@ -105,6 +105,8 @@ Section 4.1: Key ARV drug interactions</td>
 
 ### HIV.D4.DT
 
+The QA Preview questionnaire records the screening method, findings and documented screening result. The WHO rule table below is reference material. Review its symptom criteria and algorithm codes against the October Ethiopia workbook before using it for automated screening decisions.
+
 **Business Rule**: Screen for TB using W4SS single screen algorithm
 
 **Trigger**: HIV.D4. Screen for TB

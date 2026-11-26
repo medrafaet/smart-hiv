@@ -23,6 +23,16 @@ Usage: #definition
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[human].valueString = "Record the prescribed regimen when prescribing PrEP for a client currently using PrEP."
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[expression].valueExpression.language = #text/fhirpath
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[expression].valueExpression.expression = "(%resource.item.where(linkId = 'HIV.C.DE75').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.C.DE76').exists() and %resource.item.where(linkId = 'HIV.C.DE10').answer.value.where($this = true).exists()) implies %resource.item.where(linkId = 'HIV.C.DE122').answer.value.exists()"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][2].extension[key].valueId = "prevention-medication-dates"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][2].extension[severity].valueCode = #error
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][2].extension[human].valueString = "Record prescription and dispensing dates as today or earlier. For the same prescription, dispensing must be on or after prescribing."
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][2].extension[expression].valueExpression.language = #text/fhirpath
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][2].extension[expression].valueExpression.expression = """
+  %resource.item.where(linkId in ('HIV.PRV.DE26' | 'HIV.PRV.DE27')).answer.value.ofType(date)
+    .all($this <= today().toString().substring(0, $this.toString().length()).toDate()) and
+  (%resource.item.where(linkId = 'HIV.PRV.DE26').answer.value.ofType(date) >=
+    %resource.item.where(linkId = 'HIV.PRV.DE27').answer.value.ofType(date)).where($this = false).empty()
+"""
 
 * item[+]
   * id = "HIV.C.DE10"
@@ -209,8 +219,20 @@ Usage: #definition
   * enableWhen.operator = #=
   * enableWhen.answerCoding = HIVConcepts#HIV.C.DE76
 * item[+]
+  * linkId = "HIV.PRV.DE27"
+  * type = #date
+  * text = "Date medications prescribed"
+  * code = HIVConcepts#HIV.PRV.DE27
+* item[+]
+  * linkId = "HIV.PRV.DE26"
+  * type = #date
+  * text = "Date medications dispensed"
+  * code = HIVConcepts#HIV.PRV.DE26
+* item[+]
   * id = "HIV.C.DE121"
   * linkId = "HIV.C.DE121"
+  * code[+] = HIVConcepts#HIV.C.DE121
+  * code[+] = HIVConcepts#HIV.PRV.DE28
   * type = #integer
   * text = "Number of days prescribed"
   * required = false

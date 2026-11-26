@@ -37,6 +37,7 @@ Usage: #definition
 * action.action[=].participant.role.text = "Trained Lay Provider"
 * action.action[+].id = "HIV.D.4"
 * action.action[=].title = "Screen for TB"
+* action.action[=].definitionCanonical = Canonical(HIV.D4ScreenForTb)
 * action.action[=].description = "Adults and adolescents living with HIV should be screened for TB according to a clinical algorithm"
 * action.action[=].participant.type = #practitioner
 * action.action[=].participant.role.text = "Trained Lay Provider"
@@ -113,6 +114,11 @@ Usage: #definition
 * action.action[=].description = "Viral load should be tested routinely for early warning of virological failure and monitored if clinical or virological failure are suspected"
 * action.action[=].participant.type = #practitioner
 * action.action[=].participant.role.text = "Trained Lay Provider"
+* action.action[+].id = "HIV.D.20.LabResults"
+* action.action[=].title = "Record laboratory tests and results"
+* action.action[=].definitionCanonical = Canonical(HIV.D20RecordLaboratoryResults)
+* action.action[=].description = "Record specimen details, reported results and documented diagnoses for tests in the Diagnostics worksheet."
+* action.action[=].participant.type = #practitioner
 * action.action[+].id = "HIV.D.21"
 * action.action[=].title = "Determine regimen and treatment options"
 * action.action[=].definitionCanonical = Canonical(HIV.D21CareRegimenReview)

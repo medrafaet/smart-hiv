@@ -15,3 +15,4 @@ Description: "Value set of indicates patient's TB treatment outcome"
 * HIVConcepts#HIV.D.DE1006 "Died"
 * HIVConcepts#HIV.D.DE1007 "Lost to follow-up"
 * HIVConcepts#HIV.D.DE1008 "Not evaluated"
+* HIVConcepts#HIV.D.ET.DE1100

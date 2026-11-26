@@ -160,6 +160,7 @@ Description: "This tab describes the data that may be collected during the pre-e
   * ^code[+] = HIVConcepts#HIV.C.DE120
 * numberOfDaysPrescribed 0..1 integer "Number of days prescribed" "Days of medication client has been prescribed"
   * ^code[+] = HIVConcepts#HIV.C.DE121
+  * ^code[+] = HIVConcepts#HIV.PRV.DE28
 * prepRegimenPrescribed 0..* CodeableConcept "PrEP regimen prescribed" "HIV pre-exposure prophylaxis (PrEP) regimen prescribed"
   * ^code[+] = HIVConcepts#HIV.C.DE122
 * prepRegimenPrescribed from HIV.C.DE122 (extensible)

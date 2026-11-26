@@ -29,5 +29,5 @@ Description: "Example completed HIV.H follow-up phone contact after a missed app
 * extension[outreachOutcome].valueCodeableConcept = HIVConcepts#HIV.H.DE24 "Returning to clinic"
 * extension[movedFromCatchmentArea].valueBoolean = false
 * extension[partnerOrContactOfIndexCase].valueBoolean = false
-* extension[adherenceAssessment].valueBoolean = true
-* note.text = "Client reached by phone and agreed to return to clinic."
+* extension[artAdherenceStatus].valueBoolean = true
+* note.text = "Client reached by phone and agreed to return to clinic. The clinician reviewed the documented ART adherence assessment."

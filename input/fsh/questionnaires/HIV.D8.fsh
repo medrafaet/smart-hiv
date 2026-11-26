@@ -15,7 +15,7 @@ Usage: #definition
 * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext].extension[description].valueString = "Patient record supplying date of birth for age at enrolment."
 * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext][1].extension[name].valueCoding.code = #careArtHistory
 * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext][1].extension[type].valueCode = #Parameters
-* extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext][1].extension[description].valueString = "Supply visitDate (date), artFacility (repeated references to verified MFR Organizations that offer ART), currentArtFacility (one eligible MFR Organization reference), and artStartType (Coding) when known. Supply priorArvLocation references and approved priorArvRegimen codings for the corresponding fields. For regimen history, supply firstLineArtRegimen choices, currentArtRegimenStartDate, one latestPrescribedArtRegimen Coding, and any verified regimen decision outputs. For staging, supply documented hivStatus as one HIV.B.DE115 choice. For adherence, supply prescribedArtDoses as one integer covering the same period since the last visit as the missed-dose count. For ART timing, supply hivDiagnosisDate from HIV.B.DE71, the documented date the diagnosis was returned to the client. Supply lateArtInitiation as one boolean from the baseline CD4 measure in Diagnostics (HIV.D.DE369) when known. For the regimen start date, supply visitPrescribedArtRegimen and visitArtPrescriptionDate from the same documented prescription at this visit. Supply empty Parameters when context is unavailable."
+* extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext][1].extension[description].valueString = "Supply visitDate (date), artFacility (repeated references to verified MFR Organizations that offer ART), currentArtFacility (one eligible MFR Organization reference), and artStartType (Coding) when known. Supply priorArvLocation references and approved priorArvRegimen codings for the corresponding fields. For regimen history, supply firstLineArtRegimen choices, currentArtRegimenStartDate, one latestPrescribedArtRegimen Coding, and any verified regimen decision outputs. For staging, supply documented hivStatus as one HIV.B.DE115 choice. For adherence, supply prescribedArtDoses as one integer covering the same period since the last visit as the missed-dose count. For ART timing, supply hivDiagnosisDate from HIV.B.DE71, the documented date the diagnosis was returned to the client. Supply lateArtInitiation as one boolean from the baseline CD4 measure in Diagnostics (HIV.D.DE369) when known. For the regimen start date, supply visitPrescribedArtRegimen and visitArtPrescriptionDate from the same documented prescription at this visit. For active TB treatment, supply one currentlyOnTbTreatment boolean when documented and repeated tbTreatmentFacility references to verified ET Base MFR Locations that provide TB treatment. Supply empty Parameters when context is unavailable."
 * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.name = "eligibleArtFacilities"
 * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.language = #text/fhirpath
 * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.expression = "%careArtHistory.parameter.where(name = 'artFacility').value.ofType(Reference).where(reference.exists())"
@@ -77,10 +77,39 @@ Usage: #definition
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][9].extension[human].valueString = "Record a positive number of pregnancies if currently pregnant."
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][9].extension[expression].valueExpression.language = #text/fhirpath
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][9].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE31').answer.value.where($this = true).exists() implies %resource.item.where(linkId = 'HIV.D.DE33').answer.value.ofType(integer).where($this > 0).exists()"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][10].extension[key].valueId = "tb-diagnosis-date"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][10].extension[severity].valueCode = #error
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][10].extension[human].valueString = "Record the TB diagnosis date as today or earlier."
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][10].extension[expression].valueExpression.language = #text/fhirpath
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][10].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE952').answer.value.ofType(date).all($this <= today().toString().substring(0, $this.toString().length()).toDate())"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][11].extension[key].valueId = "tpt-start-required"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][11].extension[severity].valueCode = #error
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][11].extension[human].valueString = "Record the start date when the client is currently taking TB preventive treatment."
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][11].extension[expression].valueExpression.language = #text/fhirpath
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][11].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE953').answer.value.where($this = true).exists() implies %resource.item.where(linkId = 'HIV.D.DE954').answer.value.ofType(date).exists()"
+* extension[http://hl7.org/fhir/StructureDefinition/variable][1].valueExpression.name = "verifiedTbTreatmentFacilities"
+* extension[http://hl7.org/fhir/StructureDefinition/variable][1].valueExpression.language = #text/fhirpath
+* extension[http://hl7.org/fhir/StructureDefinition/variable][1].valueExpression.expression = """
+  %careArtHistory.parameter.where(name = 'tbTreatmentFacility').value.ofType(Reference)
+    .where(reference.matches('(^|/)Location/[A-Za-z0-9.-]{1,64}(/_history/[A-Za-z0-9.-]{1,64})?$')
+      and (type.empty() or type = 'Location' or type = 'http://hl7.org/fhir/StructureDefinition/Location'))
+"""
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][12].extension[key].valueId = "configuration-tb-treating-facility"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][12].extension[severity].valueCode = #error
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][12].extension[human].valueString = "Select a verified treating facility when the client is receiving treatment for active TB."
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][12].extension[expression].valueExpression.language = #text/fhirpath
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][12].extension[expression].valueExpression.expression = """
+  iif(%resource.item.where(linkId = 'currentlyOnTbTreatment').answer.value.ofType(boolean).where($this = true).exists(),
+    %resource.item.where(linkId = 'HIV.Config.DE18').answer.value.ofType(Reference)
+      .all(reference.exists() and reference in %verifiedTbTreatmentFacilities.reference)
+      and %resource.item.where(linkId = 'HIV.Config.DE18').answer.value.ofType(Reference).count() = 1,
+    %resource.item.where(linkId = 'HIV.Config.DE18').answer.value.empty())
+"""
 
 * item[+]
   * id = "HIV.D.DE31"
   * linkId = "HIV.D.DE31"
+  * code = HIVConcepts#HIV.SURV.7
   * type = #boolean
   * text = "Currently pregnant"
   * required = false
@@ -149,6 +178,7 @@ Usage: #definition
 * item[+]
   * id = "HIV.D.DE39"
   * linkId = "HIV.D.DE39"
+  * code = HIVConcepts#HIV.SURV.6
   * type = #date
   * text = "ART start date"
   * required = false
@@ -608,6 +638,7 @@ Usage: #definition
 * item[+]
   * id = "HIV.D.DE186"
   * linkId = "HIV.D.DE186"
+  * code = HIVConcepts#HIV.SURV.5
   * type = #choice
   * text = "HIV clinical stage"
   * required = false
@@ -795,6 +826,7 @@ Usage: #definition
 * item[+]
   * id = "HIV.D.DE653"
   * linkId = "HIV.D.DE653"
+  * code = HIVConcepts#HIV.SURV.25
   * type = #boolean
   * text = "AIDS-related death"
   * required = false
@@ -803,6 +835,7 @@ Usage: #definition
 * item[+]
   * id = "HIV.D.DE654"
   * linkId = "HIV.D.DE654"
+  * code = HIVConcepts#HIV.SURV.17
   * type = #date
   * text = "Date of first AIDS diagnosis"
   * required = false
@@ -827,6 +860,14 @@ Usage: #definition
   * repeats = false
   * readOnly = false
 * item[+]
+  * linkId = "HIV.D.ET.DE938"
+  * type = #boolean
+  * text = "Documented mono drug-resistant TB"
+* item[+]
+  * linkId = "HIV.D.ET.DE939"
+  * type = #boolean
+  * text = "Documented extensively drug-resistant TB (XDR-TB)"
+* item[+]
   * id = "HIV.D.DE939"
   * linkId = "HIV.D.DE939"
   * type = #choice
@@ -840,10 +881,13 @@ Usage: #definition
   * linkId = "HIV.D.DE942"
   * type = #choice
   * text = "Method of TB diagnosis"
-  * required = false
+  * required = true
   * repeats = false
   * readOnly = false
   * answerValueSet = Canonical(HIV.D.DE942)
+  * enableWhen.question = "HIV.D.DE939"
+  * enableWhen.operator = #=
+  * enableWhen.answerCoding = HIVConcepts#HIV.D.DE940
 * item[+]
   * id = "HIV.D.DE945"
   * linkId = "HIV.D.DE945"
@@ -857,9 +901,12 @@ Usage: #definition
   * linkId = "HIV.D.DE946"
   * type = #date
   * text = "Presumptive TB registration date"
-  * required = false
+  * required = true
   * repeats = false
   * readOnly = false
+  * enableWhen.question = "HIV.D.DE945"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
 * item[+]
   * id = "HIV.D.DE947"
   * linkId = "HIV.D.DE947"
@@ -868,15 +915,26 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
-  * answerValueSet = Canonical(HIV.D.DE947)
+  * answerValueSet = Canonical(HIV.D.DE947-capture)
+* item[+]
+  * linkId = "HIV.D.ET.DE9"
+  * type = #string
+  * text = "Other TB treatment history (specify)"
+  * required = true
+  * enableWhen.question = "HIV.D.DE947"
+  * enableWhen.operator = #=
+  * enableWhen.answerCoding = HIVTBWorkbookConcepts#HIV.D.ET.DE6
 * item[+]
   * id = "HIV.D.DE952"
   * linkId = "HIV.D.DE952"
   * type = #date
   * text = "Date of TB diagnosis"
-  * required = false
+  * required = true
   * repeats = false
   * readOnly = false
+  * enableWhen.question = "HIV.D.DE939"
+  * enableWhen.operator = #=
+  * enableWhen.answerCoding = HIVConcepts#HIV.D.DE940
 * item[+]
   * id = "HIV.D.DE953"
   * linkId = "HIV.D.DE953"
@@ -935,11 +993,30 @@ Usage: #definition
   * repeats = false
   * readOnly = false
 * item[+]
+  * linkId = "currentlyOnTbTreatment"
+  * type = #boolean
+  * text = "Is the client currently being treated for active TB?"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression].valueExpression.language = #text/fhirpath
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression].valueExpression.expression = "iif(%careArtHistory.parameter.where(name = 'currentlyOnTbTreatment').value.ofType(boolean).count() = 1, %careArtHistory.parameter.where(name = 'currentlyOnTbTreatment').value.ofType(boolean), {})"
+* item[+]
+  * linkId = "HIV.Config.DE18"
+  * type = #reference
+  * text = "TB treating facility"
+  * code = HIVConcepts#HIV.Config.DE18
+  * required = true
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource].valueCode = #Location
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile].valueCanonical = "http://fhir.et/core/StructureDefinition/ethiopian-mfr-location"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression].valueExpression.language = #text/fhirpath
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression].valueExpression.expression = "%verifiedTbTreatmentFacilities"
+  * enableWhen.question = "currentlyOnTbTreatment"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
+* item[+]
   * id = "HIV.D.DE1010"
   * linkId = "HIV.D.DE1010"
   * type = #choice
   * text = "TB treatment regimen composition"
   * required = false
-  * repeats = false
+  * repeats = true
   * readOnly = false
-  * answerValueSet = Canonical(HIV.D.DE1010)
+  * answerValueSet = Canonical(HIV.D.DE1010-capture)

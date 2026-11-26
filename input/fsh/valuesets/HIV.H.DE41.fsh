@@ -13,3 +13,4 @@ Description: "Value set of the outcome for the client which is used for reportin
 * HIVConcepts#HIV.H.DE43 "Transferred out"
 * HIVConcepts#HIV.H.DE44 "Death (documented)"
 * HIVConcepts#HIV.H.DE45 "Refused (stopped) treatment"
+* HIVConcepts#HIV.H.DE47 "On ART"

@@ -11,4 +11,4 @@ Description: "Value set of client's tuberculosis (TB) status when antiretroviral
 
 * HIVConcepts#HIV.D.DE1020 "Symptomatic for TB"
 * HIVConcepts#HIV.D.DE1021 "Diagnosed TB"
-* HIVConcepts#HIV.D.DE1022 ""
+* HIVConcepts#HIV.D.DE1022 "None"

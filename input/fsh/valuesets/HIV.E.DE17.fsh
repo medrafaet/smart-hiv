@@ -20,6 +20,7 @@ Description: "Value set of whether the woman has had any complications or proble
 * HIVConcepts#HIV.E.DE26 "Forceps"
 * HIVConcepts#HIV.E.DE27 "Gestational diabetes mellitus"
 * HIVConcepts#HIV.E.DE28 "Heavy bleeding (during or after delivery)"
+* HIVConcepts#HIV.E.ET.DE2
 * HIVConcepts#HIV.E.DE29 "Macrosomia"
 * HIVConcepts#HIV.E.DE30 "Perineal tear (3rd or 4th degree)"
 * HIVConcepts#HIV.E.DE31 "Substance use"

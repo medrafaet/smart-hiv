@@ -1,14 +1,19 @@
 library HIVConfig
 
+using FHIR version '4.0.1'
+
 include HIVConcepts called Concepts
 
-using FHIR version '4.0.1'
+parameter HivBurdenSetting Code
 
 /* 
  * HIV burden of setting
  */
 define "HIV burden of setting":
-  Concepts."High HIV burden setting"
+  if HivBurdenSetting ~ Concepts."High HIV burden setting"
+    or HivBurdenSetting ~ Concepts."Low HIV burden setting"
+  then HivBurdenSetting
+  else null
 
 define "Testing Interval":
   3 months

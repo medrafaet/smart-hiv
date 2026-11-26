@@ -51,6 +51,7 @@ Usage: #definition
 * item[+]
   * id = "HIV.B.DE94"
   * linkId = "HIV.B.DE94"
+  * code = HIVConcepts#HIV.SURV.21
   * type = #choice
   * text = "Test result of HIV assay 1"
   * required = false
@@ -87,6 +88,7 @@ Usage: #definition
 * item[+]
   * id = "HIV.B.DE110"
   * linkId = "HIV.B.DE110"
+  * code = HIVConcepts#HIV.SURV.1
   * type = #date
   * text = "HIV test date"
   * required = false
@@ -95,6 +97,7 @@ Usage: #definition
 * item[+]
   * id = "HIV.B.DE111"
   * linkId = "HIV.B.DE111"
+  * code = HIVConcepts#HIV.SURV.2
   * type = #choice
   * text = "HIV test result"
   * required = false

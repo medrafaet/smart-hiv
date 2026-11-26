@@ -12,3 +12,4 @@ Description: "Value set of infant feeding practice"
 * HIVConcepts#HIV.E.DE128 "Exclusively breastfeeding"
 * HIVConcepts#HIV.E.DE129 "Replacement feeding"
 * HIVConcepts#HIV.E.DE130 "Mixed feeding"
+* HIVConcepts#HIV.E.ET.DE130

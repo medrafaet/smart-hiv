@@ -31,6 +31,23 @@ Usage: #definition
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][2].extension[human].valueString = "The date informed of an HIV-positive diagnosis must be today or earlier."
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][2].extension[expression].valueExpression.language = #text/fhirpath
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][2].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.B.DE65').answer.value.all($this <= today())"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][3].extension[key].valueId = "prevention-history-dates"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][3].extension[severity].valueCode = #error
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][3].extension[human].valueString = "Record prevention service and OAMT dates as today or earlier."
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][3].extension[expression].valueExpression.language = #text/fhirpath
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][3].extension[expression].valueExpression.expression = """
+  %resource.repeat(item).where(linkId in ('HIV.PRV.DE10' | 'HIV.PRV.DE24' | 'HIV.PRV.DE25')).answer.value.ofType(date)
+    .all($this <= today().toString().substring(0, $this.toString().length()).toDate())
+"""
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][4].extension[key].valueId = "prevention-access-pair"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][4].extension[severity].valueCode = #error
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][4].extension[human].valueString = "Record the service and access date together for each prevention entry."
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][4].extension[expression].valueExpression.language = #text/fhirpath
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][4].extension[expression].valueExpression.expression = """
+  %resource.item.where(linkId = 'preventionServiceAccess' and item.answer.value.exists()).all(
+    item.where(linkId = 'HIV.PRV.DE2').answer.value.ofType(Coding).exists() and
+    item.where(linkId = 'HIV.PRV.DE10').answer.value.ofType(date).exists())
+"""
 
 * item[+]
   * id = "HIV.B.DE29"
@@ -238,6 +255,8 @@ Usage: #definition
 * item[+]
   * id = "HIV.B.DE225"
   * linkId = "HIV.B.DE225"
+  * code[+] = HIVConcepts#HIV.B.DE225
+  * code[+] = HIVConcepts#HIV.PRV.DE1
   * type = #boolean
   * text = "At elevated risk for HIV acquisition"
   * required = false
@@ -256,7 +275,77 @@ Usage: #definition
   * linkId = "HIV.H.DE34"
   * type = #choice
   * text = "HIV status of partner or contact"
-  * required = false
+  * required = true
   * repeats = false
   * readOnly = false
   * answerValueSet = Canonical(HIV.H.DE34)
+  * enableWhen.question = "HIV.H.DE33"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
+
+* item[+]
+  * linkId = "preventionServiceAccess"
+  * type = #group
+  * text = "Prevention service accessed at this facility"
+  * repeats = true
+  * item[+]
+    * linkId = "HIV.PRV.DE2"
+    * type = #choice
+    * text = "HIV prevention intervention"
+    * code = HIVConcepts#HIV.PRV.DE2
+    * required = true
+    * answerValueSet = Canonical(HIV.PRV.DE2-capture)
+  * item[+]
+    * linkId = "HIV.PRV.DE10"
+    * type = #date
+    * text = "Documented date the client accessed this service"
+    * code = HIVConcepts#HIV.PRV.DE10
+    * required = true
+  * item[+]
+    * linkId = "HIV.PRV.DE9"
+    * type = #string
+    * text = "Other prevention service (specify)"
+    * code = HIVConcepts#HIV.PRV.DE9
+    * enableWhen.question = "HIV.PRV.DE2"
+    * enableWhen.operator = #=
+    * enableWhen.answerCoding = HIVConcepts#HIV.PRV.DE8
+* item[+]
+  * linkId = "HIV.PRV.DE11"
+  * type = #choice
+  * text = "HIV status of the client’s contact (reported)"
+  * code = HIVConcepts#HIV.PRV.DE11
+  * answerValueSet = Canonical(HIV.PRV.DE11)
+* item[+]
+  * linkId = "oamtHistory"
+  * type = #group
+  * text = "Documented opioid agonist maintenance treatment (OAMT) history"
+  * item[+]
+    * linkId = "HIV.PRV.DE20"
+    * type = #boolean
+    * text = "Currently on OAMT for the reporting period"
+    * code = HIVConcepts#HIV.PRV.DE20
+  * item[+]
+    * linkId = "HIV.PRV.DE21"
+    * type = #boolean
+    * text = "Retained on OAMT for the reporting period"
+    * code = HIVConcepts#HIV.PRV.DE21
+  * item[+]
+    * linkId = "HIV.PRV.DE22"
+    * type = #boolean
+    * text = "Currently being inducted on OAMT"
+    * code = HIVConcepts#HIV.PRV.DE22
+  * item[+]
+    * linkId = "HIV.PRV.DE23"
+    * type = #boolean
+    * text = "Currently on reducing doses of OAMT"
+    * code = HIVConcepts#HIV.PRV.DE23
+  * item[+]
+    * linkId = "HIV.PRV.DE24"
+    * type = #date
+    * text = "Date the first maintenance dose was received"
+    * code = HIVConcepts#HIV.PRV.DE24
+  * item[+]
+    * linkId = "HIV.PRV.DE25"
+    * type = #date
+    * text = "Date of loss to follow-up or OAMT stopped"
+    * code = HIVConcepts#HIV.PRV.DE25

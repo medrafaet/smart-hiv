@@ -13,3 +13,7 @@ Description: "Value set of history of previous TB treatment"
 * HIVConcepts#HIV.D.DE949 "Recurrent"
 * HIVConcepts#HIV.D.DE950 "Re-registered"
 * HIVConcepts#HIV.D.DE951 "Unknown"
+* HIVTBWorkbookConcepts#HIV.D.ET.DE3
+* HIVTBWorkbookConcepts#HIV.D.ET.DE4
+* HIVTBWorkbookConcepts#HIV.D.ET.DE5
+* HIVTBWorkbookConcepts#HIV.D.ET.DE6

@@ -31,6 +31,7 @@ RuleSet: CareDiagnosticsCd4
 * item[+]
   * id = "HIV.D.DE367"
   * linkId = "HIV.D.DE367"
+  * code = HIVConcepts#HIV.SURV.3
   * type = #decimal
   * text = "Baseline CD4 count"
   * required = false
@@ -41,6 +42,7 @@ RuleSet: CareDiagnosticsCd4
 * item[+]
   * id = "HIV.D.DE368"
   * linkId = "HIV.D.DE368"
+  * code = HIVConcepts#HIV.SURV.4
   * type = #dateTime
   * text = "Date of baseline CD4 count test"
   * required = false
@@ -60,6 +62,44 @@ RuleSet: CareDiagnosticsCd4
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.language = #text/fhirpath
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.expression = "iif(%baselineCd4.count() = 1, %baselineCd4 < 200, {})"
 
+RuleSet: DocumentedTbDiagnosticFindings
+* item[+]
+  * id = "HIV.D.DE1024"
+  * linkId = "HIV.D.DE1024"
+  * type = #boolean
+  * text = "TB meningitis"
+* item[+]
+  * linkId = "HIV.D.ET.DE1024"
+  * type = #boolean
+  * text = "Documented multidrug-resistant TB (MDR-TB)"
+
+RuleSet: DocumentedMaternalDiagnostics
+* item[+]
+  * id = "HIV.E.DE149"
+  * linkId = "HIV.E.DE149"
+  * type = #choice
+  * text = "Maternal syphilis test result"
+  * required = false
+  * repeats = false
+  * readOnly = false
+  * answerValueSet = Canonical(HIV.E.DE149)
+* item[+]
+  * id = "HIV.E.DE153"
+  * linkId = "HIV.E.DE153"
+  * type = #boolean
+  * text = "Hypertension"
+  * required = false
+  * repeats = false
+  * readOnly = false
+* item[+]
+  * id = "HIV.E.DE154"
+  * linkId = "HIV.E.DE154"
+  * type = #boolean
+  * text = "Pre-eclampsia"
+  * required = false
+  * repeats = false
+  * readOnly = false
+
 Instance: HIV.D20Diagnostics
 InstanceOf: sdc-questionnaire-extr-smap
 Title: "Diagnostics"
@@ -70,8 +110,10 @@ Usage: #definition
 * subjectType = #Patient
 * language = #en
 * version = "2026-10"
+* version = "2026-10"
 * status = #draft
 * experimental = true
+* insert DiagnosticsLaboratoryConstraints
 
 * insert CareDiagnosticsCd4
 * item[+]
@@ -114,7 +156,7 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
-  * answerValueSet = "#HIV.D.DE391"
+  * answerValueSet = Canonical(HIV.D.DE391)
 * item[+]
   * id = "HIV.D.DE396"
   * linkId = "HIV.D.DE396"
@@ -147,7 +189,7 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
-  * answerValueSet = "#HIV.D.DE399"
+  * answerValueSet = Canonical(HIV.D.DE399)
 * item[+]
   * id = "HIV.D.DE414"
   * linkId = "HIV.D.DE414"
@@ -180,368 +222,6 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
-* item[+]
-  * id = "HIV.D.DE1024"
-  * linkId = "HIV.D.DE1024"
-  * type = #boolean
-  * text = "TB meningitis"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.E.DE149"
-  * linkId = "HIV.E.DE149"
-  * type = #choice
-  * text = "Maternal syphilis test result"
-  * required = false
-  * repeats = false
-  * readOnly = false
-  * answerValueSet = "#HIV.E.DE149"
-* item[+]
-  * id = "HIV.E.DE153"
-  * linkId = "HIV.E.DE153"
-  * type = #boolean
-  * text = "Hypertension"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.E.DE154"
-  * linkId = "HIV.E.DE154"
-  * type = #boolean
-  * text = "Pre-eclampsia"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE1"
-  * linkId = "HIV.G.DE1"
-  * type = #integer
-  * text = "CD4 count"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE2"
-  * linkId = "HIV.G.DE2"
-  * type = #integer
-  * text = "CD4 cell percentage"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE3"
-  * linkId = "HIV.G.DE3"
-  * type = #integer
-  * text = "Baseline CD4 count"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE4"
-  * linkId = "HIV.G.DE4"
-  * type = #date
-  * text = "Date of baseline CD4 count sample collection"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE5"
-  * linkId = "HIV.G.DE5"
-  * type = #boolean
-  * text = "Late ART initiation"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE6"
-  * linkId = "HIV.G.DE6"
-  * type = #date
-  * text = "Date of CD4 sample collection"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE7"
-  * linkId = "HIV.G.DE7"
-  * type = #boolean
-  * text = "Viral load test conducted"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE8"
-  * linkId = "HIV.G.DE8"
-  * type = #dateTime
-  * text = "Date of viral load sample collection"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE9"
-  * linkId = "HIV.G.DE9"
-  * type = #dateTime
-  * text = "Date of first viral load sample collection"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE10"
-  * linkId = "HIV.G.DE10"
-  * type = #date
-  * text = "Date viral load sample sent"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE11"
-  * linkId = "HIV.G.DE11"
-  * type = #integer
-  * text = "First viral load test result"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE12"
-  * linkId = "HIV.G.DE12"
-  * type = #integer
-  * text = "Viral load test result"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE13"
-  * linkId = "HIV.G.DE13"
-  * type = #choice
-  * text = "HIV viral load specimen type"
-  * required = false
-  * repeats = false
-  * readOnly = false
-  * answerValueSet = "#HIV.G.DE13"
-* item[+]
-  * id = "HIV.G.DE17"
-  * linkId = "HIV.G.DE17"
-  * type = #date
-  * text = "HBsAg test date"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE18"
-  * linkId = "HIV.G.DE18"
-  * type = #choice
-  * text = "HBsAg test result"
-  * required = false
-  * repeats = false
-  * readOnly = false
-  * answerValueSet = "#HIV.G.DE18"
-* item[+]
-  * id = "HIV.G.DE22"
-  * linkId = "HIV.G.DE22"
-  * type = #choice
-  * text = "Reason Hepatitis B test not conducted"
-  * required = false
-  * repeats = false
-  * readOnly = false
-  * answerValueSet = "#HIV.G.DE22"
-* item[+]
-  * id = "HIV.G.DE28"
-  * linkId = "HIV.G.DE28"
-  * type = #string
-  * text = "Other (specify)"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE29"
-  * linkId = "HIV.G.DE29"
-  * type = #choice
-  * text = "Hepatitis B diagnosis"
-  * required = false
-  * repeats = false
-  * readOnly = false
-  * answerValueSet = "#HIV.G.DE29"
-* item[+]
-  * id = "HIV.G.DE32"
-  * linkId = "HIV.G.DE32"
-  * type = #dateTime
-  * text = "Hepatitis C screening date"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE33"
-  * linkId = "HIV.G.DE33"
-  * type = #boolean
-  * text = "Hepatitis C test ordered"
-  * required = true
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE34"
-  * linkId = "HIV.G.DE34"
-  * type = #boolean
-  * text = "Hepatitis C test conducted"
-  * required = true
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE35"
-  * linkId = "HIV.G.DE35"
-  * type = #choice
-  * text = "Reason Hepatitis C test not done"
-  * required = false
-  * repeats = false
-  * readOnly = false
-  * answerValueSet = "#HIV.G.DE35"
-* item[+]
-  * id = "HIV.G.DE41"
-  * linkId = "HIV.G.DE41"
-  * type = #string
-  * text = "Other (specify)"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE42"
-  * linkId = "HIV.G.DE42"
-  * type = #date
-  * text = "HCV test date"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE43"
-  * linkId = "HIV.G.DE43"
-  * type = #choice
-  * text = "HCV test result"
-  * required = false
-  * repeats = false
-  * readOnly = false
-  * answerValueSet = "#HIV.G.DE43"
-* item[+]
-  * id = "HIV.G.DE47"
-  * linkId = "HIV.G.DE47"
-  * type = #integer
-  * text = "HCV viral load test date"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE48"
-  * linkId = "HIV.G.DE48"
-  * type = #choice
-  * text = "HCV viral load test result"
-  * required = false
-  * repeats = false
-  * readOnly = false
-  * answerValueSet = "#HIV.G.DE48"
-* item[+]
-  * id = "HIV.G.DE51"
-  * linkId = "HIV.G.DE51"
-  * type = #choice
-  * text = "Hepatitis C diagnosis"
-  * required = false
-  * repeats = false
-  * readOnly = false
-  * answerValueSet = "#HIV.G.DE51"
-* item[+]
-  * id = "HIV.G.DE54"
-  * linkId = "HIV.G.DE54"
-  * type = #boolean
-  * text = "Syphilis test required"
-  * required = true
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE55"
-  * linkId = "HIV.G.DE55"
-  * type = #choice
-  * text = "Syphilis test type"
-  * required = false
-  * repeats = false
-  * readOnly = false
-  * answerValueSet = "#HIV.G.DE55"
-* item[+]
-  * id = "HIV.G.DE61"
-  * linkId = "HIV.G.DE61"
-  * type = #string
-  * text = "Other syphilis test type (specify)"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE62"
-  * linkId = "HIV.G.DE62"
-  * type = #choice
-  * text = "Reason syphilis test not done"
-  * required = false
-  * repeats = false
-  * readOnly = false
-  * answerValueSet = "#HIV.G.DE62"
-* item[+]
-  * id = "HIV.G.DE68"
-  * linkId = "HIV.G.DE68"
-  * type = #string
-  * text = "Other (specify)"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE69"
-  * linkId = "HIV.G.DE69"
-  * type = #date
-  * text = "Syphilis test date"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE70"
-  * linkId = "HIV.G.DE70"
-  * type = #choice
-  * text = "Syphilis test result"
-  * required = false
-  * repeats = false
-  * readOnly = false
-  * answerValueSet = "#HIV.G.DE70"
-* item[+]
-  * id = "HIV.G.DE74"
-  * linkId = "HIV.G.DE74"
-  * type = #choice
-  * text = "Syphilis diagnosis"
-  * required = false
-  * repeats = false
-  * readOnly = false
-  * answerValueSet = "#HIV.G.DE74"
-* item[+]
-  * id = "HIV.G.DE77"
-  * linkId = "HIV.G.DE77"
-  * type = #boolean
-  * text = "Other tests conducted"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE78"
-  * linkId = "HIV.G.DE78"
-  * type = #string
-  * text = "Other test(s) name"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE79"
-  * linkId = "HIV.G.DE79"
-  * type = #date
-  * text = "Other test(s) date"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.G.DE80"
-  * linkId = "HIV.G.DE80"
-  * type = #string
-  * text = "Other test(s) result(s)"
-  * required = false
-  * repeats = false
-  * readOnly = false
+* insert DocumentedTbDiagnosticFindings
+* insert DocumentedMaternalDiagnostics
+* insert DiagnosticsLaboratoryFields

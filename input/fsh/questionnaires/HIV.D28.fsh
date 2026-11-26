@@ -337,6 +337,7 @@ RuleSet: CareCervicalScreeningAndServices
 * item[+]
   * id = "HIV.D.DE744"
   * linkId = "HIV.D.DE744"
+  * code = HIVConcepts#HIV.SURV.23
   * type = #dateTime
   * text = "Date of death"
   * required = false
