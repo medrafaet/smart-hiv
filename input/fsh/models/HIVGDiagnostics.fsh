@@ -1,11 +1,11 @@
 Invariant:    HIV-G-1
-Description:  "Date <= Current Date"
-Expression:   "'NOT IMPLEMENTED'"
+Description:  "Recorded laboratory dates must be today or earlier."
+Expression:   "(dateOfBaselineCd4CountSampleCollection | dateOfCd4SampleCollection | dateViralLoadSampleSent | hbsagTestDate | hcvTestDate | hcvViralLoadTestDate | syphilisTestDate | otherTestsDate | otherTest.date).all($this <= today().toString().substring(0, $this.toString().length()).toDate())"
 Severity:     #error
 
 Invariant:    HIV-G-2
-Description:  "DateTime <= Current DateTime"
-Expression:   "'NOT IMPLEMENTED'"
+Description:  "Recorded laboratory timestamps must be at or before the current time."
+Expression:   "(dateOfViralLoadSampleCollection | dateOfFirstViralLoadSampleCollection | hepatitisCScreeningDate).where($this > now()).empty()"
 Severity:     #error
 
 Logical: HIVGDiagnostics
@@ -17,17 +17,22 @@ Description: "This tab describes the data that are collected during the workflow
 * ^experimental = true
 * ^name = "HIVGDiagnostics"
 * ^status = #active
+* ^mapping[+].identity = "moh-hiv-dak"
+* ^mapping[=].name = "Ethiopia MoH HIV Data Dictionary"
+* obeys HIV-G-1 and HIV-G-2
 
 * cd4Count 0..1 integer "CD4 count" "CD4 cell count in cells/mm^3"
   * ^code[+] = HIVConcepts#HIV.G.DE1
-* cd4CellPercentage 0..1 integer "CD4 cell percentage" "CD4 cell percentage"
+* cd4CellPercentage 0..1 decimal "CD4 cell percentage" "CD4 cell percentage"
   * ^code[+] = HIVConcepts#HIV.G.DE2
-* baselineCd4Count 0..1 integer "Baseline CD4 count" "CD4 count performed at HIV diagnosis"
-  * ^code[+] = HIVConcepts#HIV.G.DE3
+* baselineCd4Count 0..1 decimal "Baseline CD4 count" "Documented result from the baseline CD4 test in cells/mm³"
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.G.DE3"
 * dateOfBaselineCd4CountSampleCollection 0..1 date "Date of baseline CD4 count sample collection" "Date and time when baseline CD4 count test sample was collected"
   * ^code[+] = HIVConcepts#HIV.G.DE4
-* lateArtInitiation 0..1 boolean "Late ART initiation" "The client's first CD4 count from baseline CD4 test performed (such as at HIV diagnosis) was a count of less than 200 cells/mm3"
-  * ^code[+] = HIVConcepts#HIV.G.DE5
+* lateArtInitiation 0..1 boolean "Baseline CD4 below 200 cells/mm³" "Classification from the documented baseline CD4 measurement"
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.G.DE5"
 * dateOfCd4SampleCollection 0..1 date "Date of CD4 sample collection" "Date sample to be used for CD4 count was collected"
   * ^code[+] = HIVConcepts#HIV.G.DE6
 * viralLoadTestConducted 0..1 boolean "Viral load test conducted" "A viral load test was performed"
@@ -58,11 +63,15 @@ Description: "This tab describes the data that are collected during the workflow
 * hepatitisBDiagnosis 0..1 Coding "Hepatitis B diagnosis" "Client's hepatitis B diagnosis"
   * ^code[+] = HIVConcepts#HIV.G.DE29
 * hepatitisBDiagnosis from HIV.G.DE29
+* hbvViralLoadTestConducted 0..1 boolean "HBV viral load test conducted" "Whether the HBV viral load test was conducted"
+  * ^code[+] = HIVConcepts#HIV.G.ET.DE1
+* hbvViralLoadResult 0..1 Quantity "HBV viral load result" "Quantitative HBV viral load result with its documented unit"
+  * ^code[+] = HIVConcepts#HIV.G.ET.DE2
 * hepatitisCScreeningDate 0..1 dateTime "Hepatitis C screening date" "Date when client was screened for HCV"
   * ^code[+] = HIVConcepts#HIV.G.DE32
-* hepatitisCTestOrdered 1..1 boolean "Hepatitis C test ordered" "Hepatitis C test has been ordered"
+* hepatitisCTestOrdered 0..1 boolean "Hepatitis C test ordered" "Required when documenting hepatitis C testing"
   * ^code[+] = HIVConcepts#HIV.G.DE33
-* hepatitisCTestConducted 1..1 boolean "Hepatitis C test conducted" "Whether a hepatitis C test was conducted"
+* hepatitisCTestConducted 0..1 boolean "Hepatitis C test conducted" "Required when documenting hepatitis C testing"
   * ^code[+] = HIVConcepts#HIV.G.DE34
 * reasonHepatitisCTestNotDone 0..* Coding "Reason Hepatitis C test not done" "Reason why a hepatitis C test was not done"
   * ^code[+] = HIVConcepts#HIV.G.DE35
@@ -74,15 +83,17 @@ Description: "This tab describes the data that are collected during the workflow
 * hcvTestResult 0..1 Coding "HCV test result" "Hepatitis C virus test result (HCV antibody, HCV RNA or HCV core antigen)"
   * ^code[+] = HIVConcepts#HIV.G.DE43
 * hcvTestResult from HIV.G.DE43
-* hcvViralLoadTestDate 0..1 integer "HCV viral load test date" "Hepatitis C viral load test date"
+* hcvViralLoadTestDate 0..1 date "HCV viral load test date" "Date of the hepatitis C viral load test"
   * ^code[+] = HIVConcepts#HIV.G.DE47
 * hcvViralLoadTestResult 0..1 Coding "HCV viral load test result" "Hepatitis C viral load test result (qualitative)"
   * ^code[+] = HIVConcepts#HIV.G.DE48
 * hcvViralLoadTestResult from HIV.G.DE48
+* hcvViralLoadResult 0..1 Quantity "HCV viral load result (quantitative)" "Documented numeric HCV viral load in the reported unit"
+  * ^code[+] = HIVConcepts#HIV.G.ET.DE3
 * hepatitisCDiagnosis 0..1 Coding "Hepatitis C diagnosis" "Client's hepatitis C diagnosis"
   * ^code[+] = HIVConcepts#HIV.G.DE51
 * hepatitisCDiagnosis from HIV.G.DE51
-* syphilisTestRequired 1..1 boolean "Syphilis test required" "Syphilis test is required"
+* syphilisTestRequired 0..1 boolean "Syphilis test required" "Required when documenting syphilis testing"
   * ^code[+] = HIVConcepts#HIV.G.DE54
 * syphilisTestType 0..* Coding "Syphilis test type" "Type of diagnostic test used for syphilis (treponema pallidum)"
   * ^code[+] = HIVConcepts#HIV.G.DE55
@@ -109,4 +120,11 @@ Description: "This tab describes the data that are collected during the workflow
 * otherTestsDate 0..1 date "Other test(s) date" "Input the date of other test(s) that were done."
   * ^code[+] = HIVConcepts#HIV.G.DE79
 * otherTestsResults 0..1 string "Other test(s) result(s)" "Input the result from the test(s)."
+  * ^code[+] = HIVConcepts#HIV.G.DE80
+* otherTest 0..* BackboneElement "Other test" "A named additional test with its own date and result"
+* otherTest.name 1..1 string "Test name" "Name of the test performed"
+  * ^code[+] = HIVConcepts#HIV.G.DE78
+* otherTest.date 0..1 date "Test date" "Documented date of the test"
+  * ^code[+] = HIVConcepts#HIV.G.DE79
+* otherTest.result 0..1 string "Test result" "Documented result of the test"
   * ^code[+] = HIVConcepts#HIV.G.DE80

@@ -34901,8 +34901,8 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.D12.DT, HIV.D17.DT</td>
-    <td></td>
-    <td></td>
+    <td>ART.5</td>
+    <td>Capture the current result in cells/mm³. The companion laboratory intake is linked from Care and Treatment Diagnostics.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -34919,7 +34919,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Capture a decimal percentage between 0 and 100.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -34936,7 +34936,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td>ART.5</td>
-    <td></td>
+    <td>Record the documented baseline result. The model maps to this row because the workbook includes the baseline at ART initiation and the existing WHO code specifies diagnosis. Keep the current and baseline measurements separate when they come from different tests.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -34953,24 +34953,24 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>The workbook data type is Date. The form records the baseline specimen collection date separately from the Care test timestamp.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
     <td>HIV.G.DE5</td>
-    <td>Late ART initiation</td>
-    <td>The client's first CD4 count from baseline CD4 test performed (such as at treatment initiation) was a count of <200 cells/mm3</td>
+    <td>Delayed HIV diagnosis</td>
+    <td>The client&#x27;s first CD4 count from baseline CD4 test performed (such as at treatment initiation) was a count of &lt;200 cells/mm3</td>
     <td>N/A</td>
     <td>Boolean</td>
     <td>True/False</td>
     <td>N/A</td>
-    <td>Baseline CD4 count <200 cells/mm3</td>
+    <td>Baseline CD4 count &lt;200 cells/mm3</td>
     <td>None</td>
     <td>C</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>The calculated flag uses a documented baseline CD4 below 200 cells/mm³. It stays blank without a result. The model maps to this row because the workbook label is Delayed HIV diagnosis and the existing WHO code is labelled Late ART initiation.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -34987,7 +34987,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when a current CD4 count or percentage is recorded.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -35004,13 +35004,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record whether the current viral load test was conducted. A report may still be pending after the test was performed.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
     <td>HIV.G.DE8</td>
     <td>Date of viral load sample collection</td>
-    <td>Date and time when the sample was collected to test the client's HIV viral load</td>
+    <td>Date and time when the sample was collected to test the client&#x27;s HIV viral load</td>
     <td>N/A</td>
     <td>DateTime</td>
     <td>N/A</td>
@@ -35020,14 +35020,14 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.S.2</td>
-    <td>ART.3, ART.8, DSD.5, VER.1, VER.2</td>
-    <td></td>
+    <td>ART.3, ART.6, ART.7, ART.8, DSD.5, VER.1</td>
+    <td>Record the current specimen collection timestamp. Care and Treatment displays the latest verified result and its paired timestamp.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
     <td>HIV.G.DE9</td>
     <td>Date of first viral load sample collection</td>
-    <td>Date and time when the sample was collected to test the client's HIV viral load for the first time</td>
+    <td>Date and time when the sample was collected to test the client&#x27;s HIV viral load for the first time</td>
     <td>N/A</td>
     <td>DateTime</td>
     <td>N/A</td>
@@ -35038,7 +35038,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the first specimen collection independently from the current specimen. When comparable, it must be on or before the current collection.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -35055,7 +35055,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>The dispatch date must be on or after collection when both dates are known.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -35072,7 +35072,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Enter the documented numeric result of the initial test in copies/mL.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -35089,7 +35089,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.D17.DT, HIV.S.2</td>
     <td>ART.3, ART.8, DSD.5, VER.1</td>
-    <td></td>
+    <td>Enter the documented numeric result in copies/mL. Qualitative or below-limit HIV results require separate reporting and remain blank in this numeric field.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -35106,7 +35106,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when the test is recorded as conducted or when a current collection date or result is recorded. The exchange list also retains the legacy dried plasma spot code.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -35133,23 +35133,6 @@ HIV.A5 Create new client record</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Dried blood spot specimen</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.D20 Diagnostics</td>
-    <td>HIV.G.DE16</td>
-    <td>Dried plasma spot from a plasma separation card</td>
-    <td>Dried plasma spot from a plasma separation card for viral load test</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Dried plasma spot from a plasma separation card</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -35189,9 +35172,9 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
-    <td>HIV.S.1</td>
+    <td>HIV.S.1, HIV.B7.DT</td>
     <td>HEP.3A, HEP.3B, HEP.3C, HEP.5</td>
-    <td></td>
+    <td>Record the reported HBsAg result independently of the documented hepatitis B diagnosis.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -35259,7 +35242,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Select all applicable documented reasons if the HBsAg test was recorded as not performed.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -35358,16 +35341,16 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Reason Hepatitis B test not conducted"='Other'</td>
+    <td>Required if &quot;Reason Hepatitis B test not conducted&quot;=&#x27;Other&#x27;</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when Other is selected.</td>
   </tr>
   <tr>
-    <td>HIV.D20 Diagnostics</td>
+    <td>HIV.D20. Diagnostics</td>
     <td>HIV.G.DE29</td>
     <td>Hepatitis B diagnosis</td>
-    <td>Client's hepatitis B diagnosis</td>
+    <td>Client&#x27;s hepatitis B diagnosis</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -35381,7 +35364,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.D20 Diagnostics</td>
+    <td>HIV.D20. Diagnostics</td>
     <td>HIV.G.DE30</td>
     <td>Hepatitis B positive</td>
     <td>Client is positive for Hepatitis B</td>
@@ -35398,7 +35381,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.D20 Diagnostics</td>
+    <td>HIV.D20. Diagnostics</td>
     <td>HIV.G.DE31</td>
     <td>Hepatitis B negative</td>
     <td>Client is negative for Hepatitis B</td>
@@ -35413,6 +35396,40 @@ HIV.A5 Create new client record</td>
     <td></td>
     <td></td>
     <td></td>
+  </tr>
+  <tr>
+    <td>HIV.D20. Diagnostics</td>
+    <td>HIV.G.ET.DE1</td>
+    <td>HBV viral load test</td>
+    <td>Whether HBV viral load test was conducted or not</td>
+    <td>N/A</td>
+    <td>Boolean</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>A separate HBV DNA test status from HBsAg testing.</td>
+  </tr>
+  <tr>
+    <td>HIV.D20. Diagnostics</td>
+    <td>HIV.G.ET.DE2</td>
+    <td>HBV viral load result</td>
+    <td>HBV viral load result</td>
+    <td>N/A</td>
+    <td>Quantity</td>
+    <td></td>
+    <td>Integer quantity</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Record the documented integer quantity with its unit. The preview accepts IU/mL and copies/mL as reported and preserves a numeric comparator.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -35446,7 +35463,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when documenting the hepatitis C testing section. An order and a performed test are recorded independently.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -35463,7 +35480,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when documenting hepatitis C testing. A pending result stays blank.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -35480,7 +35497,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Select all documented reasons. A reason is required when a test was ordered and was recorded as not performed.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -35579,10 +35596,10 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Reason Hepatitis C test not conducted"='Other'</td>
+    <td>Required if &quot;Reason Hepatitis C test not conducted&quot;=&#x27;Other&#x27;</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when Other is selected.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -35599,7 +35616,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td>HEP.2A, HEP.2B, HEP.4A, HEP.4B, HEP.6</td>
-    <td></td>
+    <td>Required when hepatitis C testing was recorded as performed.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -35684,7 +35701,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td>HEP.7</td>
-    <td></td>
+    <td>Both the name and definition describe a test date. The form uses a date despite the worksheet Quantity and Integer cells.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -35701,7 +35718,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td>HEP.7</td>
-    <td></td>
+    <td>A qualitative result distinct from the quantitative viral load and the recorded diagnosis.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -35739,9 +35756,26 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
+    <td>HIV.G.ET.DE3</td>
+    <td>HCV viral load result</td>
+    <td>HCV viral load result (quantitative)</td>
+    <td>N/A</td>
+    <td>Quantity</td>
+    <td></td>
+    <td>Decimal quantity</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Capture the documented decimal value in IU/mL and preserve a comparator when reported. Confirm handling of log results and other national reporting units in QA Preview.</td>
+  </tr>
+  <tr>
+    <td>HIV.D20. Diagnostics</td>
     <td>HIV.G.DE51</td>
     <td>Hepatitis C diagnosis</td>
-    <td>Client's hepatitis C diagnosis</td>
+    <td>Client&#x27;s hepatitis C diagnosis</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -35755,7 +35789,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.D20 Diagnostics</td>
+    <td>HIV.D20. Diagnostics</td>
     <td>HIV.G.DE52</td>
     <td>Hepatitis C positive</td>
     <td>Client is positive for hepatitis C</td>
@@ -35772,7 +35806,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.D20 Diagnostics</td>
+    <td>HIV.D20. Diagnostics</td>
     <td>HIV.G.DE53</td>
     <td>Hepatitis C negative</td>
     <td>Client is negative for hepatitis C</td>
@@ -35803,7 +35837,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when documenting syphilis testing for the visit.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -35817,16 +35851,16 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "STI tested for"='Syphilis (treponema pallidum)'</td>
+    <td>Required if &quot;STI tested for&quot;=&#x27;Syphilis (treponema pallidum)&#x27;</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record all test types used when a syphilis test was performed.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
     <td>HIV.G.DE56</td>
     <td>Treponemal</td>
-    <td>Treponemal test used </td>
+    <td>Treponemal test used</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Treponemal</td>
@@ -35919,10 +35953,10 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Syphilis test type"='Other'</td>
+    <td>Required if &quot;Syphilis test type&quot;=&#x27;Other&#x27;</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when Other test type is selected.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -35939,7 +35973,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Select all documented reasons. A reason is required when the test was required and was recorded as not performed.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -36038,10 +36072,10 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Reason syphilis test not done"='Other'</td>
+    <td>Required if &quot;Reason syphilis test not done&quot;=&#x27;Other&#x27;</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when Other is selected.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -36058,7 +36092,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td>STI.1A, STI.1B, STI.1C1, STI.1C2, STI.2A, STI.2B, STI.2C1, STI.2C2, STI.3A, STI.3B, STI.3C1, STI.3C2</td>
-    <td></td>
+    <td>Required when the test was recorded as performed.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -36075,7 +36109,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.E4.DT, HIV.S.1</td>
     <td>STI.2A, STI.2B, STI.2C1, STI.2C2, STI.3A, STI.3B, STI.3C1, STI.3C2</td>
-    <td></td>
+    <td>Record the reported result. Pending tests can remain without a result.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
@@ -36129,10 +36163,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.D20 Diagnostics</td>
+    <td>HIV.D20. Diagnostics</td>
     <td>HIV.G.DE74</td>
     <td>Syphilis diagnosis</td>
-    <td>Client's syphilis diagnosis</td>
+    <td>Client&#x27;s syphilis diagnosis</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -36143,10 +36177,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the documented diagnosis separately from the test result.</td>
   </tr>
   <tr>
-    <td>HIV.D20 Diagnostics</td>
+    <td>HIV.D20. Diagnostics</td>
     <td>HIV.G.DE75</td>
     <td>Syphilis positive</td>
     <td>Client is positive for syphilis</td>
@@ -36163,7 +36197,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.D20 Diagnostics</td>
+    <td>HIV.D20. Diagnostics</td>
     <td>HIV.G.DE76</td>
     <td>Syphilis negative</td>
     <td>Client is negative for syphilis</td>
@@ -36183,7 +36217,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.D20 Diagnostics</td>
     <td>HIV.G.DE77</td>
     <td>Other tests conducted</td>
-    <td>If the health worker performed other tests on the woman that are not explicitly listed in the application, select "yes" here and fill in the details below.</td>
+    <td>If the health worker performed other tests on the woman that are not explicitly listed in the application, select &quot;yes&quot; here and fill in the details below.</td>
     <td>N/A</td>
     <td>Boolean</td>
     <td>True/False</td>
@@ -36211,7 +36245,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Use one named entry per additional test. Its date and result stay with that test.</td>
   </tr>
   <tr>
     <td>HIV.D20 Diagnostics</td>
