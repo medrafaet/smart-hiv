@@ -9,8 +9,8 @@ Description: "Value set of the number of the assay (test kit) in the HIV testing
 * ^name = "HIVBDE88"
 * ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE88"
 
-* HIVConcepts#HIV.E.DE195 "Assay 0"
-* HIVConcepts#HIV.E.DE196 "Assay 1"
-* HIVConcepts#HIV.E.DE197 "Assay 2"
-* HIVConcepts#HIV.E.DE198 "Assay 3"
-* HIVConcepts#HIV.E.DE199 "Assay 1 repeated"
+* HIVConcepts#HIV.B.DE89 "Assay 0"
+* HIVConcepts#HIV.B.DE90 "Assay 1"
+* HIVConcepts#HIV.B.DE91 "Assay 2"
+* HIVConcepts#HIV.B.DE92 "Assay 3"
+* HIVConcepts#HIV.B.DE93 "Assay 1 repeated"

@@ -7,6 +7,7 @@ Usage: #definition
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
 * subjectType = #Patient
 * language = #en
+* version = "2026-10"
 * status = #draft
 * experimental = true
 
@@ -23,9 +24,12 @@ Usage: #definition
   * linkId = "HIV.B.DE198"
   * type = #date
   * text = "VMMC procedure date"
-  * required = false
+  * required = true
   * repeats = false
   * readOnly = false
+  * enableWhen.question = "HIV.B.DE197"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
 * item[+]
   * id = "HIV.B.DE199"
   * linkId = "HIV.B.DE199"
@@ -39,9 +43,12 @@ Usage: #definition
   * linkId = "HIV.B.DE200"
   * type = #boolean
   * text = "Serious adverse event"
-  * required = false
+  * required = true
   * repeats = false
   * readOnly = false
+  * enableWhen.question = "HIV.B.DE199"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
 * item[+]
   * id = "HIV.B.DE201"
   * linkId = "HIV.B.DE201"
@@ -50,7 +57,10 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
-  * answerValueSet = "#HIV.B.DE201"
+  * answerValueSet = Canonical(HIV.B.DE201)
+  * enableWhen.question = "HIV.B.DE199"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
 * item[+]
   * id = "HIV.B.DE204"
   * linkId = "HIV.B.DE204"
@@ -59,21 +69,30 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
-  * answerValueSet = "#HIV.B.DE204"
+  * answerValueSet = Canonical(HIV.B.DE204)
+  * enableWhen.question = "HIV.B.DE199"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
 * item[+]
   * id = "HIV.B.DE207"
   * linkId = "HIV.B.DE207"
   * type = #choice
   * text = "Type of adverse VMMC event"
-  * required = false
-  * repeats = false
+  * required = true
+  * repeats = true
   * readOnly = false
-  * answerValueSet = "#HIV.B.DE207"
+  * answerValueSet = Canonical(HIV.B.DE207)
+  * enableWhen.question = "HIV.B.DE199"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
 * item[+]
   * id = "HIV.B.DE223"
   * linkId = "HIV.B.DE223"
   * type = #string
   * text = "Other (specify)"
-  * required = false
+  * required = true
   * repeats = false
   * readOnly = false
+  * enableWhen.question = "HIV.B.DE207"
+  * enableWhen.operator = #=
+  * enableWhen.answerCoding = HIVConcepts#HIV.B.DE222

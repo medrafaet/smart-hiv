@@ -7,8 +7,30 @@ Usage: #definition
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
 * subjectType = #Patient
 * language = #en
+* version = "2026-10"
 * status = #draft
 * experimental = true
+* extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext].extension[name].valueCoding.code = #htsHistory
+* extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext].extension[type].valueCode = #Parameters
+* extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext].extension[description].valueString = "Application-supplied visit history. Use ageAtVisit (integer years) and gender (registration code) for age-based population options, hivStatus (Coding) for confirmed HIV status, firstPositiveTestDate (date) for the earliest confirmed positive test, and diagnosingFacility (repeated MFR Organization resources) for eligible diagnosing facilities. Supply empty Parameters when no history is available."
+* extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.name = "hasPositiveHivHistory"
+* extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.language = #text/fhirpath
+* extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.expression = "%htsHistory.parameter.where(name = 'hivStatus').value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.B.DE116').exists()"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[key].valueId = "hts-gestational-age"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[severity].valueCode = #error
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[human].valueString = "Enter gestational age between 4 and 40 weeks, or 28 and 280 days."
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.language = #text/fhirpath
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.B.DE30').answer.value.all(system = 'http://unitsofmeasure.org' and value.exists() and comparator.empty() and ((code = 'wk' and value >= 4 and value <= 40) or (code = 'd' and value >= 28 and value <= 280)))"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[key].valueId = "hts-key-population"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[severity].valueCode = #error
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[human].valueString = "A key population type cannot be selected when key population membership is recorded as No."
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[expression].valueExpression.language = #text/fhirpath
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.B.DE50').answer.value.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.B.DE51' | 'HIV.B.DE54' | 'HIV.B.DE55')).exists() implies %resource.item.where(linkId = 'HIV.B.DE49').answer.value.where($this = false).empty()"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][2].extension[key].valueId = "hts-diagnosis-notification-date"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][2].extension[severity].valueCode = #error
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][2].extension[human].valueString = "The date informed of an HIV-positive diagnosis must be today or earlier."
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][2].extension[expression].valueExpression.language = #text/fhirpath
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][2].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.B.DE65').answer.value.all($this <= today())"
 
 * item[+]
   * id = "HIV.B.DE29"
@@ -21,11 +43,16 @@ Usage: #definition
 * item[+]
   * id = "HIV.B.DE30"
   * linkId = "HIV.B.DE30"
-  * type = #integer
+  * type = #quantity
   * text = "Gestational age"
   * required = false
   * repeats = false
   * readOnly = false
+  * enableWhen.question = "HIV.B.DE29"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption].valueCoding = http://unitsofmeasure.org#wk "weeks"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption][1].valueCoding = http://unitsofmeasure.org#d "days"
 * item[+]
   * id = "HIV.B.DE31"
   * linkId = "HIV.B.DE31"
@@ -34,6 +61,9 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
+  * enableWhen.question = "HIV.B.DE29"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
 * item[+]
   * id = "HIV.B.DE32"
   * linkId = "HIV.B.DE32"
@@ -50,16 +80,16 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
-  * answerValueSet = "#HIV.B.DE33"
+  * answerValueSet = Canonical(HIV.B.DE33)
 * item[+]
   * id = "HIV.B.DE37"
   * linkId = "HIV.B.DE37"
   * type = #choice
-  * text = "Partner is from a key population"
+  * text = "Partner is from a population at high risk for HIV"
   * required = false
-  * repeats = false
+  * repeats = true
   * readOnly = false
-  * answerValueSet = "#HIV.B.DE37"
+  * answerValueSet = Canonical(HIV.B.DE37)
 * item[+]
   * id = "HIV.B.DE43"
   * linkId = "HIV.B.DE43"
@@ -76,7 +106,10 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
-  * answerValueSet = "#HIV.B.DE44"
+  * answerValueSet = Canonical(HIV.B.DE44)
+  * enableWhen.question = "HIV.B.DE43"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
 * item[+]
   * id = "HIV.B.DE48"
   * linkId = "HIV.B.DE48"
@@ -85,6 +118,9 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
+  * enableWhen.question = "HIV.B.DE43"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
 * item[+]
   * id = "HIV.B.DE49"
   * linkId = "HIV.B.DE49"
@@ -97,35 +133,16 @@ Usage: #definition
   * id = "HIV.B.DE50"
   * linkId = "HIV.B.DE50"
   * type = #choice
-  * text = "Key population member type"
+  * text = "Key and priority population member type"
   * required = false
-  * repeats = false
+  * repeats = true
   * readOnly = false
-  * answerValueSet = "#HIV.B.DE50"
-* item[+]
-  * id = "HIV.B.DE56"
-  * linkId = "HIV.B.DE56"
-  * type = #boolean
-  * text = "Adolescent girl"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.B.DE57"
-  * linkId = "HIV.B.DE57"
-  * type = #boolean
-  * text = "Young woman"
-  * required = false
-  * repeats = false
-  * readOnly = false
-* item[+]
-  * id = "HIV.B.DE58"
-  * linkId = "HIV.B.DE58"
-  * type = #boolean
-  * text = "Orphan or vulnerable child"
-  * required = false
-  * repeats = false
-  * readOnly = false
+  * answerValueSet = Canonical(HIV.B.DE50)
+  * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.name = "ageAtVisit"
+  * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.language = #text/fhirpath
+  * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.expression = "%htsHistory.parameter.where(name = 'ageAtVisit').value.ofType(integer)"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression].valueExpression.language = #text/fhirpath
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression].valueExpression.expression = "iif(%htsHistory.parameter.where(name = 'gender').value.ofType(code) = 'female', iif(%ageAtVisit >= 10 and %ageAtVisit < 20, 'HIV.B.DE56', iif(%ageAtVisit >= 20 and %ageAtVisit < 25, 'HIV.B.DE57', {})), {})"
 * item[+]
   * id = "HIV.B.DE59"
   * linkId = "HIV.B.DE59"
@@ -142,15 +159,18 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
+  * enableWhen.question = "HIV.B.DE59"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
 * item[+]
   * id = "HIV.B.DE61"
   * linkId = "HIV.B.DE61"
   * type = #choice
   * text = "HIV exposure type"
   * required = false
-  * repeats = false
+  * repeats = true
   * readOnly = false
-  * answerValueSet = "#HIV.B.DE61"
+  * answerValueSet = Canonical(HIV.B.DE61)
 * item[+]
   * id = "HIV.B.DE65"
   * linkId = "HIV.B.DE65"
@@ -159,15 +179,22 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.language = #text/fhirpath
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.expression = "%hasPositiveHivHistory"
 * item[+]
   * id = "HIV.B.DE66"
   * linkId = "HIV.B.DE66"
-  * type = #choice
+  * type = #reference
   * text = "HIV diagnosing facility"
   * required = true
   * repeats = false
   * readOnly = false
-  * answerValueSet = "#HIV.B.DE66"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.language = #text/fhirpath
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.expression = "%hasPositiveHivHistory"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource].valueCode = #Organization
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile].valueCanonical = Canonical(HivHtsDiagnosingFacilityOrganization)
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression].valueExpression.language = #text/fhirpath
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression].valueExpression.expression = "%htsHistory.parameter.where(name = 'diagnosingFacility').resource.ofType(Organization)"
 * item[+]
   * id = "HIV.B.DE67"
   * linkId = "HIV.B.DE67"
@@ -175,7 +202,11 @@ Usage: #definition
   * text = "Date of first positive test indicative of HIV diagnosis"
   * required = false
   * repeats = false
-  * readOnly = false
+  * readOnly = true
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.language = #text/fhirpath
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.expression = "%hasPositiveHivHistory"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression].valueExpression.language = #text/fhirpath
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression].valueExpression.expression = "iif(%hasPositiveHivHistory, %htsHistory.parameter.where(name = 'firstPositiveTestDate').value.ofType(date), {})"
 * item[+]
   * id = "HIV.B.DE136"
   * linkId = "HIV.B.DE136"
@@ -184,7 +215,7 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
-  * answerValueSet = "#HIV.B.DE136"
+  * answerValueSet = Canonical(HIV.B.DE136)
 * item[+]
   * id = "HIV.B.DE140"
   * linkId = "HIV.B.DE140"
@@ -201,6 +232,9 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
+  * enableWhen.question = "HIV.B.DE140"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
 * item[+]
   * id = "HIV.B.DE225"
   * linkId = "HIV.B.DE225"
@@ -225,4 +259,4 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
-  * answerValueSet = "#HIV.H.DE34"
+  * answerValueSet = Canonical(HIV.H.DE34)

@@ -1036,7 +1036,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.B1 Determine reason for visit</td>
     <td>HIV.B.DE1</td>
     <td>Reason for visit</td>
-    <td>Reason for HIV testing services visit</td>
+    <td>Reason for testing</td>
     <td>Select all that apply</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -1053,7 +1053,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.B1 Determine reason for visit</td>
     <td>HIV.B.DE2</td>
     <td>First-time HIV test</td>
-    <td>First encounter for screening for human immunodeficiency virus</td>
+    <td>Initial testing</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>First-time HIV test</td>
@@ -1070,7 +1070,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.B1 Determine reason for visit</td>
     <td>HIV.B.DE3</td>
     <td>Retesting for HIV</td>
-    <td>Retesting for human immunodeficiency virus</td>
+    <td>Retesting for ongoing risk</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Retesting for HIV</td>
@@ -1085,18 +1085,52 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.B1 Determine reason for visit</td>
-    <td>HIV.B.DE4</td>
-    <td>HIV testing services visit</td>
-    <td>Client attending facility for HIV testing services visit</td>
+    <td>HIV.B.ET.DE1</td>
+    <td>Verification when discordant results happen</td>
+    <td>Repeat testing of the same specimen on the same day when results become discordant</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>HIV testing services visit</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>O</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B1 Determine reason for visit</td>
+    <td>HIV.B.ET.DE2</td>
+    <td>Retesting for confirmation before ART initiation</td>
+    <td>Retesting for of HIV positive individuals to confirm the diagnosis before ART initiation</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Retesting for HIV</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.D12.DT</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B1 Determine reason for visit</td>
+    <td>HIV.B.ET.DE3</td>
+    <td>Confirmation for reactive HIVST result</td>
+    <td>Confirmation test to declare HIV positive test result after posiitive HIVST result</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>O</td>
+    <td></td>
+    <td></td>
     <td></td>
     <td></td>
   </tr>
@@ -1124,7 +1158,7 @@ HIV.A5 Create new client record</td>
     <td>The client is a contact or partner of a person diagnosed with HIV (an index case)</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Partner or contact of an index case</td>
+    <td>Partner or contact of index case</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -1163,7 +1197,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>None</td>
+    <td>Required when a partner-service referral is recorded.</td>
     <td></td>
     <td>HTS.5</td>
     <td></td>
@@ -1171,7 +1205,7 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.B1 Determine reason for visit</td>
     <td>HIV.B.DE9</td>
-    <td>Biological child</td>
+    <td>Biological children</td>
     <td>Client is the biological child of the person that referred the client for family services</td>
     <td>Input Option</td>
     <td>Codes</td>
@@ -1187,8 +1221,42 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.B1 Determine reason for visit</td>
+    <td>HIV.B.ET.DE4</td>
+    <td>Siblings</td>
+    <td>Siblings of HIV positive person that referred the client for family service</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>O</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B1 Determine reason for visit</td>
+    <td>HIV.B.ET.DE5</td>
+    <td>Parent</td>
+    <td>parent of an index child who is brought to testing because of a positive test result</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>O</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B1 Determine reason for visit</td>
     <td>HIV.B.DE10</td>
-    <td>Drug-injecting partner</td>
+    <td>Drug- injecting partner</td>
     <td>Client is a drug-injecting partner of the person that referred the client for partner services</td>
     <td>Input Option</td>
     <td>Codes</td>
@@ -1265,7 +1333,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
+    <td>Ask when suspected exposure is reported. Supply the date and time when known.</td>
     <td>HIV.C23.DT</td>
     <td></td>
     <td></td>
@@ -1284,14 +1352,14 @@ HIV.A5 Create new client record</td>
     <td>R</td>
     <td>None</td>
     <td></td>
-    <td>HTS.3, HTS.6</td>
-    <td>Community-based HTS can be delivered in many ways/settings, including HTS at places of worship, workplaces and educational establishments.  See WHO's 2022 'Consolidated guidelines on person-centred HIV strategic information' (p65).</td>
+    <td>HTS.6</td>
+    <td></td>
   </tr>
   <tr>
     <td>HIV.B1 Determine reason for visit</td>
     <td>HIV.B.DE16</td>
     <td>Community-level testing</td>
-    <td>Testing is happening in the community, which includes mobile testing</td>
+    <td>Testing is happening in the community, through out reach which includes mobile testing</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Community-level testing</td>
@@ -1301,14 +1369,14 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>HTS.3, HTS.6</td>
+    <td>HTS.6</td>
     <td></td>
   </tr>
   <tr>
     <td>HIV.B1 Determine reason for visit</td>
     <td>HIV.B.DE17</td>
     <td>Facility-level testing</td>
-    <td>Where the testing is happening – at a facility</td>
+    <td>Where the testing is happening – at a health facility</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Facility-level testing</td>
@@ -1318,7 +1386,7 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>HTS.3, HTS.6</td>
+    <td>HTS.6</td>
     <td></td>
   </tr>
   <tr>
@@ -1333,15 +1401,15 @@ HIV.A5 Create new client record</td>
     <td>Default to community/facility type</td>
     <td>None</td>
     <td>C</td>
-    <td>None</td>
+    <td>Required for community-level testing.</td>
     <td></td>
     <td></td>
-    <td>Community-based HTS can be delivered in many ways/settings, including HTS at places of worship, workplaces and educational establishments.  See WHO's 2022 'Consolidated guidelines on person-centred HIV strategic information' (p65).</td>
+    <td></td>
   </tr>
   <tr>
     <td>HIV.B1 Determine reason for visit</td>
     <td>HIV.B.DE19</td>
-    <td>Mobile testing (e.g. through vans or temporary testing facilities)</td>
+    <td>Targetted Mobile testing (e.g. through vans or temporary testing facilities)</td>
     <td>The client tested through mobile testing, such as through vans or temporary testing facilities</td>
     <td>Input Option</td>
     <td>Codes</td>
@@ -1358,7 +1426,7 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.B1 Determine reason for visit</td>
     <td>HIV.B.DE20</td>
-    <td>Voluntary counselling and testing centres (not within a health facility setting)</td>
+    <td>Voluntary counselling and testing centres (not in a health facility)</td>
     <td>The client tested at a voluntary counselling and testing centre (not in a health facility setting)</td>
     <td>Input Option</td>
     <td>Codes</td>
@@ -1401,19 +1469,19 @@ HIV.A5 Create new client record</td>
     <td>Default to community/facility type</td>
     <td>None</td>
     <td>C</td>
-    <td>None</td>
+    <td>Required for facility-level testing.</td>
     <td></td>
     <td></td>
     <td></td>
   </tr>
   <tr>
     <td>HIV.B1 Determine reason for visit</td>
-    <td>HIV.B.DE23</td>
-    <td>Provider-initiated tested in a clinic or emergency facility</td>
-    <td>The client tested though provider-initiated HIV testing & counselling, which could be at an emergency facility</td>
+    <td>HIV.B.ET.DE23</td>
+    <td>Outpatient department (OPD)</td>
+    <td>The client received HIV testing services at an outpatient department.</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Provider-initiated tested in a clinic or emergency facility</td>
+    <td>Outpatient department (OPD)</td>
     <td>N/A</td>
     <td>Default to community/facility type</td>
     <td>None</td>
@@ -1476,6 +1544,40 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.B1 Determine reason for visit</td>
+    <td>HIV.B.ET.DE24</td>
+    <td>Inpatient department (IPD)</td>
+    <td>The client received HIV testing services at an inpatient department.</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Inpatient department (IPD)</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>O</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B1 Determine reason for visit</td>
+    <td>HIV.B.ET.DE25</td>
+    <td>Emergency department</td>
+    <td>The client received HIV testing services at an emergency department.</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Emergency department</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>O</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B1 Determine reason for visit</td>
     <td>HIV.B.DE27</td>
     <td>Other facility-level testing</td>
     <td>The client tested at another type of facility</td>
@@ -1509,6 +1611,108 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
+    <td>HIV.ET.B1 Determine testing modality</td>
+    <td>HIV.B.ET.DE26</td>
+    <td>HIV Testing Modality</td>
+    <td>The modality(approach ) for HIV testing service</td>
+    <td>Select one</td>
+    <td>Coding</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>R</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.ET.B1 Determine testing modality</td>
+    <td>HIV.B.ET.DE27</td>
+    <td>Index Case Testing (ICT)</td>
+    <td>HTS Service provided through Index cases( populations linked to known positive individuals)</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>ICT</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>O</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.ET.B1 Determine testing modality</td>
+    <td>HIV.B.ET.DE28</td>
+    <td>Voluntary counselling and Testing (VCT)</td>
+    <td>HTS Service provided through VCT Modality</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>VCT</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>O</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.ET.B1 Determine testing modality</td>
+    <td>HIV.B.ET.DE29</td>
+    <td>Social Network Strategy (SNS)</td>
+    <td>Service provided to reach individuals who do not routinely access health facilities but are connected through high-risk networks</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>SNS</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>O</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.ET.B1 Determine testing modality</td>
+    <td>HIV.B.ET.DE30</td>
+    <td>Provider Initiated Testing and Counselling( PITC )</td>
+    <td>HTS Service provided through PITC Modality</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>PITC</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>O</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.ET.B1 Determine testing modality</td>
+    <td>HIV.B.ET.DE31</td>
+    <td>HIV Self-Testing (HIVST)</td>
+    <td>HIV testing provided through HIV self- testing</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>HIVST</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>O</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.B.DE29</td>
     <td>Currently pregnant</td>
@@ -1522,7 +1726,7 @@ HIV.A5 Create new client record</td>
     <td>C</td>
     <td>None</td>
     <td>HIV.B9.DT, HIV.S.1, HIV.S.4</td>
-    <td>ART.9, HEP.1C, HEP.3C, TBH.3, TBH.4, VER.7</td>
+    <td>ART.9, TBH.3, TBH.4, VER.7</td>
     <td></td>
   </tr>
   <tr>
@@ -1535,12 +1739,12 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>Duration</td>
     <td>N/A</td>
-    <td>4 Weeks ≤ "Gestational age" ≤ 40 Weeks</td>
+    <td>4 Weeks ≤ &quot;Gestational age&quot; ≤ 40 Weeks</td>
     <td>C</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>For specific methods for calculation and for the multiple ICD-11 codes used for this element, see the Antenatal Care DAK.</td>
+    <td>Capture in UCUM weeks or days when currently pregnant.</td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
@@ -1580,7 +1784,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.B.DE33</td>
     <td>Partner HIV status (reported)</td>
-    <td>The HIV status of the client's partner.</td>
+    <td>The HIV status of the client&#x27;s partner.</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -1597,7 +1801,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.B.DE34</td>
     <td>HIV-positive</td>
-    <td>Client's partner is HIV-positive</td>
+    <td>Client&#x27;s partner is HIV-positive</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>HIV-positive</td>
@@ -1614,7 +1818,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.B.DE35</td>
     <td>HIV-negative</td>
-    <td>Client's partner is HIV-negative</td>
+    <td>Client&#x27;s partner is HIV-negative</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>HIV-negative</td>
@@ -1631,10 +1835,10 @@ HIV.A5 Create new client record</td>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.B.DE36</td>
     <td>Unknown</td>
-    <td>Don't know HIV status - client does not know partner's HIV status</td>
+    <td>Don&#x27;t know HIV status - client does not know partner&#x27;s HIV status</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Unknown</td>
+    <td>Don&#x27;t know HIV status</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -1647,8 +1851,8 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.B.DE37</td>
-    <td>Partner is from a key population*</td>
-    <td>Client's partner is a member of a key population, that has an increased risk of HIV</td>
+    <td>Partner is from High risk for HIV population</td>
+    <td>Client&#x27;s partner is a member of a high risk population, that has an increased risk of HIV based on Ethiopian NSP list of high risk populations</td>
     <td>Select all that apply</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -1659,50 +1863,16 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>* Only collect where feasible, and data security and confidentiality can be ensured</td>
+    <td></td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.B.DE38</td>
     <td>Sex worker</td>
-    <td>Client's partner is a sex worker</td>
+    <td>Client&#x27;s partner is a sex worker</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Sex worker</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.B6 Capture or update client history</td>
-    <td>HIV.B.DE39</td>
-    <td>Men who have sex with men</td>
-    <td>Client's partner is a man who has sex with men</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Men who have sex with men</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.B6 Capture or update client history</td>
-    <td>HIV.B.DE40</td>
-    <td>Transgender people</td>
-    <td>Client's partner is transgender</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Transgender people</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -1715,11 +1885,11 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.B.DE41</td>
-    <td>People who inject drugs</td>
-    <td>Client's partner is a person who injects drugs</td>
+    <td>Person who injects drugs</td>
+    <td>Client&#x27;s partner is a person who injects drugs</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>People who inject drugs</td>
+    <td>Person who injects drugs</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -1732,8 +1902,8 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.B.DE42</td>
-    <td>People living in prisons and other closed settings</td>
-    <td>Client's partner lives in a prison or other closed setting</td>
+    <td>People living in prisons and other closed setting</td>
+    <td>Client&#x27;s partner lives in a prison or other closed setting</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>People living in prisons and other closed settings</td>
@@ -1749,7 +1919,7 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.B.DE43</td>
-    <td>Has used an HIV self-test before (reported)</td>
+    <td>Has used an HIV self-test before – reported</td>
     <td>The client reported having used an HIV self-test before</td>
     <td>N/A</td>
     <td>Boolean</td>
@@ -1816,23 +1986,6 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
-    <td>HIV.B.DE47</td>
-    <td>Invalid</td>
-    <td>The HIV self-test was invalid</td>
-    <td>N/A</td>
-    <td>Codes</td>
-    <td>Invalid</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.B6 Capture or update client history</td>
     <td>HIV.B.DE48</td>
     <td>Date of HIV self-test</td>
     <td>Date when the HIV self-test was conducted</td>
@@ -1851,25 +2004,25 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.B.DE49</td>
-    <td>Key population member*</td>
+    <td>Key population members</td>
     <td>Client is a member of a key population that has an increased risk of HIV</td>
     <td>N/A</td>
     <td>Boolean</td>
     <td>True/False</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>If "Key populations" is not null, ≠ False</td>
+    <td>If &quot;Key populations&quot; is not null, ≠ False</td>
     <td>C</td>
     <td>None</td>
     <td>HIV.B9.DT, HIV.C7.DT, HIV.S.1, HIV.S.4</td>
-    <td></td>
-    <td>* Only collect where feasible, and data security and confidentiality can be ensured</td>
+    <td>PRV.8, PRV.9</td>
+    <td>Priority population membership alone does not imply key population membership.</td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.B.DE50</td>
-    <td>Key population member type*</td>
-    <td>The type of key population that the client is included in</td>
+    <td>Key and priority population member type*</td>
+    <td>The type of key and priority population that the client is included in</td>
     <td>Select all that apply</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -1879,8 +2032,8 @@ HIV.A5 Create new client record</td>
     <td>C</td>
     <td>None</td>
     <td>HIV.S.1</td>
-    <td>ART.1, ART.10, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.5, HTS.6, HTS.7, HTS.8, INC.1, PRV.11, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.8, PRV.9, SDC.1, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.3, TBH.4</td>
-    <td>* Only collect where feasible, and data security and confidentiality can be ensured</td>
+    <td>ART.1, ART.2, ART.3, ART.4, ART.8, ART.9, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.5, HTS.6, PRV.11, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, SDC.1, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.3, TBH.4, PRV.2, PRV.3</td>
+    <td></td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
@@ -1896,41 +2049,7 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.S.1</td>
-    <td>ART.1, ART.10, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.5, HTS.6, HTS.7, HTS.8, INC.1, PRV.11, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.8, PRV.9, SDC.1, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.3, TBH.4</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.B6 Capture or update client history</td>
-    <td>HIV.B.DE52</td>
-    <td>Men who have sex with men</td>
-    <td>Client is a man who has sex with men</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Men who have sex with men</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.S.1</td>
-    <td>ART.1, ART.10, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.5, HTS.6, HTS.7, HTS.8, INC.1, PRV.11, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.8, PRV.9, SDC.1, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.3, TBH.4</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.B6 Capture or update client history</td>
-    <td>HIV.B.DE53</td>
-    <td>Transgender people</td>
-    <td>Client is transgender</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Transgender people</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.S.1</td>
-    <td>ART.1, ART.10, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.5, HTS.6, HTS.7, HTS.8, INC.1, PRV.11, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.8, PRV.9, SDC.1, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.3, TBH.4</td>
+    <td>ART.1, ART.2, ART.3, ART.4, ART.8, ART.9, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.5, HTS.6, PRV.11, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, SDC.1, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.3, TBH.4, PRV.2, PRV.3</td>
     <td></td>
   </tr>
   <tr>
@@ -1947,76 +2066,195 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.S.1</td>
-    <td>ART.1, ART.10, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.5, HTS.6, HTS.7, HTS.8, INC.1, PRV.11, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.8, PRV.9, SDC.1, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.3, TBH.4</td>
+    <td>ART.1, ART.2, ART.3, ART.4, ART.8, ART.9, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.5, HTS.6, PRV.11, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, SDC.1, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.3, TBH.4, PRV.2, PRV.3</td>
     <td></td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.B.DE55</td>
     <td>People living in prisons and other closed settings</td>
-    <td>Client lives in a prison or another closed setting</td>
+    <td>Client lives in a prison</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>People living in prisons and other closed settings</td>
+    <td>Prisoner</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.S.1</td>
-    <td>ART.1, ART.10, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.5, HTS.6, HTS.7, HTS.8, INC.1, PRV.11, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.8, PRV.9, SDC.1, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.3, TBH.4</td>
+    <td>ART.1, ART.2, ART.3, ART.4, ART.8, ART.9, DSD.1, DSD.2, DSD.3, DSD.4, DSD.5, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, HTS.2, HTS.3, HTS.4, HTS.5, HTS.6, PRV.11, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, SDC.1, STI.1A, STI.1B, STI.2A, STI.2B, STI.3A, STI.3B, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.3, TBH.4, PRV.2, PRV.3</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B6 Capture or update client history</td>
+    <td>HIV.B.ET.DE6</td>
+    <td>Client is widowed</td>
+    <td>Widowed are among the priority population targeted for HIV testing</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>widowed</td>
+    <td>N/A</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B6 Capture or update client history</td>
+    <td>HIV.B.ET.DE7</td>
+    <td>Client is divorced</td>
+    <td>The divorced are among the priority population groups targetted for HTS</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>divorced</td>
+    <td>N/A</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B6 Capture or update client history</td>
+    <td>HIV.B.ET.DE8</td>
+    <td>Long distance truck drivers</td>
+    <td>Long distance truck drivers are among the priority population groups targetted for HTS</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Long distance drivers</td>
+    <td>N/A</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B6 Capture or update client history</td>
+    <td>HIV.B.ET.DE9</td>
+    <td>workers in hot spot areas</td>
+    <td>Workers in hot spot areas are among the priority population groups targetted for HTS</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>hot spot area workers</td>
+    <td>N/A</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Code confirmation needed. Existing HIVConcepts already uses this ID for Daily labourers.</td>
+  </tr>
+  <tr>
+    <td>HIV.B6 Capture or update client history</td>
+    <td>HIV.B.ET.DE10</td>
+    <td>People in humanitarian settings</td>
+    <td>People in humanitarina settigns are among the priority population groups targetted for HTS</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>People in humanitarian settings</td>
+    <td>N/A</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.B.DE56</td>
-    <td>Adolescent girl</td>
+    <td>High risk Adolescent girl</td>
     <td>Calculated field based on age and gender, if client is 10 years or older and under 20 years old</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>adolescent girl</td>
     <td>N/A</td>
-    <td>Boolean</td>
-    <td>True/False</td>
-    <td>N/A</td>
-    <td>True if "Gender" = 'Female' and "Age" ≥ 10 years and <20 years</td>
+    <td>True if gender = female and age ≥ 10 years and &lt;20 years</td>
     <td>Gender</td>
     <td>C</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>The form preselects this option when the application supplies female registration gender and age 10–19 at the visit.</td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.B.DE57</td>
     <td>Young woman</td>
     <td>Calculated field based on age and gender, if client is 20 years or older and under 25 years old</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Young woman</td>
     <td>N/A</td>
-    <td>Boolean</td>
-    <td>True/False</td>
-    <td>N/A</td>
-    <td>True if "Gender" = 'Female' and "Age" ≥ 20 years and <25 years</td>
+    <td>True if gender = female and age ≥ 20 years and &lt;25 years</td>
     <td>Gender, Age</td>
     <td>C</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>The form preselects this option when the application supplies female registration gender and age 20–24 at the visit.</td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
-    <td>HIV.B.DE58</td>
-    <td>Orphan or vulnerable child</td>
-    <td>Client considered an orphan or vulnerable child</td>
-    <td>N/A</td>
-    <td>Boolean</td>
-    <td>True/False</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
+    <td></td>
+    <td>Sero-discordant partner</td>
+    <td>Sero-discordant partner are among key and priority population for HTS</td>
+    <td>Input Option</td>
+    <td>Codes</td>
     <td></td>
     <td></td>
     <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>The workbook does not assign a code for this choice.</td>
+  </tr>
+  <tr>
+    <td>HIV.B6 Capture or update client history</td>
+    <td></td>
+    <td>High-risk uniformed people</td>
+    <td>High-risk uniformed people are among key and priority population for HTS</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>The workbook does not assign a code for this choice.</td>
+  </tr>
+  <tr>
+    <td>HIV.B6 Capture or update client history</td>
+    <td></td>
+    <td>People exposed through unsafe blood products</td>
+    <td>People exposed through unsafe blood supplies and unsafe medical injections and procedures are targeted for HTS</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>The workbook does not assign a code for this choice.</td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
@@ -2055,7 +2293,7 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.B.DE61</td>
-    <td>HIV exposure type*</td>
+    <td>HIV exposure types*</td>
     <td>Ways in which the client was exposed to HIV</td>
     <td>Select all that apply</td>
     <td>Coding</td>
@@ -2066,8 +2304,8 @@ HIV.A5 Create new client record</td>
     <td>C</td>
     <td>None</td>
     <td></td>
-    <td>PRV.5, PRV.6, PRV.7</td>
-    <td>* Only collect where feasible, and data security and confidentiality can be ensured</td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
@@ -2078,12 +2316,12 @@ HIV.A5 Create new client record</td>
     <td>Codes</td>
     <td>Occupational</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
     <td></td>
     <td>PRV.5, PRV.6, PRV.7</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -2095,12 +2333,12 @@ HIV.A5 Create new client record</td>
     <td>Codes</td>
     <td>Non-occupational violent</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
     <td></td>
     <td>PRV.5, PRV.6, PRV.7</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -2112,19 +2350,19 @@ HIV.A5 Create new client record</td>
     <td>Codes</td>
     <td>Non-occupational consensual sex</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
     <td></td>
     <td>PRV.5, PRV.6, PRV.7</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.B.DE65</td>
     <td>Date informed of HIV-positive diagnosis</td>
-    <td>The date on which the client was diagnosed with HIV</td>
+    <td>The date on which the client was diagnosed with HIV and informed</td>
     <td>N/A</td>
     <td>Date</td>
     <td>N/A</td>
@@ -2152,7 +2390,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when prior confirmed HIV-positive status is known. Select an MFR Organization from the list of diagnosing facilities supplied by the application.</td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
@@ -2163,19 +2401,19 @@ HIV.A5 Create new client record</td>
     <td>Date</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>(Earliest) "HIV test date" when "HIV test result"='HIV-positive'</td>
-    <td>"HIV status" = 'HIV-positive'</td>
+    <td>(Earliest) HIV test date when &quot;HIV test result&quot;=&#x27;HIV-positive&#x27;</td>
+    <td>&quot;HIV status&quot; = &#x27;HIV-positive&#x27;</td>
     <td>C</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Populate from the earliest confirmed positive result in available client history.</td>
   </tr>
   <tr>
     <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.B.DE68</td>
     <td>HIV serotype</td>
-    <td>The client's HIV serotype</td>
+    <td>The client&#x27;s HIV serotype</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -2186,7 +2424,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Shown when HIV-positive status is recorded.</td>
   </tr>
   <tr>
     <td>HIV.B7 Test for HIV using testing algorithm</td>
@@ -2237,7 +2475,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.S.4</td>
     <td>HTS.2, HTS.3, HTS.4</td>
-    <td></td>
+    <td>Shown when confirmed HIV-positive status is recorded.</td>
   </tr>
   <tr>
     <td>HIV.B8 Provide post-test counselling</td>
@@ -2253,31 +2491,31 @@ HIV.A5 Create new client record</td>
     <td>C</td>
     <td>None</td>
     <td>HIV.D17.DT, HIV.S.2, HIV.S.4</td>
-    <td>ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, DFT.1, DFT.2, DFT.3, DFT.4, DFT.5, HTS.4, TBH.2, TBH.4</td>
-    <td></td>
+    <td>ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, DFT.1, DFT.2, DFT.3, DFT.4, DFT.5, DSD.5, HTS.4, TBH.2, TBH.4</td>
+    <td>Shown when confirmed HIV-positive status is recorded. Use the actual start or restart date.</td>
   </tr>
   <tr>
     <td>HIV.B8 Provide post-test counselling</td>
     <td>HIV.B.DE73</td>
     <td>Age at diagnosis</td>
-    <td>The client's age (in years) when given an HIV diagnosis</td>
+    <td>The client&#x27;s age (in years) when given an HIV diagnosis</td>
     <td>N/A</td>
     <td>Quantity</td>
     <td>N/A</td>
     <td>Integer Quantity</td>
-    <td>Time in years between "HIV diagnosis date" and "Date of birth"</td>
-    <td>"HIV status"='HIV-positive'</td>
+    <td>Time in years between &quot;HIV diagnosis date&quot; and &quot;Date of birth&quot;</td>
+    <td>&quot;HIV status&quot;=&#x27;HIV-positive&#x27;</td>
     <td>O</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>QA Preview calculates completed years when both full dates are known.</td>
   </tr>
   <tr>
     <td>HIV.B18 Provide voluntary partner and family services</td>
     <td>HIV.B.DE74</td>
     <td>Type of contact elicited</td>
-    <td>Client's relationship to the contact identified for voluntary partner services or family services</td>
+    <td>Client&#x27;s relationship to the contact identified for voluntary partner services or family services</td>
     <td>Select all that apply</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -2344,7 +2582,7 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.B18 Provide voluntary partner and family services</td>
     <td>HIV.B.DE78</td>
-    <td>Social contact</td>
+    <td>Social sexual contact</td>
     <td>Contact identified for social-network services is a social contact of the client</td>
     <td>Input Option</td>
     <td>Codes</td>
@@ -2356,7 +2594,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>The existing code retains the broader Social contact meaning, as in the workbook definition and input option.</td>
   </tr>
   <tr>
     <td>HIV.B7 Test for HIV using testing algorithm</td>
@@ -2384,27 +2622,27 @@ HIV.A5 Create new client record</td>
     <td>Boolean</td>
     <td>True/False</td>
     <td>N/A</td>
-    <td>"HIV test result" is NOT NULL</td>
+    <td>&quot;HIV test result&quot; is NOT NULL</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.S.1</td>
     <td></td>
-    <td></td>
+    <td>Calculated from the presence of an overall test result in this form.</td>
   </tr>
   <tr>
     <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.B.DE81</td>
     <td>HIV test type</td>
     <td>Type of HIV test</td>
-    <td>Select one</td>
+    <td>Input Option</td>
     <td>Coding</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "HIV test conducted"=True</td>
+    <td>None</td>
     <td>HIV.B7.DT, HIV.E4.DT</td>
     <td>VER.2</td>
     <td></td>
@@ -2433,7 +2671,7 @@ HIV.A5 Create new client record</td>
     <td>Antibody test for HIV performed with an enzyme immunoassay</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Enzyme immunoassay for HIV</td>
+    <td>Enzyme immunoassay</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -2446,11 +2684,11 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.B.DE84</td>
-    <td>Nucleic acid test for HIV</td>
+    <td>DNA PCR</td>
     <td>Virological test, which includes testing for early infant diagnosis</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Nucleic acid test for HIV</td>
+    <td>Nucleic acid testing</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -2458,7 +2696,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.B7.DT, HIV.E4.DT</td>
     <td>VER.2</td>
-    <td></td>
+    <td>The workbook label is DNA PCR and its input option says nucleic acid testing. The existing code retains its broader nucleic acid test meaning.</td>
   </tr>
   <tr>
     <td>HIV.B7 Test for HIV using testing algorithm</td>
@@ -2526,7 +2764,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.B7.DT, HIV.E4.DT</td>
     <td></td>
-    <td>Assay 1 (A1), Assay 2 (A2) and Assay 3 (A3) should be three different HIV assays (products) that share minimal common false reactivity.</td>
+    <td></td>
   </tr>
   <tr>
     <td>HIV.B7 Test for HIV using testing algorithm</td>
@@ -2600,10 +2838,10 @@ HIV.A5 Create new client record</td>
     <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.B.DE93</td>
     <td>Assay 1 repeated</td>
-    <td>The first test in the HIV testing strategy</td>
+    <td>Assay 1 repeated if assay 2 negative</td>
     <td>N/A</td>
     <td>Codes</td>
-    <td>Assay 1 repeated</td>
+    <td>Assay 1</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -2668,18 +2906,18 @@ HIV.A5 Create new client record</td>
     <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.B.DE97</td>
     <td>Invalid</td>
-    <td>The result of the HIV assay in the testing strategy was invalid</td>
+    <td>Cant say reactive or non reactive, If there is no line in the control window-even if there is a line in the patient/ test window</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Invalid</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.B7.DT, HIV.E4.DT</td>
     <td></td>
-    <td>Terminology may depend upon the type of assay being used in the algorithm</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>HIV.B7 Test for HIV using testing algorithm</td>
@@ -2734,20 +2972,20 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.B7 Test for HIV using testing algorithm</td>
-    <td>HIV.B.DE101</td>
+    <td>HIV.B.ET.DE101</td>
     <td>Invalid</td>
-    <td>The result of the HIV assay in the testing strategy was invalid</td>
+    <td>Cant say reactive or non reactive, If there is no line in the control window-even if there is a line in the patient/ test window</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Invalid</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.B7.DT, HIV.E4.DT</td>
     <td></td>
-    <td>Terminology may depend upon the type of assay being used in the algorithm</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>HIV.B7 Test for HIV using testing algorithm</td>
@@ -2802,20 +3040,20 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.B7 Test for HIV using testing algorithm</td>
-    <td>HIV.B.DE105</td>
+    <td>HIV.B.ET.DE105</td>
     <td>Invalid</td>
-    <td>The result of the HIV assay in the testing strategy was invalid</td>
+    <td>Cant say reactive or non reactive, If there is no line in the control window-even if there is a line in the patient/ test window</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Invalid</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.B7.DT, HIV.E4.DT</td>
     <td></td>
-    <td>Terminology may depend upon the type of assay being used in the algorithm</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>HIV.B7 Test for HIV using testing algorithm</td>
@@ -2870,20 +3108,20 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.B7 Test for HIV using testing algorithm</td>
-    <td>HIV.B.DE109</td>
+    <td>HIV.B.ET.DE109</td>
     <td>Invalid</td>
-    <td>The result of the HIV assay in the testing strategy was invalid</td>
+    <td>Cant say reactive or non reactive, If there is no line in the control window-even if there is a line in the patient/ test window</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Invalid</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.B7.DT, HIV.E4.DT</td>
     <td></td>
-    <td>Terminology may depend upon the type of assay being used in the algorithm</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>HIV.B7 Test for HIV using testing algorithm</td>
@@ -2899,75 +3137,7 @@ HIV.A5 Create new client record</td>
     <td>C</td>
     <td>None</td>
     <td></td>
-    <td>HTS.2, HTS.3, HTS.5, HTS.7, HTS.8, PRV.3, PRV.7, VER.2, VER.7</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.B7 Test for HIV using testing algorithm</td>
-    <td>HIV.B.DE111</td>
-    <td>HIV test result</td>
-    <td>The result from HIV testing after applying the testing algorithm</td>
-    <td>Select one</td>
-    <td>Coding</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>C</td>
-    <td>None</td>
-    <td>HIV.B7.DT, HIV.D12.DT, HIV.E12.DT, HIV.E4.DT, HIV.S.1</td>
-    <td>HTS.2, HTS.3, HTS.7, HTS.8, PRV.3, PRV.7, VER.7</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.B7 Test for HIV using testing algorithm</td>
-    <td>HIV.B.DE112</td>
-    <td>HIV-positive</td>
-    <td>Test result is HIV-positive</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>HIV-positive</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.B7.DT, HIV.D12.DT, HIV.E12.DT, HIV.E4.DT, HIV.S.1</td>
-    <td>HTS.2, HTS.3, HTS.7, HTS.8, PRV.3, PRV.7, VER.7</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.B7 Test for HIV using testing algorithm</td>
-    <td>HIV.B.DE113</td>
-    <td>HIV-negative</td>
-    <td>Test result is HIV-negative</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>HIV-negative</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.B7.DT, HIV.D12.DT, HIV.E12.DT, HIV.E4.DT, HIV.S.1</td>
-    <td>HTS.2, HTS.3, HTS.7, HTS.8, PRV.3, PRV.7, VER.7</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.B7 Test for HIV using testing algorithm</td>
-    <td>HIV.B.DE114</td>
-    <td>HIV-inconclusive</td>
-    <td>Test result is HIV-inconclusive</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>HIV-inconclusive</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.B7.DT, HIV.D12.DT, HIV.E12.DT, HIV.E4.DT, HIV.S.1</td>
-    <td>HTS.2, HTS.3, HTS.7, HTS.8, PRV.3, PRV.7, VER.7</td>
+    <td>HTS.2, HTS.5, HTS.7, HTS.8, PRV.3, PRV.7, VER.2, VER.7, PRV.3</td>
     <td></td>
   </tr>
   <tr>
@@ -2984,8 +3154,8 @@ HIV.A5 Create new client record</td>
     <td>R</td>
     <td>None</td>
     <td>HIV.B9.DT, HIV.C7.DT, HIV.S.1, HIV.S.2, HIV.S.3, HIV.S.4</td>
-    <td>ART.1, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, CCA.1, CCA.2, CCA.3, CCA.4, DFT.1, DFT.2, DFT.3, DFT.4, DFT.5, DSD.1, DSD.2, DSD.3, DSD.4, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, PRV.15, STI.1A, STI.1B, STI.1C1, STI.1C2, STI.2A, STI.2B, STI.2C1, STI.2C2, STI.3A, STI.3B, STI.3C1, STI.3C2, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.1, TBH.2, TBH.3, TBH.4, VER.1, VER.3, VER.4, VER.7</td>
-    <td></td>
+    <td>ART.1, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, CCA.1, CCA.2, CCA.3, CCA.4, DFT.1, DFT.2, DFT.3, DFT.4, DFT.5, DSD.1, DSD.2, DSD.3, DSD.4, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.7, HTS.1, PRV.15, STI.1A, STI.1B, STI.1C1, STI.1C2, STI.2A, STI.2B, STI.2C1, STI.2C2, STI.3A, STI.3B, STI.3C1, STI.3C2, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.1, TBH.2, TBH.3, TBH.4, VER.1, VER.3, VER.4, VER.7</td>
+    <td>Record the reported status. The QA Preview form does not calculate HIV status.</td>
   </tr>
   <tr>
     <td>HIV.B7 Test for HIV using testing algorithm</td>
@@ -3001,7 +3171,7 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.B9.DT, HIV.C7.DT, HIV.S.1, HIV.S.2, HIV.S.3, HIV.S.4</td>
-    <td>ART.1, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, CCA.1, CCA.2, CCA.3, CCA.4, DFT.1, DFT.2, DFT.3, DFT.4, DFT.5, DSD.1, DSD.2, DSD.3, DSD.4, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, PRV.15, STI.1A, STI.1B, STI.1C1, STI.1C2, STI.2A, STI.2B, STI.2C1, STI.2C2, STI.3A, STI.3B, STI.3C1, STI.3C2, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.1, TBH.2, TBH.3, TBH.4, VER.1, VER.3, VER.4, VER.7</td>
+    <td>ART.1, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, CCA.1, CCA.2, CCA.3, CCA.4, DFT.1, DFT.2, DFT.3, DFT.4, DFT.5, DSD.1, DSD.2, DSD.3, DSD.4, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.7, HTS.1, PRV.15, STI.1A, STI.1B, STI.1C1, STI.1C2, STI.2A, STI.2B, STI.2C1, STI.2C2, STI.3A, STI.3B, STI.3C1, STI.3C2, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.1, TBH.2, TBH.3, TBH.4, VER.1, VER.3, VER.4, VER.7</td>
     <td></td>
   </tr>
   <tr>
@@ -3018,7 +3188,7 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.B9.DT, HIV.C7.DT, HIV.S.1, HIV.S.2, HIV.S.3, HIV.S.4</td>
-    <td>ART.1, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, CCA.1, CCA.2, CCA.3, CCA.4, DFT.1, DFT.2, DFT.3, DFT.4, DFT.5, DSD.1, DSD.2, DSD.3, DSD.4, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, PRV.15, STI.1A, STI.1B, STI.1C1, STI.1C2, STI.2A, STI.2B, STI.2C1, STI.2C2, STI.3A, STI.3B, STI.3C1, STI.3C2, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.1, TBH.2, TBH.3, TBH.4, VER.1, VER.3, VER.4, VER.7</td>
+    <td>ART.1, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, CCA.1, CCA.2, CCA.3, CCA.4, DFT.1, DFT.2, DFT.3, DFT.4, DFT.5, DSD.1, DSD.2, DSD.3, DSD.4, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.7, HTS.1, PRV.15, STI.1A, STI.1B, STI.1C1, STI.1C2, STI.2A, STI.2B, STI.2C1, STI.2C2, STI.3A, STI.3B, STI.3C1, STI.3C2, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.1, TBH.2, TBH.3, TBH.4, VER.1, VER.3, VER.4, VER.7</td>
     <td></td>
   </tr>
   <tr>
@@ -3028,14 +3198,82 @@ HIV.A5 Create new client record</td>
     <td>Client has unknown HIV status</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Unknown</td>
+    <td>HIV-inconclusive</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.B9.DT, HIV.C7.DT, HIV.S.1, HIV.S.2, HIV.S.3, HIV.S.4</td>
-    <td>ART.1, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, CCA.1, CCA.2, CCA.3, CCA.4, DFT.1, DFT.2, DFT.3, DFT.4, DFT.5, DSD.1, DSD.2, DSD.3, DSD.4, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.6, HEP.7, HTS.1, PRV.15, STI.1A, STI.1B, STI.1C1, STI.1C2, STI.2A, STI.2B, STI.2C1, STI.2C2, STI.3A, STI.3B, STI.3C1, STI.3C2, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.1, TBH.2, TBH.3, TBH.4, VER.1, VER.3, VER.4, VER.7</td>
+    <td>ART.1, ART.2, ART.3, ART.4, ART.5, ART.6, ART.7, ART.8, ART.9, CCA.1, CCA.2, CCA.3, CCA.4, DFT.1, DFT.2, DFT.3, DFT.4, DFT.5, DSD.1, DSD.2, DSD.3, DSD.4, HEP.1A, HEP.1B, HEP.1C, HEP.2A, HEP.2B, HEP.3A, HEP.3B, HEP.3C, HEP.4A, HEP.4B, HEP.5, HEP.7, HTS.1, PRV.15, STI.1A, STI.1B, STI.1C1, STI.1C2, STI.2A, STI.2B, STI.2C1, STI.2C2, STI.3A, STI.3B, STI.3C1, STI.3C2, STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B, STI.7A, STI.7B, STI.8A, STI.8B, TBH.1, TBH.2, TBH.3, TBH.4, VER.1, VER.3, VER.4, VER.7</td>
+    <td>Unknown is a client status. Use HIV.B.DE114 to record an inconclusive overall test result.</td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.B.DE111</td>
+    <td>HIV test result</td>
+    <td>The result from HIV testing after applying the testing algorithm</td>
+    <td>Select one</td>
+    <td>Coding</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>C</td>
+    <td>None</td>
+    <td>HIV.B7.DT, HIV.D12.DT, HIV.E12.DT, HIV.E4.DT, HIV.S.1</td>
+    <td>HTS.2, HTS.3, HTS.7, HTS.8, PRV.3, PRV.7, VER.7, PRV.3</td>
+    <td>Record the overall result after applying the national algorithm. Individual assay results are recorded separately.</td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.B.DE112</td>
+    <td>HIV-positive</td>
+    <td>Test result is HIV-positive</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>HIV-positive</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>O</td>
+    <td>None</td>
+    <td>HIV.B7.DT, HIV.D12.DT, HIV.E12.DT, HIV.E4.DT, HIV.S.1</td>
+    <td>HTS.2, HTS.3, HTS.7, HTS.8, PRV.3, PRV.7, VER.7, PRV.3</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.B.DE113</td>
+    <td>HIV-negative</td>
+    <td>Test result is HIV-negative</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>HIV-negative</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>O</td>
+    <td>None</td>
+    <td>HIV.B7.DT, HIV.D12.DT, HIV.E12.DT, HIV.E4.DT, HIV.S.1</td>
+    <td>HTS.2, HTS.3, HTS.7, HTS.8, PRV.3, PRV.7, VER.7, PRV.3</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B7 Test for HIV using testing algorithm</td>
+    <td>HIV.B.DE114</td>
+    <td>HIV-inconclusive</td>
+    <td>Test result is HIV-inconclusive</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>HIV-inconclusive</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>O</td>
+    <td>None</td>
+    <td>HIV.B7.DT, HIV.D12.DT, HIV.E12.DT, HIV.E4.DT, HIV.S.1</td>
+    <td>HTS.2, HTS.3, HTS.7, HTS.8, PRV.3, PRV.7, VER.7, PRV.3</td>
     <td></td>
   </tr>
   <tr>
@@ -3053,7 +3291,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Shown for a positive overall test result. This date records receipt of written confirmation.</td>
   </tr>
   <tr>
     <td>HIV.B7 Test for HIV using testing algorithm</td>
@@ -3070,12 +3308,12 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Shown for a positive overall test result. Select an eligible MFR Organization supplied by the application.</td>
   </tr>
   <tr>
     <td>HIV.B8 Provide post-test counselling</td>
     <td>HIV.B.DE121</td>
-    <td>Probable route of transmission*</td>
+    <td>HIV probable route of transmission*</td>
     <td>Probable route(s) of transmission of HIV to client</td>
     <td>Select all that apply</td>
     <td>Coding</td>
@@ -3086,58 +3324,24 @@ HIV.A5 Create new client record</td>
     <td>C</td>
     <td>None</td>
     <td></td>
-    <td>INC.1</td>
-    <td>* Only collect where feasible, and data security and confidentiality can be ensured</td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>HIV.B8 Provide post-test counselling</td>
     <td>HIV.B.DE122</td>
-    <td>Heterosexual sex</td>
+    <td>Sexual transmission (heterosexual sex)</td>
     <td>Probable route of HIV transmission was through heterosexual sex</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Heterosexual sex</td>
+    <td>Sexual transmission</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>INC.1</td>
     <td></td>
-  </tr>
-  <tr>
-    <td>HIV.B8 Provide post-test counselling</td>
-    <td>HIV.B.DE123</td>
-    <td>Sex between men</td>
-    <td>Probable route of HIV transmission was through sex between men</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Sex between men</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td>INC.1</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.B8 Provide post-test counselling</td>
-    <td>HIV.B.DE124</td>
-    <td>Unprotected intercourse during sex work</td>
-    <td>Probable route of HIV transmission was through unprotected intercourse during sex work</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Unprotected intercourse during sex work</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td>INC.1</td>
     <td></td>
   </tr>
   <tr>
@@ -3147,31 +3351,14 @@ HIV.A5 Create new client record</td>
     <td>Probable route of HIV transmission was through injecting drug use with unsterile equipment</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Injecting drug use with unsterile equipment</td>
+    <td>Transmission through sharing of needles and syringes</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>INC.1</td>
     <td></td>
-  </tr>
-  <tr>
-    <td>HIV.B8 Provide post-test counselling</td>
-    <td>HIV.B.DE126</td>
-    <td>Nosocomial</td>
-    <td>Probable route of HIV transmission was nosocomial</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Nosocomial</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td>INC.1</td>
     <td></td>
   </tr>
   <tr>
@@ -3181,14 +3368,14 @@ HIV.A5 Create new client record</td>
     <td>Probable route of HIV transmission to an infant was during pregnancy, labour, delivery and breastfeeding (vertical transmission)</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Vertical</td>
+    <td>Mother-to-child transmission</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>INC.1</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -3198,21 +3385,21 @@ HIV.A5 Create new client record</td>
     <td>Probable route of HIV transmission was other and may include needle accidents, blood transfusion, blood products or organ/tissue donations, tattoos, piercings, circumcision, or acupuncture.</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Other</td>
+    <td>Transmission through blood transfusion</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>INC.1</td>
     <td></td>
+    <td>The existing Other code includes blood transfusion and the other routes in the definition. MoH confirmation is needed if blood transfusion needs a distinct code.</td>
   </tr>
   <tr>
     <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.B.DE129</td>
     <td>Partner HIV test conducted</td>
-    <td>If the client does not know the HIV status of the client's partner(s), offer to test and add results here</td>
+    <td>If the client does not know the HIV status of the client&#x27;s partner(s), offer to test and add results here</td>
     <td>N/A</td>
     <td>Boolean</td>
     <td>True/False</td>
@@ -3229,7 +3416,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.B.DE130</td>
     <td>Partner HIV test ordered</td>
-    <td>An HIV test for the client's partner has been ordered</td>
+    <td>An HIV test for the client&#x27;s partner has been ordered</td>
     <td>N/A</td>
     <td>Boolean</td>
     <td>True/False</td>
@@ -3246,7 +3433,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.B.DE131</td>
     <td>Partner HIV test date</td>
-    <td>Date of client's partner's HIV test</td>
+    <td>Date of client&#x27;s partner&#x27;s HIV test</td>
     <td>N/A</td>
     <td>DateTime</td>
     <td>N/A</td>
@@ -3257,13 +3444,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Shown when a partner test was conducted.</td>
   </tr>
   <tr>
     <td>HIV.B7 Test for HIV using testing algorithm</td>
     <td>HIV.B.DE132</td>
     <td>Partner HIV test result</td>
-    <td>The HIV test result of the client's partner</td>
+    <td>The HIV test result of the client&#x27;s partner</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -3274,7 +3461,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Shown when a partner test was conducted.</td>
   </tr>
   <tr>
     <td>HIV.B7 Test for HIV using testing algorithm</td>
@@ -3348,7 +3535,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.B.DE137</td>
     <td>HIV-positive</td>
-    <td>Client's partner is HIV-positive</td>
+    <td>Client&#x27;s partner is HIV-positive</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>HIV-positive</td>
@@ -3365,7 +3552,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.B.DE138</td>
     <td>HIV-negative</td>
-    <td>Client's partner is HIV-negative</td>
+    <td>Client&#x27;s partner is HIV-negative</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>HIV-negative</td>
@@ -3382,7 +3569,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.B.DE139</td>
     <td>Unknown</td>
-    <td>Client's partner HIV status is unknown</td>
+    <td>Client&#x27;s partner HIV status is unknown</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Unknown</td>
@@ -3444,7 +3631,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.S.1</td>
     <td></td>
-    <td>Preferably these selections can be automatically selected based on other actions performed</td>
+    <td>The workbook marks this field required. In QA Preview it may be left blank when none of the listed actions applies, including general post-test counselling only. Record listed actions only when they took place.</td>
   </tr>
   <tr>
     <td>HIV.B8 Provide post-test counselling</td>
@@ -3534,7 +3721,7 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.B8 Provide post-test counselling</td>
     <td>HIV.B.DE148</td>
-    <td>VMMC counselling provided</td>
+    <td>VMMC counselling conducted</td>
     <td>Whether counselling for voluntary medical male circumcision (VMMC) was provided following an HIV-negative test</td>
     <td>Input Option</td>
     <td>Codes</td>
@@ -3572,7 +3759,7 @@ HIV.A5 Create new client record</td>
     <td>Offer male and female condoms and condom-compatible lubricants</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Offer male and female condoms and condom-compatible lubricants</td>
+    <td>Male and female condoms and condom-compatible lubricants</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -3585,11 +3772,11 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.B9 Determine recommended services</td>
     <td>HIV.B.DE151</td>
-    <td>Offer pre-exposure prophylaxis (PrEP) for people at elevated risk for HIV acquisition</td>
+    <td>Offer pre-exposure prophylaxis (PrEP) for people at substantial ongoing risk of HIV infection</td>
     <td>Offer pre-exposure prophylaxis (PrEP) to people with substantial ongoing risk of HIV infection</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Offer pre-exposure prophylaxis (PrEP) for people at elevated risk for HIV acquisition</td>
+    <td>PrEP for people at substantial ongoing risk of HIV infection</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -3606,7 +3793,7 @@ HIV.A5 Create new client record</td>
     <td>Offer or refer client for PEP following suspected exposure</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Offer post-exposure prophylaxis (PEP) following suspected exposure</td>
+    <td>Post-exposure prophylaxis (PEP) following suspected exposure</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -3620,10 +3807,10 @@ HIV.A5 Create new client record</td>
     <td>HIV.B9 Determine recommended services</td>
     <td>HIV.B.DE153</td>
     <td>Voluntary medical male circumcision (VMMC)</td>
-    <td>Offer referral for VMMC services</td>
+    <td>Offer referral for VMMC (in 14 priority countries) services</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Voluntary medical male circumcision (VMMC)</td>
+    <td>Voluntary medical male circumcision</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -3640,7 +3827,7 @@ HIV.A5 Create new client record</td>
     <td>Offer or refer to harm reduction services for people who inject drugs (needle and syringe programmes, opioid substitution therapy, other drug-dependence treatment and opioid overdose prevention and management)</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Harm reduction for people who inject drugs</td>
+    <td>Harm reduction for people who inject drugs (needle and syringe programmes, opioid substitution therapy, other drug-dependence treatment and opioid overdose prevention and management)</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -3739,7 +3926,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.B9 Determine recommended services</td>
     <td>HIV.B.DE160</td>
     <td>Check pregnancy status</td>
-    <td>Check women's pregnancy status</td>
+    <td>Check women&#x27;s pregnancy status</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Check pregnancy status</td>
@@ -3759,7 +3946,7 @@ HIV.A5 Create new client record</td>
     <td>Offer services for prevention of mother-to-child transmission (counselling)</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Prevention of mother-to-child transmission counselling</td>
+    <td>Prevention of mother-to-child transmission</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -3777,23 +3964,6 @@ HIV.A5 Create new client record</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Cervical cancer screening and treatment counselling</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.S.1</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.B9 Determine recommended services</td>
-    <td>HIV.B.DE163</td>
-    <td>Anal cancer screening (for men who have sex with men)</td>
-    <td>Offer services for anal cancer screening (for men who have sex with men)</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Anal cancer screening (for men who have sex with men)</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -3861,7 +4031,7 @@ HIV.A5 Create new client record</td>
     <td>Offer or refer for HBV and/or HCV testing and treatment</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Hepatitis B (HBV) and hepatitis C virus (HCV) testing and treatment provided</td>
+    <td>HBV testing and vaccination and HCV testing and treatment</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -3874,7 +4044,7 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.B9 Determine recommended services</td>
     <td>HIV.B.DE168</td>
-    <td>Co-trimoxazole chemoprophylaxis to prevent Pneumocystis carinii pneumonia provided</td>
+    <td>Co-trimoxazole chemoprophylaxis to prevent Pneumocystis carinii pneumonia</td>
     <td>Offer or refer for co-trimoxazole chemoprophylaxis to prevent pneumocystis carinii pneumonia</td>
     <td>Input Option</td>
     <td>Codes</td>
@@ -3908,7 +4078,7 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.B9 Determine recommended services</td>
     <td>HIV.B.DE170</td>
-    <td>Provision of isoniazid preventive therapy if person does not have TB</td>
+    <td>Provision of TB Preventive Therapy (TPT)</td>
     <td>Offer or refer for provision of isoniazid preventive therapy if person does not have TB</td>
     <td>Input Option</td>
     <td>Codes</td>
@@ -3920,7 +4090,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.S.1</td>
     <td></td>
-    <td></td>
+    <td>The existing code represents isoniazid preventive therapy, as shown in the workbook input option.</td>
   </tr>
   <tr>
     <td>HIV.B9 Determine recommended services</td>
@@ -4082,7 +4252,7 @@ HIV.A5 Create new client record</td>
     <td>Client received treatment and/or counselling as needed</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Client received treatment and/or counselling as needed</td>
+    <td>Treated</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -4099,7 +4269,7 @@ HIV.A5 Create new client record</td>
     <td>Client was referred to another provider/facility</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Client was referred</td>
+    <td>Referred</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -4155,7 +4325,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Intimate partner violence enquiry results"='Other IPV result'</td>
+    <td>Required if &quot;Intimate partner violence enquiry results&quot;=&#x27;Other IPV result&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
@@ -4230,9 +4400,9 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.B9 Determine recommended services</td>
-    <td>HIV.B.DE189</td>
-    <td>Contact first name to offer social network-based/partner services</td>
-    <td>First name of each contact given by the client to offer social network-based/partner services</td>
+    <td>HIV.B.ET.DE19</td>
+    <td>Name of the Index Contacts Elicited</td>
+    <td>Full name of each contact given by the client to offer social network-based/partner services</td>
     <td>N/A</td>
     <td>String</td>
     <td>N/A</td>
@@ -4241,23 +4411,142 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
+    <td></td>
+    <td></td>
+    <td>The form groups details by contact and shows the group after the client accepts voluntary partner or social network services.</td>
+  </tr>
+  <tr>
+    <td>HIV.B9 Determine recommended services</td>
+    <td>HIV.B.ET.DE11</td>
+    <td>Phone Number</td>
+    <td>telephone numbers</td>
+    <td>N/A</td>
+    <td>String</td>
+    <td></td>
+    <td>N/A</td>
+    <td></td>
+    <td>None</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Mapped to the workbook phone field. The older terminology code combines phone and address.</td>
+  </tr>
+  <tr>
+    <td>HIV.B9 Determine recommended services</td>
+    <td>HIV.B.ET.DE18</td>
+    <td>Physical address</td>
+    <td>The contact’s physical address</td>
+    <td>N/A</td>
+    <td>String</td>
+    <td></td>
+    <td>N/A</td>
+    <td></td>
+    <td>None</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Mapped to the workbook address field. The existing terminology code continues to identify an HTS visit.</td>
+  </tr>
+  <tr>
+    <td>HIV.B9 Determine recommended services</td>
+    <td>HIV.B.ET.DE12</td>
+    <td>Has the index client already disclosed his/her HIV status</td>
+    <td>Whether or not the index client has made his/her HIV status disclosure status to each partner; This can be left for child contact</td>
+    <td>N/A</td>
+    <td>Boolean</td>
+    <td></td>
+    <td>N/A</td>
+    <td></td>
+    <td>None</td>
+    <td></td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
   </tr>
   <tr>
     <td>HIV.B9 Determine recommended services</td>
-    <td>HIV.B.DE190</td>
-    <td>Contact last name to offer social network-based/partner services</td>
-    <td>Last or family name of each contact given by the client to offer social network-based/partner services</td>
-    <td>N/A</td>
-    <td>String</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>HIV.B.ET.DE13</td>
+    <td>Notification plan/Method</td>
+    <td>The agreed notification plan</td>
+    <td>Select one</td>
+    <td>Coding</td>
+    <td></td>
+    <td></td>
+    <td></td>
     <td>None</td>
-    <td>O</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B9 Determine recommended services</td>
+    <td>HIV.B.ET.DE14</td>
+    <td>Client</td>
+    <td>Index clients tell partners about infection and encourage him or her to come to testing center for testing</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
     <td>None</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B9 Determine recommended services</td>
+    <td>HIV.B.ET.DE15</td>
+    <td>Contractual</td>
+    <td>The index client enters a “contract” with the health care provider whereby he or she agrees to disclose their HIV status to all partner(s) and or to refer them for HTS within two weeks.</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>None</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B9 Determine recommended services</td>
+    <td>HIV.B.ET.DE16</td>
+    <td>Dual</td>
+    <td>Index clients and service provider will notify his/her partner together.</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>None</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B9 Determine recommended services</td>
+    <td>HIV.B.ET.DE17</td>
+    <td>Provider</td>
+    <td>Health care provider will call or send text message to his/ her partner of potential exposure of HIV without disclosing the index client name and HIV status to visit HIV testing sites without telling them the client’s name (this will be done anonymously)</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>None</td>
+    <td></td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -4265,7 +4554,7 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.B20 Schedule retest</td>
     <td>HIV.B.DE191</td>
-    <td>Type of follow-up appointment</td>
+    <td>Type of follow up appointment</td>
     <td>Type of follow-up appointment for testing services</td>
     <td>Select all that apply</td>
     <td>Coding</td>
@@ -4294,7 +4583,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.S.2, HIV.S.4</td>
     <td></td>
-    <td>Data element is also in the "Reason for HIV care and treatment visit" value set</td>
+    <td></td>
   </tr>
   <tr>
     <td>HIV.B20 Schedule retest</td>
@@ -4325,7 +4614,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Type of follow-up appointment"='Other'</td>
+    <td>Required if &quot;Type of follow-up appointment&quot;=&#x27;Other&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
@@ -4345,7 +4634,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.S.2, HIV.S.4</td>
     <td></td>
-    <td></td>
+    <td>The booked date and time are exchanged as Appointment.start.</td>
   </tr>
   <tr>
     <td>HIV.B20 Schedule retest</td>
@@ -4362,7 +4651,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the recommendation independently of a booking. QA Preview stores this date on the HTS Encounter.</td>
   </tr>
   <tr>
     <td>HIV.B21 Offer prevention options</td>
@@ -4402,7 +4691,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.B21 Offer prevention options</td>
     <td>HIV.B.DE199</td>
     <td>Adverse event reported from a VMMC</td>
-    <td>Whether an adverse event was reported associated with a voluntary medical male circumcision (VMMC) procedure</td>
+    <td>Whether an adverse event was reported associated with a voluntary medical male circumcision procedure</td>
     <td>N/A</td>
     <td>Boolean</td>
     <td>True/False</td>
@@ -4419,7 +4708,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.B21 Offer prevention options</td>
     <td>HIV.B.DE200</td>
     <td>Serious adverse event</td>
-    <td>Complications from voluntary medical male circumcision (VMMC) procedure resulted in death or hospitalization within 30 days of the procedure or permanent disability</td>
+    <td>Complications resulted in death or hospitalization within 30 days of the procedure or permanent disability</td>
     <td>N/A</td>
     <td>Boolean</td>
     <td>True/False</td>
@@ -4427,16 +4716,16 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Adverse event reported from a VMMC" is not null</td>
+    <td>Required if &quot;Adverse event reported from a VMMC&quot; is not null</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when an adverse event is reported as Yes.</td>
   </tr>
   <tr>
     <td>HIV.B21 Offer prevention options</td>
     <td>HIV.B.DE201</td>
     <td>Adverse event severity</td>
-    <td>Severity of the adverse event associated with voluntary medical male circumcision (VMMC) procedure</td>
+    <td>Severity of the adverse event</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -4453,7 +4742,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.B21 Offer prevention options</td>
     <td>HIV.B.DE202</td>
     <td>Moderate</td>
-    <td>Severity of the adverse event associated with VMMC procedure was moderate</td>
+    <td>Moderate</td>
     <td>N/A</td>
     <td>Codes</td>
     <td>Moderate</td>
@@ -4470,7 +4759,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.B21 Offer prevention options</td>
     <td>HIV.B.DE203</td>
     <td>Severe</td>
-    <td>Severity of the adverse event associated with VMMC procedure was severe</td>
+    <td>Severe</td>
     <td>N/A</td>
     <td>Codes</td>
     <td>Severe</td>
@@ -4487,7 +4776,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.B21 Offer prevention options</td>
     <td>HIV.B.DE204</td>
     <td>Timing of adverse event</td>
-    <td>When the adverse event associated with VMMC procedure occurred</td>
+    <td>When the adverse event occurred</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -4504,10 +4793,10 @@ HIV.A5 Create new client record</td>
     <td>HIV.B21 Offer prevention options</td>
     <td>HIV.B.DE205</td>
     <td>Intraoperative</td>
-    <td>The adverse event associated with VMMC procedure occurred during the procedure</td>
+    <td>The adverse event occurred during the procedure</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Intraoperative</td>
+    <td>Intraoperative event</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -4521,10 +4810,10 @@ HIV.A5 Create new client record</td>
     <td>HIV.B21 Offer prevention options</td>
     <td>HIV.B.DE206</td>
     <td>Postoperative</td>
-    <td>The adverse event associated with VMMC procedure occurred within the first 30 days after the procedure</td>
+    <td>The adverse event occurred within the first 30 days after the procedure</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Postoperative</td>
+    <td>Postoperative event</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -4543,13 +4832,13 @@ HIV.A5 Create new client record</td>
     <td>Coding</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Adverse event reported from a VMMC" is not null</td>
-    <td></td>
+    <td>Required if &quot;Adverse event reported from a VMMC&quot; is not null</td>
     <td>PRV.16</td>
     <td></td>
+    <td>Select all event types that apply when an adverse event is reported as Yes.</td>
   </tr>
   <tr>
     <td>HIV.B21 Offer prevention options</td>
@@ -4560,12 +4849,12 @@ HIV.A5 Create new client record</td>
     <td>Codes</td>
     <td>Abnormal pain</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
     <td></td>
     <td>PRV.16</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -4577,12 +4866,12 @@ HIV.A5 Create new client record</td>
     <td>Codes</td>
     <td>Anaesthesia-related effects</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
     <td></td>
     <td>PRV.16</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -4594,12 +4883,12 @@ HIV.A5 Create new client record</td>
     <td>Codes</td>
     <td>Bleeding</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
     <td></td>
     <td>PRV.16</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -4611,12 +4900,12 @@ HIV.A5 Create new client record</td>
     <td>Codes</td>
     <td>Damage to the penis</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
     <td></td>
     <td>PRV.16</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -4628,12 +4917,12 @@ HIV.A5 Create new client record</td>
     <td>Codes</td>
     <td>Difficulty urinating</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
     <td></td>
     <td>PRV.16</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -4645,12 +4934,12 @@ HIV.A5 Create new client record</td>
     <td>Codes</td>
     <td>Excessive bleeding</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
     <td></td>
     <td>PRV.16</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -4662,12 +4951,12 @@ HIV.A5 Create new client record</td>
     <td>Codes</td>
     <td>Excessive skin removal</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
     <td></td>
     <td>PRV.16</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -4679,12 +4968,12 @@ HIV.A5 Create new client record</td>
     <td>Codes</td>
     <td>Excessive swelling</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
     <td></td>
     <td>PRV.16</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -4696,12 +4985,12 @@ HIV.A5 Create new client record</td>
     <td>Codes</td>
     <td>Haematoma</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
     <td></td>
     <td>PRV.16</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -4713,12 +5002,12 @@ HIV.A5 Create new client record</td>
     <td>Codes</td>
     <td>Infection</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
     <td></td>
     <td>PRV.16</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -4730,12 +5019,12 @@ HIV.A5 Create new client record</td>
     <td>Codes</td>
     <td>Injury to glans</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
     <td></td>
     <td>PRV.16</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -4747,12 +5036,12 @@ HIV.A5 Create new client record</td>
     <td>Codes</td>
     <td>Scar or disfigurement</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
     <td></td>
     <td>PRV.16</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -4764,12 +5053,12 @@ HIV.A5 Create new client record</td>
     <td>Codes</td>
     <td>Sharps injury to personnel</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
     <td></td>
     <td>PRV.16</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -4781,12 +5070,12 @@ HIV.A5 Create new client record</td>
     <td>Codes</td>
     <td>Wound disruption</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
     <td></td>
     <td>PRV.16</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -4798,12 +5087,12 @@ HIV.A5 Create new client record</td>
     <td>Codes</td>
     <td>Other</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
     <td></td>
     <td>PRV.16</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -4813,12 +5102,12 @@ HIV.A5 Create new client record</td>
     <td>Client experienced other adverse VMMC event (specify)</td>
     <td>N/A</td>
     <td>String</td>
-    <td>Other (specify)</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
+    <td>None</td>
     <td>C</td>
-    <td>Required if "Type of adverse VMMC event"='Other'</td>
+    <td>Required if &quot;Type of adverse VMMC event&quot;=&#x27;Other&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
@@ -4849,13 +5138,13 @@ HIV.A5 Create new client record</td>
     <td>Boolean</td>
     <td>True/False</td>
     <td>N/A</td>
-    <td>This data element be calculated, and updated through time, in a number of ways based upon country or programme context.  See chapter 3 (Prevention) of the 2022 WHO Consolidated guidelines on HIV strategic inforamation.</td>
+    <td>Calculated based upon country context</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.B9.DT, HIV.S.4</td>
-    <td>HTS.7, HTS.8, PRV.3</td>
-    <td>Chapter 2 (Prevention) of WHO's 'Consolidated guidelines on person-centred HIV strategic information' (2022) provides an example questionnaire that could be used to calculate this data element (box 2.3).  Other data elements may be used in the calculation of this data element (e.g. box 2.4 from the same chapter).  Note that this data element should only be used to include people for service provision and not exclude people.  </td>
+    <td>HTS.7, HTS.8, PRV.3, PRV.3</td>
+    <td>The workbook calls for a country-specific calculation. Supply an assessed answer until national calculation criteria are available.</td>
   </tr>
   <tr>
     <td>HIV.B23 Offer sexual and reproductive health services</td>
@@ -4911,11 +5200,11 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.B23 Offer sexual and reproductive health services</td>
     <td>HIV.B.DE229</td>
-    <td>Lower Abdominal pain </td>
+    <td>Lower Abdominal pain</td>
     <td>Client diagnosed with lower abdominal pain</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Lower Abdominal pain </td>
+    <td>Lower Abdominal pain</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -4957,6 +5246,40 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td>STI.7A, STI.7B, STI.8A, STI.8B</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B23 Offer sexual and reproductive health services</td>
+    <td>HIV.B.ET.DE207</td>
+    <td>Scrotal swelling syndrome</td>
+    <td>Swelling of the scrotum</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B23 Offer sexual and reproductive health services</td>
+    <td>HIV.B.ET.DE208</td>
+    <td>Neonatal conjuctivitis</td>
+    <td>Inflammation of the conjuctiva</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -5005,7 +5328,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Syndrome/STI diagnosed"='Other'</td>
+    <td>Required if &quot;Syndrome/STI diagnosed&quot;=&#x27;Other&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
@@ -5014,18 +5337,18 @@ HIV.A5 Create new client record</td>
     <td>HIV.B23 Offer sexual and reproductive health services</td>
     <td>HIV.B.DE235</td>
     <td>Any STI syndrome diagnosed</td>
-    <td>Was the client diagnosed with any of the five STI syndromes during this visit?</td>
+    <td>Was the client diagnosed with any of the STI syndromes during this visit?</td>
     <td>N/A</td>
     <td>Boolean</td>
     <td>True/False</td>
     <td>N/A</td>
-    <td>Is True if "Syndrome/STI diagnosed" IN 'Urethral discharge syndrome, Vaginal discharge syndrome, Lower abdominal pain, Genital ulcer disease syndrome, Anorectal discharge'</td>
+    <td>Is True if &quot;Syndrome/STI diagnosed&quot; IN &#x27;Urethral discharge syndrome, Vaginal discharge syndrome, Lower abdominal pain, Genital ulcer disease syndrome, Anorectal discharge&#x27;</td>
     <td>None</td>
     <td>C</td>
-    <td>Calculated from other "Syndrome/STI diagnosed"</td>
+    <td>Calculated from other &quot;Syndrome/STI diagnosed&quot;</td>
     <td></td>
     <td>STI.7A, STI.7B, STI.8A, STI.8B</td>
-    <td></td>
+    <td>The two added syndrome codes remain available for capture. The workbook calculation explicitly lists five syndromes.</td>
   </tr>
   <tr>
     <td>HIV.B23 Offer sexual and reproductive health services</td>
@@ -5056,7 +5379,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Date of STI test" is NOT NULL</td>
+    <td>Required if &quot;Date of STI test&quot; is NOT NULL</td>
     <td></td>
     <td></td>
     <td></td>
@@ -5119,7 +5442,7 @@ HIV.A5 Create new client record</td>
     <td>Client tested for Syphilis (treponema pallidum)</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Syphilis (Treponema pallidum)</td>
+    <td>Syphilis (treponema pallidum)</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -5132,11 +5455,11 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.B23 Offer sexual and reproductive health services</td>
     <td>HIV.B.DE242</td>
-    <td>Herpes simplex virus (HSV1, HSV2)</td>
-    <td>Client tested for herpes simplex virus (HSV1, HSV2)</td>
+    <td>Human simplex virus (HSV1, HSV2)</td>
+    <td>Client tested for human simplex virus (HSV1, HSV2)</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Herpes simplex virus (HSV1, HSV2)</td>
+    <td>Human simplex virus (HSV1, HSV2)</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -5204,7 +5527,7 @@ HIV.A5 Create new client record</td>
     <td>Client tested for Hepatitis C</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Hepatitis C</td>
+    <td>Hepatitis B</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -5243,7 +5566,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "STI tested for"='Other'</td>
+    <td>Required if &quot;STI tested for&quot;=&#x27;Other&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
@@ -5257,13 +5580,13 @@ HIV.A5 Create new client record</td>
     <td>DateTime</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>Is "Date of STI test" if "STI tested for"='Syphilis (treponema pallidum)'</td>
+    <td>Is &quot;Date of STI test&quot; if &quot;STI tested for&quot;=&#x27;Syphilis (treponema pallidum)&#x27;</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td></td>
     <td>STI.1A, STI.1B, STI.1C1, STI.1C2, STI.2A, STI.2B, STI.2C1, STI.2C2, STI.3A, STI.3B, STI.3C1, STI.3C2</td>
-    <td></td>
+    <td>Uses the STI test date when syphilis is selected.</td>
   </tr>
   <tr>
     <td>HIV.B23 Offer sexual and reproductive health services</td>
@@ -5274,13 +5597,13 @@ HIV.A5 Create new client record</td>
     <td>Coding</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>Is "STI test result" if "STI tested for"='Syphilis (treponema pallidum)'</td>
+    <td>Is &quot;STI test result&quot; if &quot;STI tested for&quot;=&#x27;Syphilis (treponema pallidum)&#x27;</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Syphilis test date" is NOT NULL</td>
+    <td>Required if &quot;Syphilis test date&quot; is NOT NULL</td>
     <td>HIV.E4.DT, HIV.S.1</td>
     <td>STI.2A, STI.2B, STI.2C1, STI.2C2, STI.3A, STI.3B, STI.3C1, STI.3C2</td>
-    <td></td>
+    <td>Enter the organism-specific result. When syphilis is the only test and is inconclusive, QA Preview records the result in HIV.B.DE312.</td>
   </tr>
   <tr>
     <td>HIV.B23 Offer sexual and reproductive health services</td>
@@ -5318,23 +5641,6 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.B23 Offer sexual and reproductive health services</td>
-    <td>HIV.B.DE253</td>
-    <td>Inconclusive</td>
-    <td>Test result is inconclusive</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Inconclusive</td>
-    <td>N/A</td>
-    <td></td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.E4.DT, HIV.S.1</td>
-    <td>STI.2A, STI.2B, STI.2C1, STI.2C2, STI.3A, STI.3B, STI.3C1, STI.3C2</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.B23 Offer sexual and reproductive health services</td>
     <td>HIV.B.DE254</td>
     <td>Syphilis treatment start date</td>
     <td>Date of initiation of syphilis treatment</td>
@@ -5359,13 +5665,13 @@ HIV.A5 Create new client record</td>
     <td>DateTime</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>Is "Date of STI test" if "STI tested for"='Neisseria gonorrhoeae'</td>
+    <td>Is &quot;Date of STI test&quot; if &quot;STI tested for&quot;=&#x27;Neisseria gonorrhoeae&#x27;</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
+    <td></td>
     <td></td>
     <td>STI.4A, STI.4B, STI.5A, STI.5B, STI.6A, STI.6B</td>
-    <td></td>
+    <td>Uses the STI test date when gonorrhoea is selected.</td>
   </tr>
   <tr>
     <td>HIV.B23 Offer sexual and reproductive health services</td>
@@ -5376,13 +5682,13 @@ HIV.A5 Create new client record</td>
     <td>Coding</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>Is "STI test result" if "STI tested for"='Neisseria gonorrhoeae'</td>
+    <td>Is &quot;STI test result&quot; if &quot;STI tested for&quot;=&#x27;Neisseria gonorrhoeae&#x27;</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Gonorrhoea test date" is NOT NULL</td>
+    <td>Required if &quot;Gonorrhoea test date&quot; is NOT NULL</td>
     <td></td>
     <td>STI.5A, STI.5B, STI.6A, STI.6B</td>
-    <td></td>
+    <td>Enter the organism-specific result. The form preserves separate results when both syphilis and gonorrhoea were tested.</td>
   </tr>
   <tr>
     <td>HIV.B23 Offer sexual and reproductive health services</td>
@@ -5426,13 +5732,13 @@ HIV.A5 Create new client record</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Inconclusive</td>
-    <td>N/A</td>
     <td></td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
     <td></td>
     <td>STI.5A, STI.5B, STI.6A, STI.6B</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -5464,7 +5770,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Date of STI test" is NOT NULL</td>
+    <td>Required if &quot;Date of STI test&quot; is NOT NULL</td>
     <td></td>
     <td>STI.4A, STI.4B, STI.5A, STI.5B</td>
     <td></td>
@@ -5495,12 +5801,12 @@ HIV.A5 Create new client record</td>
     <td>Codes</td>
     <td>Urine</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
     <td></td>
     <td>STI.4A, STI.4B, STI.5A, STI.5B</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -5583,7 +5889,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Type of specimen"='Other'</td>
+    <td>Required if &quot;Type of specimen&quot;=&#x27;Other&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
@@ -5600,7 +5906,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "STI tested for"='Syphilis (treponema pallidum)'</td>
+    <td>Required if &quot;STI tested for&quot;=&#x27;Syphilis (treponema pallidum)&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
@@ -5609,7 +5915,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.B23 Offer sexual and reproductive health services</td>
     <td>HIV.B.DE270</td>
     <td>Treponemal</td>
-    <td>Treponemal test used </td>
+    <td>Treponemal test used</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Treponemal</td>
@@ -5702,7 +6008,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Syphilis test type"='Other'</td>
+    <td>Required if &quot;Syphilis test type&quot;=&#x27;Other&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
@@ -5719,7 +6025,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "STI tested for"='Neisseria gonorrhoea'</td>
+    <td>Required if &quot;STI tested for&quot;=&#x27;Neisseria gonorrhoea&#x27;</td>
     <td></td>
     <td>STI.4A, STI.4B, STI.5A, STI.5B</td>
     <td></td>
@@ -5821,7 +6127,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Neisseria gonorrhoeae test type"='Other'</td>
+    <td>Required if &quot;Neisseria gonorrhoeae test type&quot;=&#x27;Other&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
@@ -5838,7 +6144,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Neisseria gonorrhoeae test type"='POC Test'</td>
+    <td>Required if &quot;Neisseria gonorrhoeae test type&quot;=&#x27;POC Test&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
@@ -5855,7 +6161,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "STI tested for"='Chlamydia trachomatis'</td>
+    <td>Required if &quot;STI tested for&quot;=&#x27;Chlamydia trachomatis&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
@@ -5937,10 +6243,10 @@ HIV.A5 Create new client record</td>
     <td>Codes</td>
     <td>Microscopy</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -5954,10 +6260,10 @@ HIV.A5 Create new client record</td>
     <td>Codes</td>
     <td>Other</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -5974,7 +6280,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Chlamydia trachomatis test type"='Other'</td>
+    <td>Required if &quot;Chlamydia trachomatis test type&quot;=&#x27;Other&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
@@ -5991,7 +6297,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Chlamydia trachomatis test type"='POC Test'</td>
+    <td>Required if &quot;Chlamydia trachomatis test type&quot;=&#x27;POC Test&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
@@ -6008,7 +6314,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "STI tested for"='Trichomonas vaginalis'</td>
+    <td>Required if &quot;STI tested for&quot;=&#x27;Trichomonas vaginalis&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
@@ -6022,10 +6328,10 @@ HIV.A5 Create new client record</td>
     <td>Codes</td>
     <td>NAAT</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -6110,7 +6416,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Trichomonas vaginalis test type"='Other'</td>
+    <td>Required if &quot;Trichomonas vaginalis test type&quot;=&#x27;Other&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
@@ -6127,7 +6433,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Trichomonas vaginalis test type"='POC Test'</td>
+    <td>Required if &quot;Trichomonas vaginalis test type&quot;=&#x27;POC Test&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
@@ -6136,7 +6442,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.B23 Offer sexual and reproductive health services</td>
     <td>HIV.B.DE301</td>
     <td>Herpes simplex virus (HSV) test type</td>
-    <td>Type of diagnostic test used for herpes simplex virus (HSV)</td>
+    <td>Type of diagnostic test used for Human simplex virus (HSV)</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -6144,7 +6450,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "STI tested for"='Herpes simplex virus (HSV)'</td>
+    <td>Required if &quot;STI tested for&quot;=&#x27;Human simplex virus (HSV)&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
@@ -6169,11 +6475,11 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.B23 Offer sexual and reproductive health services</td>
     <td>HIV.B.DE303</td>
-    <td>Antibody test </td>
+    <td>Antibody test</td>
     <td>Antibody test used</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Antibody test </td>
+    <td>Antibody test</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -6205,14 +6511,14 @@ HIV.A5 Create new client record</td>
     <td>HIV.B.DE305</td>
     <td>Other (specify)</td>
     <td>Other type of test used for Herpes simplex virus (HSV) test (specify)</td>
-    <td>N/A</td>
+    <td>Input Option</td>
     <td>String</td>
     <td>Other (specify)</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Herpes simplex virus (HSV) test type"='Other'</td>
+    <td>Required if &quot;Herpes simplex virus (HSV) test type&quot;=&#x27;Other&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
@@ -6229,7 +6535,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "STI tested for"='Mycoplasma genitalium'</td>
+    <td>Required if &quot;STI tested for&quot;=&#x27;Mycoplasma genitalium&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
@@ -6254,16 +6560,16 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.B23 Offer sexual and reproductive health services</td>
     <td>HIV.B.DE308</td>
-    <td>Microscopy </td>
+    <td>Microscopy</td>
     <td>Microscopy test used</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Microscopy </td>
+    <td>Microscopy</td>
     <td>N/A</td>
-    <td>N/A</td>
+    <td>None</td>
     <td>None</td>
     <td>O</td>
-    <td>None</td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -6290,14 +6596,14 @@ HIV.A5 Create new client record</td>
     <td>HIV.B.DE310</td>
     <td>Other (specify)</td>
     <td>Other type of test used for Mycoplasma genitalium test (specify)</td>
-    <td>N/A</td>
+    <td>Input Option</td>
     <td>String</td>
     <td>Other (specify)</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
     <td>O</td>
-    <td>Required if "Mycoplasma genitalium test type"='Other'</td>
+    <td>Required if &quot;Mycoplasma genitalium test type&quot;=&#x27;Other&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
@@ -6314,7 +6620,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "STI tested for"='Other (specify)'</td>
+    <td>Required if &quot;STI tested for&quot;=&#x27;Other (specify)&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
@@ -6334,7 +6640,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Shown for a single selected STI. The workbook provides a single generic result field.</td>
   </tr>
   <tr>
     <td>HIV.B23 Offer sexual and reproductive health services</td>
@@ -6425,7 +6731,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.B23 Offer sexual and reproductive health services</td>
     <td>HIV.B.DE318</td>
     <td>Treponemal</td>
-    <td>Treponemal test used </td>
+    <td>Treponemal test used</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Treponemal</td>
@@ -6511,14 +6817,14 @@ HIV.A5 Create new client record</td>
     <td>HIV.B.DE323</td>
     <td>Other (specify)</td>
     <td>Other test used for confirmatory syphilis test (specify)</td>
-    <td>N/A</td>
+    <td>Input Option</td>
     <td>String</td>
     <td>Other (specify)</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Confirmatory syphilis test type"='Other'</td>
+    <td>Required if &quot;Confirmatory syphilis test type&quot;=&#x27;Other&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
@@ -6611,7 +6917,7 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.B23 Offer sexual and reproductive health services</td>
     <td>HIV.B.DE329</td>
-    <td>Date STI treatment prescribed </td>
+    <td>Date STI treatment prescribed</td>
     <td>Date STI treatment was prescribed to the client</td>
     <td>N/A</td>
     <td>DateTime</td>
@@ -6647,7 +6953,6 @@ HIV.A5 Create new client record</td>
     <td>HIV.B.DE331</td>
     <td>STI treatment dispensed (specify)</td>
     <td>STI treatment dispensed to the client</td>
-    <td>N/A</td>
     <td>String</td>
     <td>N/A</td>
     <td>N/A</td>
@@ -6655,6 +6960,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>

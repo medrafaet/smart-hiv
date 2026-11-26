@@ -2069,6 +2069,8 @@ Immediately take action or refer for care if client is showing this sign of a se
 
 ### HIV.B7.DT
 
+For QA Preview, the HTS questionnaire captures the test result and HIV status reported after applying the national testing algorithm. The table below is the WHO reference. The accompanying CQL contains a partial implementation of that reference and is unsuitable for assigning a diagnosis.
+
 **Business Rule**: WHO standard testing strategy for HIV-1 diagnosis (among people ≥18 months of age)
 
 **Trigger**: HIV.B7 Test for HIV using testing algorithm, HIV.C4 Test for HIV using testing algorithm, HIV.D.11 Retest using HIV strategy

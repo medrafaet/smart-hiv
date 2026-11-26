@@ -11,4 +11,3 @@ Description: "Value set of results from the reported HIV self-test"
 
 * HIVConcepts#HIV.B.DE45 "Reactive"
 * HIVConcepts#HIV.B.DE46 "Non-reactive"
-* HIVConcepts#HIV.B.DE48 "Date of HIV self-test"

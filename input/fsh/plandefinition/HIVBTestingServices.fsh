@@ -19,9 +19,18 @@ Usage: #definition
 * action.participant[=].role.text = "Trained Lay Provider"
 * action.action[0].id = "HIV.B.1"
 * action.action[=].title = "Determine reason for visit"
+* action.action[=].definitionCanonical = Canonical(HIV.B1DetermineReasonForVisit)
 * action.action[=].description = "Ask client if they have visited previously, search for client details in the system and determine reason for visit"
 * action.action[=].participant.type = #practitioner
 * action.action[=].participant.role.text = "Trained Lay Provider"
+* action.action[=].relatedAction.actionId = "HIV.ET.B1"
+* action.action[=].relatedAction.relationship = #before-start
+* action.action[+].id = "HIV.ET.B1"
+* action.action[=].title = "Determine testing modality"
+* action.action[=].description = "Record the approach used to provide HIV testing services."
+* action.action[=].participant.type = #practitioner
+* action.action[=].participant.role.text = "Trained Lay Provider"
+* action.action[=].definitionCanonical = Canonical(HIV.ET.B1DetermineTestingModality)
 * action.action[=].relatedAction.actionId = "HIV.B.2"
 * action.action[=].relatedAction.relationship = #before-start
 * action.action[+].id = "HIV.B.2"
@@ -55,6 +64,7 @@ Usage: #definition
 * action.action[=].action[=].action[=].relatedAction.relationship = #before-start
 * action.action[=].action[=].action[+].id = "HIV.B.6"
 * action.action[=].action[=].action[=].title = "Capture or update client history"
+* action.action[=].action[=].action[=].definitionCanonical = Canonical(HIV.B6CaptureOrUpdateClientHistory)
 * action.action[=].action[=].action[=].description = "Discuss history with client and review available records. Examples of history may include other diagnoses, medications (including any use of ART), at risk for HIV or engages in HIV risk behaviours, partner’s HIV status and whether the client has performed an HIV self-test and, if so, the results"
 * action.action[=].action[=].action[=].participant.type = #practitioner
 * action.action[=].action[=].action[=].participant.role.text = "Trained Lay Provider"
@@ -72,15 +82,18 @@ Usage: #definition
 * action.action[+].id = "HIV.B.7"
 * action.action[=].title = "Test for HIV using testing algorithm"
 * action.action[=].description = "The type of test to use depends on national policies and may reflect a number of factors, such as the client’s age, whether the client is pregnant, and the availability of tests at a facility."
+* action.action[=].definitionCanonical = Canonical(HIV.B7TestForHivUsingTestingAlgorithm)
 * action.action[=].participant.type = #practitioner
 * action.action[=].participant.role.text = "Trained Lay Provider"
 * action.action[+].id = "HIV.B.8"
 * action.action[=].title = "Provide post-test counselling"
+* action.action[=].definitionCanonical = Canonical(HIV.B8ProvidePostTestCounselling)
 * action.action[=].description = "Messages need to provide clients with the latest information and be clearly communicated to all people tested for HIV, regardless of the test result but tailored to their test result"
 * action.action[=].participant.type = #practitioner
 * action.action[=].participant.role.text = "Trained Lay Provider"
 * action.action[+].id = "HIV.B.9"
 * action.action[=].title = "Determine recommended services"
+* action.action[=].definitionCanonical = Canonical(HIV.B9DetermineRecommendedServices)
 * action.action[=].description = "All people with HIV-positive diagnoses should be offered a package of support interventions that ensure timely linkage to care."
 * action.action[=].participant.type = #practitioner
 * action.action[=].participant.role.text = "Trained Lay Provider"
@@ -110,17 +123,25 @@ Usage: #definition
 * action.action[=].participant.type = #practitioner
 * action.action[=].participant.role.text = "Trained Lay Provider"
 * action.action[+].id = "HIV.B.18"
-* action.action[=].title = "Provide voluntary partner services"
+* action.action[=].title = "Provide voluntary partner and family services"
+* action.action[=].definitionCanonical = Canonical(HIV.B18ProvideVoluntaryPartnerAndFamilyServices)
 * action.action[=].description = "Partner services include partner notification, contact tracing, index testing and family-based index case testing for reaching partners of people with HIV. In this kit “partner services” is used as an inclusive term encompassing a range of partner services packages and approaches, including social network-based approaches. HIV partner services can be delivered in many ways, including patient referral and provider-assisted referral."
 * action.action[=].participant.type = #practitioner
 * action.action[=].participant.role.text = "Trained Lay Provider"
 * action.action[+].id = "HIV.B.20"
 * action.action[=].title = "Schedule retest"
+* action.action[=].definitionCanonical = Canonical(HIV.B20ScheduleRetest)
 * action.action[=].description = "Not all groups or settings need post-test counselling messages encouraging periodic retesting. In certain situations, individuals who have been tested for HIV in the past can be retested"
 * action.action[=].participant.type = #practitioner
 * action.action[=].participant.role.text = "Trained Lay Provider"
 * action.action[+].id = "HIV.B.21"
 * action.action[=].title = "Offer prevention options"
+* action.action[=].definitionCanonical = Canonical(HIV.B21OfferPreventionOptions)
 * action.action[=].description = "Messages should include information on HIV prevention interventions and how to access them, such as male and female condoms, PrEP for those at high ongoing risk, voluntary medical male circumcision for men and boys in eastern and southern Africa, and harm reduction services for people who inject drugs"
+* action.action[=].participant.type = #practitioner
+* action.action[=].participant.role.text = "Trained Lay Provider"
+* action.action[+].id = "HIV.B.23"
+* action.action[=].title = "Offer sexual and reproductive health services"
+* action.action[=].definitionCanonical = Canonical(HIV.B23OfferSexualAndReproductiveHealthServices)
 * action.action[=].participant.type = #practitioner
 * action.action[=].participant.role.text = "Trained Lay Provider"

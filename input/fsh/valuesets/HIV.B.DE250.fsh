@@ -11,4 +11,3 @@ Description: "Value set of result from syphilis test"
 
 * HIVConcepts#HIV.B.DE251 "Positive"
 * HIVConcepts#HIV.B.DE252 "Negative"
-* HIVConcepts#HIV.B.DE253 "Inconclusive"
