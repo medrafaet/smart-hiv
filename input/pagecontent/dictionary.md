@@ -39199,70 +39199,53 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.Configuration</td>
     <td>HIV.Config.DE1</td>
-    <td>Population prevalence of TB</td>
+    <td>National TB prevalence</td>
     <td>The tuberculosis prevalence in the general population in number of cases per 100 000 persons or greater.</td>
     <td>N/A</td>
     <td>Quantity</td>
     <td>N/A</td>
     <td>Integer Quantity</td>
     <td>N/A</td>
-    <td>0% ≤ "Population prevalence of TB" ≤ 100%</td>
+    <td>0% ≤ &quot;Population prevalence of TB&quot; ≤ 100%</td>
     <td>R</td>
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.Configuration</td>
-    <td>HIV.Config.DE2</td>
-    <td>Population prevalence of soil-transmitted helminth infection</td>
-    <td>The percentage of individuals in the general population infected with at least one species of soil-transmitted helminths</td>
-    <td>N/A</td>
-    <td>Quantity</td>
-    <td>N/A</td>
-    <td>Decimal Quantity</td>
-    <td>N/A</td>
-    <td>0% ≤ "Population prevalence of soil-transmitted helminth infection" ≤ 100%</td>
-    <td>R</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>Enter integer cases per 100,000 people. The workbook’s 0% to 100% range corresponds to 0 to 100,000 in these units.</td>
   </tr>
   <tr>
     <td>HIV.Configuration</td>
     <td>HIV.Config.DE3</td>
-    <td>Population incidence of HIV in the absence of PrEP</td>
+    <td>National HIV incidence</td>
     <td>HIV incidence number of cases per 100 person–years in the absence of PrEP</td>
     <td>N/A</td>
     <td>Quantity</td>
     <td>N/A</td>
     <td>Integer Quantity</td>
     <td>N/A</td>
-    <td>0% ≤ "Population incidence of HIV in the absence of PrEP" ≤ 100%</td>
+    <td>0% ≤ &quot;Population incidence of HIV in the absence of PrEP&quot; ≤ 100%</td>
     <td>R</td>
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Enter whole cases per 100 person-years in the absence of PrEP. The configured range is 0 to 100 in these units.</td>
   </tr>
   <tr>
     <td>HIV.Configuration</td>
     <td>HIV.Config.DE4</td>
-    <td>Population prevalence of HIV</td>
-    <td>The proportion of the population that are HIV-positive</td>
+    <td>National prevalence of HIV</td>
+    <td>The proportion of the population that are HIV positive</td>
     <td>N/A</td>
     <td>Quantity</td>
     <td>N/A</td>
     <td>Decimal Quantity</td>
     <td>N/A</td>
-    <td>0% ≤ "Population prevalence of HIV" ≤ 100%</td>
+    <td>0% ≤ &quot;Population prevalence of HIV&quot; ≤ 100%</td>
     <td>R</td>
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Use the verified national estimate as a decimal percentage. Apply the same 0 to 100 scale to the other percentage fields.</td>
   </tr>
   <tr>
     <td>HIV.Configuration</td>
@@ -39274,12 +39257,12 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>Decimal Quantity</td>
     <td>N/A</td>
-    <td>0% ≤ "Prevalence of pretreatment NNRTI drug resistance" ≤ 100%</td>
+    <td>0% ≤ &quot;Prevalence of pretreatment NNRTI drug resistance&quot; ≤ 100%</td>
     <td>R</td>
     <td></td>
     <td></td>
     <td></td>
-    <td>In countries in which the prevalence of pretreatment HIV drug resistance to NNRTIs among people initiating first-line ART is equal to or greater than 10%, NNRTI-based ART should be avoided.</td>
+    <td></td>
   </tr>
   <tr>
     <td>HIV.Configuration</td>
@@ -39301,14 +39284,14 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.Configuration</td>
     <td>HIV.Config.DE7</td>
-    <td>Population prevalence of syphilis</td>
+    <td>National prevalence of syphilis</td>
     <td>The proportion of the population with syphilis</td>
     <td>N/A</td>
     <td>Quantity</td>
     <td>N/A</td>
     <td>Decimal Quantity</td>
     <td>N/A</td>
-    <td>0% ≤ "Population prevalence of syphilis" ≤ 100%</td>
+    <td>0% ≤ &quot;Population prevalence of syphilis&quot; ≤ 100%</td>
     <td>R</td>
     <td></td>
     <td></td>
@@ -39318,14 +39301,14 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.Configuration</td>
     <td>HIV.Config.DE8</td>
-    <td>Population prevalence of hepatitis B</td>
+    <td>National prevalence of hepatitis B</td>
     <td>The proportion of hepatitis B surface antigen (HBsAg) seroprevalence in the general population</td>
     <td>N/A</td>
     <td>Quantity</td>
     <td>N/A</td>
     <td>Decimal Quantity</td>
     <td>N/A</td>
-    <td>0% ≤ "Population prevalence of hepatitis B" ≤ 100%</td>
+    <td>0% ≤ &quot;Population prevalence of hepatitis B&quot; ≤ 100%</td>
     <td>R</td>
     <td></td>
     <td></td>
@@ -39335,14 +39318,14 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.Configuration</td>
     <td>HIV.Config.DE9</td>
-    <td>Population prevalence of hepatitis C</td>
+    <td>National prevalence of hepatitis C</td>
     <td>The proportion of hepatitis C virus (HCV) antibody seroprevalence in the general population</td>
     <td>N/A</td>
     <td>Quantity</td>
     <td>N/A</td>
     <td>Decimal Quantity</td>
     <td>N/A</td>
-    <td>0% ≤ "Population prevalence of hepatitis C" ≤ 100%</td>
+    <td>0% ≤ &quot;Population prevalence of hepatitis C&quot; ≤ 100%</td>
     <td>R</td>
     <td></td>
     <td></td>
@@ -39352,19 +39335,19 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.Configuration</td>
     <td>HIV.Config.DE10</td>
-    <td>Prevalence of HIV in the catchment area</td>
-    <td>The proportion of the population from the health facility's catchment area that are HIV-positive (estimated)</td>
+    <td>Prevalence of HIV in woreda</td>
+    <td>The proportion of the population from the health facility&#x27;s catchment area that are HIV positive (estimated)</td>
     <td>N/A</td>
     <td>Quantity</td>
     <td>N/A</td>
     <td>Decimal Quantity</td>
     <td>N/A</td>
-    <td>0% ≤ "Population prevalence of HIV" ≤ 100%</td>
+    <td>0% ≤ &quot;Population prevalence of HIV&quot; ≤ 100%</td>
     <td>R</td>
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Use the verified woreda estimate for the facility’s catchment area and retain decimal precision.</td>
   </tr>
   <tr>
     <td>HIV.Configuration</td>
@@ -39398,17 +39381,16 @@ HIV.A5 Create new client record</td>
     <td></td>
     <td>HIV.B9.DT, HIV.C7.DT, HIV.S.4</td>
     <td></td>
-    <td></td>
+    <td>Use the national programme’s approved classification for the site and pass the code as the HivBurdenSetting decision-support parameter. The workbook uses above and below 5% and leaves exactly 5% unspecified.</td>
   </tr>
   <tr>
     <td>HIV.Configuration</td>
     <td>HIV.Config.DE13</td>
     <td>High HIV burden setting</td>
-    <td>Settings with >5% national HIV prevalence and subpopulations and geographic settings where HIV prevalence and/or incidence is higher than nationally.</td>
+    <td>Settings with &gt;5% national HIV prevalence and subpopulations and geographic settings where HIV prevalence and/or incidence is higher than nationally.</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>High HIV burden setting</td>
-    <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
@@ -39416,12 +39398,13 @@ HIV.A5 Create new client record</td>
     <td>HIV.B9.DT, HIV.C7.DT, HIV.S.4</td>
     <td></td>
     <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>HIV.Configuration</td>
     <td>HIV.Config.DE14</td>
     <td>Low HIV burden setting</td>
-    <td>Settings with <5% HIV national prevalence but where certain populations (primarily key populations and their partners) and geographic settings may have higher HIV prevalence and/or incidence than nationally and, therefore, need priority in the HIV response</td>
+    <td>Settings with &lt;5% HIV national prevalence but where certain populations (primarily key populations and their partners) and geographic settings may have higher HIV prevalence and/or incidence than nationally and, therefore, need priority in the HIV response</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Low HIV burden setting</td>
@@ -39483,7 +39466,7 @@ HIV.A5 Create new client record</td>
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>For QA Preview, select a verified ET Base MFR Location and use its Location.identifier:mfrId system and value. A separately issued surveillance ID requires an authoritative mapping.</td>
   </tr>
   <tr>
     <td>HIV.Configuration</td>
@@ -39500,12 +39483,12 @@ HIV.A5 Create new client record</td>
     <td>Required if client is being treated for TB</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required in HIV/TB care when the client is currently being treated for active TB. Use the verified treating Location’s MFR identifier. TB preventive treatment alone does not trigger the field.</td>
   </tr>
   <tr>
     <td>HIV.Configuration</td>
     <td>HIV.Config.DE19</td>
-    <td>Other priority populations</td>
+    <td>Priority populations</td>
     <td>Other populations of priority of HIV prevention and care in local context (provided during adaptation)</td>
     <td>N/A</td>
     <td>Coding</td>
@@ -39517,6 +39500,74 @@ HIV.A5 Create new client record</td>
     <td></td>
     <td></td>
     <td>ART.4, ART.5, ART.6, ART.7</td>
+    <td>Choose the populations prioritized by the programme. Apply these choices at the programme level.</td>
+  </tr>
+  <tr>
+    <td>HIV.Configuration</td>
+    <td>HIV.Config.ET.DE19</td>
+    <td>Population with special needs</td>
+    <td>People with disability,homeless people and street based chidren,adolecsent &amp; youth</td>
+    <td>Select all that apply</td>
+    <td>Coding</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Select all applicable groups within this category. The form uses the options listed in the worksheet.</td>
+  </tr>
+  <tr>
+    <td>HIV.Configuration</td>
+    <td>HIV.Config.ET.DE20</td>
+    <td>Disability</td>
+    <td>disability</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.Configuration</td>
+    <td>HIV.Config.ET.DE21</td>
+    <td>Adolecsent &amp; youth</td>
+    <td>adolecsent &amp; youth</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.Configuration</td>
+    <td>HIV.Config.ET.DE22</td>
+    <td>Homeless people</td>
+    <td>homeless people</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -39534,7 +39585,7 @@ HIV.A5 Create new client record</td>
     <td></td>
     <td></td>
     <td>PRV.12</td>
-    <td></td>
+    <td>If both period dates are present, the end must be on or after the start.</td>
   </tr>
   <tr>
     <td>HIV.Configuration</td>
@@ -39568,7 +39619,7 @@ HIV.A5 Create new client record</td>
     <td></td>
     <td></td>
     <td>PRV.11, PRV.14</td>
-    <td></td>
+    <td>Use for point-in-time surveys. The reporting date is independent of the period start and end.</td>
   </tr>
 </table>
 <br>

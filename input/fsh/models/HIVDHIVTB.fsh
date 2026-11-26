@@ -8,6 +8,11 @@ Description:  "Record the diagnosis method and date when the investigation confi
 Expression:   "tbDiagnosisResult.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.D.DE940').exists() implies (methodOfTbDiagnosis.exists() and dateOfTbDiagnosis.exists())"
 Severity:     #error
 
+Invariant: tb-treating-facility-required
+Description: "Record the verified treating site when the client is currently receiving treatment for active TB."
+Expression: "currentlyOnTbTreatment.where($this = true).exists() = tbTreatingFacility.exists()"
+Severity: #error
+
 Logical: HIVDHIVTB
 Title: "HIV.D HIV-TB"
 Description: "This tab describes the data that may be collected during care and treatment clinical visit for HIV/TB care (HIV.D)"
@@ -19,7 +24,7 @@ Description: "This tab describes the data that may be collected during care and 
 * ^status = #active
 * ^mapping.identity = "moh-hiv-dak"
 * ^mapping.name = "Ethiopia MoH HIV/TB Data Dictionary"
-* obeys HIV-D-17 and HIV-D-18
+* obeys HIV-D-17 and HIV-D-18 and tb-treating-facility-required
 
 * whoHivClinicalStageConditionOrSymptom 0..* Coding "WHO HIV clinical stage condition or symptom" "New or recurrent clinical events used to categorize HIV disease severity based at baseline and follow up"
   * ^code[+] = HIVConcepts#HIV.D.DE934
@@ -91,6 +96,9 @@ Description: "This tab describes the data that may be collected during care and 
 * tbTreatmentOutcome from HIV.D.DE1002
 * tbTreatmentCompletionDate 0..1 date "TB treatment completion date" "Date client completes TB treatment"
   * ^code[+] = HIVConcepts#HIV.D.DE1009
+* currentlyOnTbTreatment 0..1 boolean "Currently on treatment for active TB" "Explicitly documented current treatment status."
+* tbTreatingFacility 0..1 Reference(http://fhir.et/core/StructureDefinition/ethiopian-mfr-location) "TB treating facility" "Verified physical MFR site where the client is being treated for active TB."
+  * ^code[+] = HIVConcepts#HIV.Config.DE18
 * tbTreatmentRegimenComposition 0..* Coding "TB treatment regimen composition" "TB drugs currently being taken by the client"
   * ^code[+] = HIVConcepts#HIV.D.DE1010
 * tbTreatmentRegimenComposition from HIV.D.DE1010

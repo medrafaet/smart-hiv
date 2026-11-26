@@ -167,7 +167,9 @@ Description: "Encounter for HIV testing services visit. This profile captures th
 * participant 0..* MS
 * participant ^short = "HTS provider, counsellor, or other participant"
 * location 0..* MS
-* location ^short = "HTS service delivery location"
+* location ^short = "Registered HTS service delivery location"
+* location.location only Reference(http://fhir.et/core/StructureDefinition/ethiopian-mfr-location)
+* location.location ^comment = "Use the ET Base registry reference when the service site is registered. Use the community entry point to describe community testing at an unregistered venue."
 * serviceProvider 0..1 MS
 * serviceProvider only Reference(HivHtsDiagnosingFacilityOrganization)
 * serviceProvider ^short = "HTS service organization"
