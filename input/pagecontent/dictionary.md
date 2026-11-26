@@ -6988,10 +6988,10 @@ HIV.A5 Create new client record</td>
     <th>Annotations</th>
   </tr>
   <tr>
-    <td>HIV.C1 Determine reason for visit</td>
+    <td>HIV.B1 Determine reason for visit</td>
     <td>HIV.C.DE1</td>
-    <td>Reason for PrEP visit</td>
-    <td>Client's reason for the prevention visit</td>
+    <td>Type of visit</td>
+    <td>Client&#x27;s type of visit</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -7002,16 +7002,16 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>PrEP workflow step HIV.C1. A PrEP visit type is required unless PEP counselling is recorded.</td>
   </tr>
   <tr>
-    <td>HIV.C1 Determine reason for visit</td>
-    <td>HIV.C.DE2</td>
-    <td>First time counselling on PrEP</td>
-    <td>The client is interested in discussing pre-exposure prophylaxis (PrEP) for the first time</td>
+    <td>HIV.B1 Determine reason for visit</td>
+    <td>HIV.C.ET.DE30</td>
+    <td>Counselling on PrEP</td>
+    <td>Counselling on pre-exposure prophylaxis (PrEP)</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>First time counselling on PrEP</td>
+    <td>Counseling on PrEP</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -7022,13 +7022,30 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.C1 Determine reason for visit</td>
+    <td>HIV.B1 Determine reason for visit</td>
+    <td>HIV.C.DE2</td>
+    <td>Initial visit</td>
+    <td>The first visit for PrEP elligible clients</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>First time counselling on PrEP</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>O</td>
+    <td>None</td>
+    <td></td>
+    <td></td>
+    <td>The form keeps First time counselling on PrEP, which is also the workbook input option. Confirm whether Initial visit is intended to mean enrolment only.</td>
+  </tr>
+  <tr>
+    <td>HIV.B1 Determine reason for visit</td>
     <td>HIV.C.DE3</td>
-    <td>Follow-up appointment for PrEP</td>
+    <td>Follow-up Visit</td>
     <td>Client is at a follow-up or refill pre-exposure prophylaxis (PrEP) appointment</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Follow-up appointment for PrEP</td>
+    <td>Follow-up appointment Visit</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -7039,13 +7056,13 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.C1 Determine reason for visit</td>
+    <td>HIV.B1 Determine reason for visit</td>
     <td>HIV.C.DE4</td>
     <td>Restarting PrEP</td>
-    <td>Client has previously taken pre-exposure prophylaxis (PrEP) and may like to restart taking it</td>
+    <td>The client previously initiated PrEP but discontinued and now wishes to restart</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Restarting PrEP</td>
+    <td>Restarted visit after discontinuation</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -7056,27 +7073,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.C1 Determine reason for visit</td>
-    <td>HIV.C.DE5</td>
-    <td>Counselling on PEP</td>
-    <td>Counselling on post-exposure prophylaxis (PEP)</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Counselling on PEP</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C1 Determine reason for visit</td>
+    <td>HIV.B1 Determine reason for visit</td>
     <td>HIV.C.DE6</td>
-    <td>Unscheduled visit for side effects</td>
-    <td>Patient visit for management of side effects related to PrEP</td>
+    <td>Unscheduled visit for side effects or/and adverse events</td>
+    <td>Patient visit for management of side effects or /and adverse effect related issues</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Unscheduled visit for side effects</td>
@@ -7090,13 +7090,13 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.C1 Determine reason for visit</td>
+    <td>HIV.B1 Determine reason for visit</td>
     <td>HIV.C.DE7</td>
-    <td>3-month PrEP visit</td>
-    <td>Client is visiting for the recommended 3-month pre-exposure prophylaxis (PrEP) visit</td>
+    <td>Month PrEP visit</td>
+    <td>Client is visited for the recommended pre-exposure prophylaxis (PrEP) visit</td>
     <td>N/A</td>
-    <td>Boolean</td>
-    <td>True/False</td>
+    <td>Date</td>
+    <td>N/A</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -7104,13 +7104,47 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>There are specific indicators that reference the 3-month PrEP visit, so it is included separately here. If there are cutoffs for what can be considered a 3-month visit, they should be added.</td>
+    <td>The workbook uses this ID for a date. The existing code for a 3-month visit remains in the code system.</td>
+  </tr>
+  <tr>
+    <td>HIV.B1 Determine reason for visit</td>
+    <td>HIV.C.ET.DE7.1</td>
+    <td>2-month PrEP visit</td>
+    <td>The client is attended the recommended 2-month follow-up visit for long-acting injectable cabotegravir PrEP.</td>
+    <td>N/A</td>
+    <td>Boolean</td>
+    <td>True/False</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>C</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B1 Determine reason for visit</td>
+    <td>HIV.C.ET.DE7.2</td>
+    <td>6- month PrEP visit</td>
+    <td>The client is attended the recommended 6-month follow-up visit for Lenacapavir PrEP.</td>
+    <td>N/A</td>
+    <td>Boolean</td>
+    <td>True/False</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>C</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE8</td>
     <td>Contact with and (suspected) exposure to HIV</td>
-    <td>The client had suspected or known exposure to HIV</td>
+    <td>The client is suspected or known exposure to HIV</td>
     <td>N/A</td>
     <td>Boolean</td>
     <td>True/False</td>
@@ -7119,6 +7153,159 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B1 Determine reason for visit</td>
+    <td>HIV.C.DE5</td>
+    <td>Counselling on PEP</td>
+    <td>Counselling on post-exposure prophylaxis (PEP)</td>
+    <td>N/A</td>
+    <td>Boolean</td>
+    <td>True/False</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>O</td>
+    <td>None</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.C3 Capture or update client history</td>
+    <td>HIV.C.ET.DE1</td>
+    <td>Source of exposure</td>
+    <td>The client had suspected or known source of exposure to HIV</td>
+    <td>Select one</td>
+    <td>Coding</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Contact with and (suspected) exposure to HIV = Yes</td>
+    <td>R</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.C3 Capture or update client history</td>
+    <td>HIV.C.ET.DE2</td>
+    <td>Needle injury</td>
+    <td>Needle is the source of exposure</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Contact with and (suspected) exposure to HIV = Yes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.C3 Capture or update client history</td>
+    <td>HIV.C.ET.DE3</td>
+    <td>Skin injury with Sharps</td>
+    <td>Sharps are the source of exposure</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Contact with and (suspected) exposure to HIV = Yes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.C3 Capture or update client history</td>
+    <td>HIV.C.ET.DE4</td>
+    <td>Blood and products splash</td>
+    <td>Blood and products are source of exposure</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Contact with and (suspected) exposure to HIV = Yes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.C3 Capture or update client history</td>
+    <td>HIV.C.ET.DE5</td>
+    <td>Potentially infectious body fluids</td>
+    <td>Diferent body fluids are the source of exposure</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Contact with and (suspected) exposure to HIV = Yes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.C3 Capture or update client history</td>
+    <td>HIV.C.ET.DE6</td>
+    <td>Rape</td>
+    <td>Rape is mentioned as source of exposure</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Contact with and (suspected) exposure to HIV = Yes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.C3 Capture or update client history</td>
+    <td>HIV.C.ET.DE7</td>
+    <td>Other</td>
+    <td>Other source of exposure</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Contact with and (suspected) exposure to HIV = Yes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.C3 Capture or update client history</td>
+    <td>HIV.C.ET.DE8</td>
+    <td>Other (specify)</td>
+    <td>Mention if there is other source of exposure</td>
+    <td></td>
+    <td>String</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Contact with and (suspected) exposure to HIV = Yes</td>
+    <td></td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -7126,25 +7313,25 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE9</td>
-    <td>Date/time of suspected exposure to HIV</td>
-    <td>When the suspect exposure to HIV took place</td>
+    <td>Exposure duration</td>
+    <td>Time of exposure to the time the exposed person appeared for the PEP service in hours.</td>
     <td>N/A</td>
-    <td>DateTime</td>
+    <td>Quantity</td>
+    <td></td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
+    <td>Contact with and (suspected) exposure to HIV = Yes</td>
     <td>C</td>
-    <td>Required if "Contact with and (suspected) exposure to HIV"=True</td>
+    <td>Required if &quot;Contact with and (suspected) exposure to HIV&quot;=True</td>
     <td>HIV.C23.DT</td>
     <td></td>
-    <td></td>
+    <td>Mapped to elapsed hours in the workbook. The existing code and decision-support logic use an exposure timestamp.</td>
   </tr>
   <tr>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE10</td>
     <td>Currently on PrEP</td>
-    <td>The client is currently taking PrEP. Oral pre-exposure prophylaxis (PrEP) of HIV is the use of ARV drugs by people who are not infected with HIV to block the acquisition of HIV.</td>
+    <td>An individual who has initiated PrEP and has not discontinued it by the date of assessment, including those who are receiving oral PrEP or long-acting injectable PrEP</td>
     <td>N/A</td>
     <td>Boolean</td>
     <td>True/False</td>
@@ -7161,7 +7348,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE11</td>
     <td>PrEP dosing type</td>
-    <td>Way in which pre-exposure prophylaxis (PrEP) is taken (daily or event-driven)</td>
+    <td>The type of pre-exposure prophylaxis (PrEP) taken</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -7171,14 +7358,14 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>PRV.2</td>
+    <td>PRV.2, PRV.2</td>
     <td></td>
   </tr>
   <tr>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE12</td>
     <td>Daily oral PrEP</td>
-    <td>Pre-exposure prophylaxis (PrEP) is taken every day</td>
+    <td>Oral pre-exposure prophylaxis (PrEP) is taken every day</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Daily oral PrEP</td>
@@ -7188,68 +7375,34 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>PRV.2</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C3 Capture or update client history</td>
-    <td>HIV.C.DE13</td>
-    <td>Event-driven PrEP (2+1+1)</td>
-    <td>Event-driven pre-exposure prophylaxis (PrEP) is taken on an even-driven basis (2+1+1)</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Event-driven PrEP (2+1+1)</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td>PRV.2</td>
+    <td>PRV.2, PRV.2</td>
     <td></td>
   </tr>
   <tr>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE14</td>
-    <td>Other PrEP dosing type</td>
-    <td>Other PrEP dosing type</td>
+    <td>Injectable PrEP - Cabotegravir</td>
+    <td>Long acting injectable PrEP - Cabotegravir is given every two months</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Other PrEP dosing type</td>
+    <td>CAB-LA PrEP</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>PRV.2</td>
-    <td></td>
+    <td>PRV.2, PRV.2</td>
+    <td>The existing code means Other PrEP dosing type. QA Preview records CAB-LA with the existing HIV.C.DE23 code.</td>
   </tr>
   <tr>
     <td>HIV.C3 Capture or update client history</td>
-    <td>HIV.C.DE15</td>
-    <td>Other PrEP dosing type (specify)</td>
-    <td>Other PrEP dosing type (specify)</td>
-    <td>N/A</td>
-    <td>String</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>C</td>
-    <td>Required if "PrEP dosing type"='Other PrEP dosing type'</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C3 Capture or update client history</td>
-    <td>HIV.C.DE16</td>
-    <td>Used event-driven PrEP for at risk exposures over the past 3 months</td>
-    <td>Client reports taking ED-PrEP for at risk exposures over a 3-month period</td>
-    <td>N/A</td>
-    <td>Boolean</td>
-    <td>True/False</td>
+    <td>HIV.C.ET.DE9</td>
+    <td>Injectable PrEP-Lenacapavir(LEN)</td>
+    <td>Lenacapavir is a long-acting HIV-1 capsid inhibitor administered every six months for HIV prevention (PrEP).</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>LEN</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -7271,41 +7424,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Currently on PrEP"=True</td>
-    <td>HIV.C23.DT</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C3 Capture or update client history</td>
-    <td>HIV.C.DE18</td>
-    <td>TDF + FTC</td>
-    <td>Treated with tenofovir disoproxil fumarate (TDF) and emtricitabine (FTC) pre-exposure prophylaxis (PrEP) regimen (oral PrEP)</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>TDF + FTC</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>C</td>
-    <td>None</td>
-    <td>HIV.C23.DT</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C3 Capture or update client history</td>
-    <td>HIV.C.DE19</td>
-    <td>TDF</td>
-    <td>Treated with single-agent tenofovir disoproxil fumarate (TDF) pre-exposure prophylaxis (PrEP) regimen (oral PrEP)</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>TDF</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>C</td>
-    <td>None</td>
+    <td>Required if &quot;Currently on PrEP&quot;=True</td>
     <td>HIV.C23.DT</td>
     <td></td>
     <td></td>
@@ -7318,40 +7437,6 @@ HIV.A5 Create new client record</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>TDF + 3TC</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.C23.DT</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C3 Capture or update client history</td>
-    <td>HIV.C.DE21</td>
-    <td>Other TDF-based regimen</td>
-    <td>Treated with other tenofovir disoproxil fumarate (TDF)-based regimen (oral PrEP)</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Other TDF-based regimen</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.C23.DT</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C3 Capture or update client history</td>
-    <td>HIV.C.DE22</td>
-    <td>Dapivirine vaginal ring (DVR)</td>
-    <td>Dapivirine vaginal ring (DVR) for HIV prevention</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Dapivirine vaginal ring (DVR)</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -7380,9 +7465,26 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.C3 Capture or update client history</td>
+    <td>HIV.C.ET.DE24</td>
+    <td>Lenacapavir(LEN)</td>
+    <td>Lenacapavir (LEN) is a long-acting HIV-1 capsid inhibitor administered every six months for HIV prevention (PrEP).&quot;</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>LEN</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE24</td>
     <td>Experience with PrEP</td>
-    <td>The client's experience in taking PrEP</td>
+    <td>The client&#x27;s experience in taking PrEP</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -7392,7 +7494,7 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>PRV.2, PRV.3</td>
+    <td>PRV.2, PRV.3, PRV.2</td>
     <td></td>
   </tr>
   <tr>
@@ -7409,7 +7511,7 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>PRV.2, PRV.3</td>
+    <td>PRV.2, PRV.3, PRV.2</td>
     <td></td>
   </tr>
   <tr>
@@ -7426,7 +7528,7 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>PRV.2, PRV.3</td>
+    <td>PRV.2, PRV.3, PRV.2</td>
     <td></td>
   </tr>
   <tr>
@@ -7443,7 +7545,7 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>PRV.2, PRV.3</td>
+    <td>PRV.2, PRV.3, PRV.2</td>
     <td></td>
   </tr>
   <tr>
@@ -7501,7 +7603,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE31</td>
     <td>PEP history</td>
-    <td>The client's history in taking post-exposure prophylaxis (PEP) for HIV prevention</td>
+    <td>The client&#x27;s history in taking post-exposure prophylaxis (PEP) for HIV prevention</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -7517,7 +7619,7 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE32</td>
-    <td>First-time user</td>
+    <td>First-time PEP user</td>
     <td>The client has never used post-exposure prophylaxis (PEP) before</td>
     <td>Input Option</td>
     <td>Codes</td>
@@ -7534,7 +7636,7 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE33</td>
-    <td>Repeat user</td>
+    <td>Repeat PEP user</td>
     <td>The client has used post-exposure prophylaxis (PEP) before</td>
     <td>Input Option</td>
     <td>Codes</td>
@@ -7560,7 +7662,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Repeat PEP user" is not null</td>
+    <td>Required if &quot;Repeat PEP user&quot; is not null</td>
     <td></td>
     <td></td>
     <td></td>
@@ -7585,8 +7687,8 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE36</td>
-    <td>Signs of substantial risk of HIV infection</td>
-    <td>Signs the client is at a substantial risk of HIV infection</td>
+    <td>Evidence of substantial risk of HIV infection</td>
+    <td>Evidences the client is at a substantial risk of HIV infection</td>
     <td>Select all that apply</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -7597,16 +7699,33 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.C7.DT, HIV.S.1</td>
     <td></td>
-    <td></td>
+    <td>The workbook marks this field required. QA Preview permits an empty response when none of the listed factors applies.</td>
   </tr>
   <tr>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE37</td>
-    <td>No condom use during sex with more than one partner in the past 6 months</td>
-    <td>Recent vaginal or anal sexual intercourse without a condom with more than one partner</td>
+    <td>Recent unsafe sexual intercourse with more than one partner</td>
+    <td>Recent unsafe sexual intercourse with or without a condom with more than one partner</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>No condom use during sex with more than one partner in the past 6 months</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>O</td>
+    <td>None</td>
+    <td>HIV.C7.DT, HIV.S.1</td>
+    <td></td>
+    <td>The form retains the existing no-condom-use meaning, which matches the workbook input option.</td>
+  </tr>
+  <tr>
+    <td>HIV.C3 Capture or update client history</td>
+    <td>HIV.C.DE39</td>
+    <td>A sexual partner in the past 6 months had one or more HIV risk factors</td>
+    <td>A recent sex partner of the client had HIV risk factors</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>A sexual partner in the past 6 months with one or more HIV risk factors</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -7619,7 +7738,7 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE38</td>
-    <td>STI in the past 6 months</td>
+    <td>Hepatitis B positive counselling</td>
     <td>A recent history (in the last 6 months) of a sexually transmitted infection (STI ) by laboratory testing, self-report or syndromic STI treatment</td>
     <td>Input Option</td>
     <td>Codes</td>
@@ -7631,126 +7750,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.C7.DT, HIV.S.1</td>
     <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C3 Capture or update client history</td>
-    <td>HIV.C.DE39</td>
-    <td>A sexual partner in the past 6 months had one or more HIV risk factors</td>
-    <td>A recent sex partner of the client had HIV risk factors</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>A sexual partner in the past 6 months had one or more HIV risk factors</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.C7.DT, HIV.S.1</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C3 Capture or update client history</td>
-    <td>HIV.C.DE40</td>
-    <td>PrEP requested by client</td>
-    <td>Client is requesting PrEP, reflecting a decision-making process has already taken place and suggesting of substantial risk of HIV</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>PrEP requested by client</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.C7.DT, HIV.S.1</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C3 Capture or update client history</td>
-    <td>HIV.C.DE41</td>
-    <td>Pregnancy intention in serodiscordant partnerships</td>
-    <td>Client's intention or desire in the next year to either become pregnant or prevent a future pregnancy (in serodiscordant partnerships)</td>
-    <td>Select one</td>
-    <td>Coding</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>R</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C3 Capture or update client history</td>
-    <td>HIV.C.DE42</td>
-    <td>Yes, I want to become pregnant</td>
-    <td>Client intends to become pregnant</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Yes, I want to become pregnant</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>R</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C3 Capture or update client history</td>
-    <td>HIV.C.DE43</td>
-    <td>I'm OK either way</td>
-    <td>Client is not intending to become pregnant, but would not be adverse to becoming pregnant</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>I'm OK either way</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>R</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C3 Capture or update client history</td>
-    <td>HIV.C.DE44</td>
-    <td>No, I don't want to become pregnant</td>
-    <td>Client does not intend to become pregnant</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>No, I don't want to become pregnant</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>R</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C3 Capture or update client history</td>
-    <td>HIV.C.DE45</td>
-    <td>Unsure</td>
-    <td>Client is unsure or undecided about her pregnancy intentions</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Unsure</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>R</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>The existing code, workbook definition, and input option identify recent STI history.</td>
   </tr>
   <tr>
     <td>HIV.C3 Capture or update client history</td>
@@ -7773,7 +7773,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE47</td>
     <td>Fever</td>
-    <td>Client's symptoms include a fever</td>
+    <td>Client&#x27;s symptoms include a fever</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Fever</td>
@@ -7790,7 +7790,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE48</td>
     <td>Sore throat</td>
-    <td>Client's symptoms include a sore throat</td>
+    <td>Client&#x27;s symptoms include a sore throat</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Sore throat</td>
@@ -7807,7 +7807,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE49</td>
     <td>Aches</td>
-    <td>Client's symptoms include aches</td>
+    <td>Client&#x27;s symptoms include aches</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Aches</td>
@@ -7824,7 +7824,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE50</td>
     <td>Pains</td>
-    <td>Client's symptoms include pains</td>
+    <td>Client&#x27;s symptoms include pains</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Pains</td>
@@ -7841,7 +7841,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE51</td>
     <td>Swollen glands</td>
-    <td>Client's symptoms include swollen glands</td>
+    <td>Client&#x27;s symptoms include swollen glands</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Swollen glands</td>
@@ -7858,7 +7858,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE52</td>
     <td>Mouth sores</td>
-    <td>Client's symptoms include a mouth sores</td>
+    <td>Client&#x27;s symptoms include a mouth sores</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Mouth sores</td>
@@ -7875,7 +7875,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE53</td>
     <td>Headaches</td>
-    <td>Client's symptoms include a headaches</td>
+    <td>Client&#x27;s symptoms include a headaches</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Headaches</td>
@@ -7892,7 +7892,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE54</td>
     <td>Rash</td>
-    <td>Client's symptoms include a rash</td>
+    <td>Client&#x27;s symptoms include a rash</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Rash</td>
@@ -7908,8 +7908,8 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE55</td>
-    <td>Sex partner's HIV treatment status</td>
-    <td>Treatment adherence of client's sex partner for partners that are HIV-positive</td>
+    <td>Sex partner&#x27;s HIV treatment status</td>
+    <td>Treatment adherence of client&#x27;s sex partner for partners that are HIV positive</td>
     <td>Select all that apply</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -7926,7 +7926,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE56</td>
     <td>Not on ART</td>
-    <td>Sex partner is HIV-positive and not on ART</td>
+    <td>Sex partner is HIV positive and not on ART</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Not on ART</td>
@@ -7943,7 +7943,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE57</td>
     <td>On ART less than 6 months</td>
-    <td>Sex partner is HIV-positive and is on ART less than 6 months. ART may take up to 6 months to suppress viral load. In studies of serodiscordant couples, pre-exposure prophylaxis (PrEP) has provided a useful bridge to full viral suppression by the partner during that time.</td>
+    <td>Sex partner is HIV positive and is on ART less than 6 months. ART may take up to 6 months to suppress viral load. In studies of serodiscordant couples, pre-exposure prophylaxis (PrEP) has provided a useful bridge to full viral suppression by the partner during that time.</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>On ART less than 6 months</td>
@@ -7960,7 +7960,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE58</td>
     <td>Partner has suspected low adherence to ART</td>
-    <td>Sex partner is HIV-positive and is suspected to have low adherence to ART. There have been gaps in the partner's treatment adherence or the couple is not communicating openly about treatment adherence and viral load test results.</td>
+    <td>Sex partner is HIV positive and is suspected to have low adherence to ART. There have been gaps in the partner’s treatment adherence or the couple is not communicating openly about treatment adherence and viral load test results.</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Partner has suspected low adherence to ART</td>
@@ -7977,10 +7977,10 @@ HIV.A5 Create new client record</td>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE59</td>
     <td>Partner is not virally suppressed</td>
-    <td>Sex partner is HIV-positive and not virally suppressed</td>
+    <td>Sex partner is HIV positive and not virally suppressed</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Partner is not virally suppressed</td>
+    <td>Partner has a detectable HIV viral load</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -7994,10 +7994,10 @@ HIV.A5 Create new client record</td>
     <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE60</td>
     <td>Partner is virally suppressed and has been on ART for 6 months or more</td>
-    <td>Sex partner is HIV-positive and virally suppressed with 6 months or more on ART</td>
+    <td>Sex partner is HIV positive and virally suppressed with 6 months or more on ART</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Partner is virally suppressed and has been on ART for 6 months or more</td>
+    <td>Partner is virally suppressed and has been on ART over 6 months</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -8008,7 +8008,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.C8 Suitable for PrEP or PEP?</td>
+    <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE61</td>
     <td>Suitable for PrEP</td>
     <td>The client is suitable for PrEP</td>
@@ -8022,10 +8022,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.C23.DT, HIV.C7.DT</td>
     <td></td>
-    <td></td>
+    <td>Captured in the PrEP suitability assessment form after HIV testing.</td>
   </tr>
   <tr>
-    <td>HIV.C8 Suitable for PrEP or PEP?</td>
+    <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE62</td>
     <td>Offered PrEP</td>
     <td>After being evaluated as suitable for PrEP, the client was offered PrEP</td>
@@ -8039,7 +8039,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Captured in the PrEP suitability assessment form when suitability has been recorded.</td>
   </tr>
   <tr>
     <td>HIV.C17 Determine recommended tests</td>
@@ -8056,7 +8056,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>QA Preview records the tests chosen for the client. The form supports more than one selection.</td>
   </tr>
   <tr>
     <td>HIV.C17 Determine recommended tests</td>
@@ -8065,7 +8065,7 @@ HIV.A5 Create new client record</td>
     <td>Test serum creatinine to identify pre-existing renal disease (estimated creatinine clearance less than 60 ml/min)</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Serum creatinine test</td>
+    <td>Serum creatinine</td>
     <td>N/A</td>
     <td>Decision logic</td>
     <td>None</td>
@@ -8094,43 +8094,9 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.C17 Determine recommended tests</td>
-    <td>HIV.C.DE66</td>
-    <td>Hepatitis C test</td>
-    <td>Hepatitis C test recommended for client</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Hepatitis C test</td>
-    <td>N/A</td>
-    <td>Decision logic</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C17 Determine recommended tests</td>
-    <td>HIV.C.DE67</td>
-    <td>Syphilis test</td>
-    <td>Syphilis test recommended for client</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Syphilis test</td>
-    <td>N/A</td>
-    <td>Decision logic</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C17 Determine recommended tests</td>
     <td>HIV.C.DE68</td>
-    <td>Other screening for STIs</td>
-    <td>Other STI screening recommended for client</td>
+    <td>STI screening with syndrome</td>
+    <td>Whether the client is screened for STI or not. (STI syndromes: U=urethral discharge/G= Genital ulcer/ V= Vaginal discharge/ L= Lower abdominal pain/ S= scrotal swelling/ I= Inguinal bubo / O=Other-Specify)</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Other screening for STIs</td>
@@ -8141,13 +8107,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>The existing Other screening for STIs code supports the workbook screening option. Individual syndromes are separate findings.</td>
   </tr>
   <tr>
     <td>HIV.C17 Determine recommended tests</td>
     <td>HIV.C.DE69</td>
     <td>Pregnancy testing</td>
-    <td>Pregnancy testing for client</td>
+    <td>Pregnancy testing is recommended for client - to guide antenatal care, contraceptive and safer conception counselling, and to assess risk of mother-to-child transmission</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Pregnancy testing</td>
@@ -8163,19 +8129,19 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.C17 Determine recommended tests</td>
     <td>HIV.C.DE70</td>
-    <td>Review vaccination history</td>
-    <td>Review vaccination history recommended for client</td>
+    <td>Family planning method</td>
+    <td>Whether she is on Family planning method or not ( condoms, Oral contraceptive pills, Ingectable/ Implantable hormones, Diaphram/ cervical cap, Intrautriene device, Vasectomy/Tubal ligation, Abstinence (no sex)</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Review vaccination history</td>
-    <td>N/A</td>
-    <td>Decision logic</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
     <td></td>
     <td></td>
     <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>The existing code identifies vaccination history. Confirm how current family planning use or method should be captured separately.</td>
   </tr>
   <tr>
     <td>HIV.C21 Diagnostics</td>
@@ -8209,13 +8175,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Store the reported concentration and UCUM unit in Observation.valueQuantity. Use LOINC 2160-0 for mg/dL and 14682-9 for µmol/L in Observation.code.</td>
   </tr>
   <tr>
     <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
     <td>HIV.C.DE73</td>
-    <td>Date medications dispensed</td>
-    <td>Date the client was dispensed medications</td>
+    <td>PrEP start date</td>
+    <td>Date the client was dispensed with medications and stared using the medication</td>
     <td>N/A</td>
     <td>Date</td>
     <td>N/A</td>
@@ -8225,25 +8191,8 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
-    <td>HIV.C.DE74</td>
-    <td>Date medications prescribed</td>
-    <td>Date the client was prescribed medications</td>
-    <td>N/A</td>
-    <td>Date</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td>PRV.2, PRV.3, PRV.5, PRV.6, PRV.7</td>
-    <td></td>
+    <td>PRV.12</td>
+    <td>Mapped to the workbook date when the client both received and started PrEP. The existing code identifies dispensing.</td>
   </tr>
   <tr>
     <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
@@ -8259,7 +8208,7 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>PRV.12, PRV.14, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7</td>
+    <td>PRV.12, PRV.14, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.2, PRV.3</td>
     <td></td>
   </tr>
   <tr>
@@ -8269,14 +8218,14 @@ HIV.A5 Create new client record</td>
     <td>Client was prescribed pre-exposure prophylaxis (PrEP) for HIV prevention</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>PrEP for HIV prevention</td>
+    <td>PrEP</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>PRV.12, PRV.14, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7</td>
+    <td>PRV.12, PRV.14, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.2, PRV.3</td>
     <td></td>
   </tr>
   <tr>
@@ -8286,21 +8235,21 @@ HIV.A5 Create new client record</td>
     <td>Client was prescribed post-exposure prophylaxis (PEP) for HIV prevention</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>PEP for HIV prevention</td>
+    <td>PEP</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>PRV.12, PRV.14, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7</td>
+    <td>PRV.12, PRV.14, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.2, PRV.3</td>
     <td></td>
   </tr>
   <tr>
     <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
     <td>HIV.C.DE78</td>
-    <td>Other</td>
-    <td>Client was prescribed other medications</td>
+    <td>Treatment for STI</td>
+    <td>Client was prescribed STI medications</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Other</td>
@@ -8310,30 +8259,30 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>PRV.12, PRV.14, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7</td>
-    <td></td>
+    <td>PRV.12, PRV.14, PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.2, PRV.3</td>
+    <td>The workbook lists STI treatment under the existing Other medication category.</td>
   </tr>
   <tr>
     <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
     <td>HIV.C.DE79</td>
-    <td>Other (specify)</td>
-    <td>Client was prescribed other medications (specify)</td>
+    <td>Treatment for acute HIV infection</td>
+    <td>Following HIV testing, clients who tested positive were initiated on antiretroviral therapy (ART).</td>
     <td>N/A</td>
-    <td>String</td>
+    <td>Codes</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Medications prescribed"='Other'</td>
+    <td>Required if &quot;Medications prescribed&quot;=&#x27;Other&#x27;</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>MoH clarification needed. This ID previously captured details of other medication, while this row describes initiation of ART following HIV diagnosis.</td>
   </tr>
   <tr>
     <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
     <td>HIV.C.DE80</td>
-    <td>PrEP product prescribed</td>
+    <td>PrEP for HIV prevention</td>
     <td>PrEP product that the client was prescribed</td>
     <td>Select one</td>
     <td>Coding</td>
@@ -8344,7 +8293,7 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>PRV.2, PRV.3, PRV.4</td>
+    <td>PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.2</td>
     <td></td>
   </tr>
   <tr>
@@ -8361,31 +8310,14 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>PRV.2, PRV.3, PRV.4</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
-    <td>HIV.C.DE82</td>
-    <td>Dapivirine vaginal ring (DVR)</td>
-    <td>Client was prescribed dapivirine vaginal ring (DVR)</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Dapivirine vaginal ring (DVR)</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td>PRV.2, PRV.3, PRV.4</td>
+    <td>PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.2</td>
     <td></td>
   </tr>
   <tr>
     <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
     <td>HIV.C.DE83</td>
     <td>CAB-LA</td>
-    <td>Client was prescribed long-acting cabotegravir (CAB-LA)</td>
+    <td>Client was prescribed long-acting injectable cabotegravir (CAB-LA)</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>CAB-LA</td>
@@ -8395,13 +8327,30 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>PRV.2, PRV.3, PRV.4</td>
+    <td>PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.2</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
+    <td>HIV.C.ET.DE80</td>
+    <td>Lenacapavir(LEN)</td>
+    <td>Client was prescribed injectable Lenacapavir</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>LEN</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>O</td>
+    <td>None</td>
+    <td></td>
+    <td>PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.2</td>
     <td></td>
   </tr>
   <tr>
     <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
     <td>HIV.C.DE84</td>
-    <td>Other</td>
+    <td>Other (specify)</td>
     <td>Client was prescribed other PrEP product</td>
     <td>Input Option</td>
     <td>Codes</td>
@@ -8412,31 +8361,14 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>PRV.2, PRV.3, PRV.4</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
-    <td>HIV.C.DE85</td>
-    <td>Other (specify)</td>
-    <td>Client was prescribed other PrEP product (specify)</td>
-    <td>N/A</td>
-    <td>String</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>C</td>
-    <td>Required if "PrEP product prescribed"='Other'</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>PRV.2, PRV.3, PRV.4, PRV.5, PRV.6, PRV.7, PRV.2</td>
+    <td>When Other is selected, the form uses the existing HIV.C.DE85 text field for product details.</td>
   </tr>
   <tr>
     <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
     <td>HIV.C.DE86</td>
-    <td>Date PrEP prescribed</td>
-    <td>Date client was prescribed PrEP, including initial prescription and repeats</td>
+    <td>PrEP started date</td>
+    <td>Date client was started PrEP</td>
     <td>N/A</td>
     <td>Date</td>
     <td>N/A</td>
@@ -8447,29 +8379,12 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>Including initial prescription and repeats</td>
-  </tr>
-  <tr>
-    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
-    <td>HIV.C.DE87</td>
-    <td>Date PrEP dispensed</td>
-    <td>Date client was dispensed PrEP</td>
-    <td>N/A</td>
-    <td>Date</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>Date ≤ Current Date</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td>If available from dispensing pharmacy or community distribution</td>
+    <td>Mapped to actual PrEP start in the workbook. The existing code identifies the prescription date.</td>
   </tr>
   <tr>
     <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
     <td>HIV.C.DE88</td>
-    <td>Volume of PrEP product prescribed/dispensed</td>
+    <td>Number of tablets/products</td>
     <td>Volume of PrEP product the client was prescribed or dispensed (for example, number of pills, number of devices)</td>
     <td>N/A</td>
     <td>Quantity</td>
@@ -8486,8 +8401,8 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
     <td>HIV.C.DE89</td>
-    <td>Date PEP prescribed</td>
-    <td>Date the client was prescribed PEP</td>
+    <td>Date of enrolment</td>
+    <td>Date the client was enrolled and prescribed PEP</td>
     <td>N/A</td>
     <td>Date</td>
     <td>N/A</td>
@@ -8498,12 +8413,12 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Mapped to PEP enrolment in the workbook. The existing code identifies the prescription date.</td>
   </tr>
   <tr>
     <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
     <td>HIV.C.DE90</td>
-    <td>Date PEP course completion</td>
+    <td>Exposed Person Follow up with dates</td>
     <td>Date client completes PEP course</td>
     <td>N/A</td>
     <td>Date</td>
@@ -8515,7 +8430,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>The form records the actual PEP course completion date, following the workbook definition. The follow-up appointment is recorded under HIV.C.DE124.</td>
   </tr>
   <tr>
     <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
@@ -8532,13 +8447,64 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.C23.DT</td>
     <td></td>
+    <td>Mapped to selection of a recorded two- or three-drug regimen. The existing code and ValueSet identify the preferred PEP backbone.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>HIV.C.ET.DE91</td>
+    <td>Two drug PEP regimen</td>
+    <td>Preffered Two drug PEP regimen</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
+    <td>HIV.C.ET.DE11</td>
+    <td>Three drugs PEP regimen</td>
+    <td>Preferred three drugs PEP regimen</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Three drugs PEP regimen</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td></td>
+    <td>None</td>
+    <td>HIV.C23.DT</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>HIV.C.ET.DE92</td>
+    <td>Preferred PEP 2 drug regimen</td>
+    <td>Preferred 2 regimen for PEP</td>
+    <td>Select one</td>
+    <td>Coding</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
     <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
     <td>HIV.C.DE92</td>
     <td>TDF + 3TC</td>
-    <td>Preferred backbone containing tenofovir disoproxil fumarate and lamivudine</td>
+    <td>Preferred two drugs adults and adolescents PEP</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>TDF + 3TC</td>
@@ -8553,12 +8519,12 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
-    <td>HIV.C.DE93</td>
-    <td>TDF + FTC</td>
-    <td>Preferred backbone containing tenofovir disoproxil fumarate and emtricitabine</td>
+    <td>HIV.C.ET.DE10</td>
+    <td>DTG+3TC</td>
+    <td>Preferred two drugs pediatrics PEP</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>TDF + FTC</td>
+    <td>AZT+3TC</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -8566,92 +8532,160 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.C23.DT</td>
     <td></td>
-    <td></td>
+    <td>MoH confirmation needed. The label and input option name different drugs.</td>
   </tr>
   <tr>
-    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
-    <td>HIV.C.DE94</td>
-    <td>AZT + 3TC</td>
-    <td>Preferred backbone containing zidovudine and lamivudine</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>AZT + 3TC</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.C23.DT</td>
     <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C3 Capture or update client history</td>
-    <td>HIV.C.DE95</td>
-    <td>Alternative PEP backbone regimen</td>
-    <td>Alternative backbone regimen for PEP</td>
-    <td>Select all that apply</td>
+    <td>HIV.C.ET.DE93</td>
+    <td>Preferred PEP 3 drug regimen</td>
+    <td>Preferred 3 regimen for PEP</td>
+    <td>Select one</td>
     <td>Coding</td>
-    <td>N/A</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
+    <td>HIV.C.ET.DE12</td>
+    <td>TDF+3TC+DTG</td>
+    <td>Preferred three drugs adult &amp; adolescents PEP</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>TDF+3TC+DTG</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
-    <td>O</td>
+    <td></td>
     <td>None</td>
     <td>HIV.C23.DT</td>
     <td></td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.C3 Capture or update client history</td>
-    <td>HIV.C.DE96</td>
-    <td>ABC + 3TC</td>
-    <td>Alternative backbone containing abacavir and lamivudine</td>
+    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
+    <td>HIV.C.ET.DE13</td>
+    <td>AZT+3TC +DTG</td>
+    <td>Preferred three drugs pediatrics PEP</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>ABC + 3TC</td>
+    <td>AZT+3TC +DTG</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
-    <td>O</td>
+    <td></td>
     <td>None</td>
     <td>HIV.C23.DT</td>
     <td></td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.C3 Capture or update client history</td>
-    <td>HIV.C.DE97</td>
-    <td>TDF + 3TC</td>
-    <td>Alternative backbone containing tenofovir disoproxil fumarate and lamivudine</td>
+    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
+    <td>HIV.C.ET.DE14</td>
+    <td>TDF+3TC +EFV</td>
+    <td>Alternative three drugs adult &amp; adolescents PEP</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>TDF + 3TC</td>
+    <td>TDF+3TC +EFV</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
-    <td>O</td>
+    <td></td>
     <td>None</td>
     <td>HIV.C23.DT</td>
     <td></td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.C3 Capture or update client history</td>
-    <td>HIV.C.DE98</td>
-    <td>TDF + FTC</td>
-    <td>Alternative backbone containing tenofovir disoproxil fumarate and emtricitabine</td>
+    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
+    <td>HIV.C.ET.DE15</td>
+    <td>AZT+3TC+EFV</td>
+    <td>Alternative three drugs pediatrics, adult &amp; adolescents PEP</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>TDF + FTC</td>
+    <td>AZT+3TC+EFV</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
-    <td>O</td>
+    <td></td>
     <td>None</td>
     <td>HIV.C23.DT</td>
     <td></td>
     <td></td>
+  </tr>
+  <tr>
+    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
+    <td>HIV.C.ET.DE16</td>
+    <td>TDF+3TC+ATV/R</td>
+    <td>Alternativethree drugs adult &amp; adolescents PEP</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>TDF+3TC+ATV/R</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td></td>
+    <td>None</td>
+    <td>HIV.C23.DT</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
+    <td>HIV.C.ET.DE17</td>
+    <td>TDF+3TC+LPV/r</td>
+    <td>Alternativethree drugs adult &amp; adolescents PEP</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>TDF+3TC+LPV/r</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td></td>
+    <td>None</td>
+    <td>HIV.C23.DT</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
+    <td>HIV.C.ET.DE18</td>
+    <td>AZT+ETC+ATV/r</td>
+    <td>Alternativethree drugs pediatrics, adult &amp; adolescents PEP</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>AZT+ETC+ATV/r</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td></td>
+    <td>None</td>
+    <td>HIV.C23.DT</td>
+    <td></td>
+    <td>MoH confirmation needed for the drug abbreviation ETC.</td>
+  </tr>
+  <tr>
+    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
+    <td>HIV.C.ET.DE19</td>
+    <td>AZT+LPV+LPV/r</td>
+    <td>Alternativethree drugs pediatrics, adult &amp; adolescents PEP</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>AZT+LPV+LPV/r</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td></td>
+    <td>None</td>
+    <td>HIV.C23.DT</td>
+    <td></td>
+    <td>MoH confirmation needed for the repeated lopinavir components in the label.</td>
   </tr>
   <tr>
     <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
@@ -8723,23 +8757,6 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.C3 Capture or update client history</td>
-    <td>HIV.C.DE103</td>
-    <td>DRV/r</td>
-    <td>Alternative third drug of darunavir/ritonavir (DRV/r)</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>DRV/r</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.C23.DT</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C3 Capture or update client history</td>
     <td>HIV.C.DE104</td>
     <td>LPV/r</td>
     <td>Alternative third drug of lopinavir/ritonavir (LPV/r)</td>
@@ -8757,102 +8774,17 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.C3 Capture or update client history</td>
-    <td>HIV.C.DE105</td>
-    <td>RAL</td>
-    <td>Alternative third drug of raltegravir (RAL)</td>
+    <td>HIV.C.ET.DE20</td>
+    <td>EFV</td>
+    <td>Alternative third drug of Efavirenz (EFV)</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>RAL</td>
+    <td>Alternative third drug of Efavirenz (EFV)</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.C23.DT</td>
     <td></td>
     <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
-    <td>HIV.C.DE106</td>
-    <td>Estimated creatinine clearance</td>
-    <td>Estimated creatinine clearance of the client returned from lab in mL/min</td>
-    <td>N/A</td>
-    <td>Quantity</td>
-    <td>N/A</td>
-    <td>Integer Quantity</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.C7.DT</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
-    <td>HIV.C.DE107</td>
-    <td>Sex factor for estimating creatinine clearance</td>
-    <td>Value used for gender for calculating creatinine clearance if required. For transgender populations, the sex at birth is used in the Cockcroft-Gault equation if the person is not using hormone therapy; among transgender populations using hormone therapy for more than three months, the current gender can be used.</td>
-    <td>N/A</td>
-    <td>Coding</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>C</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
-    <td>HIV.C.DE108</td>
-    <td>Male</td>
-    <td>Male client</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Male</td>
-    <td>N/A</td>
-    <td>1</td>
-    <td>True if "Gender"='Male'</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
-    <td>HIV.C.DE109</td>
-    <td>Female</td>
-    <td>Female client</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Female</td>
-    <td>N/A</td>
-    <td>0.85</td>
-    <td>True if "Gender"='Female'</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
-    <td>HIV.C.DE110</td>
-    <td>Estimated creatinine clearance (Cockcroft–Gault equation)</td>
-    <td>If the laboratory does not have the capacity to estimate creatinine clearance, the provider can use the Cockcroft–Gault equation to calculate estimated creatinine clearance based on measured serum creatinine, the client’s sex at birth, age and estimated lean body weight.</td>
-    <td>N/A</td>
-    <td>Quantity</td>
-    <td>N/A</td>
-    <td>Integer Quantity</td>
-    <td>“Sex factor” * ((140 – Age) / (“Serum creatinine test result”)) * (Weight / 72) Sex factor: male = 1, female = 0.85 Age in years, serum creatinine in mg/DL, weight in kg</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
     <td></td>
     <td></td>
     <td></td>
@@ -8889,24 +8821,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.C7.DT</td>
     <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
-    <td>HIV.C.DE113</td>
-    <td>Tenofovir disoproxil fumarate (TDF) allergy or contraindication</td>
-    <td>Allergy to pre-exposure prophylaxis (PrEP) tenofovir disoproxil fumarate (TDF)</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Tenofovir disoproxil fumarate (TDF) allergy or contraindication</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.C7.DT</td>
-    <td></td>
-    <td></td>
+    <td>Records contraindications assessed by the clinician. An allergy or other contraindication can be documented with details.</td>
   </tr>
   <tr>
     <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
@@ -8915,7 +8830,7 @@ HIV.A5 Create new client record</td>
     <td>Client is HIV-positive</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>HIV-positive</td>
+    <td>HIV positive</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -8934,13 +8849,13 @@ HIV.A5 Create new client record</td>
     <td>Codes</td>
     <td>Low estimated creatinine clearance</td>
     <td>N/A</td>
-    <td>If estimated creatinine clearance < 60 ml/min</td>
-    <td>None</td>
+    <td>If estimated creatinine clearance &lt; 60 ml/min</td>
+    <td>For Oral PrEP</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.C7.DT</td>
     <td></td>
-    <td></td>
+    <td>The workbook applies this assessment to oral PrEP. The diagnostic serum creatinine concentration is a separate value.</td>
   </tr>
   <tr>
     <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
@@ -8957,7 +8872,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.C7.DT</td>
     <td></td>
-    <td>Symptoms are defined in the "Acute HIV infection symptoms" value set</td>
+    <td>Symptoms are defined in the &quot;Acute HIV infection symptoms&quot; value set</td>
   </tr>
   <tr>
     <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
@@ -8978,9 +8893,43 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
+    <td>HIV.C.ET.DE21</td>
+    <td>People on TB treatment with rifampicin and rifapentine regimen</td>
+    <td>People on TB treatment with rifampicin and rifapentine regimen is contraindicated to initiate long acting injectable cabotegravir.</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Capture the prescriber’s documented CAB-LA interaction assessment for either listed medicine.</td>
+  </tr>
+  <tr>
+    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
+    <td>HIV.C.ET.DE22</td>
+    <td>People on Seizure medication</td>
+    <td>People on seizure medication is contraindicated to initiate long acting injectable cabotegravir.</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>MoH confirmation needed on which medicines the category covers. Specific documented interactions can be recorded under Other contraindication with details.</td>
+  </tr>
+  <tr>
+    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
     <td>HIV.C.DE118</td>
-    <td>Other allergy or contraindication to a medicine in the PrEP regimen</td>
-    <td>Client has another allergy or contraindication to a medicine in the pre-exposure prophylaxis (PrEP) regimen</td>
+    <td>Allergy or contraindication to any medicine in the PrEP regimen.</td>
+    <td>Client has allergy or contraindication to a medicine in the pre-exposure prophylaxis (PrEP) regimen</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Other allergy or contraindication to a medicine in the PrEP regimen</td>
@@ -8996,8 +8945,8 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
     <td>HIV.C.DE119</td>
-    <td>Other allergy or contraindication to a medicine in the PrEP regimen (specify)</td>
-    <td>Client has another allergy or contraindication to a medicine in the pre-exposure prophylaxis (PrEP) regimen (specify)</td>
+    <td>Allergy or contraindication to any medicine in the PrEP regimen (specify)</td>
+    <td>Client has allergy or contraindication to a medicine in the pre-exposure prophylaxis (PrEP) regimen (specify)</td>
     <td>N/A</td>
     <td>String</td>
     <td>N/A</td>
@@ -9005,7 +8954,7 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Contraindications to PrEP usage"='Other allergy or contraindication to a medicine in the PrEP regimen'</td>
+    <td>Required if &quot;Contraindications to PrEP usage&quot;=&#x27;Other allergy or contraindication to a medicine in the PrEP regimen&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
@@ -9056,10 +9005,10 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Currently on PrEP"=True</td>
+    <td>Required if &quot;Currently on PrEP&quot;=True</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Use a coded regimen or transcribe another clinician-prescribed regimen. Required for a PrEP prescription when the client is already using PrEP.</td>
   </tr>
   <tr>
     <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
@@ -9093,7 +9042,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.S.2, HIV.S.4</td>
     <td></td>
-    <td></td>
+    <td>Maps to Appointment.start when a booking is made.</td>
   </tr>
   <tr>
     <td>HIV.C24 Schedule follow-up</td>
@@ -9127,16 +9076,16 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.S.2, HIV.S.4</td>
     <td></td>
-    <td>Data elements is also in the "Reason for HIV care and treatment visit" value set</td>
+    <td>Data elements is also in the &quot;Reason for HIV care and treatment visit&quot; value set</td>
   </tr>
   <tr>
     <td>HIV.C24 Schedule follow-up</td>
     <td>HIV.C.DE127</td>
+    <td>Scheduled follow-up appointment for PrEP</td>
     <td>Follow-up appointment for PrEP</td>
-    <td>Retesting follow-up appointment</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Follow-up appointment for PrEP</td>
+    <td>Follow up appointment for PrEP</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -9144,7 +9093,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.S.2, HIV.S.4</td>
     <td></td>
-    <td>Data elements is also in the "Reason for HIV care and treatment visit" value set</td>
+    <td>Data elements is also in the &quot;Reason for HIV care and treatment visit&quot; value set</td>
   </tr>
   <tr>
     <td>HIV.C24 Schedule follow-up</td>
@@ -9175,13 +9124,13 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Type of follow-up appointment"='Other'</td>
+    <td>Required if &quot;Type of follow-up appointment&quot;=&#x27;Other&#x27;</td>
     <td></td>
     <td></td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.C6 Post-test package of services</td>
+    <td>HIV.B9 Determine recommended services</td>
     <td>HIV.C.DE130</td>
     <td>Linked to enrolment in care and ART initiation</td>
     <td>Linkage made from HIV testing to enrolment in care following an HIV diagnosis</td>
@@ -9195,7 +9144,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Recorded in the PrEP post-test package of services form (HIV.C6).</td>
   </tr>
   <tr>
     <td>HIV.C10 Counsel on risk and prevention</td>
@@ -9221,7 +9170,7 @@ HIV.A5 Create new client record</td>
     <td>Offer male and female condoms and condom-compatible lubricants</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Male and female condoms and condom-compatible lubricants offered</td>
+    <td>Male and female condoms and condom-compatible lubricants</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -9238,7 +9187,7 @@ HIV.A5 Create new client record</td>
     <td>Offer referral for VMMC services</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Voluntary medical male circumcision (VMMC) referral</td>
+    <td>VMMC (in priority Regions)</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -9255,7 +9204,7 @@ HIV.A5 Create new client record</td>
     <td>Offer or refer to harm reduction for people who inject drugs (needle and syringe programmes, opioid substitution therapy, other drug-dependence treatment and opioid overdose prevention and management) services</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Harm reduction for people who inject drugs</td>
+    <td>Harm reduction for people who inject drugs (needle and syringe programmes, opioid substitution therapy, other drug-dependence treatment and opioid overdose prevention and management)</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -9272,7 +9221,7 @@ HIV.A5 Create new client record</td>
     <td>Offer or refer to services for behavioural interventions to support risk reduction, particularly for people with HIV and members of key populations</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Behavioural interventions to support risk reduction</td>
+    <td>Behavioural interventions to support risk reduction, particularly for people with HIV and members of key populations</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -9328,10 +9277,10 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Condoms distributed" is NOT NULL</td>
+    <td>Required if &quot;Condoms distributed&quot; is NOT NULL</td>
     <td></td>
-    <td>PRV.1</td>
-    <td></td>
+    <td>PRV.1, PRV.1</td>
+    <td>Required when the number of condoms distributed is greater than zero. Zero records that none was distributed.</td>
   </tr>
   <tr>
     <td>HIV.C10 Counsel on risk and prevention</td>
@@ -9347,7 +9296,7 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>PRV.1</td>
+    <td>PRV.1, PRV.1</td>
     <td></td>
   </tr>
   <tr>
@@ -9364,7 +9313,7 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>PRV.1</td>
+    <td>PRV.1, PRV.1</td>
     <td></td>
   </tr>
   <tr>
@@ -9399,13 +9348,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td>HTS.6</td>
-    <td></td>
+    <td>Shown after the client accepts HIV self-test kits.</td>
   </tr>
   <tr>
     <td>HIV.C10 Counsel on risk and prevention</td>
     <td>HIV.C.DE143</td>
-    <td>HIV self-test distributed for use by</td>
-    <td>Whom the client plans to give the HIV self-test kit (self, sexual partner, social contact, etc.)</td>
+    <td>HIV self-test distributed for use</td>
+    <td>The way the client plans to distribute HIV self-test kit (self, sexual partner, social contact, etc.)</td>
     <td>N/A</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -9416,7 +9365,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td>HTS.6</td>
-    <td></td>
+    <td>Shown after the client accepts HIV self-test kits.</td>
   </tr>
   <tr>
     <td>HIV.C10 Counsel on risk and prevention</td>
@@ -9541,7 +9490,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.C10 Counsel on risk and prevention</td>
     <td>HIV.C.DE151</td>
     <td>Check pregnancy status</td>
-    <td>Check woman's pregnancy status</td>
+    <td>Check woman&#x27;s pregnancy status</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Check pregnancy status</td>
@@ -9573,7 +9522,7 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.C10 Counsel on risk and prevention</td>
-    <td>HIV.C.DE153</td>
+    <td>HIV.C.DE154</td>
     <td>Cervical cancer screening and treatment</td>
     <td>Offer cervical cancer screening and treatment services</td>
     <td>Input Option</td>
@@ -9586,24 +9535,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>HIV.S.1</td>
     <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.C10 Counsel on risk and prevention</td>
-    <td>HIV.C.DE154</td>
-    <td>Anal cancer screening (for men who have sex with men)</td>
-    <td>Offer anal cancer screening (for men who have sex with men) services</td>
-    <td>Input Option</td>
-    <td>Codes</td>
-    <td>Anal cancer screening (for men who have sex with men)</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
-    <td>HIV.S.1</td>
-    <td></td>
-    <td></td>
+    <td>The existing code identifies anal cancer screening. QA Preview uses HIV.C.DE153 for cervical cancer screening and treatment.</td>
   </tr>
   <tr>
     <td>HIV.C10 Counsel on risk and prevention</td>
@@ -9626,8 +9558,8 @@ HIV.A5 Create new client record</td>
     <td>HIV.C10 Counsel on risk and prevention</td>
     <td>HIV.C.DE156</td>
     <td>HIV testing for partners and biological children</td>
-    <td>Offer testing for all partners and biological children of positive cases (includes partner services and index case testing), as well as partners and social contacts of people from key populations, where appropriate</td>
-    <td>N/A</td>
+    <td>offer HIV testing for partners and biological children</td>
+    <td>Input Option</td>
     <td>Codes</td>
     <td>HIV testing for partners and biological children</td>
     <td>N/A</td>
@@ -9680,7 +9612,7 @@ HIV.A5 Create new client record</td>
     <td>Offer or refer for HBV testing and vaccination and HCV testing and treatment</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Hepatitis B virus (HBV) and hepatitis C virus (HCV) testing and treatment</td>
+    <td>HBV testing and vaccination and HCV testing and treatment</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -9740,6 +9672,23 @@ HIV.A5 Create new client record</td>
     <td>HIV.S.1</td>
     <td></td>
     <td></td>
+  </tr>
+  <tr>
+    <td>HIV.C10 Counsel on risk and prevention</td>
+    <td></td>
+    <td>Provision of 3HP</td>
+    <td>Provision of 3HP preventive therapy if person does not have TB based on the national guidelines</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>This service row needs an assigned code. The existing 3HP code identifies a treatment regimen.</td>
   </tr>
   <tr>
     <td>HIV.C10 Counsel on risk and prevention</td>

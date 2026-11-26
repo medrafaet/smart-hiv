@@ -13,6 +13,16 @@ Description:  "True if 'Gender'='Male'"
 Expression:   "'NOT IMPLEMENTED'"
 Severity:     #error
 
+Invariant: prep-visit-reason
+Description: "Record a PrEP visit type or PEP counselling."
+Expression: "reasonForPrepVisit.exists() or counsellingOnPep.where($this = true).exists()"
+Severity: #error
+
+Invariant: prep-serum-creatinine-result
+Description: "Serum creatinine requires a nonnegative concentration in mg/dL or umol/L."
+Expression: "system.where($this = 'http://unitsofmeasure.org').exists() and code.where($this in ('mg/dL' | 'umol/L')).exists() and value.where($this >= 0).exists()"
+Severity: #error
+
 Logical: HIVCPrEPvisit
 Title: "HIV.C PrEP visit"
 Description: "This tab describes the data that may be collected during the pre-exposure prophylaxis (PrEP) or post-exposure prophylaxis (PEP) workflow (HIV.C)"
@@ -23,24 +33,41 @@ Description: "This tab describes the data that may be collected during the pre-e
 * ^name = "HIVCPrEPvisit"
 * ^status = #active
 
-* reasonForPrepVisit 1..1 Coding "Reason for PrEP visit" "Client's reason for the prevention visit"
+* ^mapping[+].identity = "moh-hiv-dak"
+* ^mapping[=].name = "Ethiopia MoH HIV Data Dictionary"
+* ^mapping[+].identity = "fhir"
+* ^mapping[=].name = "FHIR R4"
+* obeys prep-visit-reason
+
+* reasonForPrepVisit 0..1 Coding "Type of PrEP visit" "Client's type of PrEP visit. A PrEP visit type is required when PEP counselling does not apply."
   * ^code[+] = HIVConcepts#HIV.C.DE1
 * reasonForPrepVisit from HIV.C.DE1
-* threeMonthPrepVisit 0..1 boolean "3-month PrEP visit" "Client is visiting for the recommended 3-month pre-exposure prophylaxis (PrEP) visit"
-  * ^code[+] = HIVConcepts#HIV.C.DE7
+* counsellingOnPep 0..1 boolean "Counselling on PEP" "Whether counselling on post-exposure prophylaxis was provided."
+  * ^code[+] = HIVConcepts#HIV.C.DE5
+* prepFollowUpVisitDate 0..1 date "PrEP follow-up visit date" "Date of the PrEP follow-up visit."
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.C.DE7"
+* twoMonthPrepFollowUpVisit 0..1 boolean "2-month PrEP follow-up visit" "Whether the client attended the 2-month follow-up for injectable cabotegravir PrEP."
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.C.ET.DE7.1"
+* sixMonthPrepFollowUpVisit 0..1 boolean "6-month PrEP follow-up visit" "Whether the client attended the 6-month follow-up for injectable lenacapavir PrEP."
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.C.ET.DE7.2"
 * contactWithAndSuspectedExposureToHiv 0..1 boolean "Contact with and (suspected) exposure to HIV" "The client had suspected or known exposure to HIV"
   * ^code[+] = HIVConcepts#HIV.C.DE8
-* dateTimeOfSuspectedExposureToHiv 0..1 dateTime "Date/time of suspected exposure to HIV" "When the suspect exposure to HIV took place"
-  * ^code[+] = HIVConcepts#HIV.C.DE9
-* currentlyOnPrep 0..1 boolean "Currently on PrEP" "The client is currently taking PrEP. Oral pre-exposure prophylaxis (PrEP) of HIV is the use of ARV drugs by people who are not infected with HIV to block the acquisition of HIV."
+* exposureSource 0..1 Coding "Source of exposure" "Reported source of known or suspected exposure to HIV."
+  * ^code[+] = HIVConcepts#HIV.C.ET.DE1
+* exposureSource from HIV.C.ET.DE1 (required)
+* otherExposureSource 0..1 string "Other exposure source" "Details of the reported exposure source when Other is selected."
+  * ^code[+] = HIVConcepts#HIV.C.ET.DE8
+* exposureDuration 0..1 Quantity "Exposure duration" "Elapsed time from exposure to presentation for PEP services, recorded in UCUM hours."
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.C.DE9"
+* currentlyOnPrep 0..1 boolean "Currently on PrEP" "The client has initiated PrEP and has not discontinued it at the time of assessment."
   * ^code[+] = HIVConcepts#HIV.C.DE10
-* prepDosingType 0..1 Coding "PrEP dosing type" "Way in which pre-exposure prophylaxis (PrEP) is taken (daily or event-driven)"
+* prepDosingType 0..1 Coding "PrEP dosing type" "How the client currently takes PrEP."
   * ^code[+] = HIVConcepts#HIV.C.DE11
 * prepDosingType from HIV.C.DE11
-* otherPrepDosingTypeSpecify 0..1 string "Other PrEP dosing type (specify)" "Other PrEP dosing type (specify)"
-  * ^code[+] = HIVConcepts#HIV.C.DE15
-* usedEventDrivenPrepForAtRiskExposuresOverThePast3Months 0..1 boolean "Used event-driven PrEP for at risk exposures over the past 3 months" "Client reports taking ED-PrEP for at risk exposures over a 3-month period"
-  * ^code[+] = HIVConcepts#HIV.C.DE16
 * currentPrepRegimen 0..1 Coding "Current PrEP regimen" "HIV pre-exposure prophylaxis (PrEP) regimen"
   * ^code[+] = HIVConcepts#HIV.C.DE17
 * currentPrepRegimen from HIV.C.DE17
@@ -56,16 +83,13 @@ Description: "This tab describes the data that may be collected during the pre-e
 * pepHistory 0..1 Coding "PEP history" "The client's history in taking post-exposure prophylaxis (PEP) for HIV prevention"
   * ^code[+] = HIVConcepts#HIV.C.DE31
 * pepHistory from HIV.C.DE31
-* datesOfPastPepUse 0..1 date "Date(s) of past PEP use" "Dates when the client previously used post-exposure prophylaxis (PEP)"
+* datesOfPastPepUse 0..* date "Date(s) of past PEP use" "Dates when the client previously used post-exposure prophylaxis (PEP)"
   * ^code[+] = HIVConcepts#HIV.C.DE34
 * dateClientCompletesPepCourse 0..1 date "Date client completes PEP course" "Date client completes PEP course"
   * ^code[+] = HIVConcepts#HIV.C.DE35
-* signsOfSubstantialRiskOfHivInfection 1..* Coding "Signs of substantial risk of HIV infection" "Signs the client is at a substantial risk of HIV infection"
+* signsOfSubstantialRiskOfHivInfection 0..* Coding "Evidence of substantial risk of HIV infection" "Recorded evidence of substantial risk when any listed factor applies."
   * ^code[+] = HIVConcepts#HIV.C.DE36
 * signsOfSubstantialRiskOfHivInfection from HIV.C.DE36
-* pregnancyIntentionInSerodiscordantPartnerships 1..1 Coding "Pregnancy intention in serodiscordant partnerships" "Client's intention or desire in the next year to either become pregnant or prevent a future pregnancy (in serodiscordant partnerships)"
-  * ^code[+] = HIVConcepts#HIV.C.DE41
-* pregnancyIntentionInSerodiscordantPartnerships from HIV.C.DE41
 * acuteHivInfectionSymptoms 0..* Coding "Acute HIV infection symptoms" "Symptoms that could suggest an acute HIV infection"
   * ^code[+] = HIVConcepts#HIV.C.DE46
 * acuteHivInfectionSymptoms from HIV.C.DE46
@@ -79,53 +103,52 @@ Description: "This tab describes the data that may be collected during the pre-e
 * screeningsAndDiagnosticsForPrepUsers 0..* Coding "Screenings and diagnostics for PrEP users" "Listing of tests for clients on or starting pre-exposure prophylaxis (PrEP) that may be recommended or should be considered"
   * ^code[+] = HIVConcepts#HIV.C.DE63
 * screeningsAndDiagnosticsForPrepUsers from HIV.C.DE63
-* serumCreatinineTestDate 0..1 date "Serum creatinine test date" "Test serum creatinine to identify pre-existing renal disease (estimated creatinine clearance less than 60 ml/min)"
+* serumCreatinineTestDate 0..1 date "Serum creatinine test date" "Date the serum creatinine test was performed."
   * ^code[+] = HIVConcepts#HIV.C.DE71
-* serumCreatinineTestResult 0..1 integer "Serum creatinine test result" "Test serum creatinine to identify pre-existing renal disease (estimated creatinine clearance less than 60 ml/min)."
+  * ^mapping[+].identity = "fhir"
+  * ^mapping[=].map = "Observation.effectiveDateTime"
+* serumCreatinineTestResult 0..1 Quantity "Serum creatinine test result" "Reported serum creatinine concentration in mg/dL or umol/L."
   * ^code[+] = HIVConcepts#HIV.C.DE72
-* dateMedicationsDispensed 0..1 date "Date medications dispensed" "Date the client was dispensed medications"
-  * ^code[+] = HIVConcepts#HIV.C.DE73
-* dateMedicationsPrescribed 0..1 date "Date medications prescribed" "Date the client was prescribed medications"
-  * ^code[+] = HIVConcepts#HIV.C.DE74
+  * ^mapping[+].identity = "fhir"
+  * ^mapping[=].map = "Observation.valueQuantity"
+* serumCreatinineTestResult obeys prep-serum-creatinine-result
+* datePrepDispensedAndStarted 0..1 date "Date PrEP was dispensed and started" "Date when the client both received and started PrEP."
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.C.DE73"
 * medicationsPrescribed 0..1 Coding "Medications prescribed" "Medications the client was prescribed"
   * ^code[+] = HIVConcepts#HIV.C.DE75
 * medicationsPrescribed from HIV.C.DE75
-* otherMedicationsPrescribed 0..1 string "Other (specify)" "Client was prescribed other medications (specify)"
-  * ^code[+] = HIVConcepts#HIV.C.DE79
 * prepProductPrescribed 0..1 Coding "PrEP product prescribed" "PrEP product that the client was prescribed"
   * ^code[+] = HIVConcepts#HIV.C.DE80
 * prepProductPrescribed from HIV.C.DE80
 * otherPrepProductPrescribed 0..1 string "Other (specify)" "Client was prescribed other PrEP product (specify)"
   * ^code[+] = HIVConcepts#HIV.C.DE85
-* datePrepPrescribed 0..1 date "Date PrEP prescribed" "Date client was prescribed PrEP, including initial prescription and repeats"
-  * ^code[+] = HIVConcepts#HIV.C.DE86
-* datePrepDispensed 0..1 date "Date PrEP dispensed" "Date client was dispensed PrEP"
-  * ^code[+] = HIVConcepts#HIV.C.DE87
+* datePrepStarted 0..1 date "PrEP started date" "Date when the client started taking PrEP."
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.C.DE86"
 * volumeOfPrepProductPrescribedDispensed 0..1 integer "Volume of PrEP product prescribed/dispensed" "Volume of PrEP product the client was prescribed or dispensed (for example, number of pills, number of devices)"
   * ^code[+] = HIVConcepts#HIV.C.DE88
-* datePepPrescribed 0..1 date "Date PEP prescribed" "Date the client was prescribed PEP"
-  * ^code[+] = HIVConcepts#HIV.C.DE89
+* pepEnrolmentDate 0..1 date "PEP enrolment date" "Date the client was enrolled and prescribed PEP."
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.C.DE89"
 * datePepCourseCompletion 0..1 date "Date PEP course completion" "Date client completes PEP course"
   * ^code[+] = HIVConcepts#HIV.C.DE90
-* preferredPepBackboneRegimen 0..1 Coding "Preferred PEP backbone regimen" "Preferred backbone regimen for PEP"
-  * ^code[+] = HIVConcepts#HIV.C.DE91
-* preferredPepBackboneRegimen from HIV.C.DE91
-* alternativePepBackboneRegimen 0..* Coding "Alternative PEP backbone regimen" "Alternative backbone regimen for PEP"
-  * ^code[+] = HIVConcepts#HIV.C.DE95
-* alternativePepBackboneRegimen from HIV.C.DE95
+* pepRegimenType 0..1 Coding "Recorded PEP regimen type" "Whether the documented PEP regimen contains two or three drugs."
+  * ^mapping[+].identity = "moh-hiv-dak"
+  * ^mapping[=].map = "HIV.C.DE91"
+* pepRegimenType from HIV.C.DE91-regimen-type (required)
+* twoDrugPepRegimen 0..1 Coding "Recorded two-drug PEP combination" "Documented two-drug PEP combination when applicable."
+  * ^code[+] = HIVConcepts#HIV.C.ET.DE92
+* twoDrugPepRegimen from HIV.C.ET.DE92 (required)
+* threeDrugPepRegimen 0..1 Coding "Recorded three-drug PEP combination" "Documented three-drug PEP combination when applicable."
+  * ^code[+] = HIVConcepts#HIV.C.ET.DE93
+* threeDrugPepRegimen from HIV.C.ET.DE93 (required)
 * preferredThirdPepDrug 0..* Coding "Preferred third PEP drug" "Preferred third drug for PEP"
   * ^code[+] = HIVConcepts#HIV.C.DE99
 * preferredThirdPepDrug from HIV.C.DE99
 * alternativeThirdPepDrug 0..* Coding "Alternative third PEP drug" "Alternative third drug for PEP"
   * ^code[+] = HIVConcepts#HIV.C.DE101
 * alternativeThirdPepDrug from HIV.C.DE101
-* estimatedCreatinineClearance 0..1 integer "Estimated creatinine clearance" "Estimated creatinine clearance of the client returned from lab in mL/min"
-  * ^code[+] = HIVConcepts#HIV.C.DE106
-* sexFactorForEstimatingCreatinineClearance 0..1 Coding "Sex factor for estimating creatinine clearance" "Value used for gender for calculating creatinine clearance if required. For transgender populations, the sex at birth is used in the Cockcroft-Gault equation if the person is not using hormone therapy; among transgender populations using hormone therapy for more than three months, the current gender can be used."
-  * ^code[+] = HIVConcepts#HIV.C.DE107
-* sexFactorForEstimatingCreatinineClearance from HIV.C.DE107
-* estimatedCreatinineClearanceCockcroftGaultEquation 0..1 integer "Estimated creatinine clearance (Cockcroft–Gault equation)" "If the laboratory does not have the capacity to estimate creatinine clearance, the provider can use the Cockcroft–Gault equation to calculate estimated creatinine clearance based on measured serum creatinine, the client’s sex at birth, age and estimated lean body weight."
-  * ^code[+] = HIVConcepts#HIV.C.DE110
 * dateOfSampleCollection 0..1 dateTime "Date of sample collection" "Date when the specimen was collected"
   * ^code[+] = HIVConcepts#HIV.C.DE111
 * contraindicationsToPrepUsage 0..* Coding "Contraindications to PrEP usage" "Listing of contraindications to pre-exposure prophylaxis (PrEP)"
@@ -137,18 +160,24 @@ Description: "This tab describes the data that may be collected during the pre-e
   * ^code[+] = HIVConcepts#HIV.C.DE120
 * numberOfDaysPrescribed 0..1 integer "Number of days prescribed" "Days of medication client has been prescribed"
   * ^code[+] = HIVConcepts#HIV.C.DE121
-* prepRegimenPrescribed 0..* Coding "PrEP regimen prescribed" "HIV pre-exposure prophylaxis (PrEP) regimen prescribed"
+* prepRegimenPrescribed 0..* CodeableConcept "PrEP regimen prescribed" "HIV pre-exposure prophylaxis (PrEP) regimen prescribed"
   * ^code[+] = HIVConcepts#HIV.C.DE122
-* prepRegimenPrescribed from HIV.C.DE122
+* prepRegimenPrescribed from HIV.C.DE122 (extensible)
 * adherenceCounsellingProvided 0..1 boolean "Adherence counselling provided" "Whether adherence counselling was provided"
   * ^code[+] = HIVConcepts#HIV.C.DE123
 * dateTimeOfFollowUpAppointment 0..1 dateTime "Date/time of follow-up appointment" "Date the client is to return for monitoring, re-supply, or any other reason"
   * ^code[+] = HIVConcepts#HIV.C.DE124
+  * ^mapping[+].identity = "fhir"
+  * ^mapping[=].map = "Appointment.start"
 * typeOfFollowUpAppointment 0..1 Coding "Type of follow-up appointment" "Type of follow-up appointment for testing services"
   * ^code[+] = HIVConcepts#HIV.C.DE125
+  * ^mapping[+].identity = "fhir"
+  * ^mapping[=].map = "Appointment.reasonCode"
 * typeOfFollowUpAppointment from HIV.C.DE125
 * otherTypeOfFollowUpAppointment 0..1 string "Other (specify)" "Other reason for the follow-up appointment (specify)"
   * ^code[+] = HIVConcepts#HIV.C.DE129
+  * ^mapping[+].identity = "fhir"
+  * ^mapping[=].map = "Appointment.reasonCode.text"
 * linkedToEnrolmentInCareAndArtInitiation 0..1 boolean "Linked to enrolment in care and ART initiation" "Linkage made from HIV testing to enrolment in care following an HIV diagnosis"
   * ^code[+] = HIVConcepts#HIV.C.DE130
 * preventionServicesOfferedAndReferrals 0..* Coding "Prevention services offered and referrals" "Offer or refer to prevention services"

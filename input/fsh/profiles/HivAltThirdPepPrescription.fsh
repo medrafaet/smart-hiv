@@ -6,5 +6,5 @@ Description: "A profile for MedicationRequest representing an alternative Third 
 * ^experimental = true
 * ^title = "Alternative Third PEP Prescription"
 * medication[x] only CodeableConcept
-* medicationCodeableConcept from HIV.C.DE101 (required)
+* medicationCodeableConcept from HIV.C.DE101-exchange (required)
 

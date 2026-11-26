@@ -9,8 +9,8 @@ Description: "Value set of client's reason for the prevention visit"
 * ^name = "HIVCDE1"
 * ^url = "http://smart.who.int/hiv/ValueSet/HIV.C.DE1"
 
+* HIVConcepts#HIV.C.ET.DE30
 * HIVConcepts#HIV.C.DE2 "First time counselling on PrEP"
 * HIVConcepts#HIV.C.DE3 "Follow-up appointment for PrEP or PEP"
 * HIVConcepts#HIV.C.DE4 "Restarting PrEP"
-* HIVConcepts#HIV.C.DE5 "Counselling on PEP"
 * HIVConcepts#HIV.C.DE6 "Unscheduled visit for side effects"

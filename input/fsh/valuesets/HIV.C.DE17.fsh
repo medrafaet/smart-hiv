@@ -9,9 +9,6 @@ Description: "Value set of HIV pre-exposure prophylaxis (PrEP) regimen"
 * ^name = "HIVCDE17"
 * ^url = "http://smart.who.int/hiv/ValueSet/HIV.C.DE17"
 
-* HIVConcepts#HIV.C.DE18 "TDF + FTC"
-* HIVConcepts#HIV.C.DE19 "TDF"
 * HIVConcepts#HIV.C.DE20 "TDF + 3TC"
-* HIVConcepts#HIV.C.DE21 "Other TDF-based regimen"
-* HIVConcepts#HIV.C.DE22 "Dapivirine vaginal ring (DVR)"
 * HIVConcepts#HIV.C.DE23 "CAB-LA"
+* HIVConcepts#HIV.C.ET.DE24

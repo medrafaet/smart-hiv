@@ -1699,6 +1699,8 @@ Figure 8.6 WHO recommended testing strategy for dual detection of HIV and syphil
 
 ### HIV.C23.DT
 
+The QA Preview questionnaire records the clinician's prescription and assessment. The WHO decision table below is retained as a reference. Applying it to the October Ethiopia workbook requires review of the exposure duration field, the PEP regimen rows and the product-specific contraindications.
+
 **Business Rule**: Determine PEP or PrEP regimen
 
 **Trigger**: HIV.C23 Prescribe or administer PrEP or PEP

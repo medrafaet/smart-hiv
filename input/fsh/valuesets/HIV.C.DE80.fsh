@@ -10,6 +10,6 @@ Description: "Value set of prEP product that the client was prescribed"
 * ^url = "http://smart.who.int/hiv/ValueSet/HIV.C.DE80"
 
 * HIVConcepts#HIV.C.DE81 "Oral PrEP"
-* HIVConcepts#HIV.C.DE82 "Dapivirine vaginal ring (DVR)"
 * HIVConcepts#HIV.C.DE83 "CAB-LA"
+* HIVConcepts#HIV.C.ET.DE80
 * HIVConcepts#HIV.C.DE84 "Other"

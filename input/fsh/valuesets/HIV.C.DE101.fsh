@@ -10,6 +10,5 @@ Description: "Value set of alternative third drug for PEP"
 * ^url = "http://smart.who.int/hiv/ValueSet/HIV.C.DE101"
 
 * HIVConcepts#HIV.C.DE102 "ATV/r"
-* HIVConcepts#HIV.C.DE103 "DRV/r"
 * HIVConcepts#HIV.C.DE104 "LPV/r"
-* HIVConcepts#HIV.C.DE105 "RAL"
+* HIVConcepts#HIV.C.ET.DE20
