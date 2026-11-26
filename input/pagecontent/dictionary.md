@@ -37819,7 +37819,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the emergency flag independently of the appointment and handoff fields.</td>
   </tr>
   <tr>
     <td>HIV.I6 Provide information to referral facility</td>
@@ -37836,13 +37836,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Select all applicable reasons. Select Other general services by itself when no listed reason applies.</td>
   </tr>
   <tr>
     <td>HIV.I6 Provide information to referral facility</td>
     <td>HIV.I.DE3</td>
-    <td>Hospital</td>
-    <td>Client's clinical status warrants hospitalization</td>
+    <td>Hospital Admission</td>
+    <td>Client&#x27;s clinical status warrants hospitalization</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Hospital</td>
@@ -37859,7 +37859,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.I6 Provide information to referral facility</td>
     <td>HIV.I.DE4</td>
     <td>Referral for screening including diagnostics and lab testing</td>
-    <td>The client is referred because they need a lab test done and/or diagnostics done, but those services are unavailable at the current health facility or providers. This includes referral for TB screening (is symptomatic of TB, has had close contact with confirmed TB case, etc.) and other comorbidities or coinfections. </td>
+    <td>The client is referred because they need a lab test done and/or diagnostics done, but those services are unavailable at the current health facility or providers. This includes referral for TB screening (is symptomatic of TB, has had close contact with confirmed TB case, etc.) and other comorbidities or coinfections.</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Referral for screening including diagnostics and lab testing</td>
@@ -37935,10 +37935,10 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Reason for referral"='Referral for other general services'</td>
+    <td>Required if &quot;Reason for referral&quot;=&#x27;Referral for other general services&#x27;</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when Other general services is selected.</td>
   </tr>
   <tr>
     <td>HIV.I6 Provide information to referral facility</td>
@@ -37972,7 +37972,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the scheduled appointment when preparing the handoff. The appointment must be on or after the referral was made.</td>
   </tr>
   <tr>
     <td>HIV.I6 Provide information to referral facility</td>
@@ -37989,7 +37989,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Select a verified ET Base MFR Location from the sites that can provide the requested services. The application supplies the eligible registry choices.</td>
   </tr>
   <tr>
     <td>HIV.I6 Provide information to referral facility</td>
@@ -38006,7 +38006,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Prefill from the documented visit time. Staff can correct the actual referral time.</td>
   </tr>
   <tr>
     <td>HIV.I6 Provide information to referral facility</td>
@@ -38023,41 +38023,41 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Prefill the authenticated provider’s name from the application session.</td>
   </tr>
   <tr>
     <td>HIV.I6 Provide information to referral facility</td>
     <td>HIV.I.DE14</td>
-    <td>Provider's facility</td>
-    <td>Facility client is being referred from</td>
+    <td>Provider&#x27;s facility</td>
+    <td>The Facility where client is being referred from</td>
     <td>N/A</td>
     <td>String</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>Default to facility associated with end user's profile</td>
+    <td>Default to facility associated with end user&#x27;s profile</td>
     <td>Existing facility</td>
     <td>R</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>A verified ET Base MFR Location where the referral originated. Default to the site associated with the provider when available.</td>
   </tr>
   <tr>
     <td>HIV.I6 Provide information to referral facility</td>
     <td>HIV.I.DE15</td>
-    <td>Provider's telephone number</td>
+    <td>Provider&#x27;s telephone number</td>
     <td>The contact details of the provider making the referral</td>
     <td>N/A</td>
     <td>Quantity</td>
     <td>N/A</td>
     <td>Integer Quantity</td>
-    <td>Default to facility associated with end user's profile</td>
+    <td>Default to facility associated with end user&#x27;s profile</td>
     <td>None</td>
     <td>R</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Prefill from verified contact information. Store the telephone number as text to preserve its country code, leading zero, and extension.</td>
   </tr>
   <tr>
     <td>HIV.I6 Provide information to referral facility</td>
@@ -38074,13 +38074,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the additional details relevant to the receiving facility.</td>
   </tr>
   <tr>
     <td>HIV.I6 Provide information to referral facility</td>
     <td>HIV.I.DE17</td>
     <td>Client history summary</td>
-    <td>With interoperable systems, the provider receiving the referral should be able to access the client's health record digitally. However, in the absence of this, the referral provider should receive a summary of the client's health records that includes the client's history, medications, medications prescribed or dispensed, reported issues and concerns, and any other relevant clinical information the health care provider had already obtained.</td>
+    <td>With interoperable systems, the provider receiving the referral should be able to access the client&#x27;s health record digitally. However, in the absence of this, the referral provider should receive a summary of the client&#x27;s health records that includes the client&#x27;s history, medications, medications prescribed or dispensed, reported issues and concerns, and any other relevant clinical information the health care provider had already obtained.</td>
     <td>N/A</td>
     <td>String</td>
     <td>N/A</td>
@@ -38091,7 +38091,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Share the clinical summary needed for the handoff, particularly when the receiving provider cannot access the health record.</td>
   </tr>
 </table>
 <br>
