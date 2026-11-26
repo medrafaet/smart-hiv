@@ -45,3 +45,9 @@ Description: "Value set of list of ART regimens"
 * HIVConcepts#HIV.D.DE124 "TDF + FTC + PI/r"
 * HIVConcepts#HIV.D.DE125 "TDF + FTC + RAL"
 * HIVConcepts#HIV.D.DE126 "Other"
+* HIVConcepts#HIV.D.ET.DE66
+* HIVConcepts#HIV.D.ET.DE67
+* HIVConcepts#HIV.D.ET.DE68
+* HIVConcepts#HIV.D.ET.DE69
+* HIVConcepts#HIV.D.ET.DE70
+* HIVConcepts#HIV.D.ET.DE71

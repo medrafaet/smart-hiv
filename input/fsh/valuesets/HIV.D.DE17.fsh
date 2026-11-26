@@ -20,4 +20,6 @@ Description: "Value set of signs that may indicate the client has a serious illn
 * HIVConcepts#HIV.D.DE26 "Unable to breastfeed"
 * HIVConcepts#HIV.D.DE27 "Repeated vomiting"
 * HIVConcepts#HIV.D.DE28 "Headache"
+* HIVConcepts#HIV.D.ET.DE4
+* HIVConcepts#HIV.D.ET.DE5
 * HIVConcepts#HIV.D.DE29 "Other sign of serious illness"

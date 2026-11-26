@@ -1,14 +1,24 @@
 Instance: HIV.D24Counsel
 InstanceOf: sdc-questionnaire-extr-smap
 Title: "Counsel"
-Description: "Questionnaire for counsel"
+Description: "Records counselling delivered during Care and Treatment, completed adherence sessions, and treatment supporter details."
 Usage: #definition
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablequestionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
 * subjectType = #Patient
 * language = #en
+* version = "2026-10"
 * status = #draft
 * experimental = true
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[key].valueId = "care-adherence-session-dates"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[severity].valueCode = #error
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[human].valueString = "Record the completion dates in session order."
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.language = #text/fhirpath
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.expression = """
+  (%resource.item.where(linkId = 'HIV.D.DE500').answer.value.ofType(date) < %resource.item.where(linkId = 'HIV.D.DE498').answer.value.ofType(date)).where($this = true).empty() and
+  (%resource.item.where(linkId = 'HIV.D.DE502').answer.value.ofType(date) < %resource.item.where(linkId = 'HIV.D.DE498').answer.value.ofType(date)).where($this = true).empty() and
+  (%resource.item.where(linkId = 'HIV.D.DE502').answer.value.ofType(date) < %resource.item.where(linkId = 'HIV.D.DE500').answer.value.ofType(date)).where($this = true).empty()
+"""
 
 * item[+]
   * id = "HIV.D.DE446"
@@ -16,18 +26,26 @@ Usage: #definition
   * type = #choice
   * text = "Coinfection status at ART start"
   * required = false
-  * repeats = false
+  * repeats = true
   * readOnly = false
-  * answerValueSet = "#HIV.D.DE446"
+  * answerValueSet = Canonical(HIV.D.DE446)
+* item[+]
+  * linkId = "HIV.D.ET.DE91"
+  * type = #string
+  * text = "Other infection at ART start (specify)"
+  * required = true
+  * enableWhen.question = "HIV.D.DE446"
+  * enableWhen.operator = #=
+  * enableWhen.answerCoding = HIVConcepts#HIV.D.ET.DE90
 * item[+]
   * id = "HIV.D.DE449"
   * linkId = "HIV.D.DE449"
   * type = #choice
   * text = "Pregnant and breastfeeding status at ART start"
   * required = false
-  * repeats = false
+  * repeats = true
   * readOnly = false
-  * answerValueSet = "#HIV.D.DE449"
+  * answerValueSet = Canonical(HIV.D.DE449)
 * item[+]
   * id = "HIV.D.DE454"
   * linkId = "HIV.D.DE454"
@@ -36,6 +54,9 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
+  * enableWhen.question = "HIV.D.DE449"
+  * enableWhen.operator = #=
+  * enableWhen.answerCoding = HIVConcepts#HIV.D.DE453
 * item[+]
   * id = "HIV.D.DE455"
   * linkId = "HIV.D.DE455"
@@ -76,6 +97,9 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
+  * enableWhen.question = "HIV.D.DE497"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
 * item[+]
   * id = "HIV.D.DE499"
   * linkId = "HIV.D.DE499"
@@ -92,6 +116,9 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
+  * enableWhen.question = "HIV.D.DE499"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
 * item[+]
   * id = "HIV.D.DE501"
   * linkId = "HIV.D.DE501"
@@ -108,6 +135,9 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
+  * enableWhen.question = "HIV.D.DE501"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
 * item[+]
   * id = "HIV.D.DE503"
   * linkId = "HIV.D.DE503"

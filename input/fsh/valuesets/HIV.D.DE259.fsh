@@ -33,6 +33,7 @@ Description: "Value set of signs and symptoms of opportunistic infections or oth
 * HIVConcepts#HIV.D.DE281 "Diarrhoea or abdominal pain"
 * HIVConcepts#HIV.D.DE282 "Presumptive TB"
 * HIVConcepts#HIV.D.DE283 "Severe or complicated malnutrition"
+* HIVConcepts#HIV.D.ET.DE77 "Moderate acute malnutrition"
 * HIVConcepts#HIV.D.DE284 "Poor growth or development"
 * HIVConcepts#HIV.D.DE285 "Oedema"
 * HIVConcepts#HIV.D.DE286 "Previously treated for TB"

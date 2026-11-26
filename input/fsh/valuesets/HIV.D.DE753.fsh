@@ -15,3 +15,4 @@ Description: "Value set of other clinical services offered or referrals given to
 * HIVConcepts#HIV.D.DE757 "Intensified TB case finding and linkage to TB treatment"
 * HIVConcepts#HIV.D.DE758 "Provision of isoniazid preventive therapy if person does not have TB"
 * HIVConcepts#HIV.D.DE759 "Malaria prevention (such as bed nets and prophylaxis), depending on epidemiology"
+* HIVConcepts#HIV.D.ET.DE748 "Other clinical service"

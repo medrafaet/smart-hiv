@@ -1,6 +1,6 @@
 ValueSet: HIV.D.DE55
 Title: "Facility where client first enrolled in HIV care ValueSet"
-Description: "Value set of facility where the client first enrolled in HIV care"
+Description: "Historical list placeholder for HIV care enrolment facilities. The October history form records the first ART facility as an MFR Organization reference."
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"

@@ -11,3 +11,4 @@ Description: "Value set of reason why test was not performed"
 
 * HIVConcepts#HIV.D.DE533 "BP cuff (sphygmomanometer) not available"
 * HIVConcepts#HIV.D.DE534 "BP cuff (sphygmomanometer) is broken"
+* HIVConcepts#HIV.D.DE535 "Other"

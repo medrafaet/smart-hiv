@@ -34,3 +34,4 @@ Description: "Value set of vaccine preventable disease being targeted by vaccine
 * HIVConcepts#HIV.D.DE633 "Meningococcal disease"
 * HIVConcepts#HIV.D.DE634 "Tick-borne encephalitis"
 * HIVConcepts#HIV.D.DE635 "Typhoid"
+* HIVConcepts#HIV.D.ET.DE624 "Malaria"

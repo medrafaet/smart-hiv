@@ -8,5 +8,5 @@ Description: "Value set of reason(s) why one ore more drugs in client's first-li
 * ^experimental = true
 * ^name = "HIVDDE482"
 * ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE482"
-* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/valueset-rules-text"
-* ^extension[=].valueMarkdown = "This should be a context-specific list of reason(s) why one ore more drugs in client's first-line ARV drug regimen was changed"
+
+* include codes from valueset HIV.D.DE418
