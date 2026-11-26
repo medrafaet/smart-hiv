@@ -1190,7 +1190,7 @@ code "Refused stopped treatment": 'HIV.H.DE45' from "HIVConcepts" display 'Refus
 code "On ART - HIV.H.DE47": 'HIV.H.DE47' from "HIVConcepts" display 'On ART'
 code "Date ART stopped - HIV.H.DE73": 'HIV.H.DE73' from "HIVConcepts" display 'Date ART stopped'
 code "Reason ART stopped - HIV.H.DE74": 'HIV.H.DE74' from "HIVConcepts" display 'Reason ART stopped'
-code "Toxicity/side effects - HIV.H.DE75": 'HIV.H.DE75' from "HIVConcepts" display 'Toxicity/side effects'
+code "Toxicity/side effects - HIV.H.DE75": 'HIV.H.DE75' from "HIVConcepts" display 'Treatment-limiting toxicity'
 code "Severe illness, hospitalization - HIV.H.DE76": 'HIV.H.DE76' from "HIVConcepts" display 'Severe illness, hospitalization'
 code "Drugs out of stock ": 'HIV.H.DE77' from "HIVConcepts" display 'Drugs out of stock '
 code "Client lacks finances ": 'HIV.H.DE78' from "HIVConcepts" display 'Client lacks finances '

@@ -1,12 +1,12 @@
 ValueSet: HIV.H.DE50
 Title: "Transfer to facility ValueSet"
-Description: "Value set of name of health facility client was transferred to"
+Description: "Retired coded answer list. Transfer destination is recorded as a reference to a verified ET Base MFR Organization."
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"
-* ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"
-* ^status = #active
+* ^status = #retired
 * ^experimental = true
 * ^name = "HIVHDE50"
 * ^url = "http://smart.who.int/hiv/ValueSet/HIV.H.DE50"
 
-* HIVConcepts#HIV.H.DE51 "Date of transfer out"
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/valueset-rules-text"
+* ^extension[=].valueMarkdown = "Use the verified MFR Organization for the receiving facility."

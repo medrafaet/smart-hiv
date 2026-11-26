@@ -36318,16 +36318,16 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Select all documented reasons. Did not initiate ART and Inconclusive HIV status cannot be selected together.</td>
   </tr>
   <tr>
     <td>HIV.H1 Identify client for follow-up</td>
     <td>HIV.H.DE2</td>
-    <td>Missed care visit</td>
+    <td>Missed appointment</td>
     <td>Client did not present for a care appointment as scheduled / as expected</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Missed care visit</td>
+    <td>Missed clinical care visit</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -36364,7 +36364,7 @@ HIV.A5 Create new client record</td>
     <td>Did not initiate ART</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>Not selectable with "Inconclusive HIV status"</td>
+    <td>Not selectable with &quot;Inconclusive HIV status&quot;</td>
     <td>O</td>
     <td>None</td>
     <td></td>
@@ -36374,7 +36374,7 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.H1 Identify client for follow-up</td>
     <td>HIV.H.DE5</td>
-    <td>Incomplete visit</td>
+    <td>Incomplete service</td>
     <td>Client presented for care, but left before services were completed, e.g., due to long wait times or not staying to have labs taken</td>
     <td>Input Option</td>
     <td>Codes</td>
@@ -36398,7 +36398,7 @@ HIV.A5 Create new client record</td>
     <td>Inconclusive HIV status</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>Not selectable with "Did not initiate ART"</td>
+    <td>Not selectable with &quot;Did not initiate ART&quot;</td>
     <td>O</td>
     <td>None</td>
     <td></td>
@@ -36451,15 +36451,15 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Reason for follow-up"='Other follow-up reason'</td>
+    <td>Required if &quot;Reason for follow-up&quot;=&#x27;Other follow-up reason&#x27;</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when Other follow-up reason is selected.</td>
   </tr>
   <tr>
     <td>HIV.H2 Attempt to locate client</td>
     <td>HIV.H.DE10</td>
-    <td>Client contact attempted</td>
+    <td>Client contact traced</td>
     <td>An attempt to locate the client was made</td>
     <td>N/A</td>
     <td>Boolean</td>
@@ -36471,12 +36471,12 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record whether tracing was attempted. An unsuccessful attempt still counts as an attempt.</td>
   </tr>
   <tr>
     <td>HIV.H2 Attempt to locate client</td>
     <td>HIV.H.DE11</td>
-    <td>Date of contact attempt</td>
+    <td>Date of contact traced</td>
     <td>Date of attempt to contact client</td>
     <td>N/A</td>
     <td>DateTime</td>
@@ -36488,12 +36488,12 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when a tracing attempt was made. Record the actual date and time.</td>
   </tr>
   <tr>
     <td>HIV.H2 Attempt to locate client</td>
     <td>HIV.H.DE12</td>
-    <td>Contact attempted by</td>
+    <td>Contact Traced by</td>
     <td>Who attempted to reach out to the client</td>
     <td>N/A</td>
     <td>String</td>
@@ -36505,7 +36505,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when a tracing attempt was made.</td>
   </tr>
   <tr>
     <td>HIV.H2 Attempt to locate client</td>
@@ -36522,7 +36522,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>Included based on country feedback.</td>
+    <td>Required when a tracing attempt was made.</td>
   </tr>
   <tr>
     <td>HIV.H2 Attempt to locate client</td>
@@ -36539,7 +36539,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>Included based on country feedback.</td>
+    <td></td>
   </tr>
   <tr>
     <td>HIV.H2 Attempt to locate client</td>
@@ -36556,7 +36556,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>Included based on country feedback.</td>
+    <td></td>
   </tr>
   <tr>
     <td>HIV.H2 Attempt to locate client</td>
@@ -36573,7 +36573,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>Included based on country feedback.</td>
+    <td></td>
   </tr>
   <tr>
     <td>HIV.H2 Attempt to locate client</td>
@@ -36590,7 +36590,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>Included based on country feedback.</td>
+    <td>Required when information about the client was obtained. A tracing attempt may yield no information.</td>
   </tr>
   <tr>
     <td>HIV.H2 Attempt to locate client</td>
@@ -36607,10 +36607,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td>Included based on country feedback.</td>
+    <td></td>
   </tr>
   <tr>
-    <td>HIV.H2 Attempt to locate client</td>
+    <td>HIV.H2. Attempt to locate client</td>
     <td>HIV.H.DE19</td>
     <td>Informed by treatment provider</td>
     <td>Source of information was a treatment provider of the client</td>
@@ -36627,7 +36627,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H2 Attempt to locate client</td>
+    <td>HIV.H2. Attempt to locate client</td>
     <td>HIV.H.DE20</td>
     <td>Informed by family or partner</td>
     <td>Source of information was a family member of partner</td>
@@ -36644,10 +36644,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H2 Attempt to locate client</td>
+    <td>HIV.H2. Attempt to locate client</td>
     <td>HIV.H.DE21</td>
     <td>Other source of information</td>
-    <td>Information about the client's status was provided by someone else</td>
+    <td>Information about the client&#x27;s status was provided by someone else</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Other source of information</td>
@@ -36661,10 +36661,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H2 Attempt to locate client</td>
+    <td>HIV.H2. Attempt to locate client</td>
     <td>HIV.H.DE22</td>
     <td>Other source of information (specify)</td>
-    <td>Information about the client's status was provided by someone else (specify)</td>
+    <td>Information about the client&#x27;s status was provided by someone else (specify)</td>
     <td>N/A</td>
     <td>String</td>
     <td>N/A</td>
@@ -36672,13 +36672,13 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Source of information"='Other source of information'</td>
+    <td>Required if &quot;Source of information&quot;=&#x27;Other source of information&#x27;</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when Other source of information is selected.</td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE23</td>
     <td>Outcome from outreach attempt</td>
     <td>Detailed outcome from the attempt to locate the client</td>
@@ -36692,10 +36692,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the result of this individual outreach attempt separately from the documented treatment outcome.</td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE24</td>
     <td>Returning to clinic</td>
     <td>Client was located and agreed to return to clinic</td>
@@ -36712,7 +36712,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE25</td>
     <td>Self-transferred out</td>
     <td>Client transferred to another facility for care (client-initiated transfer, not provider-initiated transfer)</td>
@@ -36729,7 +36729,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE26</td>
     <td>Hospitalized</td>
     <td>Client was hospitalized</td>
@@ -36746,7 +36746,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE27</td>
     <td>Refused to return</td>
     <td>Client was found but declined to return to treatment</td>
@@ -36763,13 +36763,13 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE28</td>
-    <td>Not located </td>
+    <td>Client not found</td>
     <td>Attempt was made to locate client, but client was not found</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Not located </td>
+    <td>Not located</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -36777,10 +36777,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record that the client could not be located. Assess eligibility for the lost-to-follow-up outcome separately.</td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE29</td>
     <td>Died (reported)</td>
     <td>The client was reported as having died</td>
@@ -36794,12 +36794,29 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>An outreach report of death is recorded separately from a confirmed death for programme reporting.</td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
+    <td>HIV.H.DE31</td>
+    <td>Date client change adress</td>
+    <td>The date on which the client moved from the catchment area, if known</td>
+    <td>N/A</td>
+    <td>Date</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>C</td>
+    <td>Required if &quot;Moved from catchment area&quot;=True</td>
+    <td></td>
+    <td></td>
+    <td>Record when the client moved out of the catchment area if the date is known. A move can be recorded with an unknown date.</td>
+  </tr>
+  <tr>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE30</td>
-    <td>Moved from catchment area</td>
+    <td>Changed adress</td>
     <td>The client moved from the catchment area (may be reported from the community level)</td>
     <td>N/A</td>
     <td>Boolean</td>
@@ -36811,27 +36828,10 @@ HIV.A5 Create new client record</td>
     <td>May be reported from the community level</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Use the definition about moving out of the catchment area when recording this field.</td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
-    <td>HIV.H.DE31</td>
-    <td>Date client moved from catchment area</td>
-    <td>The date on which the client moved from the catchment area, if known</td>
-    <td>N/A</td>
-    <td>Date</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>C</td>
-    <td>Required if "Moved from catchment area"=True</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE32</td>
     <td>New catchment area</td>
     <td>New catchment area where the client resides</td>
@@ -36848,7 +36848,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.B6 Capture or update client history</td>
+    <td>HIV.B6. Capture or update client history</td>
     <td>HIV.H.DE33</td>
     <td>Partner or contact of index case</td>
     <td>The client was identified by an index case as a partner or contact</td>
@@ -36865,7 +36865,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.B6 Capture or update client history</td>
+    <td>HIV.B6. Capture or update client history</td>
     <td>HIV.H.DE34</td>
     <td>HIV status of partner or contact</td>
     <td>HIV status of the partner or contact given by the index case</td>
@@ -36879,13 +36879,30 @@ HIV.A5 Create new client record</td>
     <td></td>
     <td>HIV.C7.DT</td>
     <td></td>
+    <td>Required when the client is identified as a partner or contact of an index case. This is a reported status and the HIV test result is recorded separately.</td>
+  </tr>
+  <tr>
+    <td>HIV.B6. Capture or update client history</td>
+    <td>HIV.H.ET.DE1</td>
+    <td>Unknown HIV Status</td>
+    <td>The partner or contact of the index case doesn’t know their HIV status</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.B6 Capture or update client history</td>
+    <td>HIV.B6. Capture or update client history</td>
     <td>HIV.H.DE35</td>
-    <td>Already knew positive</td>
-    <td>The partner or contact of the index case already knew they are HIV-positive</td>
+    <td>Known positive</td>
+    <td>The partner or contact of the index case already knew they are HIV positive</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Already knew positive</td>
@@ -36899,10 +36916,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.B6 Capture or update client history</td>
+    <td>HIV.B6. Capture or update client history</td>
     <td>HIV.H.DE36</td>
     <td>Newly diagnosed</td>
-    <td>The partner or contact of the index case is newly diagnosed as HIV-positive</td>
+    <td>The partner or contact of the index case is newly diagnosed as HIV positive</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Newly diagnosed</td>
@@ -36916,10 +36933,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.B6 Capture or update client history</td>
+    <td>HIV.B6. Capture or update client history</td>
     <td>HIV.H.DE37</td>
     <td>Negative</td>
-    <td>The partner or contact of the index case is newly diagnosed is HIV-negative</td>
+    <td>The partner or contact of the index case is newly diagnosed is HIV negative</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Negative</td>
@@ -36933,9 +36950,9 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE38</td>
-    <td>Date of death </td>
+    <td>Date of death</td>
     <td>If deceased, the date that the client died</td>
     <td>N/A</td>
     <td>Date</td>
@@ -36950,7 +36967,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE39</td>
     <td>Cause of death</td>
     <td>Cause of death, if known</td>
@@ -36967,7 +36984,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE40</td>
     <td>Place of death</td>
     <td>Where the client died, if known</td>
@@ -36984,10 +37001,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE41</td>
     <td>HIV treatment outcome</td>
-    <td>The outcome for the client which is used for reporting retention/attrition.</td>
+    <td>The outcome for the client which is used for reporting retention. Included in total attrition from ART: death, stopped treatment and lost to follow-up. On ART is included so that the HIV treatment outcome remains in sync.</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -36998,13 +37015,13 @@ HIV.A5 Create new client record</td>
     <td></td>
     <td></td>
     <td>ART.2</td>
-    <td>This data element may also be called "Treatment outcome category" as per WHO's Consolidated guidelines on person-centered HIV strategic information (2022)</td>
+    <td>Select one documented programme outcome, including On ART. Outreach results are captured independently.</td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE42</td>
     <td>Lost to follow-up</td>
-    <td>Twenty-eight days or more since last missed appointment </td>
+    <td>Twenty-eight days or more since last missed appointment</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Lost to follow-up</td>
@@ -37015,10 +37032,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td>ART.2</td>
-    <td></td>
+    <td>The workbook defines lost to follow-up as 28 days or more since the last missed appointment. The form expects a documented outcome.</td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE43</td>
     <td>Transferred out</td>
     <td>The client transferred to another facility</td>
@@ -37035,9 +37052,9 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE44</td>
-    <td>Death (documented)</td>
+    <td>Dead</td>
     <td>People living with HIV previously on ART who are confirmed to have died from any cause</td>
     <td>Input Option</td>
     <td>Codes</td>
@@ -37052,7 +37069,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE45</td>
     <td>Refused (stopped) treatment</td>
     <td>Client was contacted and confirmed to have stopped ART (reasons may include stigma and discrimination, faith healing, etc.)</td>
@@ -37069,7 +37086,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE46</td>
     <td>Date patient lost to follow-up</td>
     <td>Date patient was lost to follow-up (LTFU)</td>
@@ -37083,30 +37100,30 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Shown when the documented treatment outcome is Lost to follow-up.</td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE47</td>
+    <td>Currently on ART</td>
+    <td>Client is currently taking ART</td>
+    <td>Input Option</td>
+    <td>Codes</td>
     <td>On ART</td>
-    <td>Client is currently taking ART </td>
-    <td>N/A</td>
-    <td>Boolean</td>
-    <td>True/False</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
-    <td>HIV.D12.DT, HIV.S.2, HIV.S.4</td>
-    <td>ART.1, ART.2, ART.3, ART.4, ART.6, ART.7, ART.8, ART.9, DSD.1, DSD.2, DSD.3, DSD.4, TBH.1, TBH.2, VER.4, VER.5</td>
+    <td>HIV.D12.DT</td>
     <td></td>
+    <td>Available as a choice under HIV.H.DE41.</td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE48</td>
     <td>Date HIV treatment outcome changed</td>
-    <td>The date on which the client's outcome (lost to follow-up, transferred out, death (documented), or refused (stopped) treatment) changed</td>
+    <td>The date on which the client&#x27;s outcome (lost to follow-up, transferred out, death (documented), or refused (stopped) treatment) changed</td>
     <td>N/A</td>
     <td>Date</td>
     <td>N/A</td>
@@ -37114,13 +37131,13 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "HIV treatment outcome" changes</td>
     <td></td>
     <td></td>
     <td></td>
+    <td>Capture the known date for a change to lost to follow-up, transferred out, documented death, or stopped treatment.</td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE49</td>
     <td>Transfer confirmed</td>
     <td>Select if transfer to another facility is confirmed</td>
@@ -37134,10 +37151,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record confirmation separately from the reported transfer, receiving facility, and date.</td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE50</td>
     <td>Transfer to facility</td>
     <td>Name of health facility client was transferred to</td>
@@ -37151,10 +37168,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Select a verified Ethiopian Master Facility Registry Organization that offers ART. The application supplies eligible references. Leave blank when the receiving facility cannot be verified.</td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE51</td>
     <td>Date of transfer out</td>
     <td>The date the client transferred out of the facility to be provided with care at another facility</td>
@@ -37168,14 +37185,14 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record the transfer date independently of the receiving facility.</td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE52</td>
     <td>Adherence assessment</td>
     <td>Whether client is adherent or not to ART regimen per national guidelines (immunological or virological monitoring)</td>
-    <td>N/A</td>
+    <td></td>
     <td>Boolean</td>
     <td>True/False</td>
     <td>N/A</td>
@@ -37185,10 +37202,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Record whether the client was assessed as adherent. Leave blank when the status is unknown or an assessment is unavailable. Earlier records may use an indicator that an assessment took place.</td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE53</td>
     <td>Reason(s) for adherence problem</td>
     <td>Reason why client is not adherent</td>
@@ -37202,10 +37219,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Select all documented reasons when the assessment indicates an adherence problem.</td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE54</td>
     <td>Forgot</td>
     <td>Client reported not being adherent because they forgot</td>
@@ -37222,7 +37239,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE55</td>
     <td>Toxicity/side effects</td>
     <td>Client reported not being adherent because of toxicity/side effects</td>
@@ -37239,7 +37256,24 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
+    <td>HIV.H.ET.DE55</td>
+    <td>Asleep</td>
+    <td>Client reported not being adherent because they were asleep</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Asleep</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>O</td>
+    <td>None</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE56</td>
     <td>Busy</td>
     <td>Client reported not being adherent because they were busy</td>
@@ -37256,7 +37290,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE57</td>
     <td>Change of routine</td>
     <td>Client reported not being adherent because of a change of routine</td>
@@ -37273,7 +37307,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE58</td>
     <td>Travel cost</td>
     <td>Client reported not being adherent because of travel cost</td>
@@ -37290,10 +37324,10 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE59</td>
     <td>Distance to clinic</td>
-    <td>Client reported not being adherent because of distance to clinic </td>
+    <td>Client reported not being adherent because of distance to clinic</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>Distance to clinic</td>
@@ -37307,7 +37341,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE60</td>
     <td>Client lost/ran out of pills</td>
     <td>Client reported not being adherent because of client lost/ran out of pills</td>
@@ -37324,7 +37358,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE61</td>
     <td>Stock-out</td>
     <td>Client reported not being adherent because of a stock-out</td>
@@ -37341,7 +37375,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE62</td>
     <td>Too ill</td>
     <td>Client reported not being adherent because of being too ill</td>
@@ -37358,7 +37392,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE63</td>
     <td>Pill burden</td>
     <td>Client reported not being adherent because of the pill burden</td>
@@ -37375,7 +37409,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE64</td>
     <td>Felt well</td>
     <td>Client reported not being adherent because they felt well</td>
@@ -37392,7 +37426,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE65</td>
     <td>Depression</td>
     <td>Client reported not being adherent because of depression</td>
@@ -37409,7 +37443,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE66</td>
     <td>Alcohol use</td>
     <td>Client reported not being adherent because of alcohol use</td>
@@ -37426,7 +37460,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE67</td>
     <td>Substance use</td>
     <td>Client reported not being adherent because of substance use (i.e., drugs)</td>
@@ -37443,7 +37477,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE68</td>
     <td>Stigma/disclosure concerns</td>
     <td>Client reported not being adherent because of stigma/disclosure concerns</td>
@@ -37460,7 +37494,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE69</td>
     <td>Lack of food</td>
     <td>Client reported not being adherent because of a lack of food</td>
@@ -37477,7 +37511,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE70</td>
     <td>Poor palatability</td>
     <td>Client reported not being adherent because of poor palatability</td>
@@ -37494,7 +37528,41 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
+    <td>HIV.H.ET.DE2</td>
+    <td>share with other</td>
+    <td>Client reported not being adherent because of sharing with others</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>share with other</td>
+    <td>N/A</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.H3. Record outreach and result</td>
+    <td>HIV.H.ET.DE3</td>
+    <td>Inablity to pay</td>
+    <td>Client reported not being adherent because of inability to pay</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Inablity to pay</td>
+    <td>N/A</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE71</td>
     <td>Other</td>
     <td>Client reported not being adherent because of other reason</td>
@@ -37511,7 +37579,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE72</td>
     <td>Other (specify)</td>
     <td>Client reported not being adherent because of other reason (specify)</td>
@@ -37522,13 +37590,13 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Reason(s) for adherence problem"='Other'</td>
+    <td>Required if &quot;Reason(s) for adherence problem&quot;=&#x27;Other&#x27;</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when Other is selected.</td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE73</td>
     <td>Date ART stopped</td>
     <td>Date on which client stopped ART</td>
@@ -37545,7 +37613,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE74</td>
     <td>Reason ART stopped</td>
     <td>Reason why client intentionally stopped ART</td>
@@ -37559,16 +37627,16 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td>ART.9</td>
-    <td></td>
+    <td>Select all documented reasons for stopping ART.</td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE75</td>
-    <td>Toxicity/side effects</td>
-    <td>Client stopped ART because of toxicity/side effects</td>
+    <td>Treatment-limiting toxicity</td>
+    <td>Client stopped ART because of treatment-limiting toxicity</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Toxicity/side effects</td>
+    <td>Treatment-limiting toxicity</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -37579,7 +37647,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE76</td>
     <td>Severe illness, hospitalization</td>
     <td>Client stopped ART because of severe illness, hospitalization</td>
@@ -37596,13 +37664,13 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE77</td>
-    <td>Drugs out of stock </td>
-    <td>Client stopped ART because of drugs being out of stock </td>
+    <td>Drugs out of stock</td>
+    <td>Client stopped ART because of drugs being out of stock</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Drugs out of stock </td>
+    <td>Drugs out of stock</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -37613,13 +37681,13 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE78</td>
-    <td>Client lacks finances </td>
-    <td>Client stopped ART because client lacked finances </td>
+    <td>Client lacks finances</td>
+    <td>Client stopped ART because client lacked finances</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Client lacks finances </td>
+    <td>Client lacks finances</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -37630,7 +37698,7 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE79</td>
     <td>Excluded HIV infection in infant</td>
     <td>Client stopped ART because the infant was determined to not have HIV</td>
@@ -37647,13 +37715,47 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
+    <td>HIV.H.ET.DE4</td>
+    <td>Treatment failure</td>
+    <td>Client stopped ART because of treatment failure</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Treatment failure</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.H3. Record outreach and result</td>
+    <td>HIV.H.ET.DE5</td>
+    <td>Poor adherence</td>
+    <td>Client stopped ART because of poor adherence</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>Poor adherence</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE80</td>
-    <td>Other reason for stopping ART</td>
+    <td>Other</td>
     <td>Client stopped ART for other reason</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Other reason for stopping ART</td>
+    <td>Other</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -37664,9 +37766,9 @@ HIV.A5 Create new client record</td>
     <td></td>
   </tr>
   <tr>
-    <td>HIV.H3 Record outreach and result</td>
+    <td>HIV.H3. Record outreach and result</td>
     <td>HIV.H.DE81</td>
-    <td>Other reason for stopping ART (specify)</td>
+    <td>Other (specify)</td>
     <td>Client stopped ART for other reason (specify)</td>
     <td>N/A</td>
     <td>String</td>
@@ -37675,10 +37777,10 @@ HIV.A5 Create new client record</td>
     <td>N/A</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "Reason ART stopped"='Other'</td>
+    <td>Required if &quot;Reason ART stopped&quot;=&#x27;Other&#x27;</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Required when Other is selected.</td>
   </tr>
 </table>
 <br>

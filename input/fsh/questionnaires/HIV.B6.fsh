@@ -256,7 +256,10 @@ Usage: #definition
   * linkId = "HIV.H.DE34"
   * type = #choice
   * text = "HIV status of partner or contact"
-  * required = false
+  * required = true
   * repeats = false
   * readOnly = false
   * answerValueSet = Canonical(HIV.H.DE34)
+  * enableWhen.question = "HIV.H.DE33"
+  * enableWhen.operator = #=
+  * enableWhen.answerBoolean = true
