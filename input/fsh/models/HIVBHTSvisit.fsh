@@ -258,6 +258,7 @@ Description: "This tab describes the data that are collected during the HIV Test
   * ^code[+] = HIVConcepts#HIV.B.DE224
 * atElevatedRiskForHivAcquisition 0..1 boolean "At elevated risk for HIV acquisition" "Client is at elevated risk for HIV acquisition"
   * ^code[+] = HIVConcepts#HIV.B.DE225
+  * ^code[+] = HIVConcepts#HIV.PRV.DE1
 * syndromeStiDiagnosed 0..* Coding "Syndrome/STI diagnosed" "Syndrome or STI for which client is diagnosed"
   * ^code[+] = HIVConcepts#HIV.B.DE226
 * syndromeStiDiagnosed from HIV.B.DE226

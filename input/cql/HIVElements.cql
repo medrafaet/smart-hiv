@@ -13355,7 +13355,13 @@ define "At elevated risk for HIV acquisition PRV.DE1":
 */
 
 define "HIV prevention intervention":
-  exists ("PrEP service") or exists("OAMT") or "NSP" or exists("STI services") or exists("VMMC") or exists("Other PRV.DE8")
+  exists("HIV prevention intervention Observations")
+    or exists("PrEP service") or exists("OAMT") or "NSP" or exists("STI services") or exists("VMMC") or exists("Other PRV.DE8")
+
+define "HIV prevention intervention Observations":
+  [Observation: Concepts."HIV prevention intervention"] O
+    where O.status in { 'final', 'amended', 'corrected' }
+      and (O.value as CodeableConcept) in Concepts."HIV prevention intervention Choices"
 /* End of HIV prevention intervention */
 
 /*
@@ -13505,6 +13511,7 @@ define "Other PRV.DE8 date":
 // TODO: NSP date requires fix to DeviceUseStatement support
 define "Date accessed HIV prevention intervention": 
   flatten{"PrEP service date", /*"NSP date",*/ "STI services date", "VMMC date", "Other PRV.DE8 date","OAMT status date"}
+    union ("HIV prevention intervention Observations" O return start of O.effective.toInterval())
   
   //, "OAMT","NSP".timing,"STI services".performed,"VMMC".performed,"Other PRV.DE8".effective}
 /* End of Date accessed HIV prevention intervention */
@@ -13634,7 +13641,9 @@ define "Retained on OAMT Observation":
 */
 
 define "Client being inducted on OAMT":
-  [Observation: Concepts."Client being inducted on OAMT"]
+  [Observation: Concepts."Client being inducted on OAMT"] O
+    where O.status in { 'final', 'amended', 'corrected' }
+      and O.value is true
 
 /*
 @dataElement: HIV.PRV.DE23 - Client on reducing doses of OAMT
@@ -13643,7 +13652,9 @@ define "Client being inducted on OAMT":
 */
 
 define "Client on reducing doses of OAMT":
-  [Observation: Concepts."Client on reducing doses of OAMT"]
+  [Observation: Concepts."Client on reducing doses of OAMT"] O
+    where O.status in { 'final', 'amended', 'corrected' }
+      and O.value is true
 
 
 /*

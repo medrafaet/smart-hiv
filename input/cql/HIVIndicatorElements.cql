@@ -6167,19 +6167,29 @@ define "At elevated risk for HIV acquisition PRV.DE1":
 @description: HIV prevention intervention that client accessed
 */
 
-//(including PrEP, OAMT, NSP, STI services, VMMC) 
+define "Recorded prevention interventions in period":
+  Elements."HIV prevention intervention Observations" O
+    where O.effective.toInterval() starts during "Measurement Period"
+
+define function "Recorded prevention intervention"(Intervention Code):
+  exists("Recorded prevention interventions in period" O where O.value ~ Intervention)
+
 define "HIV prevention intervention":
   List<String>{
-    if "PrEP service" then 'PrEP' else null,
-    if "OAMT" then 'OAMT' else null,
-    if "NSP" then 'NSP' else null,
-    if "STI services" then 'STI services' else null,
-    if "VMMC" then 'VMMC' else null,
-    if "Other PRV.DE8" then 'other prevention' else null
+    if "PrEP service" or "Recorded prevention intervention"(Concepts."PrEP service") then 'PrEP' else null,
+    if "OAMT" or "Recorded prevention intervention"(Concepts."OAMT") then 'OAMT' else null,
+    if "NSP" or "Recorded prevention intervention"(Concepts."NSP") then 'NSP' else null,
+    if "Recorded prevention intervention"(Concepts."Overdose management") then 'Overdose management' else null,
+    if "STI services" or "Recorded prevention intervention"(Concepts."STI services") then 'STI services' else null,
+    if "VMMC" or "Recorded prevention intervention"(Concepts."VMMC") then 'VMMC' else null,
+    if "Recorded prevention intervention"(Concepts."Condom") then 'Condom' else null,
+    if "Recorded prevention intervention"(Concepts."HIV testing and linkage") then 'HIV testing and linkage' else null,
+    if "Other PRV.DE8" or "Recorded prevention intervention"(Concepts."Other - HIV.PRV.DE8") then 'other prevention' else null
   }
 
   define "HIV.PRV.DE2 - HIV prevention intervention":
-    "PrEP service" or "OAMT" or "NSP" or "STI services" or "VMMC" or "Other PRV.DE8"
+    exists("Recorded prevention interventions in period")
+      or "PrEP service" or "OAMT" or "NSP" or "STI services" or "VMMC" or "Other PRV.DE8"
 
 
 /* End of HIV prevention intervention */

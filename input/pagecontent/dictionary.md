@@ -38118,120 +38118,154 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.PRV.DE1</td>
-    <td>At elevated risk for HIV acquisition</td>
+    <td>At substantial risk for HIV acquisition</td>
     <td>Client is at elevated risk for HIV acquisition, defined according to country/programme context</td>
     <td>N/A</td>
     <td>Boolean</td>
     <td>True/False</td>
     <td>N/A</td>
-    <td>This data element be calculated, and updated through time, in a number of ways based upon country or programme context.  See chapter 3 (Prevention) of the 2022 WHO Consolidated guidelines on HIV strategic inforamation.</td>
+    <td>N/A</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td>HIV.B9.DT, HIV.S.4</td>
-    <td>HTS.7, HTS.8, PRV.3</td>
-    <td>Chapter 3 of the SI GL provides an example questionnaire (used at POC) that could be used to calculate this data element.  Other data elements may be used in the calculation of this data element (e.g. True if "Signs of substantial risk of HIV infection" is NOT NULL).  Note that this data element should only be used to include people for service provision and not exclude people.  </td>
+    <td>HTS.7, HTS.8, PRV.3, PRV.3</td>
+    <td>The HTS history question for HIV.B.DE225 also records HIV.PRV.DE1. This preserves one risk answer for the visit.</td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.PRV.DE2</td>
     <td>HIV prevention intervention</td>
-    <td>HIV prevention intervention that client accessed</td>
-    <td>Select all that apply</td>
+    <td>HIV prevention intervention through which client access services in this facility</td>
+    <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>Calculated from other data elements</td>
+    <td>N/A</td>
     <td>None</td>
-    <td>C</td>
-    <td>Required if client accessed HIV prevention services (calculated automatically)</td>
+    <td>O</td>
+    <td>None</td>
     <td></td>
-    <td>HTS.7, STI.1A, STI.2A, STI.3A, STI.4A, STI.5A, STI.6A, STI.7A, STI.8A</td>
-    <td></td>
+    <td>HEP.1A, HEP.2A, HEP.3A, HEP.4A, HTS.7, STI.1A, STI.2A, STI.3A, STI.4A, STI.5A, STI.6A, STI.7A, STI.8A</td>
+    <td>Record one service per entry, paired with the date it was accessed. The October choices are used for new entries. The NSP code remains available for exchange of earlier records.</td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.PRV.DE3</td>
     <td>PrEP service</td>
-    <td>Client accessed PrEP services</td>
+    <td>Client accessed services through PrEP services</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>PrEP service</td>
     <td>N/A</td>
-    <td>True if "Reason for PrEP visit" is NOT NULL for current visit or other PrEP-related data elements are not null for current visit</td>
+    <td>N/A</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>HTS.7, STI.1A, STI.2A, STI.3A, STI.4A, STI.5A, STI.6A, STI.7A, STI.8A</td>
+    <td>HEP.1A, HEP.2A, HEP.3A, HEP.4A, HTS.7, STI.1A, STI.2A, STI.3A, STI.4A, STI.5A, STI.6A, STI.7A, STI.8A</td>
     <td></td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.PRV.DE4</td>
     <td>OAMT</td>
-    <td>Client accessed opioid agonist maintenance treatment (OAMT) services</td>
+    <td>Client accessed services through OAMT services</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>OAMT</td>
     <td>N/A</td>
-    <td>True if any OAMT-related data elements are not null for current visit</td>
+    <td>N/A</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>HTS.7, STI.1A, STI.2A, STI.3A, STI.4A, STI.5A, STI.6A, STI.7A, STI.8A</td>
+    <td>HEP.1A, HEP.2A, HEP.3A, HEP.4A, HTS.7, STI.1A, STI.2A, STI.3A, STI.4A, STI.5A, STI.6A, STI.7A, STI.8A</td>
     <td></td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
-    <td>HIV.PRV.DE5</td>
-    <td>NSP</td>
-    <td>Client accessed needle-syringe programme (NSP) services</td>
+    <td>HIV.Prev.ET.DE1</td>
+    <td>Overdose management</td>
+    <td>Management of overdose through community disribution of naloxone</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>NSP</td>
-    <td>N/A</td>
-    <td>True if any NSP-related data elements are not null for current visit</td>
-    <td>None</td>
-    <td>O</td>
-    <td>None</td>
+    <td>Overdose management</td>
     <td></td>
-    <td>HTS.7, STI.1A, STI.2A, STI.3A, STI.4A, STI.5A, STI.6A, STI.7A, STI.8A</td>
     <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Use the Ethiopia-specific code HIV.Prev.ET.DE1. Needle-syringe programme records retain their separate historical code.</td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.PRV.DE6</td>
     <td>STI services</td>
-    <td>Client accessed sexually transmitted infection (STI) services</td>
+    <td>Client accessed services through STI services</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>STI services</td>
     <td>N/A</td>
-    <td>True if any STI-related data elements not null for current visit</td>
+    <td>N/A</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>HTS.7, STI.1A, STI.2A, STI.3A, STI.4A, STI.5A, STI.6A, STI.7A, STI.8A</td>
+    <td>HEP.1A, HEP.2A, HEP.3A, HEP.4A, HTS.7, STI.1A, STI.2A, STI.3A, STI.4A, STI.5A, STI.6A, STI.7A, STI.8A</td>
     <td></td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.PRV.DE7</td>
     <td>VMMC</td>
-    <td>Client accessed voluntary medical male circumcision (VMMC) services</td>
+    <td>Client accessed services through VMMC services</td>
     <td>Input Option</td>
     <td>Codes</td>
     <td>VMMC</td>
     <td>N/A</td>
-    <td>True if "Prevention services offered and referrals"='Voluntary medical male circumcision (VMMC) referral' OR "Counselling provided"='VMMC counselling conducted' OR "VMMC procedure"=True (or other VMMC-related data elements are not null for current visit)</td>
+    <td>N/A</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>HTS.7, STI.1A, STI.2A, STI.3A, STI.4A, STI.5A, STI.6A, STI.7A, STI.8A</td>
+    <td>HEP.1A, HEP.2A, HEP.3A, HEP.4A, HTS.7, STI.1A, STI.2A, STI.3A, STI.4A, STI.5A, STI.6A, STI.7A, STI.8A</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B6 Capture or update client history</td>
+    <td>HIV.PRV.ET.DE7</td>
+    <td>Condom</td>
+    <td>A barrier method used during sexual intercourse to reduce the risk of HIV transmission, other sexually transmitted infections (STIs), and unintended pregnancy</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HIV.B6 Capture or update client history</td>
+    <td>HIV.PRV.ET.DE8</td>
+    <td>HIV testing and linkage</td>
+    <td>Client accessed services through HIV testing and linkage</td>
+    <td>Input Option</td>
+    <td>Codes</td>
+    <td>HIV testing and linkage</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>None</td>
+    <td>O</td>
+    <td></td>
+    <td></td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -38247,8 +38281,8 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td>O</td>
     <td>None</td>
-    <td></td>
     <td>HTS.7, STI.1A, STI.2A, STI.3A, STI.4A, STI.5A, STI.6A, STI.7A, STI.8A</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -38266,7 +38300,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Shown when Other is selected.</td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
@@ -38280,16 +38314,16 @@ HIV.A5 Create new client record</td>
     <td>Derived from the date the client accessed the specific HIV prevention intervention</td>
     <td>None</td>
     <td>C</td>
-    <td>Required if "HIV prevention intervention" is NOT NULL</td>
-    <td></td>
+    <td>Required if &quot;HIV prevention intervention&quot; is NOT NULL</td>
     <td>HEP.1A, HEP.2A, HEP.3A, HEP.4A, HTS.7, STI.1A, STI.2A, STI.3A, STI.4A, STI.5A, STI.6A, STI.7A, STI.8A</td>
     <td></td>
+    <td>Record the documented access date for this service. The observation carries the date in effective[x].</td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.PRV.DE11</td>
     <td>HIV status of contact</td>
-    <td>The HIV status of the client's contact</td>
+    <td>The HIV status of the client&#x27;s contact</td>
     <td>Select one</td>
     <td>Coding</td>
     <td>N/A</td>
@@ -38300,16 +38334,16 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td>HTS.5</td>
-    <td>Contacts defined as current or past sexual partner(s), biological children/parents (if index case is a child) or anyone with whom a needle was shared. Biological children should only include children of an HIV-positive mother. Children of male-index clients (fathers) should only be included when the biological mother is HIV-positive, she is deceased or her HIV status is not known or not documented. Conversely, if the index client is the child, his/her mother should be tested, and if the mother is HIV-positive or deceased, the father should be tested as well. In addition, all biologic siblings of the index child should be tested</td>
+    <td>Record the reported status of the contact. HTS records the client’s own test result separately.</td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.PRV.DE12</td>
     <td>HIV-positive</td>
-    <td>Client's contact is HIV-positive</td>
+    <td>Client&#x27;s contact is HIV-positive</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>HIV-positive</td>
+    <td>HIV positive</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -38323,10 +38357,10 @@ HIV.A5 Create new client record</td>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.PRV.DE13</td>
     <td>HIV-negative</td>
-    <td>Client's contact is HIV-negative</td>
+    <td>Client&#x27;scontact is HIV-negative</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>HIV-negative</td>
+    <td>HIV negative</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -38339,11 +38373,11 @@ HIV.A5 Create new client record</td>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.PRV.DE14</td>
-    <td>Unknown</td>
-    <td>Client does not know contact's HIV status</td>
+    <td>Uknown</td>
+    <td>Client does not know contact&#x27;s HIV status</td>
     <td>Input Option</td>
     <td>Codes</td>
-    <td>Unknown</td>
+    <td>Don&#x27;t know HIV Status</td>
     <td>N/A</td>
     <td>N/A</td>
     <td>None</td>
@@ -38355,43 +38389,9 @@ HIV.A5 Create new client record</td>
   </tr>
   <tr>
     <td>HIV.B21 Offer prevention options</td>
-    <td>HIV.PRV.DE15</td>
-    <td>Date injecting equipment provided</td>
-    <td>Date client was provided with injecting equipment</td>
-    <td>N/A</td>
-    <td>Date</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>Date ≤ Current Date</td>
-    <td>O</td>
-    <td>None</td>
-    <td></td>
-    <td>PRV.8, PRV.9</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.B21 Offer prevention options</td>
-    <td>HIV.PRV.DE16</td>
-    <td>Number of needles-syringes provided</td>
-    <td>Number of needles-syringes provided to client</td>
-    <td>N/A</td>
-    <td>Quantity</td>
-    <td>N/A</td>
-    <td>Integer quantity</td>
-    <td>N/A</td>
-    <td>None</td>
-    <td>C</td>
-    <td>Required if "Date injecting equipment provided" is NOT NULL</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HIV.B21 Offer prevention options</td>
     <td>HIV.PRV.DE17</td>
     <td>Date OAMT initiated</td>
-    <td>Date client initiated opioid agonist maintenance treatment (OAMT)</td>
+    <td>Date client initiated OAMT</td>
     <td>N/A</td>
     <td>Date</td>
     <td>N/A</td>
@@ -38402,13 +38402,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td>PRV.12, PRV.13</td>
-    <td></td>
+    <td>Capture the documented initiation date under Offer prevention options.</td>
   </tr>
   <tr>
     <td>HIV.B21 Offer prevention options</td>
     <td>HIV.PRV.DE18</td>
     <td>Date OAMT dose received</td>
-    <td>Date client received opioid agonist maintenance treatment (OAMT) dose</td>
+    <td>Date client received OAMT dose</td>
     <td>N/A</td>
     <td>Date</td>
     <td>N/A</td>
@@ -38419,13 +38419,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Capture the date the dose was received.</td>
   </tr>
   <tr>
     <td>HIV.B21 Offer prevention options</td>
     <td>HIV.PRV.DE19</td>
     <td>Date OAMT take-away dose(s) dispensed</td>
-    <td>Date the client was dispensed opioid agonist maintenance treatment (OAMT) take-away dose(s)</td>
+    <td>Date the client was dispensed OAMT take-away dose(s)</td>
     <td>N/A</td>
     <td>Date</td>
     <td>N/A</td>
@@ -38436,13 +38436,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Capture the dispensing date for the take-away doses.</td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.PRV.DE20</td>
     <td>Currently on OAMT</td>
-    <td>Client is currently on opioid agonist maintenance treatment (OAMT) at reporting date, defined according to country/program to account for medication dispensed and LTFU criterion</td>
+    <td>Client is currently on OAMT at during the reporting period.</td>
     <td>N/A</td>
     <td>Boolean</td>
     <td>True/False</td>
@@ -38453,13 +38453,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td>PRV.11</td>
-    <td></td>
+    <td>Record the status documented by the programme for the relevant reporting period.</td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.PRV.DE21</td>
     <td>Retained on OAMT</td>
-    <td>Client is retained on opioid agonist maintenance treatment (OAMT) at reporting date, defined according to country/program to account for medication dispensed and LTFU criterion</td>
+    <td>Client is retained on OAMT at reporting period</td>
     <td>N/A</td>
     <td>Boolean</td>
     <td>True/False</td>
@@ -38470,13 +38470,13 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td>PRV.13</td>
-    <td></td>
+    <td>Record retention documented by the programme for the relevant reporting period.</td>
   </tr>
   <tr>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.PRV.DE22</td>
     <td>Client being inducted on OAMT</td>
-    <td>Client is currently being inducted on opioid agonist maintenance treatment (OAMT), defined according to country/program</td>
+    <td>Client is currently being inducted on OAMT, defined according to country/program</td>
     <td>N/A</td>
     <td>Boolean</td>
     <td>True/False</td>
@@ -38493,7 +38493,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.PRV.DE23</td>
     <td>Client on reducing doses of OAMT</td>
-    <td>Client is current on reducing doses of opioid agonist maintenance treatment (OAMT), defined according to country/program</td>
+    <td>Client is current on reducing doses of OAMT, defined according to country/program</td>
     <td>N/A</td>
     <td>Boolean</td>
     <td>True/False</td>
@@ -38527,7 +38527,7 @@ HIV.A5 Create new client record</td>
     <td>HIV.B6 Capture or update client history</td>
     <td>HIV.PRV.DE25</td>
     <td>Date of loss to follow-up or OAMT stopped</td>
-    <td>Date of loss to follow-up or opioid agonist maintenance treatment (OAMT) stopped</td>
+    <td>Date of loss to follow-up or OAMT stopped</td>
     <td>N/A</td>
     <td>Date</td>
     <td>N/A</td>
@@ -38538,10 +38538,10 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td>PRV.12</td>
-    <td></td>
+    <td>Record the documented date of loss to follow-up or treatment stoppage.</td>
   </tr>
   <tr>
-    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
+    <td>HIV.C24 Prescribe</td>
     <td>HIV.PRV.DE26</td>
     <td>Date medications dispensed</td>
     <td>Date the client was dispensed medications</td>
@@ -38554,11 +38554,11 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td></td>
-    <td></td>
+    <td>PRV.12</td>
+    <td>Capture the date medications were dispensed in the prescribing form, HIV.C23 in the implemented workflow.</td>
   </tr>
   <tr>
-    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
+    <td>HIV.C24 Prescribe</td>
     <td>HIV.PRV.DE27</td>
     <td>Date medications prescribed</td>
     <td>Date the client was prescribed medications</td>
@@ -38571,11 +38571,11 @@ HIV.A5 Create new client record</td>
     <td>O</td>
     <td>None</td>
     <td></td>
-    <td>PRV.2, PRV.3, PRV.5, PRV.6, PRV.7</td>
-    <td></td>
+    <td>PRV.12, PRV.2, PRV.3, PRV.5, PRV.6, PRV.7, PRV.2, PRV.3</td>
+    <td>Capture the prescription date separately from the dispensing date, under HIV.C23 in the implemented workflow.</td>
   </tr>
   <tr>
-    <td>HIV.C23 Prescribe or administer PrEP or PEP</td>
+    <td>HIV.C24 Prescribe</td>
     <td>HIV.PRV.DE28</td>
     <td>Number of days prescribed</td>
     <td>Days of medication client has been prescribed</td>
@@ -38589,7 +38589,7 @@ HIV.A5 Create new client record</td>
     <td>None</td>
     <td></td>
     <td>PRV.4</td>
-    <td></td>
+    <td>The existing HIV.C.DE121 question records the same integer number of days for HIV.PRV.DE28.</td>
   </tr>
 </table>
 <br>
