@@ -19,10 +19,18 @@ Usage: #definition
   * repeats = false
   * readOnly = false
 * item[+]
+  * id = "HIV.A.ET.DE1"
+  * linkId = "HIV.A.ET.DE1"
+  * type = #string
+  * text = "Father name"
+  * required = true
+  * repeats = false
+  * readOnly = false
+* item[+]
   * id = "HIV.A.DE2"
   * linkId = "HIV.A.DE2"
   * type = #string
-  * text = "Family name"
+  * text = "Grandfather name"
   * required = true
   * repeats = false
   * readOnly = false

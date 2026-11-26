@@ -133,7 +133,7 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
-  * answerValueSet = "#HIV.A.DE30"
+  * answerValueSet = Canonical(HIV.A.DE30)
 * item[+]
   * id = "HIV.A.DE42"
   * linkId = "HIV.A.DE42"

@@ -25,6 +25,8 @@ Title: "Example HIV HTS Diagnosing Facility"
 Description: "Example organization representing the HTS diagnosing facility."
 
 * active = true
+* identifier[mfrOrgId].value = "EXAMPLE-MFR-ORG-001"
+* type = http://terminology.hl7.org/CodeSystem/organization-type#prov "Healthcare Provider"
 * name = "Example HTS Facility"
 
 Instance: ExampleHivHtsFollowUpAppointment

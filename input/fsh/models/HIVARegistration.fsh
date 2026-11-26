@@ -65,7 +65,9 @@ Description: "This tab describes the data that are collected during the registra
 
 * firstName 1..1 string "First name" "Client's first or given name"
   * ^code[+] = HIVConcepts#HIV.A.DE1
-* familyName 1..1 string "Family name" "Client's family name or last name"
+* fatherName 1..1 string "Father name" "Father name, exchanged using the Ethiopian base name.family fathersName extension"
+  * ^code[+] = HIVConcepts#HIV.A.ET.DE1
+* familyName 1..1 string "Grandfather name" "Grandfather name, exchanged using the Ethiopian base name.family grandfathersName extension"
   * ^code[+] = HIVConcepts#HIV.A.DE2
 * visitDate 1..1 dateTime "Visit date" "The date and time of the client's visit"
   * ^code[+] = HIVConcepts#HIV.A.DE3
