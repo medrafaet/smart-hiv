@@ -31,6 +31,7 @@ RuleSet: CareDiagnosticsCd4
 * item[+]
   * id = "HIV.D.DE367"
   * linkId = "HIV.D.DE367"
+  * code = HIVConcepts#HIV.SURV.3
   * type = #decimal
   * text = "Baseline CD4 count"
   * required = false
@@ -41,6 +42,7 @@ RuleSet: CareDiagnosticsCd4
 * item[+]
   * id = "HIV.D.DE368"
   * linkId = "HIV.D.DE368"
+  * code = HIVConcepts#HIV.SURV.4
   * type = #dateTime
   * text = "Date of baseline CD4 count test"
   * required = false

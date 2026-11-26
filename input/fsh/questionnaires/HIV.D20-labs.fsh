@@ -2,6 +2,7 @@ RuleSet: DiagnosticsLaboratoryFields
 * item[+]
   * id = "HIV.G.DE1"
   * linkId = "HIV.G.DE1"
+  * code = HIVConcepts#HIV.SURV.8
   * type = #integer
   * text = "CD4 count"
   * required = false
@@ -23,6 +24,7 @@ RuleSet: DiagnosticsLaboratoryFields
 * item[+]
   * id = "HIV.G.DE3"
   * linkId = "HIV.G.DE3"
+  * code = HIVConcepts#HIV.SURV.3
   * type = #decimal
   * text = "Baseline CD4 count"
   * required = false
@@ -54,6 +56,7 @@ RuleSet: DiagnosticsLaboratoryFields
 * item[+]
   * id = "HIV.G.DE6"
   * linkId = "HIV.G.DE6"
+  * code = HIVConcepts#HIV.SURV.9
   * type = #date
   * text = "Date of CD4 sample collection"
   * required = false
@@ -78,6 +81,7 @@ RuleSet: DiagnosticsLaboratoryFields
 * item[+]
   * id = "HIV.G.DE9"
   * linkId = "HIV.G.DE9"
+  * code = HIVConcepts#HIV.SURV.11
   * type = #dateTime
   * text = "Date of first viral load sample collection"
   * required = false
@@ -94,6 +98,7 @@ RuleSet: DiagnosticsLaboratoryFields
 * item[+]
   * id = "HIV.G.DE11"
   * linkId = "HIV.G.DE11"
+  * code = HIVConcepts#HIV.SURV.10
   * type = #integer
   * text = "First viral load test result"
   * required = false

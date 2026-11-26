@@ -48,6 +48,7 @@ Usage: #definition
   * text = "Date facility received or completed the viral load result"
 * item[+]
   * linkId = "HIV.D.DE388"
+  * code = HIVConcepts#HIV.SURV.14
   * type = #boolean
   * text = "Virally suppressed"
   * readOnly = true

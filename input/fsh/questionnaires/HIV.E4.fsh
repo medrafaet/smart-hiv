@@ -93,6 +93,7 @@ Usage: #definition
 * item[+]
   * id = "HIV.E.DE200"
   * linkId = "HIV.E.DE200"
+  * code = HIVConcepts#HIV.SURV.21
   * type = #choice
   * text = "Test result of HIV assay 1"
   * required = false

@@ -91,6 +91,7 @@ Usage: #definition
 * item[+]
   * id = "HIV.D.DE31"
   * linkId = "HIV.D.DE31"
+  * code = HIVConcepts#HIV.SURV.7
   * type = #boolean
   * text = "Currently pregnant"
   * required = false
@@ -159,6 +160,7 @@ Usage: #definition
 * item[+]
   * id = "HIV.D.DE39"
   * linkId = "HIV.D.DE39"
+  * code = HIVConcepts#HIV.SURV.6
   * type = #date
   * text = "ART start date"
   * required = false
@@ -618,6 +620,7 @@ Usage: #definition
 * item[+]
   * id = "HIV.D.DE186"
   * linkId = "HIV.D.DE186"
+  * code = HIVConcepts#HIV.SURV.5
   * type = #choice
   * text = "HIV clinical stage"
   * required = false
@@ -805,6 +808,7 @@ Usage: #definition
 * item[+]
   * id = "HIV.D.DE653"
   * linkId = "HIV.D.DE653"
+  * code = HIVConcepts#HIV.SURV.25
   * type = #boolean
   * text = "AIDS-related death"
   * required = false
@@ -813,6 +817,7 @@ Usage: #definition
 * item[+]
   * id = "HIV.D.DE654"
   * linkId = "HIV.D.DE654"
+  * code = HIVConcepts#HIV.SURV.17
   * type = #date
   * text = "Date of first AIDS diagnosis"
   * required = false

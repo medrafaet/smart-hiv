@@ -13699,6 +13699,12 @@ define "Number of days prescribed PRV.DE28 Value":
   return O.value as integer
 /* End of Number of days prescribed PRV.DE28 */
 
+// Read the Ethiopia surveillance codes and previously exchanged WHO observation codes.
+define function "Surveillance Observations"(CurrentCode Code, PreviousCode Code):
+  [Observation] O
+    where O.status in { 'final', 'amended', 'corrected' }
+      and (O.code ~ CurrentCode or O.code ~ PreviousCode)
+
 /*
 @dataElement: HIV.SRV.DE1 - HIV test date
 @activity: HIV.F8 Test infant/child for HIV using testing algorithm
@@ -13706,8 +13712,7 @@ define "Number of days prescribed PRV.DE28 Value":
 */
 // TODO: Replace placeholder with relevant CQL logic
 define "HIV test date SRV.DE1":
-  [Observation: Concepts."HIV test date - HIV.SRV.DE1"] O
-    where O.status in { 'final', 'amended', 'corrected' }
+  "Surveillance Observations"(Concepts."Surveillance 1", Concepts."HIV test date - HIV.SRV.DE1")
 define "HIV test date SRV.DE1 Value":
   "HIV test date SRV.DE1" O
   return O.value as dateTime
@@ -13719,8 +13724,7 @@ define "HIV test date SRV.DE1 Value":
 @description: The result from HIV testing after applying the testing algorithm
 */
 define "HIV test result SRV.DE2":
-  [Observation: Concepts."HIV test result - HIV.SRV.DE2"] O
-    where O.status in { 'final', 'amended', 'corrected' }
+  "Surveillance Observations"(Concepts."Surveillance 2", Concepts."HIV test result - HIV.SRV.DE2")
 /* End of HIV test result SRV.DE2 */
 
 /*
@@ -13730,8 +13734,7 @@ define "HIV test result SRV.DE2":
 */
 
 define "Baseline CD4 count SRV.DE3":
-  [Observation: Concepts."Baseline CD4 count - HIV.SRV.DE3"] O
-    where O.status in { 'final', 'amended', 'corrected' }
+  "Surveillance Observations"(Concepts."Surveillance 3", Concepts."Baseline CD4 count - HIV.SRV.DE3")
 define "Baseline CD4 count SRV.DE3 Value":
   "Baseline CD4 count SRV.DE3" O
   return O.value as integer
@@ -13757,8 +13760,7 @@ define "Date of baseline CD4 count test SRV.DE4":
 define "HIV clinical stage SRV.DE5":
   exists "HIV clinical stage SRV.DE5 Observation"
 define "HIV clinical stage SRV.DE5 Observation":
-  [Observation: Concepts."HIV clinical stage - HIV.SRV.DE5"] O
-    where O.status in { 'final', 'amended', 'corrected' }
+  "Surveillance Observations"(Concepts."Surveillance 5", Concepts."HIV clinical stage - HIV.SRV.DE5")
 /* End of HIV clinical stage SRV.DE5 */
 
 /*
@@ -13768,8 +13770,7 @@ define "HIV clinical stage SRV.DE5 Observation":
 */
 // TODO: Replace placeholder with relevant CQL logic
 define "ART start date SRV.DE6":
-  [Observation: Concepts."ART start date - HIV.SRV.DE6"] O
-    where O.status in { 'final', 'amended', 'corrected' }
+  "Surveillance Observations"(Concepts."Surveillance 6", Concepts."ART start date - HIV.SRV.DE6")
 define "ART start date SRV.DE6 Value":
   "ART start date SRV.DE6" O
   return O.value as dateTime
@@ -13784,7 +13785,8 @@ define "ART start date SRV.DE6 Value":
 define "Currently pregnant SRV.DE7":
   exists "Currently pregnant SRV.DE7 Condition"
 define "Currently pregnant SRV.DE7 Condition":
-  [Condition: Concepts."Currently pregnant - HIV.SRV.DE7"]
+  [Condition] C
+    where C.code ~ Concepts."Surveillance 7" or C.code ~ Concepts."Currently pregnant - HIV.SRV.DE7"
 /* End of Currently pregnant SRV.DE7 */
 
 /*
@@ -13794,8 +13796,7 @@ define "Currently pregnant SRV.DE7 Condition":
 */
 // TODO: Replace placeholder with relevant CQL logic
 define "CD4 count SRV.DE8":
-  [Observation: Concepts."CD4 count - HIV.SRV.DE8"] O
-    where O.status in { 'final', 'amended', 'corrected' }
+  "Surveillance Observations"(Concepts."Surveillance 8", Concepts."CD4 count - HIV.SRV.DE8")
 define "CD4 count SRV.DE8 Value":
   "CD4 count SRV.DE8" O
   return O.value as integer
@@ -13847,8 +13848,7 @@ define "Visit date SRV.DE15":
 */
 // TODO: Replace placeholder with relevant CQL logic
 define "ANC contact date SRV.DE18":
-  [Observation: Concepts."ANC contact date - HIV.SRV.DE18"] O
-    where O.status in { 'final', 'amended', 'corrected' }
+  "Surveillance Observations"(Concepts."Surveillance 18", Concepts."ANC contact date - HIV.SRV.DE18")
 define "ANC contact date SRV.DE18 Value":
   "ANC contact date SRV.DE18" O
   return O.value as dateTime
@@ -13863,9 +13863,8 @@ define "ANC contact date SRV.DE18 Value":
 define "HIV-exposed infant or child SRV.DE20":
   exists "HIV-exposed infant or child SRV.DE20 Observation"
 define "HIV-exposed infant or child SRV.DE20 Observation":
-  [Observation: Concepts."HIV-exposed infant or child - HIV.SRV.DE20"] O
-    where O.status in { 'final', 'amended', 'corrected' }
-      and O.value is true
+  "Surveillance Observations"(Concepts."Surveillance 20", Concepts."HIV-exposed infant or child - HIV.SRV.DE20") O
+    where O.value is true
 /* End of HIV-exposed infant or child SRV.DE20 */
 
 /*
@@ -13877,8 +13876,7 @@ define "HIV-exposed infant or child SRV.DE20 Observation":
 define "Test result of HIV assay 1 SRV.DE21":
   exists "Test result of HIV assay 1 SRV.DE21 Observation"
 define "Test result of HIV assay 1 SRV.DE21 Observation":
-  [Observation: Concepts."Test result of HIV assay 1 - HIV.SRV.DE21"] O
-    where O.status in { 'final', 'amended', 'corrected' }
+  "Surveillance Observations"(Concepts."Surveillance 21", Concepts."Test result of HIV assay 1 - HIV.SRV.DE21")
 /* End of Test result of HIV assay 1 SRV.DE21 */
 
 /*
@@ -13890,8 +13888,7 @@ define "Test result of HIV assay 1 SRV.DE21 Observation":
 define "Final diagnosis of HIV-exposed infant SRV.DE22":
   exists "Final diagnosis of HIV-exposed infant SRV.DE22 Observation"
 define "Final diagnosis of HIV-exposed infant SRV.DE22 Observation":
-  [Observation: Concepts."Final diagnosis of HIV-exposed infant - HIV.SRV.DE22"] O
-    where O.status in { 'final', 'amended', 'corrected' }
+  "Surveillance Observations"(Concepts."Surveillance 22", Concepts."Final diagnosis of HIV-exposed infant - HIV.SRV.DE22")
 /* End of Final diagnosis of HIV-exposed infant SRV.DE22 */
 
 /*

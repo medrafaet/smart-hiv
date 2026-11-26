@@ -204,6 +204,7 @@ RuleSet: CareRegimenReview
     * enableWhen.answerCoding = HIVConcepts#HIV.D.DE650
 * item[+]
   * linkId = "moreThan28DaysSinceLastScheduledAppointment"
+  * code = HIVConcepts#HIV.SURV.16
   * type = #boolean
   * text = "More than 28 days since last scheduled appointment"
   * readOnly = true

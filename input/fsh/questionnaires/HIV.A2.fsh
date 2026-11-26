@@ -56,6 +56,7 @@ Usage: #definition
 * item[+]
   * id = "HIV.A.DE3"
   * linkId = "HIV.A.DE3"
+  * code = HIVConcepts#HIV.SURV.15
   * type = #dateTime
   * text = "Visit date"
   * required = true

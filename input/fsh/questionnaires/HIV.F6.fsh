@@ -31,3 +31,19 @@ Usage: #definition
   * enableWhen.question = "HIV.E.DE108"
   * enableWhen.operator = #=
   * enableWhen.answerCoding = HIVConcepts#HIV.E.DE110
+* item[+]
+  * linkId = "HIV.SURV.20"
+  * type = #boolean
+  * text = "HIV-exposed infant or child"
+  * readOnly = true
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-hidden].valueBoolean = true
+  * code = HIVConcepts#HIV.SURV.20
+  * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.name = "exposureAnswers"
+  * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.language = #text/fhirpath
+  * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.expression = "%resource.item.where(linkId = 'HIV.E.DE108').answer.value.ofType(Coding)"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.language = #text/fhirpath
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.expression = """
+    iif(%exposureAnswers.count() = 1,
+      %exposureAnswers.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.E.DE109' | 'HIV.E.DE110'))
+        .select(code = 'HIV.E.DE110'), {})
+    """

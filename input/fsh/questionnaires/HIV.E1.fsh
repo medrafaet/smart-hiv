@@ -701,6 +701,7 @@ Usage: #definition
 * item[+]
   * id = "HIV.E.DE85"
   * linkId = "HIV.E.DE85"
+  * code = HIVConcepts#HIV.SURV.18
   * type = #dateTime
   * text = "ANC contact date"
   * required = true

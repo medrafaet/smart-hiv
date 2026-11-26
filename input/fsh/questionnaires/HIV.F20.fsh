@@ -72,6 +72,7 @@ Usage: #definition
 * item[+]
   * id = "HIV.E.DE230"
   * linkId = "HIV.E.DE230"
+  * code = HIVConcepts#HIV.SURV.22
   * type = #choice
   * text = "Final diagnosis of HIV-exposed infant"
   * required = false

@@ -37,6 +37,7 @@ Usage: #definition
 * item[+]
   * id = "HIV.E.DE224"
   * linkId = "HIV.E.DE224"
+  * code = HIVConcepts#HIV.SURV.1
   * type = #date
   * text = "HIV test date"
   * required = false
