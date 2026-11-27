@@ -5,6 +5,15 @@ template
 output
 fsh-generated
 
+# Generated Publisher artifacts
+/Requirements-fromNarrative.json
+/local-template/package/.index.db
+
+# Generated HIV DAK documentation placeholders
+/input/pagecontent/StructureDefinition-HIV*.md
+!/input/pagecontent/StructureDefinition-HIVARegistration.md
+/input/pagecontent/ValueSet-HIV.*.md
+
 # Don't commit this because it's so large #
 ###########################################
 /input-cache
