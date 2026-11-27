@@ -7,7 +7,7 @@ Usage: #definition
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
 * subjectType = #Patient
 * language = #en
-* version = "2026-10"
+* insert EthiopiaQuestionnaireVersion
 * status = #draft
 * experimental = true
 * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext].extension[name].valueCoding.code = #carePrescribing
@@ -87,7 +87,7 @@ Usage: #definition
   * linkId = "HIV.D.DE442"
   * type = #integer
   * text = "Number of days of co-trimoxazole prescribed"
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#d "days"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#d "d"
   * extension[http://hl7.org/fhir/StructureDefinition/minValue].valueInteger = 0
 * item[+]
   * linkId = "suspectedTreatmentFailure"
@@ -132,7 +132,7 @@ Usage: #definition
     * linkId = "HIV.D.DE460"
     * type = #integer
     * text = "Number of days of medication prescribed"
-    * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#d "days"
+    * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#d "d"
     * extension[http://hl7.org/fhir/StructureDefinition/minValue].valueInteger = 0
 * item[+]
   * linkId = "dispensedMedication"
@@ -150,7 +150,7 @@ Usage: #definition
     * linkId = "HIV.D.DE462"
     * type = #integer
     * text = "Number of days of medication dispensed"
-    * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#d "days"
+    * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#d "d"
     * extension[http://hl7.org/fhir/StructureDefinition/minValue].valueInteger = 0
   * item[+]
     * linkId = "HIV.D.DE463"

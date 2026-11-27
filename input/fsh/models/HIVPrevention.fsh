@@ -5,7 +5,7 @@ Severity: #error
 
 Invariant: hiv-prevention-event-dates
 Description: "Enter today or an earlier date for documented prevention events."
-Expression: "(dateAccessedHivPreventionIntervention | dateOamtInitiated | dateOamtDoseReceived | dateOamtTakeAwayDosesDispensed | dateFirstMaintenanceDoseReceived | dateOfLossToFollowUpOrOamtStopped | dateMedicationsDispensed | dateMedicationsPrescribed).all($this <= today().toString().substring(0, $this.toString().length()).toDate())"
+Expression: "(dateAccessedHivPreventionIntervention | dateOamtInitiated | dateOamtDoseReceived | dateOamtTakeAwayDosesDispensed | dateFirstMaintenanceDoseReceived | dateOfLossToFollowUpOrOamtStopped | dateMedicationsDispensed | dateMedicationsPrescribed).where($this > today()).empty()"
 Severity: #error
 
 Logical: HIVPrevention

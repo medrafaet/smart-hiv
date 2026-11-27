@@ -17,6 +17,7 @@ Usage: #definition
 * relatedArtifact[+]
   * type = #citation
   * citation = "Consolidated Guidelines on HIV Testing Services (2019)"
+  * url = "https://www.who.int/publications/i/978-92-4-155058-1"
 * action[+]
   * textEquivalent = "Determine retest recommendation"
   * action[+]

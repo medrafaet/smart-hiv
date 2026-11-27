@@ -27,13 +27,13 @@ Title: "HIV.IND.3 PrEP coverage"
     * description = "a) Programme/service provider level: number of individuals who received a negative HIV test during the reporting period and identified as being at elevated risk for HIV acquisition (includes people requesting/receiving any HIV prevention intervention, people from key populations, people with known risk factors or assessed as being at risk of HIV acquisition) |  | b) Population level: population-level estimate of the number of people who would benefit from PrEP, for example as derived from a PrEP need estimator tool"
     * code = $measure-population#denominator "Denominator"
     * criteria.language = #text/cql-identifier
-    * criteria.expression = "Denominator"
+    * criteria.expression = "denominator"
   * population[numerator]
     * id = "HIV.IND.3.NUM"
     * description = "Number of unique individuals prescribed or dispensed any form of PrEP at least once during the reporting period. Individuals prescribed different products or regimens at different times during the reporting period should be counted only once."
     * code = $measure-population#numerator "Numerator"
     * criteria.language = #text/cql-identifier
-    * criteria.expression = "Numerator"
+    * criteria.expression = "numerator"
   * stratifier[+]
     * id = "HIV.IND.3.S"
     * criteria.language = #text/cql-identifier

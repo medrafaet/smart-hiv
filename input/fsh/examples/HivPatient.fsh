@@ -10,7 +10,7 @@ Description: "Example Patient conforming to the HIV Patient profile for Ethiopia
 * identifier[nationalIdentifier].type = $identifier-type#NI "National unique individual identifier"
 * identifier[nationalIdentifier].value = "ETH-1234567890"
 // The open ART identifier follows the two inherited slices; [+] would restart at index 0.
-* identifier[2].type = HIVConcepts#HIV.A.DE11 "Unique ART number"
+* identifier[2].type = HIVConcepts#HIV.A.DE11 "National programme ID"
 * identifier[2].value = "ART-987654"
 * name.given = "Abebe"
 * name.family.extension[fathersName].valueString = "Bekele"

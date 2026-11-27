@@ -27,13 +27,13 @@ Title: "HIV.IND.20 Individuals testing positive for HIV"
     * description = "Number of people receiving an HIV test in the reporting period"
     * code = $measure-population#denominator "Denominator"
     * criteria.language = #text/cql-identifier
-    * criteria.expression = "Denominator"
+    * criteria.expression = "denominator"
   * population[numerator]
     * id = "HIV.IND.20.NUM"
     * description = "Number of people who test HIV-positive in the reporting period and have results returned to them"
     * code = $measure-population#numerator "Numerator"
     * criteria.language = #text/cql-identifier
-    * criteria.expression = "Numerator"
+    * criteria.expression = "numerator"
   * stratifier[+]
     * id = "HIV.IND.20.S"
     * criteria.language = #text/cql-identifier

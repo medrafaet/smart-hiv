@@ -352,10 +352,10 @@ RuleSet: CareCervicalScreeningAndServices
     * type = #quantity
     * text = "Documented screening interval"
     * required = true
-    * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption].valueCoding = http://unitsofmeasure.org#a "years"
-    * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption][1].valueCoding = http://unitsofmeasure.org#mo "months"
-    * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption][2].valueCoding = http://unitsofmeasure.org#wk "weeks"
-    * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption][3].valueCoding = http://unitsofmeasure.org#d "days"
+    * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption].valueCoding = http://unitsofmeasure.org#a "a"
+    * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption][1].valueCoding = http://unitsofmeasure.org#mo "mo"
+    * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption][2].valueCoding = http://unitsofmeasure.org#wk "wk"
+    * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption][3].valueCoding = http://unitsofmeasure.org#d "d"
 * item[+]
   * id = "HIV.D.DE753"
   * linkId = "HIV.D.DE753"
@@ -379,6 +379,7 @@ InstanceOf: sdc-questionnaire-extr-smap
 Title: "Offer other services"
 Description: "Questionnaire for offer other services"
 Usage: #definition
+* insert QuestionnaireVersionAlgorithm
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablequestionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
 * subjectType = #Patient
@@ -398,7 +399,7 @@ Usage: #definition
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
 * subjectType = #Patient
 * language = #en
-* version = "2026-10"
+* insert EthiopiaQuestionnaireVersion
 * status = #draft
 * experimental = true
 

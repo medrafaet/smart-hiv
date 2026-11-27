@@ -27,13 +27,13 @@ Title: "HIV.IND.7 HIV in PEP recipients"
     * description = "Number of people receiving PEP during the observation period. To allow for observation of a 3-month test result, the observation period must be set at least three months prior."
     * code = $measure-population#denominator "Denominator"
     * criteria.language = #text/cql-identifier
-    * criteria.expression = "Denominator"
+    * criteria.expression = "denominator"
   * population[numerator]
     * id = "HIV.IND.7.NUM"
     * description = "Number of people testing positive for HIV three months after receiving PEP during the reporting period"
     * code = $measure-population#numerator "Numerator"
     * criteria.language = #text/cql-identifier
-    * criteria.expression = "Numerator"
+    * criteria.expression = "numerator"
   * stratifier[+]
     * id = "HIV.IND.7.S"
     * criteria.language = #text/cql-identifier

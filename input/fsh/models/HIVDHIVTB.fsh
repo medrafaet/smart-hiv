@@ -1,6 +1,6 @@
 Invariant:    HIV-D-17
 Description:  "The TB diagnosis date must be on or before today."
-Expression:   "dateOfTbDiagnosis.all($this <= today().toString().substring(0, $this.toString().length()).toDate())"
+Expression:   "dateOfTbDiagnosis.where($this > today()).empty()"
 Severity:     #error
 
 Invariant:    HIV-D-18

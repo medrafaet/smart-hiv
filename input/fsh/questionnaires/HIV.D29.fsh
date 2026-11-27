@@ -57,6 +57,7 @@ InstanceOf: sdc-questionnaire-extr-smap
 Title: "Schedule follow-up"
 Description: "Questionnaire for schedule follow-up"
 Usage: #definition
+* insert QuestionnaireVersionAlgorithm
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablequestionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
 * subjectType = #Patient
@@ -75,7 +76,7 @@ Usage: #definition
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
 * subjectType = #Patient
 * language = #en
-* version = "2026-10"
+* insert EthiopiaQuestionnaireVersion
 * status = #draft
 * experimental = true
 

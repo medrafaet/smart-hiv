@@ -14,7 +14,7 @@ Usage: #definition
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
 * subjectType = #Patient
 * language = #en
-* version = "2026-10"
+* insert EthiopiaQuestionnaireVersion
 * status = #draft
 * experimental = true
 * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext].extension[name].valueCoding.code = #maternalHistory
@@ -163,7 +163,7 @@ Usage: #definition
   * repeats = false
   * readOnly = false
   * extension[http://hl7.org/fhir/StructureDefinition/minValue].valueInteger = 0
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#wk "weeks"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#wk "wk"
 * item[+]
   * id = "HIV.E.DE6"
   * linkId = "HIV.E.DE6"
@@ -465,7 +465,7 @@ Usage: #definition
   * enableWhen[=].operator = #=
   * enableWhen[=].answerCoding = HIVConcepts#HIV.E.DE51
   * extension[http://hl7.org/fhir/StructureDefinition/minValue].valueInteger = 1
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#wk "weeks"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#wk "wk"
 * item[+]
   * id = "HIV.E.DE61"
   * linkId = "HIV.E.DE61"
@@ -758,7 +758,7 @@ Usage: #definition
   * enableWhen[=].operator = #=
   * enableWhen[=].answerBoolean = true
   * extension[http://hl7.org/fhir/StructureDefinition/minValue].valueDecimal = 0.0
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#a "years"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#a "a"
 * item[+]
   * id = "HIV.E.DE90"
   * linkId = "HIV.E.DE90"
@@ -787,7 +787,7 @@ Usage: #definition
   * readOnly = true
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.language = #text/fhirpath
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.expression = "iif(%recordedBirthDate.count() = 1 and %recordedContactDate.count() = 1 and %ageBirthDate.count() = 1 and %ageContactDate.count() = 1 and %verifiedAge.count() = 1 and %recordedBirthDate = %ageBirthDate and %recordedContactDate = %ageContactDate and %recordedContactDate >= %recordedBirthDate, %verifiedAge.where($this >= 0), {})"
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#a "years"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#a "a"
 * item[+]
   * id = "HIV.E.DE91"
   * linkId = "HIV.E.DE91"
@@ -923,7 +923,7 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = true
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#wk "weeks"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#wk "wk"
   * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.name = "deliveryDates"
   * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.language = #text/fhirpath
   * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.expression = "%resource.item.where(linkId = 'HIV.E.DE46').answer.value.ofType(date)"
@@ -961,7 +961,7 @@ Usage: #definition
   * enableWhen.question = "recordInfantHistory"
   * enableWhen.operator = #=
   * enableWhen.answerBoolean = true
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#mo "months"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#mo "mo"
   * extension[http://hl7.org/fhir/StructureDefinition/minValue].valueInteger = 0
 * item[+]
   * id = "HIV.E.DE244"

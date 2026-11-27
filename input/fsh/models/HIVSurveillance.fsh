@@ -1,6 +1,6 @@
 Invariant: hiv-surveillance-event-dates
 Description: "Record documented surveillance dates and times at or before the current time."
-Expression: "(hivTestDate | artStartDate | dateOfCd4SampleCollection | dateOfFirstAidsDiagnosis | ancContactDate).all($this.toDate() <= today().toString().substring(0, $this.toString().length()).toDate()) and (dateOfBaselineCd4CountTest | dateOfFirstViralLoadSampleCollection | followUpDate | dateOfDeath).where($this.toDateTime() > now()).empty()"
+Expression: "(hivTestDate | artStartDate | dateOfCd4SampleCollection | dateOfFirstAidsDiagnosis | ancContactDate).where($this > today()).empty() and (dateOfBaselineCd4CountTest | dateOfFirstViralLoadSampleCollection | followUpDate | dateOfDeath).where($this > now()).empty()"
 Severity: #error
 
 Invariant: hiv-surveillance-test-date
