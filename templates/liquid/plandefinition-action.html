@@ -34,7 +34,7 @@ include.action.dynamicValue.exists() %}
 {%include default.html header='Cardinality Behavior' content=include.action.cardinalityBehavior %}
 {%include default.html header='Definition' content=include.action.definition %}
 {%include default.html header='Transform' content=include.action.transform %}
-{%include dynamicvalue.html dynamicvalue=include.action.dynamicValue library=include.library %}
+{%include dynamicvalue-noref.html dynamicvalue=include.action.dynamicValue %}
 {% endif %}
 {% if include.action.action.exists() %}
   {% for subaction in include.action.action %}

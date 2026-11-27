@@ -19,6 +19,7 @@
   {% if contained.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition' or url = 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition').exists() %}
   {%include section-header.html header='PlanDefinition Logic Definitions' %}
   {% endif %}
-  {%include logic-definition.html header='Data Requirement' contained=contained %}
+  {% assign libraryName = include.plandefinition.library.first().replaceMatches('.*/Library/', '').replaceMatches('[|].*$', '') %}
+  {%include logic-definitions.html contained=contained library=libraryName %}
   {% endfor %}
 {% endif %}
