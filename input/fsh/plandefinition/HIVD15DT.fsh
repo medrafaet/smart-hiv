@@ -17,6 +17,7 @@ Usage: #definition
 * relatedArtifact[+]
   * type = #citation
   * citation = "WHO Consolidated guidelines on the use of antiretroviral drugs for treating and preventing HIV infection, 2nd edition (2016). ANNEX 10 - WHO clinical staging of HIV disease in adults, adolescents and children."
+  * url = "https://www.who.int/publications/i/item/9789241549684"
 * action[+]
   * textEquivalent = "Outcome of determining WHO clinical staging for HIV"
   * definitionCanonical = Canonical(HIVGuidanceCommunicationRequestActivity)

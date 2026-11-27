@@ -27,13 +27,13 @@ Title: "HIV.IND.21 Linkage to ART"
     * description = "Number of people newly diagnosed with HIV during the reporting period"
     * code = $measure-population#denominator "Denominator"
     * criteria.language = #text/cql-identifier
-    * criteria.expression = "Denominator"
+    * criteria.expression = "denominator"
   * population[numerator]
     * id = "HIV.IND.21.NUM"
     * description = "Number of people newly diagnosed with HIV and started on ART during the reporting period"
     * code = $measure-population#numerator "Numerator"
     * criteria.language = #text/cql-identifier
-    * criteria.expression = "Numerator"
+    * criteria.expression = "numerator"
   * stratifier[+]
     * id = "HIV.IND.21.S"
     * criteria.language = #text/cql-identifier

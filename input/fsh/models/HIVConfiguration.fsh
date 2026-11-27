@@ -5,7 +5,7 @@ Severity: #error
 
 Invariant: configuration-reporting-period
 Description: "The reporting period end must be on or after its start."
-Expression: "(reportingPeriodEndDate.toDate() >= reportingPeriodStartDate.toDate()).where($this = false).empty()"
+Expression: "(reportingPeriodEndDate >= reportingPeriodStartDate).where($this = false).empty()"
 Severity: #error
 
 Invariant: configuration-special-needs

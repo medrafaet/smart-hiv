@@ -13510,7 +13510,7 @@ define "Other PRV.DE8 date":
 */
 // TODO: NSP date requires fix to DeviceUseStatement support
 define "Date accessed HIV prevention intervention": 
-  flatten{"PrEP service date", /*"NSP date",*/ "STI services date", "VMMC date", "Other PRV.DE8 date","OAMT status date"}
+  (flatten {"PrEP service date", "STI services date", "VMMC date", "Other PRV.DE8 date", "OAMT status date"})
     union ("HIV prevention intervention Observations" O return start of O.effective.toInterval())
   
   //, "OAMT","NSP".timing,"STI services".performed,"VMMC".performed,"Other PRV.DE8".effective}
@@ -13863,7 +13863,7 @@ define "ANC contact date SRV.DE18 Value":
 define "HIV-exposed infant or child SRV.DE20":
   exists "HIV-exposed infant or child SRV.DE20 Observation"
 define "HIV-exposed infant or child SRV.DE20 Observation":
-  "Surveillance Observations"(Concepts."Surveillance 20", Concepts."HIV-exposed infant or child - HIV.SRV.DE20") O
+  ("Surveillance Observations"(Concepts."Surveillance 20", Concepts."HIV-exposed infant or child - HIV.SRV.DE20")) O
     where O.value is true
 /* End of HIV-exposed infant or child SRV.DE20 */
 

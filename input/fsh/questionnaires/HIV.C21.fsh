@@ -7,7 +7,7 @@ Usage: #definition
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
 * subjectType = #Patient
 * language = #en
-* version = "2026-10"
+* insert EthiopiaQuestionnaireVersion
 * status = #draft
 * experimental = true
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[key].valueId = "prep-serum-creatinine-result"
@@ -33,4 +33,4 @@ Usage: #definition
   * repeats = false
   * readOnly = false
   * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption].valueCoding = http://unitsofmeasure.org#mg/dL "mg/dL"
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption][1].valueCoding = http://unitsofmeasure.org#umol/L "µmol/L"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption][1].valueCoding = http://unitsofmeasure.org#umol/L "umol/L"

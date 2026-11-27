@@ -7,7 +7,7 @@ Usage: #definition
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
 * subjectType = #Patient
 * language = #en
-* version = "2026-10"
+* insert EthiopiaQuestionnaireVersion
 * status = #draft
 * experimental = true
 * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext].extension[name].valueCoding.code = #htsHistory
@@ -68,8 +68,8 @@ Usage: #definition
   * enableWhen.question = "HIV.B.DE29"
   * enableWhen.operator = #=
   * enableWhen.answerBoolean = true
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption].valueCoding = http://unitsofmeasure.org#wk "weeks"
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption][1].valueCoding = http://unitsofmeasure.org#d "days"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption].valueCoding = http://unitsofmeasure.org#wk "wk"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption][1].valueCoding = http://unitsofmeasure.org#d "d"
 * item[+]
   * id = "HIV.B.DE31"
   * linkId = "HIV.B.DE31"

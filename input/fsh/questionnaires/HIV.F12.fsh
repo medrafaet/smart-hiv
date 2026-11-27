@@ -7,7 +7,7 @@ Usage: #definition
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
 * subjectType = #Patient
 * language = #en
-* version = "2026-10"
+* insert EthiopiaQuestionnaireVersion
 * status = #draft
 * experimental = true
 * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext].extension[name].valueCoding.code = #infantProphylaxis
@@ -31,7 +31,7 @@ Usage: #definition
   * linkId = "HIV.E.DE164"
   * type = #decimal
   * text = "Infant age at co-trimoxazole prophylaxis start (months)"
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#mo "months"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#mo "mo"
   * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.name = "birthDates"
   * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.language = #text/fhirpath
   * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.expression = "%infantProphylaxis.parameter.where(name = 'birthDate').value.ofType(date)"

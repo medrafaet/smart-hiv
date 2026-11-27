@@ -1,6 +1,6 @@
 Invariant:    HIV-G-1
 Description:  "Recorded laboratory dates must be today or earlier."
-Expression:   "(dateOfBaselineCd4CountSampleCollection | dateOfCd4SampleCollection | dateViralLoadSampleSent | hbsagTestDate | hcvTestDate | hcvViralLoadTestDate | syphilisTestDate | otherTestsDate | otherTest.date).all($this <= today().toString().substring(0, $this.toString().length()).toDate())"
+Expression:   "(dateOfBaselineCd4CountSampleCollection | dateOfCd4SampleCollection | dateViralLoadSampleSent | hbsagTestDate | hcvTestDate | hcvViralLoadTestDate | syphilisTestDate | otherTestsDate | otherTest.date).where($this > today()).empty()"
 Severity:     #error
 
 Invariant:    HIV-G-2

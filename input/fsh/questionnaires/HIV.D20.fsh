@@ -7,7 +7,7 @@ RuleSet: CareDiagnosticsCd4
   * required = false
   * repeats = false
   * readOnly = false
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#"{cells}/mm3" "cells/mm³"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#"{cells}/mm3" "{cells}/mm3"
   * extension[http://hl7.org/fhir/StructureDefinition/minValue].valueInteger = 0
 * item[+]
   * id = "HIV.D.DE365"
@@ -37,7 +37,7 @@ RuleSet: CareDiagnosticsCd4
   * required = false
   * repeats = false
   * readOnly = false
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#"{cells}/mm3" "cells/mm³"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#"{cells}/mm3" "{cells}/mm3"
   * extension[http://hl7.org/fhir/StructureDefinition/minValue].valueDecimal = 0
 * item[+]
   * id = "HIV.D.DE368"
@@ -109,8 +109,8 @@ Usage: #definition
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
 * subjectType = #Patient
 * language = #en
-* version = "2026-10"
-* version = "2026-10"
+* insert EthiopiaQuestionnaireVersion
+* insert EthiopiaQuestionnaireVersion
 * status = #draft
 * experimental = true
 * insert DiagnosticsLaboratoryConstraints

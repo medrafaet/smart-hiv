@@ -7,7 +7,7 @@ Usage: #definition
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
 * subjectType = #Patient
 * language = #en
-* version = "2026-10"
+* insert EthiopiaQuestionnaireVersion
 * status = #draft
 * experimental = true
 * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext].extension[name].valueCoding = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext#patient
@@ -241,7 +241,7 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = true
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#mo "months"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#mo "mo"
   * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.name = "artStart"
   * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.language = #text/fhirpath
   * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE39').answer.value.toString()"
@@ -849,7 +849,7 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = false
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#a "years"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#a "a"
   * extension[http://hl7.org/fhir/StructureDefinition/minValue].valueInteger = 0
 * item[+]
   * id = "HIV.D.DE938"

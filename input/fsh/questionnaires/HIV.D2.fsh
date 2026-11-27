@@ -7,7 +7,7 @@ Usage: #definition
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
 * subjectType = #Patient
 * language = #en
-* version = "2026-10"
+* insert EthiopiaQuestionnaireVersion
 * status = #draft
 * experimental = true
 * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.name = "statureInCm"
@@ -65,7 +65,7 @@ Usage: #definition
   * text = "Body temperature"
   * required = false
   * repeats = false
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption].valueCoding = http://unitsofmeasure.org#Cel "°C"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption].valueCoding = http://unitsofmeasure.org#Cel "Cel"
 * item[+]
   * id = "HIV.D.DE10"
   * linkId = "HIV.D.DE10"
@@ -73,7 +73,7 @@ Usage: #definition
   * text = "Respiratory rate"
   * required = false
   * repeats = false
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption].valueCoding = http://unitsofmeasure.org#/min "breaths/min"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption].valueCoding = http://unitsofmeasure.org#/min "/min"
 * item[+]
   * id = "HIV.D.DE11"
   * linkId = "HIV.D.DE11"
@@ -81,7 +81,7 @@ Usage: #definition
   * text = "Heart rate"
   * required = false
   * repeats = false
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption].valueCoding = http://unitsofmeasure.org#/min "beats/min"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption].valueCoding = http://unitsofmeasure.org#/min "/min"
 * item[+]
   * id = "HIV.D.DE12"
   * linkId = "HIV.D.DE12"
@@ -122,7 +122,7 @@ Usage: #definition
   * required = false
   * repeats = false
   * readOnly = true
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#kg/m2 "kg/m²"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#kg/m2 "kg/m2"
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.language = #text/fhirpath
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.expression = "%statureInCm.exists() and %weightInKg.exists()"
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.language = #text/fhirpath
@@ -142,7 +142,7 @@ Usage: #definition
   * text = "Systolic blood pressure"
   * required = false
   * repeats = false
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption].valueCoding = http://unitsofmeasure.org#"mm[Hg]" "mmHg"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption].valueCoding = http://unitsofmeasure.org#"mm[Hg]" "mm[Hg]"
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.language = #text/fhirpath
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE16').answer.value.where($this = true).empty()"
 * item[+]
@@ -152,7 +152,7 @@ Usage: #definition
   * text = "Diastolic blood pressure"
   * required = false
   * repeats = false
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption].valueCoding = http://unitsofmeasure.org#"mm[Hg]" "mmHg"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption].valueCoding = http://unitsofmeasure.org#"mm[Hg]" "mm[Hg]"
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.language = #text/fhirpath
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE16').answer.value.where($this = true).empty()"
 * item[+]

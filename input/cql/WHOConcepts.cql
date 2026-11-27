@@ -10,7 +10,7 @@ codesystem "ICHI": 'https://mitel.dimi.uniud.it/ichi/#http://id.who.int/ichi'
 codesystem "ICF": 'http://hl7.org/fhir/sid/icf-nl'
 
 // ValueSets
-valueset "Pregnancy Status Pregnant": 'http://smart.who.int/hiv/ValueSet/pregnancystatus-values '
+valueset "Pregnancy Status Pregnant": 'http://smart.who.int/hiv/ValueSet/pregnancystatus-values'
 valueset "Adverse Events": 'http://hl7.org/fhir/ValueSet/adverse-event-type'
 
 code "Pregnancy status": '82810-3' from "LOINC" display 'Pregnancy status'

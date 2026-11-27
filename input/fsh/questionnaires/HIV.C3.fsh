@@ -7,7 +7,7 @@ Usage: #definition
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
 * subjectType = #Patient
 * language = #en
-* version = "2026-10"
+* insert EthiopiaQuestionnaireVersion
 * status = #draft
 * experimental = true
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[key].valueId = "prep-exposure-duration"
@@ -55,7 +55,7 @@ Usage: #definition
   * enableWhen.question = "HIV.C.DE8"
   * enableWhen.operator = #=
   * enableWhen.answerBoolean = true
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption].valueCoding = http://unitsofmeasure.org#h "hours"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption].valueCoding = http://unitsofmeasure.org#h "h"
 * item[+]
   * id = "HIV.C.DE10"
   * linkId = "HIV.C.DE10"

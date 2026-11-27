@@ -10,7 +10,7 @@ Severity:     #error
 
 Invariant:    HIV-E-3
 Description:  "Delivery date must be today or earlier."
-Expression:   "deliveryDate.all($this <= today().toString().substring(0, $this.toString().length()).toDate())"
+Expression:   "deliveryDate.where($this > today()).empty()"
 Severity:     #error
 
 Invariant:    HIV-E-4
@@ -90,12 +90,12 @@ Severity:     #error
 
 Invariant:    HIV-E-19
 Description:  "Maternal date of death must be today or earlier."
-Expression:   "dateOfDeathOfMother.all($this <= today().toString().substring(0, $this.toString().length()).toDate())"
+Expression:   "dateOfDeathOfMother.where($this > today()).empty()"
 Severity:     #error
 
 Invariant:    HIV-E-20
 Description:  "Date of miscarriage or abortion must be today or earlier."
-Expression:   "dateOfMiscarriageOrAbortion.all($this <= today().toString().substring(0, $this.toString().length()).toDate())"
+Expression:   "dateOfMiscarriageOrAbortion.where($this > today()).empty()"
 Severity:     #error
 
 Invariant:    HIV-E-21

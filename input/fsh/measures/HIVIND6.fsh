@@ -27,13 +27,13 @@ Title: "HIV.IND.6 PEP completion"
     * description = "Number of people starting PEP during the reporting period, excluding those whose PEP course is due to be completed after the end of the reporting period"
     * code = $measure-population#denominator "Denominator"
     * criteria.language = #text/cql-identifier
-    * criteria.expression = "Denominator"
+    * criteria.expression = "denominator"
   * population[numerator]
     * id = "HIV.IND.6.NUM"
     * description = "Number of people completing a course of PEP among those starting in reporting period"
     * code = $measure-population#numerator "Numerator"
     * criteria.language = #text/cql-identifier
-    * criteria.expression = "Numerator"
+    * criteria.expression = "numerator"
   * stratifier[+]
     * id = "HIV.IND.6.S"
     * criteria.language = #text/cql-identifier

@@ -8,7 +8,7 @@ RuleSet: DiagnosticsLaboratoryFields
   * required = false
   * repeats = false
   * readOnly = false
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#"{cells}/mm3" "cells/mm³"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#"{cells}/mm3" "{cells}/mm3"
   * extension[http://hl7.org/fhir/StructureDefinition/minValue].valueInteger = 0
 * item[+]
   * id = "HIV.G.DE2"
@@ -30,7 +30,7 @@ RuleSet: DiagnosticsLaboratoryFields
   * required = false
   * repeats = false
   * readOnly = false
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#"{cells}/mm3" "cells/mm³"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#"{cells}/mm3" "{cells}/mm3"
   * extension[http://hl7.org/fhir/StructureDefinition/minValue].valueDecimal = 0
 * item[+]
   * id = "HIV.G.DE4"
@@ -104,7 +104,7 @@ RuleSet: DiagnosticsLaboratoryFields
   * required = false
   * repeats = false
   * readOnly = false
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#"{copies}/mL" "copies/mL"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#"{copies}/mL" "{copies}/mL"
   * extension[http://hl7.org/fhir/StructureDefinition/minValue].valueInteger = 0
 * item[+]
   * id = "HIV.G.DE12"
@@ -114,7 +114,7 @@ RuleSet: DiagnosticsLaboratoryFields
   * required = false
   * repeats = false
   * readOnly = false
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#"{copies}/mL" "copies/mL"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unit].valueCoding = http://unitsofmeasure.org#"{copies}/mL" "{copies}/mL"
   * extension[http://hl7.org/fhir/StructureDefinition/minValue].valueInteger = 0
 * item[+]
   * id = "HIV.G.DE13"
@@ -199,8 +199,8 @@ RuleSet: DiagnosticsLaboratoryFields
   * enableWhen.question = "HIV.G.ET.DE1"
   * enableWhen.operator = #=
   * enableWhen.answerBoolean = true
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption][0].valueCoding = http://unitsofmeasure.org#"[IU]/mL" "IU/mL"
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption][+].valueCoding = http://unitsofmeasure.org#"{copies}/mL" "copies/mL"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption][0].valueCoding = http://unitsofmeasure.org#"[IU]/mL" "[IU]/mL"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption][+].valueCoding = http://unitsofmeasure.org#"{copies}/mL" "{copies}/mL"
 * item[+]
   * linkId = "recordHcvTesting"
   * type = #boolean
@@ -305,7 +305,7 @@ RuleSet: DiagnosticsLaboratoryFields
   * linkId = "HIV.G.ET.DE3"
   * type = #quantity
   * text = "HCV viral load result (quantitative)"
-  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption].valueCoding = http://unitsofmeasure.org#"[IU]/mL" "IU/mL"
+  * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption].valueCoding = http://unitsofmeasure.org#"[IU]/mL" "[IU]/mL"
 * item[+]
   * id = "HIV.G.DE51"
   * linkId = "HIV.G.DE51"
@@ -522,7 +522,7 @@ Usage: #definition
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablequestionnaire"
 * subjectType = #Patient
 * language = #en
-* version = "2026-10"
+* insert EthiopiaQuestionnaireVersion
 * status = #draft
 * experimental = true
 
