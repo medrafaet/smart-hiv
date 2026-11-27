@@ -312,6 +312,7 @@ parameters:
   path-binary:
     - input/cql
   path-liquid:
+    - template/liquid # Load inherited templates before this guide's overrides.
     - templates/liquid
   special-url:
     - http://id.who.int/icd/release/11/mms
