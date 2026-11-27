@@ -7,6 +7,6 @@ Description: "Value set of country where the client was born"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVADE13"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.A.DE13"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.A.DE13"
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/valueset-rules-text"
 * ^extension[=].valueMarkdown = "This should be a context-specific list of countries where a patient might be born"

@@ -7,7 +7,7 @@ Description: "Value set of screening test result for VIA"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE668"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE668"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE668"
 
 * HIVConcepts#HIV.D.DE669 "Negative"
 * HIVConcepts#HIV.D.DE670 "Positive"

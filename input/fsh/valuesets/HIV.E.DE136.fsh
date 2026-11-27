@@ -7,7 +7,7 @@ Description: "Value set of whether the amount of iron prescribed is for daily or
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE136"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE136"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE136"
 
 * HIVConcepts#HIV.E.DE137 "Daily"
 * HIVConcepts#HIV.E.DE138 "Weekly"

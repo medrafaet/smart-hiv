@@ -3,7 +3,7 @@ Alias: $plan-definition-type = http://terminology.hl7.org/CodeSystem/plan-defini
 Instance: HIV-Testing-PlanDefinition
 InstanceOf: PlanDefinition
 Usage: #definition
-* url = "http://smart.who.int/hiv/PlanDefinition/HIV-Testing-PlanDefinition"
+* url = "https://hiv.fhir.et/PlanDefinition/HIV-Testing-PlanDefinition"
 * name = "PlanDefinition_HIV_Testing"
 * title = "PlanDefinition - HiV Testing"
 * type = $plan-definition-type#workflow-definition "Workflow Definition"

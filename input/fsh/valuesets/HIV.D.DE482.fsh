@@ -7,6 +7,6 @@ Description: "Value set of reason(s) why one ore more drugs in client's first-li
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE482"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE482"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE482"
 
 * include codes from valueset HIV.D.DE418

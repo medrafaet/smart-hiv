@@ -7,7 +7,7 @@ Description: "Value set of drug class of current ART regimen"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE146"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE146"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE146"
 
 * HIVConcepts#HIV.D.DE147 "NRTI"
 * HIVConcepts#HIV.D.DE148 "NtRTI"

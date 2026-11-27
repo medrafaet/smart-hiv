@@ -7,7 +7,7 @@ Description: "Value set of name of examinations, test and results for any releva
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE399"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE399"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE399"
 
 * HIVConcepts#HIV.D.DE400 "Haemoglobin (Hb)"
 * HIVConcepts#HIV.D.DE401 "Pregnancy test"

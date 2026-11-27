@@ -7,8 +7,8 @@ Usage: #definition
 * experimental = true
 * version = "2026-10"
 * description = "Translates documented clinical answers to the Ethiopia surveillance options. Preserve invalid or unknown results in the source record when no surveillance code applies."
-* group.source = "http://smart.who.int/hiv/CodeSystem/HIVConcepts"
-* group.target = "http://smart.who.int/hiv/CodeSystem/HIVConcepts"
+* group.source = "https://hiv.fhir.et/CodeSystem/HIVConcepts"
+* group.target = "https://hiv.fhir.et/CodeSystem/HIVConcepts"
 * group.element[+].code = #HIV.B.DE113
 * group.element[=].target.code = #HIV.SURV.ET.1
 * group.element[=].target.equivalence = #equivalent

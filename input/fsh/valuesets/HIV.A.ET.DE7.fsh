@@ -7,7 +7,7 @@ Description: "Education codes from the previous Ethiopia HIV registration data d
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVAETDE7"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.A.ET.DE7"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.A.ET.DE7"
 
 * HIVConcepts#HIV.A.ET.DE8 "No formal education"
 * HIVConcepts#HIV.A.ET.DE9 "Can read and write"

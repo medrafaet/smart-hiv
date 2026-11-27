@@ -7,7 +7,7 @@ Description: "Value set of result from Gonorrhoea test"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE256"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE256"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE256"
 
 * HIVConcepts#HIV.B.DE257 "Positive"
 * HIVConcepts#HIV.B.DE258 "Negative"

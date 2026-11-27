@@ -7,6 +7,6 @@ Description: "Historical list placeholder. The October history form uses the app
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE64"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE64"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE64"
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/valueset-rules-text"
 * ^extension[=].valueMarkdown = "This should be a context-specific list of approved ARV regimens"

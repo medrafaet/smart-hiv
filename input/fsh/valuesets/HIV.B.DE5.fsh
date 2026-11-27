@@ -7,7 +7,7 @@ Description: "Value set of client reported coming to the facility after receivin
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE5"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE5"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE5"
 
 * HIVConcepts#HIV.B.DE6 "Partner or contact of an index case"
 * HIVConcepts#HIV.B.DE7 "Partner or contact of an HIV testing client (non-index case)"

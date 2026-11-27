@@ -7,7 +7,7 @@ Description: "Value set of client's screening outcome for cervical cancer"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE706"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE706"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE706"
 
 * HIVConcepts#HIV.D.DE707 "Positive for cervical precancer lesions"
 * HIVConcepts#HIV.D.DE708 "Negative for cervical precancer lesions"

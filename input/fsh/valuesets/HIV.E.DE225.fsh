@@ -7,7 +7,7 @@ Description: "Value set of HIV status reported after applying the HIV testing al
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE225"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE225"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE225"
 
 * HIVConcepts#HIV.E.DE226 "HIV-positive"
 * HIVConcepts#HIV.E.DE227 "HIV-negative"

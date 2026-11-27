@@ -7,7 +7,7 @@ Description: "Value set of result of cervical cancer colposcopy"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE691"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE691"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE691"
 
 * HIVConcepts#HIV.D.DE692 "Normal colposcopic findings"
 * HIVConcepts#HIV.D.DE693 "Abnormal colposcopic findings"

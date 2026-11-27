@@ -7,7 +7,7 @@ Description: "Value set of type of diagnostic test used for syphilis (Treponema 
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE821"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE821"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE821"
 
 * HIVConcepts#HIV.D.DE822 "Treponemal"
 * HIVConcepts#HIV.D.DE823 "Non-treponemal"

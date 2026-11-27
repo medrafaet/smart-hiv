@@ -15,7 +15,7 @@ Usage: #definition
 * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext].extension[description].valueString = "Application-supplied visit history. Use ageAtVisit (integer years) and gender (registration code) for age-based population options, hivStatus (Coding) for confirmed HIV status, firstPositiveTestDate (date) for the earliest confirmed positive test, and diagnosingFacility (repeated MFR Organization resources) for eligible diagnosing facilities. Supply empty Parameters when no history is available."
 * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.name = "hasPositiveHivHistory"
 * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.language = #text/fhirpath
-* extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.expression = "%htsHistory.parameter.where(name = 'hivStatus').value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.B.DE116').exists()"
+* extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.expression = "%htsHistory.parameter.where(name = 'hivStatus').value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.B.DE116').exists()"
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[key].valueId = "hts-gestational-age"
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[severity].valueCode = #error
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[human].valueString = "Enter gestational age between 4 and 40 weeks, or 28 and 280 days."
@@ -25,7 +25,7 @@ Usage: #definition
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[severity].valueCode = #error
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[human].valueString = "A key population type cannot be selected when key population membership is recorded as No."
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[expression].valueExpression.language = #text/fhirpath
-* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.B.DE50').answer.value.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.B.DE51' | 'HIV.B.DE54' | 'HIV.B.DE55')).exists() implies %resource.item.where(linkId = 'HIV.B.DE49').answer.value.where($this = false).empty()"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.B.DE50').answer.value.where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.B.DE51' | 'HIV.B.DE54' | 'HIV.B.DE55')).exists() implies %resource.item.where(linkId = 'HIV.B.DE49').answer.value.where($this = false).empty()"
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][2].extension[key].valueId = "hts-diagnosis-notification-date"
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][2].extension[severity].valueCode = #error
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][2].extension[human].valueString = "The date informed of an HIV-positive diagnosis must be today or earlier."

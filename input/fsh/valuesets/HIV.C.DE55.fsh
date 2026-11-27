@@ -7,7 +7,7 @@ Description: "Value set of treatment adherence of client's sex partner for partn
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVCDE55"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.C.DE55"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.C.DE55"
 
 * HIVConcepts#HIV.C.DE56 "Not on ART"
 * HIVConcepts#HIV.C.DE57 "On ART less than 6 months"

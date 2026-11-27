@@ -124,7 +124,7 @@ Usage: #definition
   * text = "Child antibody assay number"
   * answerValueSet = Canonical(HIV.E.ET.DE197)
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.language = #text/fhirpath
-  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.E.DE168').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.E.DE169' | 'HIV.E.DE170')).exists()"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.E.DE168').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.E.DE169' | 'HIV.E.DE170')).exists()"
 * item[+]
   * linkId = "HIV.E.ET.DE202"
   * type = #choice
@@ -163,7 +163,7 @@ Usage: #definition
   * text = "Infant confirmatory antibody result"
   * answerValueSet = Canonical(HIV.E.ET.DE194)
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.language = #text/fhirpath
-  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.E.DE168').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.E.DE169' | 'HIV.E.DE170')).exists()"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.E.DE168').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.E.DE169' | 'HIV.E.DE170')).exists()"
 * item[+]
   * id = "HIV.E.DE225"
   * linkId = "HIV.E.DE225"

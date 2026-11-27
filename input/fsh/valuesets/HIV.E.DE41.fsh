@@ -7,7 +7,7 @@ Description: "Value set of when the pregnant woman or mother initiated ART, for 
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE41"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE41"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE41"
 
 * HIVConcepts#HIV.E.DE42 "Already on ART at first antenatal care visit"
 * HIVConcepts#HIV.E.DE43 "Newly on ART during pregnancy"

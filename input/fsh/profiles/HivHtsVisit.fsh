@@ -89,17 +89,17 @@ Description: "Organization where the client received an HIV-positive diagnosis. 
 Invariant: hiv-b-hts-community-entry-point
 Description: "Community-level HTS visits should include the community entry point."
 Severity: #warning
-Expression: "extension('http://smart.who.int/hiv/StructureDefinition/hiv-hts-visit-testing-entry-point').value.coding.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.B.DE16').exists() implies extension('http://smart.who.int/hiv/StructureDefinition/hiv-hts-visit-community-entry-point').exists()"
+Expression: "extension('https://hiv.fhir.et/StructureDefinition/hiv-hts-visit-testing-entry-point').value.coding.where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.B.DE16').exists() implies extension('https://hiv.fhir.et/StructureDefinition/hiv-hts-visit-community-entry-point').exists()"
 
 Invariant: hiv-b-hts-facility-entry-point
 Description: "Facility-level HTS visits should include the facility entry point."
 Severity: #warning
-Expression: "extension('http://smart.who.int/hiv/StructureDefinition/hiv-hts-visit-testing-entry-point').value.coding.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.B.DE17').exists() implies extension('http://smart.who.int/hiv/StructureDefinition/hiv-hts-visit-facility-entry-point').exists()"
+Expression: "extension('https://hiv.fhir.et/StructureDefinition/hiv-hts-visit-testing-entry-point').value.coding.where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.B.DE17').exists() implies extension('https://hiv.fhir.et/StructureDefinition/hiv-hts-visit-facility-entry-point').exists()"
 
 Invariant: hiv-b-hts-suspected-exposure-date
 Description: "Supply an exposure date and time only when suspected HIV exposure is recorded."
 Severity: #warning
-Expression: "extension('http://smart.who.int/hiv/StructureDefinition/hiv-hts-visit-suspected-exposure-date-time').exists() implies extension('http://smart.who.int/hiv/StructureDefinition/hiv-hts-visit-contact-with-suspected-exposure-to-hiv').where(value = true).exists()"
+Expression: "extension('https://hiv.fhir.et/StructureDefinition/hiv-hts-visit-suspected-exposure-date-time').exists() implies extension('https://hiv.fhir.et/StructureDefinition/hiv-hts-visit-contact-with-suspected-exposure-to-hiv').where(value = true).exists()"
 
 Extension: HivHtsRecommendedFollowUpDate
 Id: hiv-hts-recommended-follow-up-date

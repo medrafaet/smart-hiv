@@ -7,7 +7,7 @@ Description: "Value set of vaccine preventable disease being targeted by vaccine
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE610"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE610"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE610"
 
 * HIVConcepts#HIV.D.DE611 "Hepatitis A"
 * HIVConcepts#HIV.D.DE612 "Hepatitis B"

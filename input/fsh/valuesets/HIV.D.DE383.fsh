@@ -7,7 +7,7 @@ Description: "Value set of time from HIV diagnosis to when client started ART"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE383"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE383"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE383"
 
 * HIVConcepts#HIV.D.DE384 "Within 7 days of HIV diagnosis"
 * HIVConcepts#HIV.D.DE385 "Within 30 days of HIV diagnosis"

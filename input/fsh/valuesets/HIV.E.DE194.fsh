@@ -7,7 +7,7 @@ Description: "Value set of the number of the assay (test kit) in the HIV testing
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE194"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE194"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE194"
 
 * HIVConcepts#HIV.E.DE195 "Assay 0"
 * HIVConcepts#HIV.E.DE196 "Assay 1"

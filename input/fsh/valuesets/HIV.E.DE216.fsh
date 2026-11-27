@@ -7,7 +7,7 @@ Description: "Value set of the result of the first syphilis assay in the testing
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE216"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE216"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE216"
 
 * HIVConcepts#HIV.E.DE217 "Reactive"
 * HIVConcepts#HIV.E.DE218 "Non-reactive"

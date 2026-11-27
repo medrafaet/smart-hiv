@@ -7,7 +7,7 @@ Description: "Value set of cervical cancer stage at diagnosis of cervical cancer
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE712"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE712"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE712"
 
 * HIVConcepts#HIV.D.DE713 "Stage 0"
 * HIVConcepts#HIV.D.DE714 "Stage I"

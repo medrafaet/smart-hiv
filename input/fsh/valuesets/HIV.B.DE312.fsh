@@ -7,7 +7,7 @@ Description: "Value set of result from STI test"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE312"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE312"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE312"
 
 * HIVConcepts#HIV.B.DE313 "Positive"
 * HIVConcepts#HIV.B.DE314 "Negative"

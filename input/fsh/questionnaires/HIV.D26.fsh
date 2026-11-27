@@ -61,7 +61,7 @@ Usage: #definition
   * readOnly = true
   * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.name = "recordedSyndromes"
   * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.language = #text/fhirpath
-  * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE778').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.D.DE779' | 'HIV.D.DE780' | 'HIV.D.DE781' | 'HIV.D.DE782' | 'HIV.D.DE783' | 'HIV.D.DE784' | 'HIV.D.DE785'))"
+  * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE778').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.D.DE779' | 'HIV.D.DE780' | 'HIV.D.DE781' | 'HIV.D.DE782' | 'HIV.D.DE783' | 'HIV.D.DE784' | 'HIV.D.DE785'))"
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.language = #text/fhirpath
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.expression = "iif(%recordedSyndromes.exists(), %recordedSyndromes.where(code in ('HIV.D.DE779' | 'HIV.D.DE780' | 'HIV.D.DE781' | 'HIV.D.DE782' | 'HIV.D.DE783')).exists(), {})"
 * item[+]

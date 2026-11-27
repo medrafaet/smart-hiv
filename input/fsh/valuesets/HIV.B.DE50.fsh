@@ -7,7 +7,7 @@ Description: "Coded key and priority population types for HTS in the October 202
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE50"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE50"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE50"
 
 * HIVConcepts#HIV.B.DE51 "Sex worker"
 * HIVConcepts#HIV.B.DE54 "People who inject drugs"

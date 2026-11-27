@@ -7,7 +7,7 @@ Description: "Value set of other clinical services offered or referrals given to
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE165"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE165"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE165"
 
 * HIVConcepts#HIV.B.DE166 "Assessment and provision of vaccinations"
 * HIVConcepts#HIV.B.DE167 "Hepatitis B (HBV) and hepatitis C virus (HCV) testing and treatment provided"

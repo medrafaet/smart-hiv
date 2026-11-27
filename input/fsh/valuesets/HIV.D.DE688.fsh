@@ -7,7 +7,7 @@ Description: "Value set of test result from HPV16/18 test"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE688"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE688"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE688"
 
 * HIVConcepts#HIV.D.DE689 "Positive"
 * HIVConcepts#HIV.D.DE690 "Negative"

@@ -7,7 +7,7 @@ Description: "Value set of syndrome or STI for which client is diagnosed"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE226"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE226"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE226"
 
 * HIVConcepts#HIV.B.DE227 "Urethral discharge syndrome"
 * HIVConcepts#HIV.B.DE228 "Vaginal discharge syndrome"

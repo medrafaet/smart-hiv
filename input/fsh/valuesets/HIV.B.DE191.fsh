@@ -7,7 +7,7 @@ Description: "Value set of type of follow-up appointment for testing services"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE191"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE191"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE191"
 
 * HIVConcepts#HIV.B.DE192 "Retesting for HIV"
 * HIVConcepts#HIV.B.DE193 "Other"

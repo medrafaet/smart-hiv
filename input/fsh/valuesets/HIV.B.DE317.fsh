@@ -7,7 +7,7 @@ Description: "Value set of type of test ued for confirmatory syphilis test"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE317"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE317"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE317"
 
 * HIVConcepts#HIV.B.DE318 "Treponemal"
 * HIVConcepts#HIV.B.DE319 "Non-treponemal"

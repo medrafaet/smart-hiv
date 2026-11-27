@@ -7,7 +7,7 @@ Description: "Value set of listing of tests for clients on or starting pre-expos
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVCDE63"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.C.DE63"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.C.DE63"
 
 * HIVConcepts#HIV.C.DE64 "Serum creatinine test"
 * HIVConcepts#HIV.C.DE65 "Hepatitis B test"

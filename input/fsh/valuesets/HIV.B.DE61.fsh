@@ -7,7 +7,7 @@ Description: "Value set of ways in which the client was exposed to HIV"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE61"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE61"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE61"
 
 * HIVConcepts#HIV.B.DE62 "Occupational"
 * HIVConcepts#HIV.B.DE63 "Non-occupational violent"

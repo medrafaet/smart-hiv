@@ -7,7 +7,7 @@ Description: "Value set of offer or refer to prevention services"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVCDE131"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.C.DE131"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.C.DE131"
 
 * HIVConcepts#HIV.C.DE132 "Male and female condoms and condom-compatible lubricants offered"
 * HIVConcepts#HIV.C.DE133 "Voluntary medical male circumcision (VMMC) referral"

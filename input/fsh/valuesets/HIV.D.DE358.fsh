@@ -7,7 +7,7 @@ Description: "Value set of wHO clinical stage of client based on signs and sympt
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE358"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE358"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE358"
 
 * HIVConcepts#HIV.D.DE359 "WHO clinical stage 1"
 * HIVConcepts#HIV.D.DE360 "WHO clinical stage 2"

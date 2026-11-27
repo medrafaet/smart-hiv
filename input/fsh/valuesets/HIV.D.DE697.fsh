@@ -7,7 +7,7 @@ Description: "Value set of result of cervical cancer histopathology"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE697"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE697"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE697"
 
 * HIVConcepts#HIV.D.DE698 "Normal"
 * HIVConcepts#HIV.D.DE699 "LSIL (inclusive of LSIL-CIN1)"

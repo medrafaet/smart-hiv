@@ -7,7 +7,7 @@ Description: "Value set of the reason why the client is being followed up"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVHDE1"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.H.DE1"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.H.DE1"
 
 * HIVConcepts#HIV.H.DE2 "Missed care visit"
 * HIVConcepts#HIV.H.DE3 "Missed medication pickup"

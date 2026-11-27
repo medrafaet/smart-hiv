@@ -16,8 +16,8 @@ Usage: #definition
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[human].valueString = "Choose either Did not initiate ART or Inconclusive HIV status."
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.language = #text/fhirpath
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.expression = """
-  %resource.item.where(linkId = 'HIV.H.DE1').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.H.DE4').empty() or
-  %resource.item.where(linkId = 'HIV.H.DE1').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.H.DE6').empty()
+  %resource.item.where(linkId = 'HIV.H.DE1').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.H.DE4').empty() or
+  %resource.item.where(linkId = 'HIV.H.DE1').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.H.DE6').empty()
 """
 
 * item[+]

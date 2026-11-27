@@ -7,7 +7,7 @@ Description: "Value set of final result of the TB investigation (bacteriological
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE939"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE939"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE939"
 
 * HIVConcepts#HIV.D.DE940 "Diagnosed TB"
 * HIVConcepts#HIV.D.DE941 "TB excluded"

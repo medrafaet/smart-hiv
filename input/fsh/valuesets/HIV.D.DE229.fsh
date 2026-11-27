@@ -7,7 +7,7 @@ Description: "Value set of general care activities to be performed during the ca
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE229"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE229"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE229"
 
 * HIVConcepts#HIV.D.DE230 "Determine WHO clinical stage"
 * HIVConcepts#HIV.D.DE231 "Determine if advanced disease"

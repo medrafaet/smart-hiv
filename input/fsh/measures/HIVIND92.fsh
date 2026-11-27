@@ -5,14 +5,14 @@ Title: "HIV.IND.92 HCV cured among people living with HIV"
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablemeasure"
 * extension[http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis].valueCode = #boolean
 * description = "% of people living with HIV and co-infected with HCV who were confirmed to be cured of HCV during the reporting period"
-* url = "http://smart.who.int/hiv/Measure/HIVIND92"
+* url = "https://hiv.fhir.et/Measure/HIVIND92"
 * status = #draft
 * experimental = true
 * date = "2024-08-18"
 * name = "HIVIND92"
 * title = "HIV.IND.92 HCV cured among people living with HIV"
 * publisher = "World Health Organization (WHO)"
-* library = "http://smart.who.int/hiv/Library/HIVIND92Logic"
+* library = "https://hiv.fhir.et/Library/HIVIND92Logic"
 * scoring = $measure-scoring#proportion "Proportion"
 * improvementNotation = $measure-improvement-notation#increase
 * group[+]

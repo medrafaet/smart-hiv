@@ -7,7 +7,7 @@ Description: "Value set of reason why a hepatitis C test was not done"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVGDE35"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.G.DE35"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.G.DE35"
 
 * HIVConcepts#HIV.G.DE36 "Test delayed to next contact or referred"
 * HIVConcepts#HIV.G.DE37 "Stock-out or expired"

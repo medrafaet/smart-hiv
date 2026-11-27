@@ -7,7 +7,7 @@ Description: "Value set of clients status of coinfections at the time when ART w
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE446"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE446"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE446"
 
 * HIVConcepts#HIV.D.DE447 "Hepatitis B"
 * HIVConcepts#HIV.D.DE448 "Hepatitis C"

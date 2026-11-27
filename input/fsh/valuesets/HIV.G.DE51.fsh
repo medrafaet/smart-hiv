@@ -7,7 +7,7 @@ Description: "Value set of client's hepatitis C diagnosis"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVGDE51"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.G.DE51"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.G.DE51"
 
 * HIVConcepts#HIV.G.DE52 "Hepatitis C positive"
 * HIVConcepts#HIV.G.DE53 "Hepatitis C negative"

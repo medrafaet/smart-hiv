@@ -7,7 +7,7 @@ Description: "Value set of specific point in the community where testing is happ
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE18"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE18"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE18"
 
 * HIVConcepts#HIV.B.DE19 "Mobile testing (e.g. through vans or temporary testing facilities)"
 * HIVConcepts#HIV.B.DE20 "Voluntary counselling and testing centres (not within a health facility setting)"

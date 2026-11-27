@@ -7,6 +7,6 @@ Description: "Value set of hepatitis C virus treatment regimen prescribed"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE177"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE177"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE177"
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/valueset-rules-text"
 * ^extension[=].valueMarkdown = "This should be a context-specific list of Hepatitis C virus treatment regimens"

@@ -7,7 +7,7 @@ Description: "Value set of hepatitis C virus test result (HCV antibody, HCV RNA 
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE170"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE170"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE170"
 
 * HIVConcepts#HIV.D.DE171 "Positive"
 * HIVConcepts#HIV.D.DE172 "Negative"

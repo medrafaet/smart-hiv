@@ -7,7 +7,7 @@ Description: "Value set of invasive cervical cancer treatment method"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE731"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE731"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE731"
 
 * HIVConcepts#HIV.D.DE732 "Conization"
 * HIVConcepts#HIV.D.DE733 "Trachelectomy"

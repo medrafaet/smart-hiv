@@ -7,7 +7,7 @@ Description: "Value set of value used for gender for calculating creatinine clea
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVCDE107"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.C.DE107"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.C.DE107"
 
 * HIVConcepts#HIV.C.DE108 "Male"
 * HIVConcepts#HIV.C.DE109 "Female"

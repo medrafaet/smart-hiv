@@ -26,7 +26,7 @@ Usage: #definition
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[human].valueString = "Select Other general services only when no listed reason applies and enter the reason."
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.language = #text/fhirpath
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.expression = """
-  %resource.item.where(linkId = 'HIV.I.DE2').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.I.DE7').exists()
+  %resource.item.where(linkId = 'HIV.I.DE2').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.I.DE7').exists()
     implies (%resource.item.where(linkId = 'HIV.I.DE2').answer.value.ofType(Coding).count() = 1 and %resource.item.where(linkId = 'HIV.I.DE8').answer.value.ofType(string).where(trim().length() > 0).exists())
 """
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[key].valueId = "referral-sites"

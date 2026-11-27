@@ -7,7 +7,7 @@ Description: "Value set of the result of the first HIV assay in the testing stra
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE200"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE200"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE200"
 
 * HIVConcepts#HIV.E.DE201 "Reactive"
 * HIVConcepts#HIV.E.DE202 "Non-reactive"

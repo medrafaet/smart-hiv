@@ -5,14 +5,14 @@ Title: "HIV.IND.91 HCV treatment among people living with HIV"
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablemeasure"
 * extension[http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis].valueCode = #boolean
 * description = "% of people living with HIV and diagnosed with HCV infection who initiated HCV treatment (direct acting antivirals) during the reporting period"
-* url = "http://smart.who.int/hiv/Measure/HIVIND91"
+* url = "https://hiv.fhir.et/Measure/HIVIND91"
 * status = #draft
 * experimental = true
 * date = "2024-08-18"
 * name = "HIVIND91"
 * title = "HIV.IND.91 HCV treatment among people living with HIV"
 * publisher = "World Health Organization (WHO)"
-* library = "http://smart.who.int/hiv/Library/HIVIND91Logic"
+* library = "https://hiv.fhir.et/Library/HIVIND91Logic"
 * scoring = $measure-scoring#proportion "Proportion"
 * improvementNotation = $measure-improvement-notation#increase
 * group[+]

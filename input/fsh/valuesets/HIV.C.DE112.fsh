@@ -7,7 +7,7 @@ Description: "Value set of listing of contraindications to pre-exposure prophyla
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVCDE112"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.C.DE112"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.C.DE112"
 
 * HIVConcepts#HIV.C.DE114 "HIV-positive"
 * HIVConcepts#HIV.C.DE115 "Low estimated creatinine clearance"

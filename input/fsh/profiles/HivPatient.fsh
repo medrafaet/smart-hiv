@@ -70,7 +70,7 @@ Expression: "gender = 'female' or gender = 'male'"
 Invariant: hiv-a-registration-birth-date-or-age
 Description: "Ethiopia HIV.A requires a birth date or estimated age. An estimated age is required when the birth date is marked unknown."
 Severity: #error
-Expression: "(birthDate.hasValue() or extension('http://smart.who.int/hiv/StructureDefinition/hiv-patient-estimated-age').value.value.hasValue()) and (extension('http://smart.who.int/hiv/StructureDefinition/hiv-patient-date-of-birth-unknown').where(value = true).exists() implies extension('http://smart.who.int/hiv/StructureDefinition/hiv-patient-estimated-age').value.value.hasValue())"
+Expression: "(birthDate.hasValue() or extension('https://hiv.fhir.et/StructureDefinition/hiv-patient-estimated-age').value.value.hasValue()) and (extension('https://hiv.fhir.et/StructureDefinition/hiv-patient-date-of-birth-unknown').where(value = true).exists() implies extension('https://hiv.fhir.et/StructureDefinition/hiv-patient-estimated-age').value.value.hasValue())"
 
 Profile: HivPatient
 Parent: http://fhir.et/core/StructureDefinition/ETPatient

@@ -7,4 +7,4 @@ Description: "An observation representing a patient's HIV status."
 * ^title = "HIV Status Observation"
 * code = HIVConcepts#HIV.B.DE115
 * value[x] only CodeableConcept
-* valueCodeableConcept from http://smart.who.int/hiv/ValueSet/HIV.B.DE115 (required)
+* valueCodeableConcept from https://hiv.fhir.et/ValueSet/HIV.B.DE115 (required)

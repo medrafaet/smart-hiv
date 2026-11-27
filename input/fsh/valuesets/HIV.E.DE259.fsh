@@ -7,7 +7,7 @@ Description: "Value set of results of urine protein test of mother during ANC vi
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE259"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE259"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE259"
 
 * HIVConcepts#HIV.E.DE260 "0"
 * HIVConcepts#HIV.E.DE261 "+"

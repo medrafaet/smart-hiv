@@ -7,7 +7,7 @@ Description: "Value set of whether the visit will be clinical only, ARV drug pic
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE525"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE525"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE525"
 
 * HIVConcepts#HIV.D.DE526 "Clinical visit"
 * HIVConcepts#HIV.D.DE527 "Antiretroviral drug pick up"

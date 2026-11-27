@@ -5,14 +5,14 @@ Title: "HIV.IND.52 TB treatment initiation among diagnosed"
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablemeasure"
 * extension[http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis].valueCode = #boolean
 * description = "% of people living with HIV newly initiated on ART and diagnosed with active TB who initiated TB treatment"
-* url = "http://smart.who.int/hiv/Measure/HIVIND52"
+* url = "https://hiv.fhir.et/Measure/HIVIND52"
 * status = #draft
 * experimental = true
 * date = "2024-08-18"
 * name = "HIVIND52"
 * title = "HIV.IND.52 TB treatment initiation among diagnosed"
 * publisher = "World Health Organization (WHO)"
-* library = "http://smart.who.int/hiv/Library/HIVIND52Logic"
+* library = "https://hiv.fhir.et/Library/HIVIND52Logic"
 * scoring = $measure-scoring#proportion "Proportion"
 * improvementNotation = $measure-improvement-notation#increase
 * group[+]

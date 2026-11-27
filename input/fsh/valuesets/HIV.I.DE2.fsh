@@ -7,7 +7,7 @@ Description: "Value set of reason why the client is being referred. If diagnosed
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVIDE2"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.I.DE2"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.I.DE2"
 
 * HIVConcepts#HIV.I.DE3 "Hospital"
 * HIVConcepts#HIV.I.DE4 "Referral for screening including diagnostics and lab testing"

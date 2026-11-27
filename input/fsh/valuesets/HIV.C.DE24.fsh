@@ -7,7 +7,7 @@ Description: "Value set of the client's experience in taking PrEP"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVCDE24"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.C.DE24"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.C.DE24"
 
 * HIVConcepts#HIV.C.DE25 "First-time user"
 * HIVConcepts#HIV.C.DE26 "Continuing user"

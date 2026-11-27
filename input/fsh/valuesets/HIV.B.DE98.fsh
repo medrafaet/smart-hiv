@@ -7,7 +7,7 @@ Description: "Value set of the result of the second HIV assay in the testing str
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE98"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE98"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE98"
 
 * HIVConcepts#HIV.B.DE99 "Reactive"
 * HIVConcepts#HIV.B.DE100 "Non-reactive"

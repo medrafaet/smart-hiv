@@ -7,7 +7,7 @@ Description: "PrEP dosing types captured in the October Ethiopia MoH HIV workboo
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVCDE11"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.C.DE11"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.C.DE11"
 
 * HIVConcepts#HIV.C.DE12 "Daily oral PrEP"
 * HIVConcepts#HIV.C.DE23 "CAB-LA"

@@ -7,6 +7,6 @@ Description: "Value set of HIV pre-exposure prophylaxis (PrEP) regimen prescribe
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVCDE122"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.C.DE122"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.C.DE122"
 
 * include codes from valueset HIV.C.DE17

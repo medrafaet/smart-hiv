@@ -7,7 +7,7 @@ Description: "Value set of mode of delivery for current pregnancy"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE52"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE52"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE52"
 
 * HIVConcepts#HIV.E.DE53 "Spontaneous vaginal delivery"
 * HIVConcepts#HIV.E.DE54 "Assisted vaginal delivery"

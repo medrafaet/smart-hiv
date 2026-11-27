@@ -23,7 +23,7 @@ Usage: #definition
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[severity].valueCode = #error
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[human].valueString = "For first-time ART, record the same date for ART start and first initiation."
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.language = #text/fhirpath
-* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.expression = "(%resource.item.where(linkId = 'HIV.D.DE43').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.D.DE44')).exists() and %resource.item.where(linkId = 'HIV.D.DE39').answer.value.exists()) implies %resource.item.where(linkId = 'HIV.D.DE46').answer.value.where($this.toString() = %resource.item.where(linkId = 'HIV.D.DE39').answer.value.toString()).exists()"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.expression = "(%resource.item.where(linkId = 'HIV.D.DE43').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.D.DE44')).exists() and %resource.item.where(linkId = 'HIV.D.DE39').answer.value.exists()) implies %resource.item.where(linkId = 'HIV.D.DE46').answer.value.where($this.toString() = %resource.item.where(linkId = 'HIV.D.DE39').answer.value.toString()).exists()"
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[key].valueId = "art-cohort-month"
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[severity].valueCode = #error
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[human].valueString = "Record the ART cohort as a year and month."
@@ -38,7 +38,7 @@ Usage: #definition
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][3].extension[severity].valueCode = #error
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][3].extension[human].valueString = "Select No chronic or past health conditions or Unknown on its own."
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][3].extension[expression].valueExpression.language = #text/fhirpath
-* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][3].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE65').answer.value.ofType(Coding).count() <= 1 or %resource.item.where(linkId = 'HIV.D.DE65').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.D.DE66' | 'HIV.D.DE67')).empty()"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][3].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE65').answer.value.ofType(Coding).count() <= 1 or %resource.item.where(linkId = 'HIV.D.DE65').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.D.DE66' | 'HIV.D.DE67')).empty()"
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][4].extension[key].valueId = "care-art-regimen-reconciliation"
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][4].extension[severity].valueCode = #warning
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][4].extension[human].valueString = "Review the current ART regimen. It differs from the latest prescription on record."
@@ -49,7 +49,7 @@ Usage: #definition
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][5].extension[human].valueString = "Record the assessed WHO clinical stage for a client with confirmed HIV who is off ART or within six months of starting ART."
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][5].extension[expression].valueExpression.language = #text/fhirpath
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][5].extension[expression].valueExpression.expression = """
-  (%resource.item.where(linkId = 'HIV.B.DE115').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.B.DE116').exists() and
+  (%resource.item.where(linkId = 'HIV.B.DE115').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.B.DE116').exists() and
     (%resource.item.where(linkId = 'HIV.D.DE38').answer.value.where($this = false).exists() or
       (%resource.item.where(linkId = 'HIV.D.DE38').answer.value.where($this = true).exists() and
         %resource.item.where(linkId = 'careVisitDate').answer.value.ofType(date).where(toString().length() = 10).exists($this >= %resource.item.where(linkId = 'HIV.D.DE39').answer.value.ofType(date).where(toString().length() = 10) and $this <= (%resource.item.where(linkId = 'HIV.D.DE39').answer.value.ofType(date).where(toString().length() = 10) + 6 months)))))
@@ -60,18 +60,18 @@ Usage: #definition
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][6].extension[severity].valueCode = #error
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][6].extension[human].valueString = "Record the reason for starting ART after seven days when the baseline CD4 measure is also positive."
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][6].extension[expression].valueExpression.language = #text/fhirpath
-* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][6].extension[expression].valueExpression.expression = "(%resource.item.where(linkId = 'HIV.D.DE369').answer.value.where($this = true).exists() and %resource.item.where(linkId = 'HIV.D.DE383').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.D.ET.DE79').exists()) implies %resource.item.where(linkId = 'HIV.D.DE370').answer.value.ofType(Coding).exists()"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][6].extension[expression].valueExpression.expression = "(%resource.item.where(linkId = 'HIV.D.DE369').answer.value.where($this = true).exists() and %resource.item.where(linkId = 'HIV.D.DE383').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.D.ET.DE79').exists()) implies %resource.item.where(linkId = 'HIV.D.DE370').answer.value.ofType(Coding).exists()"
 
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][7].extension[key].valueId = "care-current-medications-exclusive"
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][7].extension[severity].valueCode = #error
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][7].extension[human].valueString = "Select No medications or Don’t know on its own."
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][7].extension[expression].valueExpression.language = #text/fhirpath
-* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][7].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE537').answer.value.ofType(Coding).count() <= 1 or %resource.item.where(linkId = 'HIV.D.DE537').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.D.DE538' | 'HIV.D.DE539')).empty()"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][7].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE537').answer.value.ofType(Coding).count() <= 1 or %resource.item.where(linkId = 'HIV.D.DE537').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.D.DE538' | 'HIV.D.DE539')).empty()"
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][8].extension[key].valueId = "care-allergies-exclusive"
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][8].extension[severity].valueCode = #error
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][8].extension[human].valueString = "Select No known allergies or Don’t know on its own."
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][8].extension[expression].valueExpression.language = #text/fhirpath
-* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][8].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE560').answer.value.ofType(Coding).count() <= 1 or %resource.item.where(linkId = 'HIV.D.DE560').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.D.DE561' | 'HIV.D.DE562')).empty()"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][8].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE560').answer.value.ofType(Coding).count() <= 1 or %resource.item.where(linkId = 'HIV.D.DE560').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.D.DE561' | 'HIV.D.DE562')).empty()"
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][9].extension[key].valueId = "care-gravida-required"
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][9].extension[severity].valueCode = #error
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][9].extension[human].valueString = "Record a positive number of pregnancies if currently pregnant."
@@ -224,7 +224,7 @@ Usage: #definition
   * readOnly = false
   * answerValueSet = Canonical(HIV.D.DE43)
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression].valueExpression.language = #text/fhirpath
-  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression].valueExpression.expression = "%careArtHistory.parameter.where(name = 'artStartType').value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.D.DE44' | 'HIV.D.DE45' | 'HIV.D.ET.DE103'))"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression].valueExpression.expression = "%careArtHistory.parameter.where(name = 'artStartType').value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.D.DE44' | 'HIV.D.DE45' | 'HIV.D.ET.DE103'))"
 * item[+]
   * id = "HIV.D.DE46"
   * linkId = "HIV.D.DE46"
@@ -340,7 +340,7 @@ Usage: #definition
   * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.language = #text/fhirpath
   * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.expression = "%careArtHistory.parameter.where(name = 'currentArtFacility').value.ofType(Reference).where(reference.exists() and reference in %eligibleArtFacilities.reference)"
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression].valueExpression.language = #text/fhirpath
-  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression].valueExpression.expression = "iif(%careArtHistory.parameter.where(name = 'artStartType').value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.D.DE44').exists() and %eligibleCurrentArtFacility.count() = 1, %eligibleCurrentArtFacility, {})"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression].valueExpression.expression = "iif(%careArtHistory.parameter.where(name = 'artStartType').value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.D.DE44').exists() and %eligibleCurrentArtFacility.count() = 1, %eligibleCurrentArtFacility, {})"
 * item[+]
   * id = "HIV.D.DE56"
   * linkId = "HIV.D.DE56"
@@ -359,7 +359,7 @@ Usage: #definition
   * repeats = false
   * readOnly = false
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.language = #text/fhirpath
-  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE56').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.D.DE58' | 'HIV.D.DE59' | 'HIV.D.DE60' | 'HIV.D.DE61')).exists()"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE56').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.D.DE58' | 'HIV.D.DE59' | 'HIV.D.DE60' | 'HIV.D.DE61')).exists()"
 * item[+]
   * id = "HIV.D.DE63"
   * linkId = "HIV.D.DE63"
@@ -369,7 +369,7 @@ Usage: #definition
   * repeats = false
   * readOnly = false
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.language = #text/fhirpath
-  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE56').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.D.DE58' | 'HIV.D.DE59' | 'HIV.D.DE60' | 'HIV.D.DE61')).exists()"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE56').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.D.DE58' | 'HIV.D.DE59' | 'HIV.D.DE60' | 'HIV.D.DE61')).exists()"
   * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource].valueCode = #Organization
   * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource][1].valueCode = #Location
   * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile].valueCanonical = "http://fhir.et/core/StructureDefinition/ethiopian-mfr-organization"
@@ -385,7 +385,7 @@ Usage: #definition
   * repeats = false
   * readOnly = false
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.language = #text/fhirpath
-  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE56').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.D.DE58' | 'HIV.D.DE59' | 'HIV.D.DE60' | 'HIV.D.DE61')).exists() and %resource.item.where(linkId = 'HIV.D.DE62').answer.value.exists()"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE56').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.D.DE58' | 'HIV.D.DE59' | 'HIV.D.DE60' | 'HIV.D.DE61')).exists() and %resource.item.where(linkId = 'HIV.D.DE62').answer.value.exists()"
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression].valueExpression.language = #text/fhirpath
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression].valueExpression.expression = "%careArtHistory.parameter.where(name = 'priorArvRegimen').value.ofType(Coding).where(system.exists() and code.exists())"
 * item[+]
@@ -621,7 +621,7 @@ Usage: #definition
   * extension[http://hl7.org/fhir/StructureDefinition/questionnaire-hidden].valueBoolean = true
   * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.name = "documentedStatus"
   * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.language = #text/fhirpath
-  * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.expression = "%careArtHistory.parameter.where(name = 'hivStatus').value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.B.DE116' | 'HIV.B.DE117' | 'HIV.B.DE118'))"
+  * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.expression = "%careArtHistory.parameter.where(name = 'hivStatus').value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.B.DE116' | 'HIV.B.DE117' | 'HIV.B.DE118'))"
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression].valueExpression.language = #text/fhirpath
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression].valueExpression.expression = "iif(%documentedStatus.count() = 1, %documentedStatus, {})"
 * item[+]
@@ -697,7 +697,7 @@ Usage: #definition
   * extension[http://hl7.org/fhir/StructureDefinition/variable][1].valueExpression.expression = """
     iif(%resource.item.where(linkId = 'HIV.D.DE46').answer.value.exists(),
       %resource.item.where(linkId = 'HIV.D.DE46').answer.value.ofType(date).select(toString()),
-      iif(%resource.item.where(linkId = 'HIV.D.DE43').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.D.DE44').exists(),
+      iif(%resource.item.where(linkId = 'HIV.D.DE43').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.D.DE44').exists(),
         %resource.item.where(linkId = 'HIV.D.DE39').answer.value.ofType(date).select(toString()), {}))
     """
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.language = #text/fhirpath
@@ -717,7 +717,7 @@ Usage: #definition
   * readOnly = true
   * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.name = "timeToArtCode"
   * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.language = #text/fhirpath
-  * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE383').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.D.DE384' | 'HIV.D.ET.DE79')).code"
+  * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE383').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.D.DE384' | 'HIV.D.ET.DE79')).code"
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.language = #text/fhirpath
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.expression = "iif(%timeToArtCode.count() = 1, %timeToArtCode = 'HIV.D.DE384', {})"
 * item[+]

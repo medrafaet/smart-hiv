@@ -169,7 +169,7 @@ Usage: #definition
   * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.language = #text/fhirpath
   * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.expression = "%careScreening.parameter.where(name = 'artRegimenComposition')"
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.language = #text/fhirpath
-  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.expression = "iif(%artComposition.exists() and %artComposition.all(value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code.exists()).exists()), %artComposition.value.ofType(Coding).where(code = 'HIV.D.DE135').exists(), {})"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.expression = "iif(%artComposition.exists() and %artComposition.all(value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code.exists()).exists()), %artComposition.value.ofType(Coding).where(code = 'HIV.D.DE135').exists(), {})"
 * item[+]
   * id = "HIV.D.DE229"
   * linkId = "HIV.D.DE229"

@@ -7,7 +7,7 @@ Description: "Value set of does the client have any current chronic health condi
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE65"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE65"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE65"
 
 * HIVConcepts#HIV.D.DE66 "No chronic or past health conditions"
 * HIVConcepts#HIV.D.DE67 "Don't know"

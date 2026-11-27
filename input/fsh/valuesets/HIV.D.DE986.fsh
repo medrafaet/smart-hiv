@@ -7,7 +7,7 @@ Description: "Value set of record the result of the tuberculosis (TB) screening"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE986"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE986"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE986"
 
 * HIVConcepts#HIV.D.DE987 "Screen positive for TB"
 * HIVConcepts#HIV.D.DE988 "Screen negative for TB"

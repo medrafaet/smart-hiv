@@ -104,7 +104,7 @@ Mapping: HIVSurveillanceClinicalSource
 Source: HIVSurveillance
 Id: clinical-source
 Title: "Surveillance clinical source"
-Target: "http://smart.who.int/hiv"
+Target: "https://hiv.fhir.et"
 Description: "Clinical records from which the Ethiopia surveillance values are obtained."
 * hivTestDate -> "HIV.F8/HIV.E.DE224 or HIV.B7/HIV.B.DE110 for the documented test event."
 * hivTestResult -> "HIV.B7/HIV.B.DE111 after the HIV testing algorithm. Translate the recorded choice using the surveillance ConceptMap."

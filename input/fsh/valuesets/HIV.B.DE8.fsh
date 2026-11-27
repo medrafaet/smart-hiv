@@ -7,7 +7,7 @@ Description: "Value set of client's relationship to the person that referred the
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE8"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE8"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE8"
 
 * HIVConcepts#HIV.B.DE9 "Biological child"
 * HIVConcepts#HIV.B.DE10 "Drug-injecting partner"

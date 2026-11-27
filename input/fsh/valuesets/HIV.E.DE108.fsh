@@ -7,7 +7,7 @@ Description: "Value set of whether the infant or child was determined to have ha
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE108"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE108"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE108"
 
 * HIVConcepts#HIV.E.DE109 "Not exposed"
 * HIVConcepts#HIV.E.DE110 "HIV-exposed"

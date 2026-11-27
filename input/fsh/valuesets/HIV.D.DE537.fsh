@@ -7,7 +7,7 @@ Description: "Value set of list of all of the medications the client is currentl
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE537"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE537"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE537"
 
 * HIVConcepts#HIV.D.DE538 "No medications"
 * HIVConcepts#HIV.D.DE539 "Don't know of any current medications"

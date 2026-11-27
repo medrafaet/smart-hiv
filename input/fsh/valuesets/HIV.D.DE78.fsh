@@ -7,6 +7,6 @@ Description: "Value set of the alternative first-line ART regimen for the client
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE78"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE78"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE78"
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/valueset-rules-text"
 * ^extension[=].valueMarkdown = "This should be a context-specific list of alternative first-line ART regimens"

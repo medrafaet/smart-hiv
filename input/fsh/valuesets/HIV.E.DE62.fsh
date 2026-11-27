@@ -7,7 +7,7 @@ Description: "Value set of the woman gave birth when the gestational age is less
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE62"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE62"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE62"
 
 * HIVConcepts#HIV.E.DE63 "Not preterm"
 * HIVConcepts#HIV.E.DE64 "Preterm (less than 37 weeks gestation)"

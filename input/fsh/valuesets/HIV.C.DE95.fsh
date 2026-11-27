@@ -7,7 +7,7 @@ Description: "Value set of alternative backbone regimen for PEP"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVCDE95"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.C.DE95"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.C.DE95"
 
 * HIVConcepts#HIV.C.DE96 "ABC + 3TC"
 * HIVConcepts#HIV.C.DE97 "TDF + 3TC"

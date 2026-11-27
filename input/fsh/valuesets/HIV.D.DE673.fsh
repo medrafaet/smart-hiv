@@ -7,7 +7,7 @@ Description: "Value set of screening result for cervical cytology"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE673"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE673"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE673"
 
 * HIVConcepts#HIV.D.DE674 "NILM"
 * HIVConcepts#HIV.D.DE675 "ASCUS"

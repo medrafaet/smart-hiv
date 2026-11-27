@@ -7,7 +7,7 @@ Description: "Value set of new or recurrent clinical events used to categorize H
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE289"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE289"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE289"
 
 * HIVConcepts#HIV.D.DE290 "Asymptomatic"
 * HIVConcepts#HIV.D.DE291 "Persistent generalized lymphadenopathy"

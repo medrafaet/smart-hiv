@@ -7,7 +7,7 @@ Description: "Value set of whether visit was scheduled or unscheduled, clinical 
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE1"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE1"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE1"
 
 * HIVConcepts#HIV.D.DE2 "First clinical visit"
 * HIVConcepts#HIV.D.DE3 "Clinical visit"

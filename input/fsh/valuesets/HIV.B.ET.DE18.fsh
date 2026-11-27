@@ -7,6 +7,6 @@ Description: "Value set containing the Ethiopia HTS visit code used to fix Encou
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBETDE18"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.ET.DE18"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.ET.DE18"
 
 * HIVConcepts#HIV.B.ET.DE18 "HTS visit"

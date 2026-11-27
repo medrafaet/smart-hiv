@@ -6,7 +6,7 @@ Description: "Retired coded answer list. Vaccination location is recorded as a r
 * ^status = #retired
 * ^experimental = true
 * ^name = "HIVDDE606"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE606"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE606"
 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/valueset-rules-text"
 * ^extension[=].valueMarkdown = "Use the verified MFR Location referenced by Immunization.location."

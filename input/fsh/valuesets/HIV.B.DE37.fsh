@@ -7,7 +7,7 @@ Description: "Partner populations at high risk for HIV listed in the October 202
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE37"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE37"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE37"
 
 * HIVConcepts#HIV.B.DE38 "Sex worker"
 * HIVConcepts#HIV.B.DE41

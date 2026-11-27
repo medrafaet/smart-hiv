@@ -7,7 +7,7 @@ Description: "Value set of hepatitis C viral load test result (qualitative)"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE179"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE179"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE179"
 
 * HIVConcepts#HIV.D.DE180 "Detected"
 * HIVConcepts#HIV.D.DE181 "Not detected"

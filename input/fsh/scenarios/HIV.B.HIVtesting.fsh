@@ -1,7 +1,7 @@
 Instance: HIV.B.HIVtesting
 InstanceOf: ExampleScenario
 Usage: #definition
-* url = "http://smart.who.int/hiv/ExampleScenario/HIV.B.HIVtesting"
+* url = "https://hiv.fhir.et/ExampleScenario/HIV.B.HIVtesting"
 * status = #active
 * name = "HIV.B. HIV testing services"
 * actor[0].actorId = "patient"

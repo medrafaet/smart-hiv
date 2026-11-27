@@ -7,7 +7,7 @@ Description: "Value set of gender of the infant"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE91"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE91"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE91"
 
 * HIVConcepts#HIV.E.DE92 "Female"
 * HIVConcepts#HIV.E.DE93 "Male"

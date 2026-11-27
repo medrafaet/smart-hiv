@@ -7,6 +7,6 @@ Description: "Value set of reason why client was switched from first- to second-
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE486"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE486"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE486"
 
 * include codes from valueset HIV.D.DE430

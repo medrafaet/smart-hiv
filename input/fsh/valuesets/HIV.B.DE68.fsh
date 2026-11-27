@@ -7,7 +7,7 @@ Description: "Value set of the client's HIV serotype"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE68"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE68"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE68"
 
 * HIVConcepts#HIV.B.DE69 "HIV-1"
 * HIVConcepts#HIV.B.DE70 "HIV-2"

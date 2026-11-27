@@ -7,7 +7,7 @@ Description: "Value set of client's reason for the prevention visit"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVCDE1"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.C.DE1"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.C.DE1"
 
 * HIVConcepts#HIV.C.ET.DE30
 * HIVConcepts#HIV.C.DE2 "First time counselling on PrEP"

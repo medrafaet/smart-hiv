@@ -7,7 +7,7 @@ Description: "Value set of symptoms that could suggest an acute HIV infection"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVCDE46"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.C.DE46"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.C.DE46"
 
 * HIVConcepts#HIV.C.DE47 "Fever"
 * HIVConcepts#HIV.C.DE48 "Sore throat"

@@ -7,7 +7,7 @@ Description: "Value set of the HIV status of the infant's mother"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE141"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE141"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE141"
 
 * HIVConcepts#HIV.E.DE142 "HIV-positive"
 * HIVConcepts#HIV.E.DE143 "HIV-negative"

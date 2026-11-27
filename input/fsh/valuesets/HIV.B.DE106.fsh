@@ -7,7 +7,7 @@ Description: "Value set of the result of the repeated first HIV assay in the tes
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE106"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE106"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE106"
 
 * HIVConcepts#HIV.B.DE107 "Reactive"
 * HIVConcepts#HIV.B.DE108 "Non-reactive"

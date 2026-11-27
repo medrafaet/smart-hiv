@@ -14,7 +14,7 @@ Usage: #definition
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[severity].valueCode = #error
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[human].valueString = "Select Asymptomatic on its own for this assessment."
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.language = #text/fhirpath
-* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE289').answer.value.ofType(Coding).count() <= 1 or %resource.item.where(linkId = 'HIV.D.DE289').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.D.DE290').empty()"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE289').answer.value.ofType(Coding).count() <= 1 or %resource.item.where(linkId = 'HIV.D.DE289').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.D.DE290').empty()"
 
 * item[+]
   * id = "HIV.D.DE289"

@@ -7,7 +7,7 @@ Description: "Value set of indicates patient's TB treatment outcome"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE1002"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE1002"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE1002"
 
 * HIVConcepts#HIV.D.DE1003 "Treatment failed"
 * HIVConcepts#HIV.D.DE1004 "Cured"

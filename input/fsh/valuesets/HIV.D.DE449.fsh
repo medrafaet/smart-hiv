@@ -7,7 +7,7 @@ Description: "Value set of aRT status of women to prevent mother-to-child transm
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE449"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE449"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE449"
 
 * HIVConcepts#HIV.D.DE450 "Pregnant at ART start"
 * HIVConcepts#HIV.D.DE451 "Postpartum at ART start"

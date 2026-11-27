@@ -7,7 +7,7 @@ Description: "Value set of type of adverse event associated with voluntary medic
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE207"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE207"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE207"
 
 * HIVConcepts#HIV.B.DE208 "Abnormal pain"
 * HIVConcepts#HIV.B.DE209 "Anaesthesia-related effects"

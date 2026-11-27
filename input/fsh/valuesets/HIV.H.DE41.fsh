@@ -7,7 +7,7 @@ Description: "Value set of the outcome for the client which is used for reportin
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVHDE41"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.H.DE41"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.H.DE41"
 
 * HIVConcepts#HIV.H.DE42 "Lost to follow-up"
 * HIVConcepts#HIV.H.DE43 "Transferred out"

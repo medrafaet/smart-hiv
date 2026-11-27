@@ -7,6 +7,6 @@ Description: "Historical placeholder for the confirmation facility list. The Oct
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE120"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE120"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE120"
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/valueset-rules-text"
 * ^extension[=].valueMarkdown = "This should be a context-specific list of health facilities capable of performing a HIV test"

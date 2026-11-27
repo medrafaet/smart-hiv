@@ -7,7 +7,7 @@ Description: "Priority population categories in the Ethiopia HIV DAK Configurati
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVConfigDE19"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.Config.DE19"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.Config.DE19"
 * ^version = "2026-10"
 
 * HIVConcepts#HIV.Config.ET.DE19 "Population with special needs"

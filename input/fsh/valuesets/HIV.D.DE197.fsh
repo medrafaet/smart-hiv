@@ -7,7 +7,7 @@ Description: "Value set of reason why client was not adherent"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE197"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE197"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE197"
 
 * HIVConcepts#HIV.D.DE198 "Forgot"
 * HIVConcepts#HIV.D.DE200 "Busy"
