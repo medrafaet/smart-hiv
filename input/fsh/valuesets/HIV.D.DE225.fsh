@@ -7,7 +7,7 @@ Description: "Value set of aRT treatment failure"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE225"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE225"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE225"
 
 * HIVConcepts#HIV.D.DE226 "Clinical failure"
 * HIVConcepts#HIV.D.DE227 "Immunological failure"

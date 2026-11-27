@@ -140,7 +140,7 @@ Severity:     #error
 
 Invariant: pmtct-delivery-details
 Description: "Record the delivery date and place for a live birth or stillbirth."
-Expression: "pregnancyOutcome.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.E.DE48' | 'HIV.E.DE51')).exists() implies (deliveryDate.exists() and placeOfDelivery.exists())"
+Expression: "pregnancyOutcome.where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.E.DE48' | 'HIV.E.DE51')).exists() implies (deliveryDate.exists() and placeOfDelivery.exists())"
 Severity: #error
 
 Logical: HIVEPMTCT

@@ -7,7 +7,7 @@ Description: "Value set of sTI for which the client was tested"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE237"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE237"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE237"
 
 * HIVConcepts#HIV.B.DE238 "Neisseria gonorrhoeae"
 * HIVConcepts#HIV.B.DE239 "Chlamydia trachomatis"

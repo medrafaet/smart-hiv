@@ -24,7 +24,7 @@ Usage: #definition
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][2].extension[severity].valueCode = #error
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][2].extension[human].valueString = "Enter the syphilis result when completing a dated syphilis test. For a single inconclusive syphilis test, record the result in STI test result."
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][2].extension[expression].valueExpression.language = #text/fhirpath
-* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][2].extension[expression].valueExpression.expression = "(%resource.status in ('completed' | 'amended') and %resource.item.where(linkId = 'HIV.B.DE249').answer.value.exists()) implies (%resource.item.where(linkId = 'HIV.B.DE250').answer.value.exists() or (%resource.item.where(linkId = 'HIV.B.DE237').answer.value.ofType(Coding).count() = 1 and %resource.item.where(linkId = 'HIV.B.DE312').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.B.DE315')).exists()))"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][2].extension[expression].valueExpression.expression = "(%resource.status in ('completed' | 'amended') and %resource.item.where(linkId = 'HIV.B.DE249').answer.value.exists()) implies (%resource.item.where(linkId = 'HIV.B.DE250').answer.value.exists() or (%resource.item.where(linkId = 'HIV.B.DE237').answer.value.ofType(Coding).count() = 1 and %resource.item.where(linkId = 'HIV.B.DE312').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.B.DE315')).exists()))"
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][3].extension[key].valueId = "hts-sti-gonorrhoea-result"
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][3].extension[severity].valueCode = #error
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][3].extension[human].valueString = "Enter the gonorrhoea result when completing a dated gonorrhoea test."
@@ -60,7 +60,7 @@ Usage: #definition
   * repeats = false
   * readOnly = true
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.language = #text/fhirpath
-  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.B.DE226').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.B.DE227' | 'HIV.B.DE228' | 'HIV.B.DE229' | 'HIV.B.DE230' | 'HIV.B.DE231')).exists()"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.B.DE226').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.B.DE227' | 'HIV.B.DE228' | 'HIV.B.DE229' | 'HIV.B.DE230' | 'HIV.B.DE231')).exists()"
 * item[+]
   * id = "HIV.B.DE236"
   * linkId = "HIV.B.DE236"
@@ -101,7 +101,7 @@ Usage: #definition
   * enableWhen.operator = #=
   * enableWhen.answerCoding = HIVConcepts#HIV.B.DE241
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.language = #text/fhirpath
-  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.expression = "iif(%resource.item.where(linkId = 'HIV.B.DE237').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.B.DE241')).exists(), %resource.item.where(linkId = 'HIV.B.DE236').answer.value.ofType(dateTime), {})"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.expression = "iif(%resource.item.where(linkId = 'HIV.B.DE237').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.B.DE241')).exists(), %resource.item.where(linkId = 'HIV.B.DE236').answer.value.ofType(dateTime), {})"
 * item[+]
   * id = "HIV.B.DE250"
   * linkId = "HIV.B.DE250"
@@ -134,7 +134,7 @@ Usage: #definition
   * enableWhen.operator = #=
   * enableWhen.answerCoding = HIVConcepts#HIV.B.DE238
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.language = #text/fhirpath
-  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.expression = "iif(%resource.item.where(linkId = 'HIV.B.DE237').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.B.DE238')).exists(), %resource.item.where(linkId = 'HIV.B.DE236').answer.value.ofType(dateTime), {})"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.expression = "iif(%resource.item.where(linkId = 'HIV.B.DE237').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.B.DE238')).exists(), %resource.item.where(linkId = 'HIV.B.DE236').answer.value.ofType(dateTime), {})"
 * item[+]
   * id = "HIV.B.DE256"
   * linkId = "HIV.B.DE256"

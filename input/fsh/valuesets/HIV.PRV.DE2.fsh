@@ -7,7 +7,7 @@ Description: "HIV prevention services accessed at the facility, including the NS
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVPRVDE2"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.PRV.DE2"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.PRV.DE2"
 
 * HIVConcepts#HIV.PRV.DE3 "PrEP service"
 * HIVConcepts#HIV.PRV.DE4 "OAMT"

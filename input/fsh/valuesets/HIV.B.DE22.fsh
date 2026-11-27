@@ -7,7 +7,7 @@ Description: "Value set of specific point where testing is happening at a facili
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE22"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE22"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE22"
 
 * HIVConcepts#HIV.B.ET.DE23 "Outpatient department (OPD)"
 * HIVConcepts#HIV.B.DE24 "Antenatal care clinic"

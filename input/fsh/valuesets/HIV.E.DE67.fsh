@@ -7,7 +7,7 @@ Description: "Value set of the type of place where the woman delivered"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE67"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE67"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE67"
 
 * HIVConcepts#HIV.E.DE68 "Health facility"
 * HIVConcepts#HIV.E.DE69 "Home"

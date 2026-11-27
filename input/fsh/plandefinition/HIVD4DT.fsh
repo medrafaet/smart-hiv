@@ -9,7 +9,7 @@ Usage: #definition
 * extension[+]
   * url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
   * valueCode = #computable
-* url = "http://smart.who.int/hiv/PlanDefinition/HIVD4DT"
+* url = "https://hiv.fhir.et/PlanDefinition/HIVD4DT"
 * name = "HIVD4DT"
 * status = #draft
 * experimental = true

@@ -7,7 +7,7 @@ Description: "Value set of new or recurrent clinical events used to categorize H
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE934"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE934"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE934"
 
 * HIVConcepts#HIV.D.DE935 "Pulmonary TB"
 * HIVConcepts#HIV.D.DE936 "Lymph node TB"

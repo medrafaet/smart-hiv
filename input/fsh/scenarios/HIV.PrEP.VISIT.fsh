@@ -1,7 +1,7 @@
 Instance: HIV.PrEP.Visit.Scenario
 InstanceOf: ExampleScenario
 Usage: #definition
-* url = "http://smart.who.int/hiv/ExampleScenario/HIV.PrEP.Visit.Scenario"
+* url = "https://hiv.fhir.et/ExampleScenario/HIV.PrEP.Visit.Scenario"
 * status = #active
 * name = "ExampleScenarioForProcess"
 * actor[0].actorId = "patient"

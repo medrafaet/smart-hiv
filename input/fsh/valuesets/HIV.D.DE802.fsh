@@ -7,7 +7,7 @@ Description: "Value set of result from syphilis test"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE802"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE802"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE802"
 
 * HIVConcepts#HIV.D.DE803 "Positive"
 * HIVConcepts#HIV.D.DE804 "Negative"

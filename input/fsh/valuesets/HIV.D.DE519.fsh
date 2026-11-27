@@ -7,7 +7,7 @@ Description: "Value set of offer or refer for other support services"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE519"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE519"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE519"
 
 * HIVConcepts#HIV.D.DE520 "Mental health services"
 * HIVConcepts#HIV.D.DE521 "Psychosocial counselling, support and treatment adherence counselling"

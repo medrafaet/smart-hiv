@@ -7,7 +7,7 @@ Description: "Value set of type of TPT regimen the client is currently on"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE1028"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE1028"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE1028"
 
 * HIVConcepts#HIV.D.DE1029 "3HP"
 * HIVConcepts#HIV.D.DE1030 "1HP"

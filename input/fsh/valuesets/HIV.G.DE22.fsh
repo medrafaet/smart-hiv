@@ -7,7 +7,7 @@ Description: "Value set of reason why a hepatitis B test was not done"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVGDE22"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.G.DE22"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.G.DE22"
 
 * HIVConcepts#HIV.G.DE23 "Test delayed to next contact or referred"
 * HIVConcepts#HIV.G.DE24 "Stock-out or expired"

@@ -7,7 +7,7 @@ Description: "Value set of signs the client is at a substantial risk of HIV infe
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE155"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE155"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE155"
 
 * HIVConcepts#HIV.E.DE156 "No condom use during sex with more than one partner in the past 6 months"
 * HIVConcepts#HIV.E.DE157 "STI in the past 6 months"

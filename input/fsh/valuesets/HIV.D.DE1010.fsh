@@ -7,7 +7,7 @@ Description: "Value set of tB drugs currently being taken by the client"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE1010"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE1010"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE1010"
 
 * HIVConcepts#HIV.D.DE1011 "Isoniazid"
 * HIVConcepts#HIV.D.DE1012 "Rifampicin"

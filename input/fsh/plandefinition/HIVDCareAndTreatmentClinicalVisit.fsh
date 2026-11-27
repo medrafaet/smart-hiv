@@ -3,7 +3,7 @@ Alias: $plan-definition-type = http://terminology.hl7.org/CodeSystem/plan-defini
 Instance: CareAndTreatmentClinicalVisit-PlanDefinition
 InstanceOf: PlanDefinition
 Usage: #definition
-* url = "http://smart.who.int/hiv/PlanDefinition/CareAndTreatmentClinicalVisit-PlanDefinition"
+* url = "https://hiv.fhir.et/PlanDefinition/CareAndTreatmentClinicalVisit-PlanDefinition"
 * name = "PlanDefinition_Care and treatment clinical visit"
 * title = "PlanDefinition - Care and treatment clinical visit"
 * type = $plan-definition-type#workflow-definition "Workflow Definition"

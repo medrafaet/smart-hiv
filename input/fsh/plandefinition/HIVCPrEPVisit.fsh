@@ -3,7 +3,7 @@ Alias: $plan-definition-type = http://terminology.hl7.org/CodeSystem/plan-defini
 Instance: PrEP-visit-PlanDefinition
 InstanceOf: PlanDefinition
 Usage: #definition
-* url = "http://smart.who.int/hiv/PlanDefinition/PrEP-visit-PlanDefinition"
+* url = "https://hiv.fhir.et/PlanDefinition/PrEP-visit-PlanDefinition"
 * name = "PlanDefinition_PrEP_visit"
 * title = "PlanDefinition - PrEP Visit"
 * type = $plan-definition-type#workflow-definition "Workflow Definition"

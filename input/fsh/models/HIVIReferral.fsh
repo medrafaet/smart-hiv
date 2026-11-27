@@ -1,6 +1,6 @@
 Invariant: hiv-i-other-referral-reason
 Description: "Select Other general services only when no listed reason applies and record the reason."
-Expression: "reasonForReferral.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.I.DE7').exists() implies (reasonForReferral.count() = 1 and referralForOtherGeneralServicesSpecify.where(trim().length() > 0).exists())"
+Expression: "reasonForReferral.where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.I.DE7').exists() implies (reasonForReferral.count() = 1 and referralForOtherGeneralServicesSpecify.where(trim().length() > 0).exists())"
 Severity: #error
 
 Logical: HIVIReferral

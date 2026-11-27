@@ -6,7 +6,7 @@ Description: "Retired coded answer list. Transfer destination is recorded as a r
 * ^status = #retired
 * ^experimental = true
 * ^name = "HIVHDE50"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.H.DE50"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.H.DE50"
 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/valueset-rules-text"
 * ^extension[=].valueMarkdown = "Use the verified MFR Organization for the receiving facility."

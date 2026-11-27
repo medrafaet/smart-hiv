@@ -5,14 +5,14 @@ Title: "HIV.IND.9 Regular NSP access"
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablemeasure"
 * extension[http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis].valueCode = #boolean
 * description = "% of people who inject drugs accessing a needle-syringe programme (NSP) at least once per month during the reporting period"
-* url = "http://smart.who.int/hiv/Measure/HIVIND9"
+* url = "https://hiv.fhir.et/Measure/HIVIND9"
 * status = #draft
 * experimental = true
 * date = "2024-08-18"
 * name = "HIVIND9"
 * title = "HIV.IND.9 Regular NSP access"
 * publisher = "World Health Organization (WHO)"
-* library = "http://smart.who.int/hiv/Library/HIVIND9Logic"
+* library = "https://hiv.fhir.et/Library/HIVIND9Logic"
 * scoring = $measure-scoring#proportion "Proportion"
 * improvementNotation = $measure-improvement-notation#increase
 * group[+]

@@ -7,7 +7,7 @@ Description: "Earlier Ethiopia HTS population options. The October 2026 history 
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBETDE6"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.ET.DE6"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.ET.DE6"
 
 * HIVConcepts#HIV.B.ET.DE6 "Client is widowed"
 * HIVConcepts#HIV.B.ET.DE7 "Client is divorced"

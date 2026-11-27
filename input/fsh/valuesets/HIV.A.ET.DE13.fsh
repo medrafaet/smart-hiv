@@ -7,7 +7,7 @@ Description: "Occupation codes from the previous Ethiopia HIV registration data 
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVAETDE13"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.A.ET.DE13"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.A.ET.DE13"
 
 * HIVConcepts#HIV.A.ET.DE14 "Employed"
 * HIVConcepts#HIV.A.ET.DE15 "Unemployed"

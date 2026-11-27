@@ -7,7 +7,7 @@ Description: "Value set of any other medications that were dispensed to client, 
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE461"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE461"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE461"
 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/valueset-rules-text"
 * ^extension[=].valueMarkdown = "Use approved medication codes from the prescribing application. Record the duration, dosage and frequency separately for each medication."

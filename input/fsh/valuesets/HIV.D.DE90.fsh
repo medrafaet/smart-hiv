@@ -7,7 +7,7 @@ Description: "Value set of list of ART regimens"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE90"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE90"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE90"
 
 * HIVConcepts#HIV.D.DE91 "ABC + 3TC + ATV/r"
 * HIVConcepts#HIV.D.DE92 "ABC + 3TC + DTG"

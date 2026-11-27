@@ -7,7 +7,7 @@ Description: "Value set of type of DSD ART model client is enrolled in (country-
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE764"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE764"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE764"
 
 * HIVConcepts#HIV.D.ET.DE1273 "3-month multi-month dispensing (3MMD)"
 * HIVConcepts#HIV.D.ET.DE1274 "Appointment spacing model (ASM, 6MMD)"

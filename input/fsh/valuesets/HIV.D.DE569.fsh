@@ -7,7 +7,7 @@ Description: "Value set of method the client reports currently using at intake"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE569"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE569"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE569"
 
 * HIVConcepts#HIV.D.DE570 "Copper-bearing intrauterine device (Cu-IUD)"
 * HIVConcepts#HIV.D.DE571 "Levonorgestrel intrauterine device (LNG-IUD)"

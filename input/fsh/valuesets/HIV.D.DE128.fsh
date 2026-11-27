@@ -7,7 +7,7 @@ Description: "Value set of drug composition of client's current ART regimen"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE128"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE128"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE128"
 
 * HIVConcepts#HIV.D.DE129 "ABC"
 * HIVConcepts#HIV.D.DE130 "FTC"

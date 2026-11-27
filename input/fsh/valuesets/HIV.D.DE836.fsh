@@ -7,7 +7,7 @@ Description: "Value set of type of diagnostic test used for Chlamydia trachomati
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE836"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE836"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE836"
 
 * HIVConcepts#HIV.D.DE837 "NAAT"
 * HIVConcepts#HIV.D.DE838 "POC Test"

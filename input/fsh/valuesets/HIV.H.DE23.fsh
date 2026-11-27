@@ -7,7 +7,7 @@ Description: "Value set of detailed outcome from the attempt to locate the clien
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVHDE23"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.H.DE23"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.H.DE23"
 
 * HIVConcepts#HIV.H.DE24 "Returning to clinic"
 * HIVConcepts#HIV.H.DE25 "Self-transferred out"

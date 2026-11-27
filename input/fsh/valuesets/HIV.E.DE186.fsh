@@ -7,7 +7,7 @@ Description: "Value set of early infant diagnosis test number 1 test result"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE186"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE186"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE186"
 
 * HIVConcepts#HIV.E.DE187 "Positive"
 * HIVConcepts#HIV.E.DE188 "Negative"

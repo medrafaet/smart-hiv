@@ -7,7 +7,7 @@ Description: "Value set of method used to try to reach out to the client"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVHDE13"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.H.DE13"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.H.DE13"
 
 * HIVConcepts#HIV.H.DE14 "Home visit"
 * HIVConcepts#HIV.H.DE15 "Text message"

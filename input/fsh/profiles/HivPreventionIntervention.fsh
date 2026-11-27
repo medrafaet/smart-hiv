@@ -8,5 +8,5 @@ Description: "A documented HIV prevention service accessed at the facility. Use 
 * code = HIVConcepts#HIV.PRV.DE2
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1 MS
-* valueCodeableConcept from http://smart.who.int/hiv/ValueSet/HIV.PRV.DE2 (required)
+* valueCodeableConcept from https://hiv.fhir.et/ValueSet/HIV.PRV.DE2 (required)
 * effective[x] 1..1 MS

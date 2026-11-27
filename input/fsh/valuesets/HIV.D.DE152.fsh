@@ -7,7 +7,7 @@ Description: "Value set of offer or refer for prevention services"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE152"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE152"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE152"
 
 * HIVConcepts#HIV.D.DE153 "Offer male and female condoms and condom-compatible lubricants"
 * HIVConcepts#HIV.D.DE154 "Harm reduction for people who inject drugs"

@@ -7,7 +7,7 @@ Description: "Value set of STI for which the client was tested"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE789"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE789"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE789"
 
 * HIVConcepts#HIV.D.DE790 "Neisseria gonorrhoeae"
 * HIVConcepts#HIV.D.DE791 "Chlamydia trachomatis"

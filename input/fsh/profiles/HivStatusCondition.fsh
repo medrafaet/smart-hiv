@@ -7,4 +7,4 @@ Description: "A condition representing a patient's HIV status."
 * ^title = "HIV Status Condition"
 * clinicalStatus from http://hl7.org/fhir/ValueSet/condition-clinical (required) 
 * category = http://terminology.hl7.org/CodeSystem/condition-category#encounter-diagnosis
-* code from http://smart.who.int/hiv/ValueSet/HIV.B.DE115 (required)
+* code from https://hiv.fhir.et/ValueSet/HIV.B.DE115 (required)

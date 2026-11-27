@@ -19,7 +19,7 @@ Description: "MFR organization where the positive HIV test result was confirmed.
 Invariant: hiv-positive-test-confirmation
 Description: "A positive test confirmation date or facility applies to a positive overall HIV test result."
 Severity: #error
-Expression: "(extension('http://smart.who.int/hiv/StructureDefinition/hiv-hiv-test-confirmation-date').exists() or extension('http://smart.who.int/hiv/StructureDefinition/hiv-hiv-test-confirmation-facility').exists()) implies value.coding.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.B.DE112').exists()"
+Expression: "(extension('https://hiv.fhir.et/StructureDefinition/hiv-hiv-test-confirmation-date').exists() or extension('https://hiv.fhir.et/StructureDefinition/hiv-hiv-test-confirmation-facility').exists()) implies value.coding.where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.B.DE112').exists()"
 
 Profile: HivHivTest
 Parent: HivLabTestObservation

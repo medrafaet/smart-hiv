@@ -7,7 +7,7 @@ Description: "Value set of type of condom provided to client"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVCDE138"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.C.DE138"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.C.DE138"
 
 * HIVConcepts#HIV.C.DE139 "Male condom"
 * HIVConcepts#HIV.C.DE140 "Female condom"

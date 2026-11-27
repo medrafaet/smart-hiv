@@ -5,14 +5,14 @@ Title: "HIV.IND.59 Syphilis testing coverage, HIV-positive clients"
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablemeasure"
 * extension[http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis].valueCode = #boolean
 * description = "% of people living with HIV who were tested for syphilis during the reporting period"
-* url = "http://smart.who.int/hiv/Measure/HIVIND59"
+* url = "https://hiv.fhir.et/Measure/HIVIND59"
 * status = #draft
 * experimental = true
 * date = "2024-08-18"
 * name = "HIVIND59"
 * title = "HIV.IND.59 Syphilis testing coverage, HIV-positive clients"
 * publisher = "World Health Organization (WHO)"
-* library = "http://smart.who.int/hiv/Library/HIVIND59Logic"
+* library = "https://hiv.fhir.et/Library/HIVIND59Logic"
 * scoring = $measure-scoring#proportion "Proportion"
 * improvementNotation = $measure-improvement-notation#increase
 * group[+]

@@ -7,7 +7,7 @@ Description: "Value set of HIV-exposed infant final status at 18 months or 3 mon
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE230"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE230"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE230"
 
 * HIVConcepts#HIV.E.DE231 "HIV-positive"
 * HIVConcepts#HIV.E.DE232 "HIV-negative and no longer breastfeeding"

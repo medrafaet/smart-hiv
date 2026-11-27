@@ -7,7 +7,7 @@ Description: "Value set of type of medicine client is prescribed"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE182"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE182"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE182"
 
 * HIVConcepts#HIV.D.DE183 "Interferon"
 * HIVConcepts#HIV.D.DE184 "Direct acting antivirals"

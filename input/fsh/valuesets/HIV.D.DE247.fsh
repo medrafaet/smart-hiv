@@ -7,7 +7,7 @@ Description: "Value set of coinfection prevention and treatment activities perfo
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE247"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE247"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE247"
 
 * HIVConcepts#HIV.D.DE248 "Provide co-trimoxazole preventive therapy (CPT)"
 * HIVConcepts#HIV.D.DE249 "Intensified TB case finding and linkage to TB treatment"

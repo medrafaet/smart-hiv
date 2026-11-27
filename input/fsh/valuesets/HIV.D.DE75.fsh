@@ -7,7 +7,7 @@ Description: "Value set of the current ART regimen the client is taking"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE75"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE75"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE75"
 
 * HIVConcepts#HIV.D.DE92
 * HIVConcepts#HIV.D.DE93

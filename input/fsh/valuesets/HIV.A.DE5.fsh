@@ -7,7 +7,7 @@ Description: "Value set of how the client was referred"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVADE5"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.A.DE5"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.A.DE5"
 
 * HIVConcepts#HIV.A.DE6 "Community"
 * HIVConcepts#HIV.A.DE7 "Facility"

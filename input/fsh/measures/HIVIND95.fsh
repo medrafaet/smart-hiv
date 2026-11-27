@@ -5,14 +5,14 @@ Title: "HIV.IND.95 Invasive cervical cancer treatment"
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablemeasure"
 * extension[http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis].valueCode = #boolean
 * description = "% of women living with HIV diagnosed with invasive cancer who were treated"
-* url = "http://smart.who.int/hiv/Measure/HIVIND95"
+* url = "https://hiv.fhir.et/Measure/HIVIND95"
 * status = #draft
 * experimental = true
 * date = "2024-08-18"
 * name = "HIVIND95"
 * title = "HIV.IND.95 Invasive cervical cancer treatment"
 * publisher = "World Health Organization (WHO)"
-* library = "http://smart.who.int/hiv/Library/HIVIND95Logic"
+* library = "https://hiv.fhir.et/Library/HIVIND95Logic"
 * scoring = $measure-scoring#proportion "Proportion"
 * improvementNotation = $measure-improvement-notation#increase
 * group[+]

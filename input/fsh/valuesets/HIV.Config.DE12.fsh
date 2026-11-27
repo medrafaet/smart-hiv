@@ -7,7 +7,7 @@ Description: "Value set of HIV burden of the setting (high or low) based on the 
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVConfigDE12"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.Config.DE12"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.Config.DE12"
 
 * HIVConcepts#HIV.Config.DE13 "High HIV burden setting"
 * HIVConcepts#HIV.Config.DE14 "Low HIV burden setting"

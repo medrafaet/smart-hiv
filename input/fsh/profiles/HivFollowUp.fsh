@@ -251,27 +251,27 @@ Description: "Free-text reason when the reason ART stopped is Other. Supports Et
 Invariant: hiv-h-follow-up-other-reason
 Description: "If reason for follow-up is Other, other follow-up reason should be captured."
 Severity: #warning
-Expression: "reasonCode.coding.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.H.DE8').exists() implies extension('http://smart.who.int/hiv/StructureDefinition/hiv-follow-up-other-reason').exists()"
+Expression: "reasonCode.coding.where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.H.DE8').exists() implies extension('https://hiv.fhir.et/StructureDefinition/hiv-follow-up-other-reason').exists()"
 
 Invariant: hiv-h-follow-up-exclusive-reasons
 Description: "Did not initiate ART and Inconclusive HIV status are mutually exclusive."
 Severity: #error
-Expression: "reasonCode.coding.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.H.DE4').empty() or reasonCode.coding.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.H.DE6').empty()"
+Expression: "reasonCode.coding.where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.H.DE4').empty() or reasonCode.coding.where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.H.DE6').empty()"
 
 Invariant: hiv-h-follow-up-other-source
 Description: "If source of information is Other, other source of information should be captured."
 Severity: #warning
-Expression: "extension('http://smart.who.int/hiv/StructureDefinition/hiv-follow-up-source-of-information').value.coding.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.H.DE21').exists() implies extension('http://smart.who.int/hiv/StructureDefinition/hiv-follow-up-other-source-of-information').exists()"
+Expression: "extension('https://hiv.fhir.et/StructureDefinition/hiv-follow-up-source-of-information').value.coding.where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.H.DE21').exists() implies extension('https://hiv.fhir.et/StructureDefinition/hiv-follow-up-other-source-of-information').exists()"
 
 Invariant: hiv-h-follow-up-moved-address
 Description: "If client changed address or moved from catchment area, date moved or new catchment area should be captured when known."
 Severity: #warning
-Expression: "extension('http://smart.who.int/hiv/StructureDefinition/hiv-follow-up-moved-from-catchment-area').value = true implies (extension('http://smart.who.int/hiv/StructureDefinition/hiv-follow-up-date-moved-from-catchment-area').exists() or extension('http://smart.who.int/hiv/StructureDefinition/hiv-follow-up-new-catchment-area').exists())"
+Expression: "extension('https://hiv.fhir.et/StructureDefinition/hiv-follow-up-moved-from-catchment-area').value = true implies (extension('https://hiv.fhir.et/StructureDefinition/hiv-follow-up-date-moved-from-catchment-area').exists() or extension('https://hiv.fhir.et/StructureDefinition/hiv-follow-up-new-catchment-area').exists())"
 
 Invariant: hiv-h-follow-up-died-reported
 Description: "If outreach outcome is Died reported, date, cause, or place of death should be captured when known."
 Severity: #warning
-Expression: "extension('http://smart.who.int/hiv/StructureDefinition/hiv-follow-up-outreach-outcome').value.coding.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.H.DE29').exists() implies (extension('http://smart.who.int/hiv/StructureDefinition/hiv-follow-up-date-of-death').exists() or extension('http://smart.who.int/hiv/StructureDefinition/hiv-follow-up-cause-of-death').exists() or extension('http://smart.who.int/hiv/StructureDefinition/hiv-follow-up-place-of-death').exists())"
+Expression: "extension('https://hiv.fhir.et/StructureDefinition/hiv-follow-up-outreach-outcome').value.coding.where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.H.DE29').exists() implies (extension('https://hiv.fhir.et/StructureDefinition/hiv-follow-up-date-of-death').exists() or extension('https://hiv.fhir.et/StructureDefinition/hiv-follow-up-cause-of-death').exists() or extension('https://hiv.fhir.et/StructureDefinition/hiv-follow-up-place-of-death').exists())"
 
 Profile: HivFollowUpAppointment
 Parent: Appointment

@@ -7,7 +7,7 @@ Description: "Value set of gestational age can be calculated multiple ways. This
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE6"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE6"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE6"
 
 * HIVConcepts#HIV.E.DE7 "Last menstrual period (LMP)"
 * HIVConcepts#HIV.E.DE8 "Ultrasound"

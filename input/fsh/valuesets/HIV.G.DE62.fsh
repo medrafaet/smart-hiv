@@ -7,7 +7,7 @@ Description: "Value set of reason why a syphilis test was not done"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVGDE62"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.G.DE62"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.G.DE62"
 
 * HIVConcepts#HIV.G.DE63 "Test delayed to next contact or referred"
 * HIVConcepts#HIV.G.DE64 "Stock-out or expired"

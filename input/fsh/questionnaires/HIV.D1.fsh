@@ -42,6 +42,6 @@ Usage: #definition
   * answerValueSet = Canonical(HIV.D.DE746)
   * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.name = "facilityEntryPoints"
   * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.language = #text/fhirpath
-  * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.expression = "%careVisit.parameter.where(name = 'facilityTestingEntryPoint').value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.D.DE747' | 'HIV.D.DE748' | 'HIV.D.DE749' | 'HIV.D.DE750' | 'HIV.D.DE751' | 'HIV.D.DE752'))"
+  * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.expression = "%careVisit.parameter.where(name = 'facilityTestingEntryPoint').value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.D.DE747' | 'HIV.D.DE748' | 'HIV.D.DE749' | 'HIV.D.DE750' | 'HIV.D.DE751' | 'HIV.D.DE752'))"
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression].valueExpression.language = #text/fhirpath
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression].valueExpression.expression = "iif(%facilityEntryPoints.count() = 1, %facilityEntryPoints, {})"

@@ -7,7 +7,7 @@ Description: "Value set of the type of diagnostic test performed to detect tuber
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE992"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE992"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE992"
 
 * HIVConcepts#HIV.D.DE993 "LF-LAM"
 * HIVConcepts#HIV.D.DE994 "mWRD test for TB"

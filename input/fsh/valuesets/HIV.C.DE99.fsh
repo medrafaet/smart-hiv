@@ -7,6 +7,6 @@ Description: "Value set of preferred third drug for PEP"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVCDE99"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.C.DE99"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.C.DE99"
 
 * HIVConcepts#HIV.C.DE100 "DTG"

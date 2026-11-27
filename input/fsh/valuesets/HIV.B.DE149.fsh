@@ -7,7 +7,7 @@ Description: "Value set of offer or refer to prevention services"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE149"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE149"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE149"
 
 * HIVConcepts#HIV.B.DE150 "Offer male and female condoms and condom-compatible lubricants"
 * HIVConcepts#HIV.B.DE151 "Offer pre-exposure prophylaxis (PrEP) for people at elevated risk for HIV acquisition"

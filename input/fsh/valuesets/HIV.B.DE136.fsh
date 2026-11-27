@@ -7,7 +7,7 @@ Description: "Value set of the HIV status of a sexual or drug-injecting partner 
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE136"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE136"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE136"
 
 * HIVConcepts#HIV.B.DE137 "HIV-positive"
 * HIVConcepts#HIV.B.DE138 "HIV-negative"

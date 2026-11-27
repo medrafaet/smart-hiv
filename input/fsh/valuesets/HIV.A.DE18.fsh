@@ -7,7 +7,7 @@ Description: "Value set of Ethiopia HIV.A.DE18 sex options retained for registra
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVADE18"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.A.DE18"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.A.DE18"
 
 * HIVConcepts#HIV.A.DE19 "Female"
 * HIVConcepts#HIV.A.DE20 "Male"

@@ -25,7 +25,7 @@ Usage: #definition
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[severity].valueCode = #error
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[human].valueString = "The workbook selects the dual HIV and syphilis test only when pregnancy is documented."
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[expression].valueExpression.language = #text/fhirpath
-* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.E.DE168').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.E.DE172')).exists() implies (%resource.item.where(linkId = 'maternalPregnancyAtTest').answer.value.ofType(boolean).count() = 1 and %resource.item.where(linkId = 'maternalPregnancyAtTest').answer.value.ofType(boolean).where($this = true).exists())"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][1].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.E.DE168').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.E.DE172')).exists() implies (%resource.item.where(linkId = 'maternalPregnancyAtTest').answer.value.ofType(boolean).count() = 1 and %resource.item.where(linkId = 'maternalPregnancyAtTest').answer.value.ofType(boolean).where($this = true).exists())"
 
 * item[+]
   * id = "HIV.E.DE101"
@@ -36,7 +36,7 @@ Usage: #definition
   * repeats = false
   * readOnly = true
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.language = #text/fhirpath
-  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.expression = "iif(%resource.item.where(linkId = 'HIV.E.DE104').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.E.DE105' | 'HIV.E.DE106' | 'HIV.E.DE107')).count() = 1, true, {})"
+  * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.expression = "iif(%resource.item.where(linkId = 'HIV.E.DE104').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.E.DE105' | 'HIV.E.DE106' | 'HIV.E.DE107')).count() = 1, true, {})"
 * item[+]
   * id = "HIV.E.DE102"
   * linkId = "HIV.E.DE102"

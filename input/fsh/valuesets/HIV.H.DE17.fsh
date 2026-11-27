@@ -7,7 +7,7 @@ Description: "Value set of source of information about the client"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVHDE17"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.H.DE17"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.H.DE17"
 
 * HIVConcepts#HIV.H.DE18 "Client"
 * HIVConcepts#HIV.H.DE19 "Informed by treatment provider"

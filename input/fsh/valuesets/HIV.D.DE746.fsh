@@ -7,7 +7,7 @@ Description: "Value set of specific point where testing is happening at a facili
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE746"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE746"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE746"
 
 * HIVConcepts#HIV.D.DE747 "Provider-initiated tested in a clinic or emergency facility"
 * HIVConcepts#HIV.D.DE748 "Antenatal care clinic"

@@ -7,7 +7,7 @@ Description: "Value set of screening algorithm selected for screening activities
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE956"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE956"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE956"
 
 * HIVConcepts#HIV.D.DE957 "Screening with cough"
 * HIVConcepts#HIV.D.DE958 "Screening with any TB symptom"

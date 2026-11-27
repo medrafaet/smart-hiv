@@ -7,7 +7,7 @@ Description: "Value set of signs that may indicate the client has a serious illn
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE17"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE17"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE17"
 
 * HIVConcepts#HIV.D.DE18 "Fever of 39 C or greater"
 * HIVConcepts#HIV.D.DE19 "Tachycardia"

@@ -7,7 +7,7 @@ Description: "Value set of result of urine culture (or urine Gram-staining if no
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE255"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE255"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE255"
 
 * HIVConcepts#HIV.E.DE256 "Positive"
 * HIVConcepts#HIV.E.DE257 "Negative"

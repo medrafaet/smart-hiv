@@ -7,6 +7,6 @@ Description: "Ethiopian base marital status codes used for HIV.A.DE30 registrati
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVADE30"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.A.DE30"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.A.DE30"
 
 * include codes from valueset http://fhir.et/core/ValueSet/marital-status-vs

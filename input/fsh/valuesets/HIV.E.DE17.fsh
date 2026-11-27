@@ -7,7 +7,7 @@ Description: "Value set of whether the woman has had any complications or proble
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE17"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE17"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE17"
 
 * HIVConcepts#HIV.E.DE18 "No past pregnancy complications"
 * HIVConcepts#HIV.E.DE19 "Does not know of any past pregnancy complications"

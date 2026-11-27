@@ -7,7 +7,7 @@ Description: "Value set of prEP product that the client was prescribed"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVCDE80"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.C.DE80"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.C.DE80"
 
 * HIVConcepts#HIV.C.DE81 "Oral PrEP"
 * HIVConcepts#HIV.C.DE83 "CAB-LA"

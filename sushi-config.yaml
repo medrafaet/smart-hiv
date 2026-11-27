@@ -3,8 +3,8 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: smart.who.int.hiv
-canonical: http://smart.who.int/hiv
+id: et.fhir.hiv
+canonical: https://hiv.fhir.et
 name: HIV
 title: Ethiopian Ministry of Health SMART Guidelines - HIV
 description: The Ethiopian Ministry of Health implementation guide for HIV services, adapted from WHO SMART Guidelines, WHO HIV L2 artifacts, and the Ethiopia HIV Digital Adaptation Kit.

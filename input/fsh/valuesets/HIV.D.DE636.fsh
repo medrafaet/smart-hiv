@@ -7,7 +7,7 @@ Description: "Value set of reason the vaccine dose was not given"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE636"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE636"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE636"
 
 * HIVConcepts#HIV.D.DE637 "Stock-out"
 * HIVConcepts#HIV.D.DE638 "Client is ill"

@@ -10,7 +10,7 @@ Severity: #error
 
 Invariant: configuration-special-needs
 Description: "Select the population with special needs category before recording its groups."
-Expression: "populationsWithSpecialNeeds.exists() implies otherPriorityPopulations.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.Config.ET.DE19').exists()"
+Expression: "populationsWithSpecialNeeds.exists() implies otherPriorityPopulations.where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.Config.ET.DE19').exists()"
 Severity: #error
 
 Invariant: configuration-site-identifiers
@@ -86,7 +86,7 @@ Mapping: HIVConfigurationClinicalSource
 Source: HIVConfiguration
 Id: clinical-source
 Title: "Configuration sources"
-Target: "http://smart.who.int/hiv"
+Target: "https://hiv.fhir.et"
 Description: "Facility identity and approved programme settings."
 * healthFacilityId -> "HIVConfigurationForm/HIV.Config.DE17. Resolve the selected ET Base MFR Location and use Location.identifier:mfrId."
 * tbTreatingFacilityId -> "HIV.D8/HIV.Config.DE18 from the documented active TB treatment episode. Resolve the selected ET Base MFR Location and use Location.identifier:mfrId."

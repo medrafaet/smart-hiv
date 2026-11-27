@@ -80,7 +80,7 @@ Severity:     #error
 
 Invariant: care-chronic-exclusive
 Description: "No chronic or past health conditions and Unknown are each exclusive answers."
-Expression: "existingChronicHealthConditions.count() <= 1 or existingChronicHealthConditions.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.D.DE66' | 'HIV.D.DE67')).empty()"
+Expression: "existingChronicHealthConditions.count() <= 1 or existingChronicHealthConditions.where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.D.DE66' | 'HIV.D.DE67')).empty()"
 Severity: #error
 
 Invariant: care-adherence-percent
@@ -90,12 +90,12 @@ Severity: #error
 
 Invariant: care-current-medications-exclusive
 Description: "No medications and Don’t know are each exclusive answers."
-Expression: "currentMedications.count() <= 1 or currentMedications.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.D.DE538' | 'HIV.D.DE539')).empty()"
+Expression: "currentMedications.count() <= 1 or currentMedications.where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.D.DE538' | 'HIV.D.DE539')).empty()"
 Severity: #error
 
 Invariant: care-allergies-exclusive
 Description: "No known allergies and Don’t know are each exclusive answers."
-Expression: "allergies.count() <= 1 or allergies.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.D.DE561' | 'HIV.D.DE562')).empty()"
+Expression: "allergies.count() <= 1 or allergies.where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.D.DE561' | 'HIV.D.DE562')).empty()"
 Severity: #error
 
 Logical: HIVDCareTreatment

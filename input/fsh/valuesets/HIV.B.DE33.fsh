@@ -7,7 +7,7 @@ Description: "Value set of the HIV status of the client's partner."
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE33"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE33"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE33"
 
 * HIVConcepts#HIV.B.DE34 "HIV-positive"
 * HIVConcepts#HIV.B.DE35 "HIV-negative"

@@ -7,7 +7,7 @@ Description: "Value set of mother's blood type and blood Rh factor"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE246"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE246"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE246"
 
 * HIVConcepts#HIV.E.DE247 "A+"
 * HIVConcepts#HIV.E.DE248 "A-"

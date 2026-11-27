@@ -7,7 +7,7 @@ Description: "Value set of type of specimen to be collected"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE813"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE813"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE813"
 
 * HIVConcepts#HIV.D.DE814 "Blood"
 * HIVConcepts#HIV.D.DE815 "Urine"

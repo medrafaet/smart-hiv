@@ -7,7 +7,7 @@ Description: "Value set of the result of the third HIV assay in the testing stra
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE208"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE208"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE208"
 
 * HIVConcepts#HIV.E.DE209 "Reactive"
 * HIVConcepts#HIV.E.DE210 "Non-reactive"

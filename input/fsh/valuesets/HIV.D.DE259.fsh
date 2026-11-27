@@ -7,7 +7,7 @@ Description: "Value set of signs and symptoms of opportunistic infections or oth
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE259"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE259"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE259"
 
 * HIVConcepts#HIV.D.DE260 "Oral candidiasis"
 * HIVConcepts#HIV.D.DE261 "Vaginal candidiasis"

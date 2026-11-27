@@ -7,7 +7,7 @@ Description: "Value set of alternative third drug for PEP"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVCDE101"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.C.DE101"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.C.DE101"
 
 * HIVConcepts#HIV.C.DE102 "ATV/r"
 * HIVConcepts#HIV.C.DE104 "LPV/r"

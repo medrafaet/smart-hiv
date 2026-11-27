@@ -7,7 +7,7 @@ Description: "Value set of does the client have any allergies?"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE560"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE560"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE560"
 
 * HIVConcepts#HIV.D.DE561 "No known allergies"
 * HIVConcepts#HIV.D.DE562 "Don't know of any allergies"

@@ -7,7 +7,7 @@ Description: "Value set of current or considered medication/drug, for the purpos
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE903"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE903"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE903"
 
 * HIVConcepts#HIV.D.DE904 "Rifampicin"
 * HIVConcepts#HIV.D.DE905 "Halofantrine"

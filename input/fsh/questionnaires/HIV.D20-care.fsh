@@ -23,7 +23,7 @@ Usage: #definition
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[severity].valueCode = #error
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[human].valueString = "Select Initial viral load test only after confirming there is no earlier viral load result for this client."
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.language = #text/fhirpath
-* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE391').answer.value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.D.DE394').exists() implies %resource.item.where(linkId = 'hasPriorViralLoadResult').answer.value.ofType(boolean).where($this = false).exists()"
+* extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[expression].valueExpression.expression = "%resource.item.where(linkId = 'HIV.D.DE391').answer.value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.D.DE394').exists() implies %resource.item.where(linkId = 'hasPriorViralLoadResult').answer.value.ofType(boolean).where($this = false).exists()"
 
 * insert CareDiagnosticsCd4
 * item[+]

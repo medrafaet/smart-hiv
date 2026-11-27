@@ -7,7 +7,7 @@ Description: "Value set of infant feeding practice"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE127"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE127"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE127"
 
 * HIVConcepts#HIV.E.DE128 "Exclusively breastfeeding"
 * HIVConcepts#HIV.E.DE129 "Replacement feeding"

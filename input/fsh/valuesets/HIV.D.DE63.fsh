@@ -7,6 +7,6 @@ Description: "Historical list placeholder. The October history form uses a refer
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE63"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE63"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE63"
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/valueset-rules-text"
 * ^extension[=].valueMarkdown = "This should be a context-specific list of facilities providing ARV drugs"

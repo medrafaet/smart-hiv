@@ -1,6 +1,6 @@
 Invariant: hiv-h-follow-up-logical-reasons
 Description: "Did not initiate ART and Inconclusive HIV status are mutually exclusive."
-Expression: "reasonForFollowUp.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.H.DE4').empty() or reasonForFollowUp.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.H.DE6').empty()"
+Expression: "reasonForFollowUp.where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.H.DE4').empty() or reasonForFollowUp.where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.H.DE6').empty()"
 Severity: #error
 
 Logical: HIVHFollowup

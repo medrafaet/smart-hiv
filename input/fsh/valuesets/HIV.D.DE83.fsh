@@ -7,7 +7,7 @@ Description: "Value set of aRT regimen for treating clients living with HIV, bas
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE83"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE83"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE83"
 
 * HIVConcepts#HIV.D.DE84 "First-line ART regimen for adults and adolescents"
 * HIVConcepts#HIV.D.DE85 "First-line ART regimen for children"

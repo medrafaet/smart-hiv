@@ -5,7 +5,7 @@ Severity:     #error
 
 Invariant:    HIV-D-18
 Description:  "Record the diagnosis method and date when the investigation confirms TB."
-Expression:   "tbDiagnosisResult.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.D.DE940').exists() implies (methodOfTbDiagnosis.exists() and dateOfTbDiagnosis.exists())"
+Expression:   "tbDiagnosisResult.where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.D.DE940').exists() implies (methodOfTbDiagnosis.exists() and dateOfTbDiagnosis.exists())"
 Severity:     #error
 
 Invariant: tb-treating-facility-required

@@ -7,7 +7,7 @@ Description: "Value set of hPV-DNA cervical cancer screening test result"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE664"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE664"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE664"
 
 * HIVConcepts#HIV.D.DE665 "Negative"
 * HIVConcepts#HIV.D.DE666 "Positive"

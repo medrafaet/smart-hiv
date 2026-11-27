@@ -7,7 +7,7 @@ Description: "Value set of result from confirmatory STI test"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE877"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE877"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE877"
 
 * HIVConcepts#HIV.D.DE878 "Positive"
 * HIVConcepts#HIV.D.DE879 "Negative"

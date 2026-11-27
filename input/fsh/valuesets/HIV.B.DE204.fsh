@@ -7,7 +7,7 @@ Description: "Value set of when the adverse event associated with VMMC procedure
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE204"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE204"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE204"
 
 * HIVConcepts#HIV.B.DE205 "Intraoperative"
 * HIVConcepts#HIV.B.DE206 "Postoperative"

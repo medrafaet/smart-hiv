@@ -7,7 +7,7 @@ Description: "Value set of the type of specimen to be used to test viral load"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVGDE13"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.G.DE13"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.G.DE13"
 
 * HIVConcepts#HIV.G.DE14 "Liquid plasma specimen for viral load testing"
 * HIVConcepts#HIV.G.DE15 "Dried blood spot specimen"

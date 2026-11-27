@@ -7,7 +7,7 @@ Description: "Value set of type of diagnostic test used for Mycoplasma genitaliu
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE306"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE306"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE306"
 
 * HIVConcepts#HIV.B.DE307 "NAAT"
 * HIVConcepts#HIV.B.DE308 "Microscopy"

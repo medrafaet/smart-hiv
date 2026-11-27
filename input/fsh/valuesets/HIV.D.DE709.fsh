@@ -7,7 +7,7 @@ Description: "Value set of type of cervical cancer diagnosis"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE709"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE709"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE709"
 
 * HIVConcepts#HIV.D.DE710 "Cervical precancer lesions"
 * HIVConcepts#HIV.D.DE711 "Invasive cervical cancer"

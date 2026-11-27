@@ -7,7 +7,7 @@ Description: "Value set of test result for mother after applying the testing str
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE104"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE104"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE104"
 
 * HIVConcepts#HIV.E.DE105 "HIV-positive"
 * HIVConcepts#HIV.E.DE106 "HIV-negative"

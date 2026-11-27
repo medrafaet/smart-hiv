@@ -7,7 +7,7 @@ Description: "Value set of the client's history in taking post-exposure prophyla
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVCDE31"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.C.DE31"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.C.DE31"
 
 * HIVConcepts#HIV.C.DE32 "First-time user"
 * HIVConcepts#HIV.C.DE33 "Repeat user"

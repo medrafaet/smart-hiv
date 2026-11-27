@@ -7,7 +7,7 @@ Description: "Value set of history of previous TB treatment"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE947"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE947"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE947"
 
 * HIVConcepts#HIV.D.DE948 "New"
 * HIVConcepts#HIV.D.DE949 "Recurrent"

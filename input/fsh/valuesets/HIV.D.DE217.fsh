@@ -7,7 +7,7 @@ Description: "Value set of reason client intentionally stopped ART"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE217"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE217"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE217"
 
 * HIVConcepts#HIV.D.DE218 "Toxicity/side effects"
 * HIVConcepts#HIV.D.DE219 "Severe illness, hospitalization"

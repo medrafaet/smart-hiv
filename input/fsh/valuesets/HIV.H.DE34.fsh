@@ -7,7 +7,7 @@ Description: "Value set of HIV status of the partner or contact given by the ind
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVHDE34"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.H.DE34"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.H.DE34"
 
 * HIVConcepts#HIV.H.ET.DE1 "Unknown HIV status"
 * HIVConcepts#HIV.H.DE35 "Already knew positive"

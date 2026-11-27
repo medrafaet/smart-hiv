@@ -7,7 +7,7 @@ Description: "Value set of results from the reported HIV self-test"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE44"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE44"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE44"
 
 * HIVConcepts#HIV.B.DE45 "Reactive"
 * HIVConcepts#HIV.B.DE46 "Non-reactive"

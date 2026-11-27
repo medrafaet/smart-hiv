@@ -7,7 +7,7 @@ Description: "Communication channels the client prefers for HIV services."
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVADE46"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.A.DE46"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.A.DE46"
 
 * HIVConcepts#HIV.A.DE47 "Text message/SMS"
 * HIVConcepts#HIV.A.DE48 "Voice call"

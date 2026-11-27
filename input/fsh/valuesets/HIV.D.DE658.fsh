@@ -7,7 +7,7 @@ Description: "Value set of type of cervical cancer screening test used in primar
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE658"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE658"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE658"
 
 * HIVConcepts#HIV.D.DE659 "HPV-DNA"
 * HIVConcepts#HIV.D.DE660 "VIA"

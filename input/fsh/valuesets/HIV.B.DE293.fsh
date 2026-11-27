@@ -7,7 +7,7 @@ Description: "Value set of type of diagnostic test used for Trichomonas vaginali
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBDE293"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.DE293"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.DE293"
 
 * HIVConcepts#HIV.B.DE294 "NAAT"
 * HIVConcepts#HIV.B.DE295 "POC Test"

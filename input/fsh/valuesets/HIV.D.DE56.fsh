@@ -7,7 +7,7 @@ Description: "Value set of whether or not the client received ARV drugs prior to
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE56"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE56"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE56"
 
 * HIVConcepts#HIV.D.DE57 "No prior ARVs"
 * HIVConcepts#HIV.D.DE58 "Received ARVs prior without records/documentation"

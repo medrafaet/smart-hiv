@@ -7,7 +7,7 @@ Description: "Value set of reason why a substitution was made to the antiretrovi
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE418"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE418"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE418"
 
 * HIVConcepts#HIV.D.DE419 "Toxicity/side effects"
 * HIVConcepts#HIV.D.DE420 "Drug-drug interaction"

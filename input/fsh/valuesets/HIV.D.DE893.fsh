@@ -7,7 +7,7 @@ Description: "Value set of staging of liver disease in client"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE893"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE893"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE893"
 
 * HIVConcepts#HIV.D.DE894 "F0-4, fibrosis staging"
 * HIVConcepts#HIV.D.DE895 "F4 or cirrhosis, presence of cirrhosis"

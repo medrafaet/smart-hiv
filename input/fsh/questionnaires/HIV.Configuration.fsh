@@ -50,7 +50,7 @@ Usage: #definition
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint][3].extension[expression].valueExpression.expression = """
   %resource.item.where(linkId = 'HIV.Config.ET.DE19').answer.value.exists()
     implies %resource.item.where(linkId = 'HIV.Config.DE19').answer.value.ofType(Coding)
-      .where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.Config.ET.DE19').exists()
+      .where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.Config.ET.DE19').exists()
 """
 
 * item[+]

@@ -7,6 +7,6 @@ Description: "Context-specific codes for ART regimens documented in the prescrip
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE444"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE444"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE444"
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/valueset-rules-text"
 * ^extension[=].valueMarkdown = "Use the approved national ART regimen list supplied by the prescribing application."

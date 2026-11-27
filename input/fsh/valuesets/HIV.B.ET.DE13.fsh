@@ -7,7 +7,7 @@ Description: "Value set of Ethiopia-specific partner notification plan or method
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVBETDE13"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.B.ET.DE13"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.B.ET.DE13"
 
 * HIVConcepts#HIV.B.ET.DE14 "Client"
 * HIVConcepts#HIV.B.ET.DE15 "Contractual"

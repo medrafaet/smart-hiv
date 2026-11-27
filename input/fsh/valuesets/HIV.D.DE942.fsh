@@ -7,7 +7,7 @@ Description: "Value set of method used to set the TB diagnosis"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE942"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE942"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE942"
 
 * HIVConcepts#HIV.D.DE943 "Bacteriologically confirmed"
 * HIVConcepts#HIV.D.DE944 "Clinically diagnosed"

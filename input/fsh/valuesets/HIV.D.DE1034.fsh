@@ -7,7 +7,7 @@ Description: "Value set of indicates the current status of TB preventive treatme
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE1034"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE1034"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE1034"
 
 * HIVConcepts#HIV.D.DE1035 "Not started"
 * HIVConcepts#HIV.D.DE1036 "On TPT"

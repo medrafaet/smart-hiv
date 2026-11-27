@@ -44,6 +44,6 @@ Usage: #definition
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.language = #text/fhirpath
   * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression].valueExpression.expression = """
     iif(%exposureAnswers.count() = 1,
-      %exposureAnswers.where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code in ('HIV.E.DE109' | 'HIV.E.DE110'))
+      %exposureAnswers.where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code in ('HIV.E.DE109' | 'HIV.E.DE110'))
         .select(code = 'HIV.E.DE110'), {})
     """

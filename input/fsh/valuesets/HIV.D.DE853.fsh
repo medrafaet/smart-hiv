@@ -7,7 +7,7 @@ Description: "Value set of type of diagnostic test used for Herpes simplex virus
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE853"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE853"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE853"
 
 * HIVConcepts#HIV.D.DE854 "NAAT"
 * HIVConcepts#HIV.D.DE855 "Antibody test"

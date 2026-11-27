@@ -7,7 +7,7 @@ Description: "Value set of reason why a switch to a second- or third-line regime
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE430"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE430"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE430"
 
 * HIVConcepts#HIV.D.DE431 "Clinical treatment failure"
 * HIVConcepts#HIV.D.DE432 "Immunological failure"

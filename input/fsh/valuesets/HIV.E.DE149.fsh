@@ -7,7 +7,7 @@ Description: "Value set of result from maternal syphilis test"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE149"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE149"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE149"
 
 * HIVConcepts#HIV.E.DE150 "Positive"
 * HIVConcepts#HIV.E.DE151 "Negative"

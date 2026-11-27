@@ -7,7 +7,7 @@ Description: "Value set of offer or refer to sexual and reproductive health serv
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVCDE149"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.C.DE149"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.C.DE149"
 
 * HIVConcepts#HIV.C.DE150 "Contraception and family planning"
 * HIVConcepts#HIV.C.DE151 "Check pregnancy status"

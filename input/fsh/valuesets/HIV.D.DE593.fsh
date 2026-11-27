@@ -7,7 +7,7 @@ Description: "Value set of current state of the client's taking of the medicatio
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE593"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE593"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE593"
 
 * HIVConcepts#HIV.D.DE594 "Currently taking"
 * HIVConcepts#HIV.D.DE595 "Completed"

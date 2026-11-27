@@ -7,6 +7,6 @@ Description: "Value set of the woman's cause of death"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVEDE75"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.E.DE75"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.E.DE75"
 
 * HIVConcepts#HIV.E.DE24 "Prolonged labour"

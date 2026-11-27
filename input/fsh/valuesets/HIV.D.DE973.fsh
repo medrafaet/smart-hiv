@@ -7,7 +7,7 @@ Description: "Value set of symptoms that may indicate TB disease in clients livi
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE973"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE973"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE973"
 
 * HIVConcepts#HIV.D.DE974 "Current cough"
 * HIVConcepts#HIV.D.DE975 "Prolonged cough (>=2w)"

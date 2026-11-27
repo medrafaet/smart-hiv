@@ -7,7 +7,7 @@ Description: "Value set of functional status of people with advanced HIV disease
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVDDE897"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.D.DE897"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.D.DE897"
 
 * HIVConcepts#HIV.D.DE898 "Working, able to perform usual work inside and outside the home"
 * HIVConcepts#HIV.D.DE899 "Ambulatory, able to perform activity of daily living (ADL), not able to work"

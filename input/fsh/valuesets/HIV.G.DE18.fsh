@@ -7,7 +7,7 @@ Description: "Value set of hepatitis B virus test result (HBsAg)"
 * ^status = #active
 * ^experimental = true
 * ^name = "HIVGDE18"
-* ^url = "http://smart.who.int/hiv/ValueSet/HIV.G.DE18"
+* ^url = "https://hiv.fhir.et/ValueSet/HIV.G.DE18"
 
 * HIVConcepts#HIV.G.DE19 "Positive"
 * HIVConcepts#HIV.G.DE20 "Negative"

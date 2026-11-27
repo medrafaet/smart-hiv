@@ -18,7 +18,7 @@ Usage: #definition
 * extension[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext][1].extension[description].valueString = "The confirmed HIV status reported for this visit as an hivStatus parameter with valueCoding. Supply empty Parameters when the status is unavailable."
 * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.name = "hasPositiveHivStatus"
 * extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.language = #text/fhirpath
-* extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.expression = "%htsCounselling.parameter.where(name = 'hivStatus').value.ofType(Coding).where(system = 'http://smart.who.int/hiv/CodeSystem/HIVConcepts' and code = 'HIV.B.DE116').exists()"
+* extension[http://hl7.org/fhir/StructureDefinition/variable].valueExpression.expression = "%htsCounselling.parameter.where(name = 'hivStatus').value.ofType(Coding).where(system = 'https://hiv.fhir.et/CodeSystem/HIVConcepts' and code = 'HIV.B.DE116').exists()"
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[key].valueId = "hts-art-start-date"
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[severity].valueCode = #error
 * extension[http://hl7.org/fhir/StructureDefinition/targetConstraint].extension[human].valueString = "The ART start date must be today or earlier."
